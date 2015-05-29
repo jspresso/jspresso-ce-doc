@@ -4,6 +4,7 @@
         "readme": "en/reference-guide.md"
     },
     "plugins": [
-        "toc"
+        "toc",
+        "include"
     ]
 }
