@@ -1,6 +1,8 @@
 Views
 =====
 
+<!-- toc -->
+
 Simple views
 ============
 
