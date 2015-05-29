@@ -1,6 +1,8 @@
 Domain model
 ============
 
+<!-- toc -->
+
 Components and entities
 =======================
 
