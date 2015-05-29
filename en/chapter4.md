@@ -1,6 +1,8 @@
 Actions
 =======
 
+<!-- toc -->
+
 Overview
 ========
 
