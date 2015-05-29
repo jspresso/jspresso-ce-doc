@@ -2,5 +2,8 @@
     "gitbook": ">=2.0.0",
     "structure": {
         "readme": "en/reference-guide.md"
-    }
+    },
+    "plugins": [
+        "gitbook-plugin-toc"
+    ]
 }
