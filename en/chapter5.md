@@ -1,6 +1,8 @@
 Application Structure
 =====================
 
+<!-- toc -->
+
 Controllers
 ===========
 
