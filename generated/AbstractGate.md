@@ -10,8 +10,7 @@ AbstractGate
 
 -   **Sub-types** : ``, ``, ``
 
-This is the base abstract class of all Jspresso built-in gates.
-Open/close rule is delegated to concrete implementations.
+This is the base abstract class of all Jspresso built-in gates. Open/close rule is delegated to concrete implementations.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -52,8 +51,7 @@ AbstractPropertyModelGate
 
 -   **Sub-types** : ``, ``, ``
 
-This is the base abstract class of gates whose opening rules are based
-on a single model property value.
+This is the base abstract class of gates whose opening rules are based on a single model property value.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -85,8 +83,7 @@ BooleanPropertyModelGate
 
 -   **Super-type** : ``
 
-This gate opens and closes based on the value of a boolean property of
-the assigned model.
+This gate opens and closes based on the value of a boolean property of the assigned model.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -110,8 +107,7 @@ EnumerationPropertyModelGate
 
 -   **Super-type** : ``
 
-This gate opens and closes based on the value of an enumeration property
-matching a set of allowed values.
+This gate opens and closes based on the value of an enumeration property matching a set of allowed values.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -130,8 +126,7 @@ RegexPropertyModelGate
 
 -   **Super-type** : ``
 
-This gate opens and closes based on the value of a string property
-matching a regular expression.
+This gate opens and closes based on the value of a string property matching a regular expression.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -170,11 +165,7 @@ GrantedRolesGate
 
 -   **Super-type** : ``
 
-This is a role based gate. The gate depends only on the roles of the
-logged-in user. The difference between using a roles gate and directly
-assigning the granted roles on the authorized artifact, is that the gate
-only disables the artifact whereas the artifact granted roles prevent
-the artifact from being created at all.
+This is a role based gate. The gate depends only on the roles of the logged-in user. The difference between using a roles gate and directly assigning the granted roles on the authorized artifact, is that the gate only disables the artifact whereas the artifact granted roles prevent the artifact from being created at all.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

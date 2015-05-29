@@ -8,8 +8,7 @@ DefaultDescriptor
 
 -   **Sub-types** : ``, ``
 
-This is a utility class from which most named descriptors inherit for
-factorization purpose. It provides translatable name and description.
+This is a utility class from which most named descriptors inherit for factorization purpose. It provides translatable name and description.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -50,8 +49,7 @@ DefaultIconDescriptor
 
 -   **Sub-types** : ``, ``, ``, ``
 
-This is a utility class from which most displayable descriptors inherit
-for factorization purpose. It provides an icon image URL.
+This is a utility class from which most displayable descriptors inherit for factorization purpose. It provides an icon image URL.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

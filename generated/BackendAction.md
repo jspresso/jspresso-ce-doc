@@ -8,13 +8,9 @@ BackendAction
 
 -   **Super-type** : ``
 
--   **Sub-types** : ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,
-    ``, ``, ``, ``, ``, ``
+-   **Sub-types** : ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``
 
-This class should serve as base class for implementing actions that
-execute on the backend (domain model) of the application. It provides
-accessors on the context elements that are generally used through the
-action execution process.
+This class should serve as base class for implementing actions that execute on the backend (domain model) of the application. It provides accessors on the context elements that are generally used through the action execution process.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -36,25 +32,15 @@ AbstractChangePasswordAction
 
 -   **Sub-types** : ``, ``, ``
 
-This is the base class for implementing an action that performs actual
-modification of a logged-in user password. This implementation delegates
-to subclasses the actual change in the concrete JAAS store. This backend
-action expects a Map\<String,Object\> in as action parameter in the
-context. This map must contain :
+This is the base class for implementing an action that performs actual modification of a logged-in user password. This implementation delegates to subclasses the actual change in the concrete JAAS store. This backend action expects a Map\<String,Object\> in as action parameter in the context. This map must contain :
 
--   {@code password\_current} entry containing current password. Entry
-    key can be referred to as PASSWD\_CURRENT static constant.
+-   {@code password\_current} entry containing current password. Entry key can be referred to as PASSWD\_CURRENT static constant.
 
--   {@code password\_typed} entry containing the new password. Entry key
-    can be referred to as PASSWD\_TYPED static constant.
+-   {@code password\_typed} entry containing the new password. Entry key can be referred to as PASSWD\_TYPED static constant.
 
--   {@code password\_retyped} entry containing the new password retyped.
-    Entry key can be referred to as PASSWD\_RETYPED static constant.
+-   {@code password\_retyped} entry containing the new password retyped. Entry key can be referred to as PASSWD\_RETYPED static constant.
 
-For the action to succeed, {@code current\_password} must match the
-logged-in user current password and {@code password\_typed} and {@code
-password\_retyped} mut match between each other. The only method to be
-implemented by concrete subclasses is :
+For the action to succeed, {@code current\_password} must match the logged-in user current password and {@code password\_typed} and {@code password\_retyped} mut match between each other. The only method to be implemented by concrete subclasses is :
 
      protected abstract boolean changePassword(UserPrincipal userPrincipal,
                String currentPassword, String newPassword)
@@ -108,8 +94,7 @@ DatabaseChangePasswordAction
 
 -   **Super-type** : ``
 
-Concrete backend implementation of a change password action where
-password is stored in a relational database.
+Concrete backend implementation of a change password action where password is stored in a relational database.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -138,10 +123,7 @@ LdapChangePasswordAction
 
 -   **Super-type** : ``
 
-Concrete backend implementation of a change password action where
-password is stored in an LDAP directory. The user DN to use to connect
-to the LDAP directory is the one stored in the user principal from the
-login process.
+Concrete backend implementation of a change password action where password is stored in an LDAP directory. The user DN to use to connect to the LDAP directory is the one stored in the user principal from the login process.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -181,8 +163,7 @@ AbstractCloneAction
 
 -   **Sub-types** : ``
 
-An action used duplicate a domain object. the cloned domain object is
-set as model for the current view.
+An action used duplicate a domain object. the cloned domain object is set as model for the current view.
 
      protected abstract Object cloneElement(Object element,
          Map<String, Object> context)
@@ -204,10 +185,7 @@ CloneComponentAction
 
 -   **Super-type** : ``
 
-An action used duplicate an entity or a component. This action is
-parametrized with a clone factory ({@code IEntityCloneFactory}) to
-perform the actual component cloning. Executing this action will result
-in setting the cloned component to the underlying view.
+An action used duplicate an entity or a component. This action is parametrized with a clone factory ({@code IEntityCloneFactory}) to perform the actual component cloning. Executing this action will result in setting the cloned component to the underlying view.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -228,8 +206,7 @@ AbstractCollectionAction
 
 -   **Sub-types** : ``, ``, ``, ``, ``, ``, ``
 
-Base class for backend actions acting on collection models. This class
-is just used to refine certain protected methods return types.
+Base class for backend actions acting on collection models. This class is just used to refine certain protected methods return types.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -250,9 +227,7 @@ AbstractAddCollectionToMasterAction
 
 -   **Sub-types** : ``, ``, ``, ``, ``
 
-An action used in master/detail views to create and add a new detail to
-a master domain object. The only method to be implemented by concrete
-subclasses to retrieve the instances to be added to the master is :
+An action used in master/detail views to create and add a new detail to a master domain object. The only method to be implemented by concrete subclasses to retrieve the instances to be added to the master is :
 
      protected abstract List<?>
                getAddedComponents(Map<String, Object> context)
@@ -279,11 +254,7 @@ AbstractCloneCollectionAction
 
 -   **Sub-types** : ``
 
-An action used duplicate a collection of domain objects. Cloning an
-entity should result in adding it to the collection the action was
-triggered on. Components to clone are retrieved from the context using
-the selected indices of the model collection connector. Actual cloning
-of components is left to concrete implementations that must implement :
+An action used duplicate a collection of domain objects. Cloning an entity should result in adding it to the collection the action was triggered on. Components to clone are retrieved from the context using the selected indices of the model collection connector. Actual cloning of components is left to concrete implementations that must implement :
 
      protected abstract Object cloneElement(Object element,
          Map<String, Object> context)
@@ -305,11 +276,7 @@ CloneComponentCollectionAction
 
 -   **Super-type** : ``
 
-An action used duplicate a collection of entities or components. This
-action is parametrized with a clone factory ({@code
-IEntityCloneFactory}) to perform the actual component cloning. Executing
-this action will result in adding the cloned component(s) to the
-underlying model collection.
+An action used duplicate a collection of entities or components. This action is parametrized with a clone factory ({@code IEntityCloneFactory}) to perform the actual component cloning. Executing this action will result in adding the cloned component(s) to the underlying model collection.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -328,9 +295,7 @@ AddAnyCollectionToMasterAction
 
 -   **Super-type** : ``
 
-An action used in master/detail views to add new detail(s) to a master
-domain object. The details to add are taken from the action context
-through the {@code ActionParameter} context value.
+An action used in master/detail views to add new detail(s) to a master domain object. The details to add are taken from the action context through the {@code ActionParameter} context value.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -348,16 +313,11 @@ AddComponentCollectionToMasterAction
 
 -   **Super-type** : ``
 
-An action used in master/detail views to create and add a new detail to
-a master domain object. Entity (or component) to add are actually
-created by the entity factory retrieved from the action context. The
-class of entity (component) to create is either taken :
+An action used in master/detail views to create and add a new detail to a master domain object. Entity (or component) to add are actually created by the entity factory retrieved from the action context. The class of entity (component) to create is either taken :
 
 1.  from the action context under the key {@code ELEMENT\_DESCRIPTOR}
 
-2.  or, if it does not exist, taken from the view model descriptor. In
-    this case, the component descriptor to use is the element descriptor
-    of the underlying collection descriptor.
+2.  or, if it does not exist, taken from the view model descriptor. In this case, the component descriptor to use is the element descriptor of the underlying collection descriptor.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -377,12 +337,7 @@ AddMapToMasterAction
 
 -   **Sub-types** : ``
 
-An action used in master/detail views where models are backed by maps to
-create and add a new detail to a master domain object. The new instance
-created is an instance of {@code
-org.jspresso.framework.util.collection.ObjectEqualityMap}. Default
-property values as well as {@code onCreate} lifecycle interceptors
-registered on the component descriptor are supported.
+An action used in master/detail views where models are backed by maps to create and add a new detail to a master domain object. The new instance created is an instance of {@code org.jspresso.framework.util.collection.ObjectEqualityMap}. Default property values as well as {@code onCreate} lifecycle interceptors registered on the component descriptor are supported.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -400,11 +355,7 @@ CloneMapCollectionAction
 
 -   **Super-type** : ``
 
-An action used duplicate a collection of domain objects implemented as
-maps. Newly created maps are instances of {@code
-org.jspresso.framework.util.collection.ObjectEqualityMap} that contains
-the same key/value pairs as the maps to clone. Executing this action
-will result in adding the cloned map to the underlying model collection.
+An action used duplicate a collection of domain objects implemented as maps. Newly created maps are instances of {@code org.jspresso.framework.util.collection.ObjectEqualityMap} that contains the same key/value pairs as the maps to clone. Executing this action will result in adding the cloned map to the underlying model collection.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -422,14 +373,7 @@ PasteCollectionToMasterAction
 
 -   **Super-type** : ``
 
-An action used in master/detail views to paste previously copied or cut
-detail(s) to a master domain object. The application clipboard is used
-to retrieve the entities (or components) to paste. Whenever the
-components have been previously *copied* to the clipboard, the paste
-action will clone them when executed using the configured entity clone
-factory. Whenever the components have been previously *cut*, the paste
-action will simply use the exact same instances as the one placed on the
-clipboard.
+An action used in master/detail views to paste previously copied or cut detail(s) to a master domain object. The application clipboard is used to retrieve the entities (or components) to paste. Whenever the components have been previously *copied* to the clipboard, the paste action will clone them when executed using the configured entity clone factory. Whenever the components have been previously *cut*, the paste action will simply use the exact same instances as the one placed on the clipboard.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -448,10 +392,7 @@ CollectionElementMoveAction
 
 -   **Super-type** : ``
 
-This action can be declared on views that are backed by collections with
-list semantics (indexed collections). It allows to take a the selected
-elements and move them in the collection using a configured offset. It
-allows for re-ordering the list.
+This action can be declared on views that are backed by collections with list semantics (indexed collections). It allows to take a the selected elements and move them in the collection using a configured offset. It allows for re-ordering the list.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -481,9 +422,7 @@ RemoveCollectionFromMasterAction
 
 -   **Super-type** : ``
 
-An action used in master/detail views to remove selected details from a
-master domain object. No further operation (like actual removal from a
-persistent store) is performed by this action.
+An action used in master/detail views to remove selected details from a master domain object. No further operation (like actual removal from a persistent store) is performed by this action.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -501,14 +440,7 @@ RemoveCollectionFromMasterAction
 
 -   **Super-type** : ``
 
-An action used in master/detail views to remove selected details from a
-master domain object. More than just removing the selected details from
-their owning collection, this action "*cuts*" the existing links between
-the entities to remove and the rest of the domain then registers them
-for deletion on next save operation. Note that cleaning of relationships
-is a 2 pass process. The 1st one is a dry run that checks that no
-functional exception is thrown by the business rules. The second one
-performs the actual cleaning.
+An action used in master/detail views to remove selected details from a master domain object. More than just removing the selected details from their owning collection, this action "*cuts*" the existing links between the entities to remove and the rest of the domain then registers them for deletion on next save operation. Note that cleaning of relationships is a 2 pass process. The 1st one is a dry run that checks that no functional exception is thrown by the business rules. The second one performs the actual cleaning.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -526,10 +458,7 @@ RemoveFromModuleObjectsAction
 
 -   **Super-type** : ``
 
-This action, which is to be used on bean collection modules, removes the
-selected objects from the module's projected collection. If one (or
-more) of the removed objects are also used in children bean modules, the
-corresponding children bean modules are also removed accordingly.
+This action, which is to be used on bean collection modules, removes the selected objects from the module's projected collection. If one (or more) of the removed objects are also used in children bean modules, the corresponding children bean modules are also removed accordingly.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -547,9 +476,7 @@ RemoveModuleObjectAction
 
 -   **Super-type** : ``
 
-This action, which is to be used on bean modules, **deletes the module
-object from the persistent store**. The bean module is also removed from
-it's parent accordingly.
+This action, which is to be used on bean modules, **deletes the module object from the persistent store**. The bean module is also removed from it's parent accordingly.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -567,9 +494,7 @@ SetActionParamFromSelectedComponentsAction
 
 -   **Super-type** : ``
 
-A trivial backend action that updates the action context by setting the
-{@code ActionParameter} with the selected components of the underlying
-model.
+A trivial backend action that updates the action context by setting the {@code ActionParameter} with the selected components of the underlying model.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -587,8 +512,7 @@ AbstractLdapAction
 
 -   **Super-type** : ``
 
-Root abstract class of actions that deal with LDAP directory. It's only
-purpose is to standardize the use of Spring {@code LdapTemplate}.
+Root abstract class of actions that deal with LDAP directory. It's only purpose is to standardize the use of Spring {@code LdapTemplate}.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -632,11 +556,7 @@ FindAction
 
 -   **Super-type** : ``
 
-This action will climb the model connector hierarchy to retrieve a query
-component used as QBE filter. It will then tailor paging status on this
-query component before continuing execution. This action is meant to be
-chained with an actual backend action to perform the query (like {@code
-QueryEntitiesAction}).
+This action will climb the model connector hierarchy to retrieve a query component used as QBE filter. It will then tailor paging status on this query component before continuing execution. This action is meant to be chained with an actual backend action to perform the query (like {@code QueryEntitiesAction}).
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -654,10 +574,7 @@ QueryModuleFilterAction
 
 -   **Super-type** : ``
 
-Retrieves the filter of a module and queries the persistent store to
-populate the module objects. The actual query is delegated to another
-backend action (defaulted to {@code QueryEntitiesAction}) that can be
-configured through the {@code queryAction} property.
+Retrieves the filter of a module and queries the persistent store to populate the module objects. The actual query is delegated to another backend action (defaulted to {@code QueryEntitiesAction}) that can be configured through the {@code queryAction} property.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -677,26 +594,15 @@ AbstractQueryComponentsAction
 
 -   **Sub-types** : ``, ``
 
-This action is the base abstract class to query components by example.
-It is used behind the scene in several places in Jspresso based
-applications, as in filtered bean collection modules, list of values,
-... The principles are to perform a search based on the Jspresso "{@code
-IQueryComponent} ". A Jspresso query component is a hierarchical data
-structure that mimics a portion of the domain model headed by an entity.
-It is essentially a set of property/value pairs where values can be :
+This action is the base abstract class to query components by example. It is used behind the scene in several places in Jspresso based applications, as in filtered bean collection modules, list of values, ... The principles are to perform a search based on the Jspresso "{@code IQueryComponent} ". A Jspresso query component is a hierarchical data structure that mimics a portion of the domain model headed by an entity. It is essentially a set of property/value pairs where values can be :
 
 1.  a scalar value
 
-2.  a comparable query structure (operator, inf and sup value) to place
-    a constraint on a comparable property (date, number, ...)
+2.  a comparable query structure (operator, inf and sup value) to place a constraint on a comparable property (date, number, ...)
 
 3.  a sub query component
 
-Whenever the query is successful, the result is merged back to the
-application session and assigned to the query component {@code
-queriedComponents} property. Note that there is 1 hook that can be
-configured by injection to fine-tune the performed query : {@code
-queryComponentRefiner}.
+Whenever the query is successful, the result is merged back to the application session and assigned to the query component {@code queriedComponents} property. Note that there is 1 hook that can be configured by injection to fine-tune the performed query : {@code queryComponentRefiner}.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -732,30 +638,15 @@ QueryEntitiesAction
 
 -   **Super-type** : ``
 
-This action is used to Hibernate query entities by example. It is used
-behind the scene in several places in Jspresso based applications, as in
-filtered bean collection modules, list of values, ... The principles are
-to tailor an Hibernate Criterion based on the Jspresso "{@code
-IQueryComponent} ". A Jspresso query component is a hierarchical data
-structure that mimics a portion of the domain model headed by an entity.
-It is essentially a set of property/value pairs where values can be :
+This action is used to Hibernate query entities by example. It is used behind the scene in several places in Jspresso based applications, as in filtered bean collection modules, list of values, ... The principles are to tailor an Hibernate Criterion based on the Jspresso "{@code IQueryComponent} ". A Jspresso query component is a hierarchical data structure that mimics a portion of the domain model headed by an entity. It is essentially a set of property/value pairs where values can be :
 
 1.  a scalar value
 
-2.  a comparable query structure (operator, inf and sup value) to place
-    a constraint on a comparable property (date, number, ...)
+2.  a comparable query structure (operator, inf and sup value) to place a constraint on a comparable property (date, number, ...)
 
 3.  a sub query component
 
-Out of this query component, the action will build an Hibernate detached
-criteria by constructing all join sub-criteria whenever necessary. Once
-the detached criteria is complete, the action will perform the Hibernate
-query while using paging information taken from the query component as
-well as custom sorting properties. Whenever the query is successful, the
-result is merged back to the application session and assigned to the
-query component {@code queriedComponents} property. Note that there are
-2 hooks that can be configured by injection to fine-tune the performed
-query : {@code queryComponentRefiner} and {@code criteriaRefiner}.
+Out of this query component, the action will build an Hibernate detached criteria by constructing all join sub-criteria whenever necessary. Once the detached criteria is complete, the action will perform the Hibernate query while using paging information taken from the query component as well as custom sorting properties. Whenever the query is successful, the result is merged back to the application session and assigned to the query component {@code queriedComponents} property. Note that there are 2 hooks that can be configured by injection to fine-tune the performed query : {@code queryComponentRefiner} and {@code criteriaRefiner}.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -786,8 +677,7 @@ StaticQueryComponentsAction
 
 -   **Super-type** : ``
 
-This action filters an arbitrary component list against the query
-component using a query component matcher.
+This action filters an arbitrary component list against the query component using a query component matcher.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -810,17 +700,11 @@ This action can be installed on any collection view and will :
 
 1.  take the selected elements in the underlying model collection,
 
-2.  create bean modules out of them, using the {@code
-    childModuleProjectedViewDescriptor} as projected view if it has been
-    configured,
+2.  create bean modules out of them, using the {@code childModuleProjectedViewDescriptor} as projected view if it has been configured,
 
-3.  add the created bean modules as children of the currently selected
-    module, visualizing them in the workspace navigation tree.
+3.  add the created bean modules as children of the currently selected module, visualizing them in the workspace navigation tree.
 
-Whenever there is no {@code childModuleProjectedViewDescriptor}
-configured, and the currently selected module is a bean collection
-module, the created modules projected view descriptor is taken from the
-bean collection module ({@code elementViewDescriptor}).
+Whenever there is no {@code childModuleProjectedViewDescriptor} configured, and the currently selected module is a bean collection module, the created modules projected view descriptor is taken from the bean collection module ({@code elementViewDescriptor}).
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -840,10 +724,7 @@ CreateQueryComponentAction
 
 -   **Super-type** : ``
 
-Creates a query component to be used in filters or list of values. The
-created query component is stored in the context under the key {@code
-IQueryComponent.QUERY\_COMPONENT}. Further explanations are given about
-query components in the {@code QueryEntitiesAction} documentation.
+Creates a query component to be used in filters or list of values. The created query component is stored in the context under the key {@code IQueryComponent.QUERY\_COMPONENT}. Further explanations are given about query components in the {@code QueryEntitiesAction} documentation.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -868,10 +749,7 @@ DeleteEntityAction
 
 -   **Super-type** : ``
 
-An action used to delete the entity that is model of the view. Note that
-cleaning of relationships is a 2 pass process. The 1st one is a dry run
-that checks that no functional exception is thrown by the business
-rules. The second one performs the actual cleaning.
+An action used to delete the entity that is model of the view. Note that cleaning of relationships is a 2 pass process. The 1st one is a dry run that checks that no functional exception is thrown by the business rules. The second one performs the actual cleaning.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -889,16 +767,9 @@ GenerateJasperReportAction
 
 -   **Super-type** : ``
 
-This action performs the actual Jasper report generation using a JDBC
-data source. The report design is retrieved from the action context
-(under the key {@code IReport.REPORT\_ACTION\_PARAM}). The report
-context used during the generation includes the action context so that
-all Jspresso managed objects can be leveraged in the report itself. The
-logged-in user locale is used as the report locale.
+This action performs the actual Jasper report generation using a JDBC data source. The report design is retrieved from the action context (under the key {@code IReport.REPORT\_ACTION\_PARAM}). The report context used during the generation includes the action context so that all Jspresso managed objects can be leveraged in the report itself. The logged-in user locale is used as the report locale.
 
-The resulting {@code JasperPrint} report is then placed into the action
-context as action parameter for further processing (like PDF production
-for instance).
+The resulting {@code JasperPrint} report is then placed into the action context as action parameter for further processing (like PDF production for instance).
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -917,8 +788,7 @@ InitModuleFilterAction
 
 -   **Super-type** : ``
 
-Initialize a module filter with a brand new query component and resets
-the module objects collection.
+Initialize a module filter with a brand new query component and resets the module objects collection.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -963,8 +833,7 @@ ReloadAction
 
 -   **Sub-types** : ``
 
-Reloads the entities provided by the context {@code ActionParameter}.
-The whole entities graphs are reloaded from the persistent store.
+Reloads the entities provided by the context {@code ActionParameter}. The whole entities graphs are reloaded from the persistent store.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -983,9 +852,7 @@ ReloadModuleObjectAction
 
 -   **Super-type** : ``
 
-Reloads all the module entities as well as all its sub-modules entities
-recursively. The whole entities graphs are reloaded from the persistent
-store.
+Reloads all the module entities as well as all its sub-modules entities recursively. The whole entities graphs are reloaded from the persistent store.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1003,12 +870,7 @@ RemoveFromModuleObjectsAction
 
 -   **Super-type** : ``
 
-This action, which is to be used on bean collection modules, removes the
-selected objects from the module's projected collection **and deletes
-them from the persistent store**. If one (or more) of the removed
-objects are also used in children bean modules, the corresponding
-children bean modules are also removed accordingly. It is versatile
-enough to work on mobile collection module details.
+This action, which is to be used on bean collection modules, removes the selected objects from the module's projected collection **and deletes them from the persistent store**. If one (or more) of the removed objects are also used in children bean modules, the corresponding children bean modules are also removed accordingly. It is versatile enough to work on mobile collection module details.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1046,8 +908,7 @@ SaveAction
 
 -   **Sub-types** : ``
 
-Saves the entities provided by the context {@code ActionParameter}. All
-previously registered persistence operations are also performed.
+Saves the entities provided by the context {@code ActionParameter}. All previously registered persistence operations are also performed.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1065,9 +926,7 @@ SaveModuleObjectAction
 
 -   **Super-type** : ``
 
-Saves all the module entities as well as all its sub-modules entities
-recursively. All previously registered persistence operations are also
-performed.
+Saves all the module entities as well as all its sub-modules entities recursively. All previously registered persistence operations are also performed.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1087,10 +946,7 @@ ScriptedBackendAction
 
 -   **Sub-types** : ``
 
-A scripted backend action. The action takes the script to execute (an
-{@code IScript} implementation) out of its context (using {@code
-ActionParameter}) and delegates the actual script execution to a {@code
-IScriptHandler} configured through the {@code scriptHandler} property.
+A scripted backend action. The action takes the script to execute (an {@code IScript} implementation) out of its context (using {@code ActionParameter}) and delegates the actual script execution to a {@code IScriptHandler} configured through the {@code scriptHandler} property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1109,8 +965,7 @@ StaticScriptedBackendAction
 
 -   **Super-type** : ``
 
-A statically scripted backend action. The script and the scripting
-language are statically configured in the action itself.
+A statically scripted backend action. The script and the scripting language are statically configured in the action itself.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1133,8 +988,7 @@ SelectEntityPropertyAction
 
 -   **Super-type** : ``
 
-A generic action to fill-in the context {@code ActionParameter} with the
-value of an entity property.
+A generic action to fill-in the context {@code ActionParameter} with the value of an entity property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1153,8 +1007,7 @@ TransferCollectionAction
 
 -   **Super-type** : ``
 
-An action used to register a collection of domain objects into the
-application's clipboard along with a transfer mode semantics.
+An action used to register a collection of domain objects into the application's clipboard along with a transfer mode semantics.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

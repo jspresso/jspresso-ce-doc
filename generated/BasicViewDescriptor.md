@@ -10,8 +10,7 @@ BasicViewDescriptor
 
 -   **Sub-types** : ``, ``, ``, ``, ``, ``, ``, ``
 
-This is the abstract base descriptor for all views. Its main purpose,
-since it cannot be used directly, is to factorize common properties.
+This is the abstract base descriptor for all views. Its main purpose, since it cannot be used directly, is to factorize common properties.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -213,24 +212,11 @@ AbstractCardViewDescriptor
 
 -   **Sub-types** : ``, ``
 
-This descriptor serves as abstract base implementation for card view
-descriptor. A card view is a view stack made of children views (the
-cards) where only the view (card) at the top of the stack is visible.
-The actual child view to place on the top of the stack is dynamically
-determined based on the bound model. This card determination strategy
-depends on the concrete descriptor sub-types.
+This descriptor serves as abstract base implementation for card view descriptor. A card view is a view stack made of children views (the cards) where only the view (card) at the top of the stack is visible. The actual child view to place on the top of the stack is dynamically determined based on the bound model. This card determination strategy depends on the concrete descriptor sub-types.
 
-One might wonder why a card view is not considered as (and actually does
-not inherit from) a composite view. The difference is that composite
-views are used aggregate views that displays - hopefully - different
-parts (the children views) of the **same** model. A card view descriptor
-is rather used to make the same UI region display different views
-depending on different models (or different model states). Once the
-model is fixed, the card view behaves exactly as its top card.
+One might wonder why a card view is not considered as (and actually does not inherit from) a composite view. The difference is that composite views are used aggregate views that displays - hopefully - different parts (the children views) of the **same** model. A card view descriptor is rather used to make the same UI region display different views depending on different models (or different model states). Once the model is fixed, the card view behaves exactly as its top card.
 
-One of the most important usage of card views is when it is combine as
-the detail in a master-detail view. The detail view may then change
-dynamically based on the selected master.
+One of the most important usage of card views is when it is combine as the detail in a master-detail view. The detail view may then change dynamically based on the selected master.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -248,10 +234,7 @@ BasicCardViewDescriptor
 
 -   **Super-type** : ``
 
-Describes a multi-purpose card view that is configurable with a custom
-card determination strategy. Cards are registered with a name key that
-is used to retrieve the card to display based on the card selector
-selected name key.
+Describes a multi-purpose card view that is configurable with a custom card determination strategy. Cards are registered with a name key that is used to retrieve the card to display based on the card selector selected name key.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -285,9 +268,7 @@ EntityCardViewDescriptor
 
 -   **Super-type** : ``
 
-This card view provides a simple card determination strategy that is
-based on the bound model type. This strategy pulls up the card whose
-model descriptor matches the type of the bound model.
+This card view provides a simple card determination strategy that is based on the bound model type. This strategy pulls up the card whose model descriptor matches the type of the bound model.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -428,40 +409,19 @@ BasicComponentViewDescriptor
 
 -   **Super-type** : ``
 
-Component view descriptors are surely one of the most commonly used view
-descriptors in Jspresso. It allows to implement advanced form-like views
-to interact with a single component model. Component properties that are
-displayed in the view are organized in an invisible grid. Each field
-component is labelled with the property name it displays and labels can
-be configured to be displayed aside or above their peer field. Property
-fields can be configured to span multiple form columns. Component view
-offer various straightforward customizations, but the most advanced and
-powerful one is definitely the {@code propertyViewDescriptors} property
-tat allows to fine-tune each component UI field individually.
+Component view descriptors are surely one of the most commonly used view descriptors in Jspresso. It allows to implement advanced form-like views to interact with a single component model. Component properties that are displayed in the view are organized in an invisible grid. Each field component is labelled with the property name it displays and labels can be configured to be displayed aside or above their peer field. Property fields can be configured to span multiple form columns. Component view offer various straightforward customizations, but the most advanced and powerful one is definitely the {@code propertyViewDescriptors} property tat allows to fine-tune each component UI field individually.
 
-The description property is used to compute view tooltips and support
-the following rules :
+The description property is used to compute view tooltips and support the following rules :
 
-1.  if the description is a property name of the underlying model, this
-    property will be used to compute the (dynamic) tooltip (depending on
-    the actual model).
+1.  if the description is a property name of the underlying model, this property will be used to compute the (dynamic) tooltip (depending on the actual model).
 
-2.  if the description is not a property name of the underlying model,
-    the the tooltip is considered static and the translation will
-    searched in the application resource bundles.
+2.  if the description is not a property name of the underlying model, the the tooltip is considered static and the translation will searched in the application resource bundles.
 
-3.  if the description is the empty string (''), the tooltip is
-    de-activated.
+3.  if the description is the empty string (''), the tooltip is de-activated.
 
-4.  if the description is not set, then the toHtml property (see toHtml
-    property on entities / components definition) is used as dynamic
-    property. And the toHtml falls back to the toString if not set,
-    which falls back to the 1st string rendered property if not set.
+4.  if the description is not set, then the toHtml property (see toHtml property on entities / components definition) is used as dynamic property. And the toHtml falls back to the toString if not set, which falls back to the 1st string rendered property if not set.
 
-Note that on every case above, HTML is supported. This way, you can have
-really useful tooltips (event multi-line), in order to detail some
-synthetic data. Moreover, this rule is available for the form tooltip,
-but also for each individual field (property view) in the form.
+Note that on every case above, HTML is supported. This way, you can have really useful tooltips (event multi-line), in order to detail some synthetic data. Moreover, this rule is available for the form tooltip, but also for each individual field (property view) in the form.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -612,12 +572,7 @@ AbstractTreeViewDescriptor
 
 -   **Sub-types** : ``, ``
 
-This descriptor is use to design a tree view. The way to define a tree
-view in Jspresso is a matter of assembling *tree level descriptors*
-hierarchically. A *tree level descriptor* is a group of sibling nodes
-that usually represent a component collection property. Each individual
-tree node collection can be secured by using role-based authorization
-(i.e. {@code grantedRoles}) on its descriptor.
+This descriptor is use to design a tree view. The way to define a tree view in Jspresso is a matter of assembling *tree level descriptors* hierarchically. A *tree level descriptor* is a group of sibling nodes that usually represent a component collection property. Each individual tree node collection can be secured by using role-based authorization (i.e. {@code grantedRoles}) on its descriptor.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -746,12 +701,7 @@ BasicTreeViewDescriptor
 
 -   **Sub-types** :
 
-This descriptor is use to design a tree view. The way to define a tree
-view in Jspresso is a matter of assembling *tree level descriptors*
-hierarchically. A *tree level descriptor* is a group of sibling nodes
-that usually represent a component collection property. Each individual
-tree node collection can be secured by using role-based authorization
-(i.e. {@code grantedRoles}) on its descriptor.
+This descriptor is use to design a tree view. The way to define a tree view in Jspresso is a matter of assembling *tree level descriptors* hierarchically. A *tree level descriptor* is a group of sibling nodes that usually represent a component collection property. Each individual tree node collection can be secured by using role-based authorization (i.e. {@code grantedRoles}) on its descriptor.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -774,12 +724,7 @@ MobileTreeViewDescriptor
 
 -   **Sub-types** :
 
-This descriptor is use to design a tree view. The way to define a tree
-view in Jspresso is a matter of assembling *tree level descriptors*
-hierarchically. A *tree level descriptor* is a group of sibling nodes
-that usually represent a component collection property. Each individual
-tree node collection can be secured by using role-based authorization
-(i.e. {@code grantedRoles}) on its descriptor.
+This descriptor is use to design a tree view. The way to define a tree view in Jspresso is a matter of assembling *tree level descriptors* hierarchically. A *tree level descriptor* is a group of sibling nodes that usually represent a component collection property. Each individual tree node collection can be secured by using role-based authorization (i.e. {@code grantedRoles}) on its descriptor.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -798,11 +743,7 @@ BasicActionViewDescriptor
 
 -   **Super-type** : ``
 
-This type of view allows to make an action available as a view and thus
-participate in the UI composition as a visual component. An action view
-can then be embedded in surrounding a composite view. It literally takes
-the action away from the toolbar/context menu it is located when
-registered in an action map and makes it a primary citizen of the UI.
+This type of view allows to make an action available as a view and thus participate in the UI composition as a visual component. An action view can then be embedded in surrounding a composite view. It literally takes the action away from the toolbar/context menu it is located when registered in an action map and makes it a primary citizen of the UI.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -840,11 +781,7 @@ BasicCollectionViewDescriptor
 
 -   **Sub-types** : ``, ``
 
-This is the abstract base descriptor of all views used to display a
-collection of elements. A collection view must be backed by a collection
-descriptor model. Most of the time, the model will be a collection
-property descriptor so that the collection to display is directly
-inferred from the collection property value through the binding layer.
+This is the abstract base descriptor of all views used to display a collection of elements. A collection view must be backed by a collection descriptor model. Most of the time, the model will be a collection property descriptor so that the collection to display is directly inferred from the collection property value through the binding layer.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -935,18 +872,9 @@ AbstractListViewDescriptor
 
 -   **Sub-types** : ``, ``
 
-This type of descriptor is used to implement a list view. A list view is
-a single column, un-editable collection view used to display a
-collection of components. Each item is displayed using a string
-representation that can be customized using the {@code renderedProperty}
-property. List views are rarely used since one might prefer its much
-more advanced cousin, i.e. the table view.
+This type of descriptor is used to implement a list view. A list view is a single column, un-editable collection view used to display a collection of components. Each item is displayed using a string representation that can be customized using the {@code renderedProperty} property. List views are rarely used since one might prefer its much more advanced cousin, i.e. the table view.
 
-Despite its low usage as an individual UI component, the list view is
-also used by Jspresso to describe tree parts. A collection of sibling
-tree nodes can actually be considered as being a list view and can be
-described as such. In the latter case, the {@code renderedProperty}
-property will be used to label the tree nodes.
+Despite its low usage as an individual UI component, the list view is also used by Jspresso to describe tree parts. A collection of sibling tree nodes can actually be considered as being a list view and can be described as such. In the latter case, the {@code renderedProperty} property will be used to label the tree nodes.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -985,18 +913,9 @@ BasicListViewDescriptor
 
 -   **Super-type** : ``
 
-This type of descriptor is used to implement a list view. A list view is
-a single column, un-editable collection view used to display a
-collection of components. Each item is displayed using a string
-representation that can be customized using the {@code renderedProperty}
-property. List views are rarely used since one might prefer its much
-more advanced cousin, i.e. the table view.
+This type of descriptor is used to implement a list view. A list view is a single column, un-editable collection view used to display a collection of components. Each item is displayed using a string representation that can be customized using the {@code renderedProperty} property. List views are rarely used since one might prefer its much more advanced cousin, i.e. the table view.
 
-Despite its low usage as an individual UI component, the list view is
-also used by Jspresso to describe tree parts. A collection of sibling
-tree nodes can actually be considered as being a list view and can be
-described as such. In the latter case, the {@code renderedProperty}
-property will be used to label the tree nodes.
+Despite its low usage as an individual UI component, the list view is also used by Jspresso to describe tree parts. A collection of sibling tree nodes can actually be considered as being a list view and can be described as such. In the latter case, the {@code renderedProperty} property will be used to label the tree nodes.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1014,18 +933,9 @@ MobileListViewDescriptor
 
 -   **Super-type** : ``
 
-This type of descriptor is used to implement a list view. A list view is
-a single column, un-editable collection view used to display a
-collection of components. Each item is displayed using a string
-representation that can be customized using the {@code renderedProperty}
-property. List views are rarely used since one might prefer its much
-more advanced cousin, i.e. the table view.
+This type of descriptor is used to implement a list view. A list view is a single column, un-editable collection view used to display a collection of components. Each item is displayed using a string representation that can be customized using the {@code renderedProperty} property. List views are rarely used since one might prefer its much more advanced cousin, i.e. the table view.
 
-Despite its low usage as an individual UI component, the list view is
-also used by Jspresso to describe tree parts. A collection of sibling
-tree nodes can actually be considered as being a list view and can be
-described as such. In the latter case, the {@code renderedProperty}
-property will be used to label the tree nodes.
+Despite its low usage as an individual UI component, the list view is also used by Jspresso to describe tree parts. A collection of sibling tree nodes can actually be considered as being a list view and can be described as such. In the latter case, the {@code renderedProperty} property will be used to label the tree nodes.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1048,59 +958,35 @@ BasicTableViewDescriptor
 
 -   **Super-type** : ``
 
-This descriptor is used to implement a table view. This is certainly the
-most commonly used collection descriptor in Jspresso. A table view
-displays a collection of components (one row per component in the
-collection) detailed by a set of properties (one column per displayed
-component property).
+This descriptor is used to implement a table view. This is certainly the most commonly used collection descriptor in Jspresso. A table view displays a collection of components (one row per component in the collection) detailed by a set of properties (one column per displayed component property).
 
-The table view will automatically adapt its columns depending on the
-underlying property descriptors, e.g. :
+The table view will automatically adapt its columns depending on the underlying property descriptors, e.g. :
 
 -   columns for read-only properties won't be editable
 
--   columns that are assigned writability gates will compute the
-    editability of their cells based on each cell's gates
+-   columns that are assigned writability gates will compute the editability of their cells based on each cell's gates
 
--   columns will adapt their renderer/editor based on the underlying
-    property type, e.g. a calendar component will be used for dates
+-   columns will adapt their renderer/editor based on the underlying property type, e.g. a calendar component will be used for dates
 
--   column titles will be filled with property names translations based
-    on the user locale
+-   column titles will be filled with property names translations based on the user locale
 
 -   mandatory properties will be visually indicated
 
 -   ...
 
-A table view provides sensible defaults regarding its configuration, but
-it can be refined using either the simple {@code renderedProperties} or
-the more advanced yet lot more powerful {@code columnViewDescriptors}
-properties.
+A table view provides sensible defaults regarding its configuration, but it can be refined using either the simple {@code renderedProperties} or the more advanced yet lot more powerful {@code columnViewDescriptors} properties.
 
-The description property is used to compute view tooltips and support
-the following rules :
+The description property is used to compute view tooltips and support the following rules :
 
-1.  if the description is a property name of the underlying model, this
-    property will be used to compute the (dynamic) tooltip (depending on
-    the actual model).
+1.  if the description is a property name of the underlying model, this property will be used to compute the (dynamic) tooltip (depending on the actual model).
 
-2.  if the description is not a property name of the underlying model,
-    the the tooltip is considered static and the translation will
-    searched in the application resource bundles.
+2.  if the description is not a property name of the underlying model, the the tooltip is considered static and the translation will searched in the application resource bundles.
 
-3.  if the description is the empty string (''), the tooltip is
-    de-activated.
+3.  if the description is the empty string (''), the tooltip is de-activated.
 
-4.  if the description is not set, then the toHtml property (see toHtml
-    property on entities / components definition) is used as dynamic
-    property. And the toHtml falls back to the toString if not set,
-    which falls back to the 1st string rendered property if not set.
+4.  if the description is not set, then the toHtml property (see toHtml property on entities / components definition) is used as dynamic property. And the toHtml falls back to the toString if not set, which falls back to the 1st string rendered property if not set.
 
-Note that on every case above, HTML is supported. This way, you can have
-really useful tooltips (event multi-line), in order to detail some
-synthetic data. Moreover, this rule is available for the table rows
-tooltip, but also for each individual column (property view) in the
-table.
+Note that on every case above, HTML is supported. This way, you can have really useful tooltips (event multi-line), in order to detail some synthetic data. Moreover, this rule is available for the table rows tooltip, but also for each individual column (property view) in the table.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1242,19 +1128,11 @@ BasicPropertyViewDescriptor
 
 This view descriptor serves 2 purposes :
 
--   configure complex, component based views : refine *columns* of table
-    views and *fields* of component (form) views.
+-   configure complex, component based views : refine *columns* of table views and *fields* of component (form) views.
 
--   display a single property as an autonomous view, i.e. not as a table
-    column or a form field.
+-   display a single property as an autonomous view, i.e. not as a table column or a form field.
 
-The second usage might be a little bit unusual, but here is a use-case
-scenario : display a text area which maps a text property that contains
-XML content. This text area must be displayed in a split pane and
-provide actions to interact directly with the FS (save content to a
-file, load content from a file, ...). In that case, defining a property
-view alone on the text property of the owning component might be a good
-solution.
+The second usage might be a little bit unusual, but here is a use-case scenario : display a text area which maps a text property that contains XML content. This text area must be displayed in a split pane and provide actions to interact directly with the FS (save content to a file, load content from a file, ...). In that case, defining a property view alone on the text property of the owning component might be a good solution.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1401,9 +1279,7 @@ BasicEnumerationPropertyViewDescriptor
 
 -   **Super-type** : ``
 
-This specialized property view descriptor is used in order to be able to
-refine the "values" that are taken from the model enumeration. You can
-configure a set of allowed values from which the user can choose.
+This specialized property view descriptor is used in order to be able to refine the "values" that are taken from the model enumeration. You can configure a set of allowed values from which the user can choose.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1450,9 +1326,7 @@ BasicHtmlViewDescriptor
 
 -   **Super-type** : ``
 
-This type of view descriptor is used to display a a string property
-containing HTML text. The objective is to be able to configure
-scrollability of the HTML component.
+This type of view descriptor is used to display a a string property containing HTML text. The objective is to be able to configure scrollability of the HTML component.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1476,15 +1350,7 @@ BasicImageViewDescriptor
 
 -   **Super-type** : ``
 
-This type of view descriptor is used to display a binary property or a
-string property containing an URL as an image. By default, binary
-properties are rendered as button fields that allow to upload, download
-and query size of the binary content. This button field visually
-indicate whether the binary property is empty or not. Whenever you know
-that the underlying property is used to store image content, you can
-explicitly define an image view backed by the binary property descriptor
-and use it in your UI. Jspresso will then display the image whose
-content is stored in the binary property directly in the UI.
+This type of view descriptor is used to display a binary property or a string property containing an URL as an image. By default, binary properties are rendered as button fields that allow to upload, download and query size of the binary content. This button field visually indicate whether the binary property is empty or not. Whenever you know that the underlying property is used to store image content, you can explicitly define an image view backed by the binary property descriptor and use it in your UI. Jspresso will then display the image whose content is stored in the binary property directly in the UI.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1523,9 +1389,7 @@ BasicStringPropertyViewDescriptor
 
 -   **Sub-types** : ``
 
-This type of view descriptor is used to display a a string property. The
-objective is to be able to configure an action bound to character
-typing.
+This type of view descriptor is used to display a a string property. The objective is to be able to configure an action bound to character typing.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1544,11 +1408,7 @@ BasicReferencePropertyViewDescriptor
 
 -   **Super-type** : ``
 
-This specialized property view descriptor is used in order to be able to
-refine the "List of values" action that gets automatically installed by
-Jspresso when a reference property is displayed. You can then customize
-this action when defining the corresponding column in a table view or
-field in a component view.
+This specialized property view descriptor is used in order to be able to refine the "List of values" action that gets automatically installed by Jspresso when a reference property is displayed. You can then customize this action when defining the corresponding column in a table view or field in a component view.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

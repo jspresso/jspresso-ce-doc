@@ -8,14 +8,7 @@ ActionList
 
 -   **Super-type** : ``
 
-An action list is collection of actions tha can be described with a
-name, a description and an icon. Whether these information are visually
-leveraged depends on the place where the action list is used. For
-instance, an action list used to create a menu in a menu bar will be
-able to leverage its name and icon for menu representation. If it is
-used to define a toolbar part, none of them will be leveraged. The name
-of the action list is also used to identify the sibling action lists to
-be merged when inheriting action map together.
+An action list is collection of actions tha can be described with a name, a description and an icon. Whether these information are visually leveraged depends on the place where the action list is used. For instance, an action list used to create a menu in a menu bar will be able to leverage its name and icon for menu representation. If it is used to define a toolbar part, none of them will be leveraged. The name of the action list is also used to identify the sibling action lists to be merged when inheriting action map together.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

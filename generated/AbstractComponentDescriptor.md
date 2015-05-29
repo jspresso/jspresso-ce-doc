@@ -10,18 +10,13 @@ AbstractComponentDescriptor
 
 -   **Sub-types** : ``, ``, ``
 
-This is the abstract base descriptor for all component-like part of the
-domain model. All the properties included in this base descriptor can of
-course be used in concrete sub-types. These sub-types include :
+This is the abstract base descriptor for all component-like part of the domain model. All the properties included in this base descriptor can of course be used in concrete sub-types. These sub-types include :
 
 -   *BasicEntityDescriptor* for defining a persistent entity
 
--   *BasicInterfaceDescriptor* for defining a common interface that will
-    be implemented by other entities, components or even sub-interfaces.
+-   *BasicInterfaceDescriptor* for defining a common interface that will be implemented by other entities, components or even sub-interfaces.
 
--   *BasicComponentDescriptor* for defining reusable structures that can
-    be inline in an entity. It also allows to describe an arbitrary POJO
-    and make use of it in Jspresso UIs.
+-   *BasicComponentDescriptor* for defining reusable structures that can be inline in an entity. It also allows to describe an arbitrary POJO and make use of it in Jspresso UIs.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -341,27 +336,11 @@ BasicComponentDescriptor
 
 This type of descriptor is used to describe :
 
--   structures that are to be reused but don't have enough focus for
-    being considered as entities. For instance {@code MoneyAmount}
-    component could be composed of a decimal and a reference to a {@code
-    Money} entity. This structure could then be reused in other elements
-    of the domain like an {@code Invoice} or an {@code Article}.
-    Jspresso terminology for these type of structures is *"Inline
-    Component"*.
+-   structures that are to be reused but don't have enough focus for being considered as entities. For instance {@code MoneyAmount} component could be composed of a decimal and a reference to a {@code Money} entity. This structure could then be reused in other elements of the domain like an {@code Invoice} or an {@code Article}. Jspresso terminology for these type of structures is *"Inline Component"*.
 
--   arbitrary models, that even come from outside of Jspresso (an
-    external library for instance). Describing an arbitrary component
-    allows for seamless usage in the Jspresso view binding architecture.
-    Note that in that case, all behavioural properties like lifecycle
-    interceptors or service delegates are ignored since none of the
-    model behaviour is handled by Jspresso.
+-   arbitrary models, that even come from outside of Jspresso (an external library for instance). Describing an arbitrary component allows for seamless usage in the Jspresso view binding architecture. Note that in that case, all behavioural properties like lifecycle interceptors or service delegates are ignored since none of the model behaviour is handled by Jspresso.
 
-Both types of components described above must conform to the *Java
-Beans* standard so that its property changes can be followed by the
-classic {@code add/removePropertyChangeListener} methods since Jspresso
-binding architecture leverages this behaviour. Jspresso managed
-components implement it automatically but the developer must ensure it
-for other types of components.
+Both types of components described above must conform to the *Java Beans* standard so that its property changes can be followed by the classic {@code add/removePropertyChangeListener} methods since Jspresso binding architecture leverages this behaviour. Jspresso managed components implement it automatically but the developer must ensure it for other types of components.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -380,13 +359,7 @@ BasicEntityDescriptor
 
 -   **Super-type** : ``
 
-This descriptor key to the description of the application model. It is
-used to describe a model entity. A Jspresso managed entity has a
-synthetic identifier (*id*) and is versioned (*version*) to cope with
-concurrent access conflicts through optimistic locking. It conforms to
-the *Java Beans* standard so that its property changes can be followed
-by the classic {@code add/removePropertyChangeListener} methods;
-Jspresso binding architecture leverages this behaviour.
+This descriptor key to the description of the application model. It is used to describe a model entity. A Jspresso managed entity has a synthetic identifier (*id*) and is versioned (*version*) to cope with concurrent access conflicts through optimistic locking. It conforms to the *Java Beans* standard so that its property changes can be followed by the classic {@code add/removePropertyChangeListener} methods; Jspresso binding architecture leverages this behaviour.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -431,17 +404,9 @@ BasicInterfaceDescriptor
 
 -   **Super-type** : ``
 
-This descriptor is a mean of factorizing state/behaviour among
-components, entities or even sub-interfaces. This is a much less
-coupling mechanism than actual entity inheritance and can be used across
-entities that don't belong the the same inheritance hierarchy, or even
-across types (entities, components, interfaces).
+This descriptor is a mean of factorizing state/behaviour among components, entities or even sub-interfaces. This is a much less coupling mechanism than actual entity inheritance and can be used across entities that don't belong the the same inheritance hierarchy, or even across types (entities, components, interfaces).
 
-Please note that interface descriptor is not a way for domain elements
-to implement arbitrary interfaces coming from external libraries unless
-they only contain property accessors. The latter can be achieved using
-service delegates and the {@code serviceDelegates[Bean|Class]Names}
-property.
+Please note that interface descriptor is not a way for domain elements to implement arbitrary interfaces coming from external libraries unless they only contain property accessors. The latter can be achieved using service delegates and the {@code serviceDelegates[Bean|Class]Names} property.
 
   -------------------------------------------------------------------------
   Property                 Description

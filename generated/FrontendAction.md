@@ -8,22 +8,13 @@ FrontendAction
 
 -   **Super-type** : ``
 
--   **Sub-types** : ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,
-    ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``,
-    ``, ``, ``, ``, ``, ``, ``
+-   **Sub-types** : ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``
 
-This is the base class for frontend actions. To get a better
-understanding of how actions are organized in Jspresso, please refer to
-{@code AbstractAction} documentation.
+This is the base class for frontend actions. To get a better understanding of how actions are organized in Jspresso, please refer to {@code AbstractAction} documentation.
 
-This base class allows for visual (name, icon, toolTip) as well as
-accessibility (accelerator, mnemonic shortcuts) and actionability (using
-gates) parametrization.
+This base class allows for visual (name, icon, toolTip) as well as accessibility (accelerator, mnemonic shortcuts) and actionability (using gates) parametrization.
 
-A frontend action is to be executed by the frontend controller in the
-context of the UI. It can thus access the view structure, interact
-visually with the user, and so on. A frontend action can chain a backend
-action but the opposite will be prevented.
+A frontend action is to be executed by the frontend controller in the context of the UI. It can thus access the view structure, interact visually with the user, and so on. A frontend action can chain a backend action but the opposite will be prevented.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -139,9 +130,7 @@ AbstractChartAction
 
 -   **Sub-types** : ``
 
-This is the abstract base class for *Fusioncharts* (flash based charting
-library) display actions. It holds several common properties that are
-independent from the actual, concrete, implementations.
+This is the abstract base class for *Fusioncharts* (flash based charting library) display actions. It holds several common properties that are independent from the actual, concrete, implementations.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -179,11 +168,7 @@ DisplayChartAction
 
 -   **Super-type** : ``
 
-This is the concrete implementation of the Fusionchart display action.
-This action is specialized by UI channel, i.e. server based UI channels
-(Ajax, Flex, ULC) will use *{@code server}* {@code .DisplayChartAction}
-whereas standalone UI channels (Swing) will use *{@code
-standalone}*{@code .DisplayChartAction}.
+This is the concrete implementation of the Fusionchart display action. This action is specialized by UI channel, i.e. server based UI channels (Ajax, Flex, ULC) will use *{@code server}* {@code .DisplayChartAction} whereas standalone UI channels (Swing) will use *{@code standalone}*{@code .DisplayChartAction}.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -203,8 +188,7 @@ AbstractEditComponentAction
 
 -   **Sub-types** : ``, ``
 
-This action serves as a base class for actions that pop-pup a dialog to
-edit a component.
+This action serves as a base class for actions that pop-pup a dialog to edit a component.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -229,14 +213,7 @@ EditComponentAction
 
 -   **Sub-types** : ``, ``, ``, ``, ``
 
-This action pulls a model out of the context (action parameter or
-selected model if action parameter is not filled), creates a view, binds
-it on the model and prepares for chaining with a modal dialog action to
-pop-up the result. The translated name of the action, whenever not
-empty, will be used as the dialog title. If the context extracted model
-is a collection, the first element of the collection is used. Custom
-actions ( {@code okAction} and {@code cancelAction}) can be configured
-to take care of user decision when closing the dialog.
+This action pulls a model out of the context (action parameter or selected model if action parameter is not filled), creates a view, binds it on the model and prepares for chaining with a modal dialog action to pop-up the result. The translated name of the action, whenever not empty, will be used as the dialog title. If the context extracted model is a collection, the first element of the collection is used. Custom actions ( {@code okAction} and {@code cancelAction}) can be configured to take care of user decision when closing the dialog.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -259,9 +236,7 @@ ChangePasswordAction
 
 -   **Super-type** : ``
 
-This is the frontend action to initiate the logged-in user password
-change. It will install a form view with a custom component designed to
-host :
+This is the frontend action to initiate the logged-in user password change. It will install a form view with a custom component designed to host :
 
 1.  the current password
 
@@ -269,16 +244,11 @@ host :
 
 3.  the confirmation for the new password
 
-This action must be combined (setting {@code okAction}) with a concrete
-subclass of backend {@code AbstractChangePasswordAction} that performs
-the actual password change depending on the authentication backend.
-Jspresso offers two concrete implementations :
+This action must be combined (setting {@code okAction}) with a concrete subclass of backend {@code AbstractChangePasswordAction} that performs the actual password change depending on the authentication backend. Jspresso offers two concrete implementations :
 
--   {@code LdapChangePasswordAction} for LDAP based authentication
-    backend
+-   {@code LdapChangePasswordAction} for LDAP based authentication backend
 
--   {@code DatabaseChangePasswordAction} for JDBC based authentication
-    backend
+-   {@code DatabaseChangePasswordAction} for JDBC based authentication backend
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -296,9 +266,7 @@ EditBackendControllerAction
 
 -   **Super-type** : ``
 
-This is a frontend action to display a view backed by the session
-backend controller itself. It is used, for instance, to display the
-running asynchronous actions.
+This is a frontend action to display a view backed by the session backend controller itself. It is used, for instance, to display the running asynchronous actions.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -316,9 +284,7 @@ EditFrontendControllerAction
 
 -   **Super-type** : ``
 
-This is a frontend action to display a view backed by the session
-backend controller itself. It is used, for instance, to display the
-running asynchronous actions.
+This is a frontend action to display a view backed by the session backend controller itself. It is used, for instance, to display the running asynchronous actions.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -336,9 +302,7 @@ EditReportParametersAction
 
 -   **Super-type** : ``
 
-This action takes a report ({@code IReport}) from the context ( {@code
-REPORT\_ACTION\_PARAM} key) and pops-up a form to allow for the report
-input parameters customization.
+This action takes a report ({@code IReport}) from the context ( {@code REPORT\_ACTION\_PARAM} key) and pops-up a form to allow for the report input parameters customization.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -356,9 +320,7 @@ MobileEditComponentAction
 
 -   **Super-type** : ``
 
-This is the mobile version of the edit component action. {@code
-okAction} and {@code cancelAction}) are added as page actions instead of
-dialog ones.
+This is the mobile version of the edit component action. {@code okAction} and {@code cancelAction}) are added as page actions instead of dialog ones.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -376,9 +338,7 @@ EditSelectedComponentAction
 
 -   **Super-type** : ``
 
-This action should be installed on collection views. It takes the
-selected component and edit it in a modal dialog. Editing happens in a
-"Unit of Work" meaning that it can be rolled-back when canceling.
+This action should be installed on collection views. It takes the selected component and edit it in a modal dialog. Editing happens in a "Unit of Work" meaning that it can be rolled-back when canceling.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -403,12 +363,7 @@ AbstractMessageAction
 
 -   **Sub-types** : ``, ``, ``, ``
 
-This is the base class for all UI message based communication actions.
-This type of action generally opens a modal dialog to display an
-informational message, ask a question, and so on. It takes the message
-from the action context parameter and supports basic HTML formatting. In
-order for the message to be interpreted as HTML, it must be surrounded
-by {@code \<HTML\>} tags.
+This is the base class for all UI message based communication actions. This type of action generally opens a modal dialog to display an informational message, ask a question, and so on. It takes the message from the action context parameter and supports basic HTML formatting. In order for the message to be interpreted as HTML, it must be surrounded by {@code \<HTML\>} tags.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -446,9 +401,7 @@ StaticInfoAction
 
 -   **Super-type** : ``
 
-This action pops-up an informational message to the user. The message,
-instead of being extracted out of the context, is parametrized
-statically into the action through its internationalization key.
+This action pops-up an informational message to the user. The message, instead of being extracted out of the context, is parametrized statically into the action through its internationalization key.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -471,9 +424,7 @@ OkCancelAction
 
 -   **Sub-types** : ``
 
-This action pops-up an Ok - Cancel confirmation option. Depending on
-user answer, another action is triggered. The Ok - Cancel alternative
-actions are parametrized statically.
+This action pops-up an Ok - Cancel confirmation option. Depending on user answer, another action is triggered. The Ok - Cancel alternative actions are parametrized statically.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -496,9 +447,7 @@ StaticOkCancelAction
 
 -   **Super-type** : ``
 
-This action pops-up an Ok - Cancel confirmation option. The message,
-instead of being extracted out of the context, is parametrized
-statically into the action through its internationalization key.
+This action pops-up an Ok - Cancel confirmation option. The message, instead of being extracted out of the context, is parametrized statically into the action through its internationalization key.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -521,9 +470,7 @@ YesNoAction
 
 -   **Sub-types** : ``
 
-This action pops-up a binary question. Depending on user answer, another
-action is triggered. The Yes - No alternative actions are parametrized
-statically.
+This action pops-up a binary question. Depending on user answer, another action is triggered. The Yes - No alternative actions are parametrized statically.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -546,9 +493,7 @@ StaticYesNoAction
 
 -   **Super-type** : ``
 
-This action pops-up a binary question. The message, instead of being
-extracted out of the context, is parametrized statically into the action
-through its internationalization key.
+This action pops-up a binary question. The message, instead of being extracted out of the context, is parametrized statically into the action through its internationalization key.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -571,9 +516,7 @@ YesNoCancelAction
 
 -   **Sub-types** : ``
 
-This action pops-up a binary question with Cancel option. Depending on
-user answer, another action is triggered. The Yes - No - Cancel
-alternative actions are parametrized statically.
+This action pops-up a binary question with Cancel option. Depending on user answer, another action is triggered. The Yes - No - Cancel alternative actions are parametrized statically.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -600,9 +543,7 @@ StaticYesNoCancelAction
 
 -   **Super-type** : ``
 
-This action pops-up a binary question with Cancel option. The message,
-instead of being extracted out of the context, is parametrized
-statically into the action through its internationalization key.
+This action pops-up a binary question with Cancel option. The message, instead of being extracted out of the context, is parametrized statically into the action through its internationalization key.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -625,13 +566,7 @@ AbstractModuleDirtyStateAction
 
 -   **Sub-types** : ``, ``
 
-This is the base abstract class for actions that are responsible for
-checking module dirty state. *Dirty* is taken in the sense of an entity
-needing to be flushed to the persistent store. Among modules that are to
-be checked, a collection module is marked dirty if and only if one of
-its module objects is an entity which is dirty. On the other hand, a
-bean module is marked dirty if and only if its (single) module object is
-an entity and is dirty.
+This is the base abstract class for actions that are responsible for checking module dirty state. *Dirty* is taken in the sense of an entity needing to be flushed to the persistent store. Among modules that are to be checked, a collection module is marked dirty if and only if one of its module objects is an entity which is dirty. On the other hand, a bean module is marked dirty if and only if its (single) module object is an entity and is dirty.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -649,11 +584,7 @@ CheckAllModulesDirtyStateAction
 
 -   **Super-type** : ``
 
-This action recomputes all application modules dirty state. All the
-workspaces are traversed as well as, for each workspace, the whole
-module hierarchy. This action is typically triggered before a user
-exists the application to bring up a notification of potentially lost
-pending changes.
+This action recomputes all application modules dirty state. All the workspaces are traversed as well as, for each workspace, the whole module hierarchy. This action is typically triggered before a user exists the application to bring up a notification of potentially lost pending changes.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -671,9 +602,7 @@ CheckModuleDirtyStateAction
 
 -   **Super-type** : ``
 
-This action recomputes the dirty state of the current selected module.
-It is typically triggered when the user navigates (leaves) out of the
-module to compute a visual notification of a pending change.
+This action recomputes the dirty state of the current selected module. It is typically triggered when the user navigates (leaves) out of the module to compute a visual notification of a pending change.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -750,17 +679,9 @@ ChooseFileAction
 
 -   **Sub-types** : ``, ``
 
-This is the abstract base class for actions dealing with client file
-system operations. It holds several parametrizations that are common to
-all file operations. Please, be aware that these FS actions heavily
-depend on the UI channel, i.e. you have different implementation classes
-(but registered under the same Spring name) for all supported UI
-technologies. For instance, {@code SaveFileAction} will have as many
-implementations as the number of supported UIs, each in a specific
-package :
+This is the abstract base class for actions dealing with client file system operations. It holds several parametrizations that are common to all file operations. Please, be aware that these FS actions heavily depend on the UI channel, i.e. you have different implementation classes (but registered under the same Spring name) for all supported UI technologies. For instance, {@code SaveFileAction} will have as many implementations as the number of supported UIs, each in a specific package :
 
-{@code org.jspresso.framework.application.frontend.action.}**{@code
-[ui]}**{@code .file.SaveFileAction}
+{@code org.jspresso.framework.application.frontend.action.}**{@code [ui]}**{@code .file.SaveFileAction}
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -794,9 +715,7 @@ OpenFileAction
 
 -   **Sub-types** : ``
 
-This action lets the user browse his local file system and choose a file
-to read some content from. What is done with the file content is
-determined by the configured {@code fileOpenCallback} instance.
+This action lets the user browse his local file system and choose a file to read some content from. What is done with the file content is determined by the configured {@code fileOpenCallback} instance.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -828,12 +747,7 @@ OpenFileAsBinaryPropertyAction
 
 -   **Super-type** : ``
 
-This action lets the user browse the local file system and choose a file
-to update the content of a binary property. Files are filtered based on
-the file filter defined in the binary property descriptor. This file
-action must be installed on a property view. A suitable (built-in) file
-open callback is installed upon action instantiation and thus, nothing
-has to be configured for the action to be immediately operational.
+This action lets the user browse the local file system and choose a file to update the content of a binary property. Files are filtered based on the file filter defined in the binary property descriptor. This file action must be installed on a property view. A suitable (built-in) file open callback is installed upon action instantiation and thus, nothing has to be configured for the action to be immediately operational.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -853,9 +767,7 @@ SaveFileAction
 
 -   **Sub-types** : ``
 
-This action lets the user browse his local file system and choose a file
-to write some content to. What is done with the file content is
-determined by the configured {@code fileSaveCallback} instance.
+This action lets the user browse his local file system and choose a file to write some content to. What is done with the file content is determined by the configured {@code fileSaveCallback} instance.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -900,12 +812,7 @@ SaveBinaryPropertyAsFileAction
 
 -   **Super-type** : ``
 
-This action lets the user browse the local file system and choose a file
-to save the content of a binary property to. Files are filtered based on
-the file filter defined in the binary property descriptor. This file
-action must be installed on a property view. A suitable (built-in) file
-open callback is installed upon action instantiation and thus, nothing
-has to be configured for the action to be immediately operational.
+This action lets the user browse the local file system and choose a file to save the content of a binary property to. Files are filtered based on the file filter defined in the binary property descriptor. This file action must be installed on a property view. A suitable (built-in) file open callback is installed upon action instantiation and thus, nothing has to be configured for the action to be immediately operational.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -923,8 +830,7 @@ CleanModuleAndGoBackIfTransientAction
 
 -   **Super-type** : `AbstractRemoteAction`
 
-Check current selected module object. If it is transient, removes it
-from the current module and go back.
+Check current selected module object. If it is transient, removes it from the current module and go back.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -942,9 +848,7 @@ DisplayJasperReportAction
 
 -   **Super-type** : `AbstractRemoteAction`
 
-This action will take a {@code JasperPrint} (a processed Jasper report
-instance), produce a PDF output and open a browser window (tab) to
-display it.
+This action will take a {@code JasperPrint} (a processed Jasper report instance), produce a PDF output and open a browser window (tab) to display it.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1029,12 +933,7 @@ ReportAction
 
 -   **Super-type** : ``
 
-This action allows the user to select a report to generate on the
-collection view where it has been installed. The collection backing the
-view can either be a collection of {@code IReport} or {@code
-IReportDescriptor}. In the latter situation, the corresponding {@code
-IReport} instances are created on the fly using the configured report
-factory.
+This action allows the user to select a report to generate on the collection view where it has been installed. The collection backing the view can either be a collection of {@code IReport} or {@code IReportDescriptor}. In the latter situation, the corresponding {@code IReport} instances are created on the fly using the configured report factory.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1052,11 +951,7 @@ StaticReportAction
 
 -   **Super-type** : ``
 
-This action generates and displays a report that is statically
-configured through the {@code reportDescriptor} parameter. The report
-context is augmented with the identifier of the entity that is selected
-in the view were the action is installed, under the key {@code
-ENTITY\_ID}.
+This action generates and displays a report that is statically configured through the {@code reportDescriptor} parameter. The report context is augmented with the identifier of the entity that is selected in the view were the action is installed, under the key {@code ENTITY\_ID}.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1075,8 +970,7 @@ ActionParamToSelectedModelAction
 
 -   **Super-type** : ``
 
-A very simple frontend action that uses the puts the context action
-param as selected model.
+A very simple frontend action that uses the puts the context action param as selected model.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1094,9 +988,7 @@ AddBeanAsSubModuleFrontAction
 
 -   **Super-type** : ``
 
-This action can be installed on any collection view and will take the
-selected elements in the underlying model collection and create a bean
-module out of them.
+This action can be installed on any collection view and will take the selected elements in the underlying model collection and create a bean module out of them.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1129,13 +1021,7 @@ AddCollectionToMasterAction
 
 -   **Super-type** : ``
 
-This action is designed to wrap a backend action that will create and
-add a (collection of) component(s) to the model collection of the view
-it's installed on. Its objective is to complete the action context with
-the descriptor of the component (or entity) to be added so that the
-backend action explicitly knows what to create. Moreover, the name,
-description and icon used for the graphical representation are all
-computed out of the configured {@code elementEntityDescriptor}.
+This action is designed to wrap a backend action that will create and add a (collection of) component(s) to the model collection of the view it's installed on. Its objective is to complete the action context with the descriptor of the component (or entity) to be added so that the backend action explicitly knows what to create. Moreover, the name, description and icon used for the graphical representation are all computed out of the configured {@code elementEntityDescriptor}.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1167,8 +1053,7 @@ AddPageAction
 
 -   **Super-type** : ``
 
-A special mobile pagination action that adds a page to the current
-results.
+A special mobile pagination action that adds a page to the current results.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1186,10 +1071,7 @@ BinaryPropertyInfoAction
 
 -   **Super-type** : ``
 
-This action displays information about a binary property content. The
-displayed information mainly consists in the content size. The action
-must be installed on a property view and supports textual and binary
-properties.
+This action displays information about a binary property content. The displayed information mainly consists in the content size. The action must be installed on a property view and supports textual and binary properties.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1207,10 +1089,7 @@ ChooseActionAction
 
 -   **Super-type** : ``
 
-This action displays a list of frontend actions so that the user can
-choose and launch one of them. This action is meant to be chained with
-the generic {@code ChooseComponentAction} so that the action list is
-actually displayed.
+This action displays a list of frontend actions so that the user can choose and launch one of them. This action is meant to be chained with the generic {@code ChooseComponentAction} so that the action list is actually displayed.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1229,12 +1108,7 @@ ChooseComponentAction
 
 -   **Super-type** : ``
 
-This action takes an arbitrary model collection connector from the
-action context parameter and binds it to a newly created table view.
-This action is meant to be chained to the generic {@code
-ModalDialogAction} so that the table is actually popped-up in a dialog.
-Two actions ({@code okAction} and {@code cancelAction}) can be
-configured to react to the user decision.
+This action takes an arbitrary model collection connector from the action context parameter and binds it to a newly created table view. This action is meant to be chained to the generic {@code ModalDialogAction} so that the table is actually popped-up in a dialog. Two actions ({@code okAction} and {@code cancelAction}) can be configured to react to the user decision.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1269,9 +1143,7 @@ CloseDialogAction
 
 -   **Sub-types** : ``
 
-This is a very generic action that closes (disposes) the currently
-opened dialog. The dialog is actually closed between the *wrapped*
-action and the *next* action if and only if the wrapped action succeeds.
+This is a very generic action that closes (disposes) the currently opened dialog. The dialog is actually closed between the *wrapped* action and the *next* action if and only if the wrapped action succeeds.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1307,10 +1179,7 @@ DisplayNextPinnedModuleAction
 
 -   **Super-type** : ``
 
-This action triggers a *"forward"* navigation in the recorded module
-history. The frontend controller automatically keeps track of the
-traversed modules so that a user can go back and forward his navigation
-history, much like for a web navigation.
+This action triggers a *"forward"* navigation in the recorded module history. The frontend controller automatically keeps track of the traversed modules so that a user can go back and forward his navigation history, much like for a web navigation.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1328,10 +1197,7 @@ DisplayPreviousPinnedModuleAction
 
 -   **Super-type** : ``
 
-This action triggers a *"backward"* navigation in the recorded module
-history. The frontend controller automatically keeps track of the
-traversed modules so that a user can go back and forward his navigation
-history, much like for a web navigation.
+This action triggers a *"backward"* navigation in the recorded module history. The frontend controller automatically keeps track of the traversed modules so that a user can go back and forward his navigation history, much like for a web navigation.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1351,9 +1217,7 @@ DisplayUrlAction
 
 -   **Sub-types** : ``
 
-This action opens a browser (or a browser tab) targeted at a URL. The
-actual URL is a composition of a static parametrized prefix ({@code
-baseUrl}) and a dynamic part taken from the action context parameter.
+This action opens a browser (or a browser tab) targeted at a URL. The actual URL is a composition of a static parametrized prefix ({@code baseUrl}) and a dynamic part taken from the action context parameter.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1376,13 +1240,7 @@ DisplayStaticUrlAction
 
 -   **Super-type** : ``
 
-Like its parent, this action opens a URL in a browser (or a browser
-tab). But instead of taking the URL out of the context, it uses a
-statically parametrized URL, or rather a key ({@code urlKey}) used to
-translate the URL based on the logged-in user language. This is
-particularly useful for linking to static internationalized content,
-like an online manual. Be aware that once the URL is translated, it is
-still appended to the {@code baseUrl}.
+Like its parent, this action opens a URL in a browser (or a browser tab). But instead of taking the URL out of the context, it uses a statically parametrized URL, or rather a key ({@code urlKey}) used to translate the URL based on the logged-in user language. This is particularly useful for linking to static internationalized content, like an online manual. Be aware that once the URL is translated, it is still appended to the {@code baseUrl}.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1401,8 +1259,7 @@ EditSelectionAction
 
 -   **Super-type** : ``
 
-This action is meant to trigger editing on the current collection view
-whenever a single element is selected.
+This action is meant to trigger editing on the current collection view whenever a single element is selected.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1420,8 +1277,7 @@ ExecuteActionAction
 
 -   **Super-type** : ``
 
-This generic action takes another arbitrary action out of the context
-parameter and executes it.
+This generic action takes another arbitrary action out of the context parameter and executes it.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1439,11 +1295,7 @@ ExitAction
 
 -   **Super-type** : ``
 
-This action exits the application. Before doing so, user activated
-application modules are traversed ton check that no pending changes need
-to be forwarded to the persistent store. Whenever the dirty checking is
-positive, then the user is notified and given a chance to cancel the
-exit.
+This action exits the application. Before doing so, user activated application modules are traversed ton check that no pending changes need to be forwarded to the persistent store. Whenever the dirty checking is positive, then the user is notified and given a chance to cancel the exit.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1466,9 +1318,7 @@ ListApplicationElementsAction
 
 -   **Super-type** : ``
 
-This is a special frontend action to list all application metamodel
-elements available along with their permIds. This is particularly useful
-to set-up the base of security referential setup.
+This is a special frontend action to list all application metamodel elements available along with their permIds. This is particularly useful to set-up the base of security referential setup.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1486,10 +1336,7 @@ LoginAction
 
 -   **Super-type** : ``
 
-This is the frontend action to trigger the application login using the
-current credential in the frontend controller. If the action is
-configured with {@code anonymous = true}, then an anonymous login is
-attempted. If not, a normal login is performed.
+This is the frontend action to trigger the application login using the current credential in the frontend controller. If the action is configured with {@code anonymous = true}, then an anonymous login is attempted. If not, a normal login is performed.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1510,18 +1357,7 @@ LovAction
 
 -   **Sub-types** : ``
 
-This is a standard "List Of Values" action for reference property views.
-Although this action is used by default in view factories on reference
-fields, it can also be used in a more standard way, i.e. registered as a
-view action. In the latter, the {@code okAction} must be configured to
-perform a custom treatment once the entity is chosen from the LOV.
-Additionally you can statically configure the descriptor of the searched
-entities using the {@code entityDescriptor} parameter so that the LOV
-will act on this type of entities. The LOV action prepares a QBE view
-(filter / result list) along with 3 actions that can be further refined
-: {@code findAction}, {@code okAction} and {@code cancelAction}. It must
-the be linked to a {@code ModalDialogAction} so that the LOV actually
-pops up.
+This is a standard "List Of Values" action for reference property views. Although this action is used by default in view factories on reference fields, it can also be used in a more standard way, i.e. registered as a view action. In the latter, the {@code okAction} must be configured to perform a custom treatment once the entity is chosen from the LOV. Additionally you can statically configure the descriptor of the searched entities using the {@code entityDescriptor} parameter so that the LOV will act on this type of entities. The LOV action prepares a QBE view (filter / result list) along with 3 actions that can be further refined : {@code findAction}, {@code okAction} and {@code cancelAction}. It must the be linked to a {@code ModalDialogAction} so that the LOV actually pops up.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1628,23 +1464,15 @@ ModalDialogAction
 
 -   **Super-type** : ``
 
-This is a very generic action that takes its specifications out of the
-action context, creates and pops-up a modal dialog based on these specs.
-The action is meant to be chained after another frontend action that
-produce the dialog specs into the action context. Context entries that
-are used are :
+This is a very generic action that takes its specifications out of the action context, creates and pops-up a modal dialog based on these specs. The action is meant to be chained after another frontend action that produce the dialog specs into the action context. Context entries that are used are :
 
--   {@code DIALOG\_VIEW} : the view to be used as the dialog content
-    pane.
+-   {@code DIALOG\_VIEW} : the view to be used as the dialog content pane.
 
 -   {@code DIALOG\_TITLE} : the title of the dialog.
 
--   {@code DIALOG\_ACTIONS} : the actions to be installed at the bottom
-    of the dialog.
+-   {@code DIALOG\_ACTIONS} : the actions to be installed at the bottom of the dialog.
 
--   {@code DIALOG\_SIZE} : the dialog preferred size. Whenever the
-    dialog size is {@code null}, the dialog size is determined from the
-    preferred size of the content view.
+-   {@code DIALOG\_SIZE} : the dialog preferred size. Whenever the dialog size is {@code null}, the dialog size is determined from the preferred size of the content view.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1662,8 +1490,7 @@ ModuleRestartAction
 
 -   **Super-type** : ``
 
-This action is used to restart a module. It cleans its children and
-executes its startup action.
+This action is used to restart a module. It cleans its children and executes its startup action.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1681,9 +1508,7 @@ ModuleSelectionAction
 
 -   **Super-type** : ``
 
-Displays a module, and the corresponding workspace if necessary based on
-their names. It can be used as startup action to select and display a
-module when the application launches.
+Displays a module, and the corresponding workspace if necessary based on their names. It can be used as startup action to select and display a module when the application launches.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1706,8 +1531,7 @@ OkChooseComponentAction
 
 -   **Super-type** : ``
 
-This action augments the context by setting the action parameter to the
-selected component of the collection view (or null if none is selected).
+This action augments the context by setting the action parameter to the selected component of the collection view (or null if none is selected).
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1725,8 +1549,7 @@ OkLovAction
 
 -   **Super-type** : ``
 
-This action augments the context by setting the action parameter to the
-selected entity of the LOV result list (or null if none is selected).
+This action augments the context by setting the action parameter to the selected entity of the LOV result list (or null if none is selected).
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1744,10 +1567,7 @@ PageOffsetAction
 
 -   **Super-type** : ``
 
-This action simply augment the context with a page offset integer (
-{@code PAGE\_OFFSET}). It is meant to be linked to a find/query action
-that will further leverage this offset to navigate a pageable result
-set.
+This action simply augment the context with a page offset integer ( {@code PAGE\_OFFSET}). It is meant to be linked to a find/query action that will further leverage this offset to navigate a pageable result set.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1766,9 +1586,7 @@ ParentModuleConnectorSelectionAction
 
 -   **Super-type** : ``
 
-This action simply displays the parent of the currently selected module;
-i.e. it goes up one level in the module hierarchy of the current
-workspace.
+This action simply displays the parent of the currently selected module; i.e. it goes up one level in the module hierarchy of the current workspace.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1786,9 +1604,7 @@ PrintAction
 
 -   **Super-type** : ``
 
-This action allows the user to choose a report among a list and print
-it. The list of available reports is statically configured into the
-action.
+This action allows the user to choose a report among a list and print it. The list of available reports is statically configured into the action.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1831,8 +1647,7 @@ SelectedModelToActionParamAction
 
 -   **Super-type** : ``
 
-A very simple frontend action that puts the selected model(s) as context
-action param.
+A very simple frontend action that puts the selected model(s) as context action param.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1850,9 +1665,7 @@ SetConnectorValueAction
 
 -   **Super-type** : ``
 
-This action retrieves the action parameter from the action context and
-assigns it as value to the targeted connector. The connector to target
-is itself retrieved from the action context using a parametrized key.
+This action retrieves the action parameter from the action context and assigns it as value to the targeted connector. The connector to target is itself retrieved from the action context using a parametrized key.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1872,8 +1685,7 @@ TransferToClipboardAction
 
 -   **Super-type** : ``
 
-An action used to transfer textual representation(s) of selected models
-to the system clipboard.
+An action used to transfer textual representation(s) of selected models to the system clipboard.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -1893,8 +1705,7 @@ EditSelectedComponentAction.UowRollbackerAction
 
 -   **Super-type** : ``
 
-A wrapper action that roll backs the current UOW before delegating to
-its delegate.
+A wrapper action that roll backs the current UOW before delegating to its delegate.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -1912,70 +1723,25 @@ WizardAction
 
 -   **Super-type** : ``
 
-This action implements a "wizard". It can be configured from the
-simplest use-case (as for a value entering) to the most complex,
-multi-step wizard. Here are a usage directions :
+This action implements a "wizard". It can be configured from the simplest use-case (as for a value entering) to the most complex, multi-step wizard. Here are a usage directions :
 
-1.  The generic wizard front-end action is registered in the Spring
-    context under the name wizardAction. So you will typically inherit
-    the bean definition using the parent="wizardAction" when declaring
-    yours.
+1.  The generic wizard front-end action is registered in the Spring context under the name wizardAction. So you will typically inherit the bean definition using the parent="wizardAction" when declaring yours.
 
-2.  The goal of the wizard action is to work on a map - the wizard model
-    - (potentially containing other maps) that represents a hierarchical
-    data structure that can be used seamlessly as model for any Jspresso
-    view. In your case, the map will only contain 1 key-value pair (the
-    property you want your user to enter). When finishing the wizard,
-    the action context will contain the map with all the key-value pairs
-    the user has created/modified through the wizard steps. It will be
-    accessible in the action context under the
-    ActionContextConstants.ACTION\_PARAM key and will typically serve as
-    input for the finish chained action.
+2.  The goal of the wizard action is to work on a map - the wizard model - (potentially containing other maps) that represents a hierarchical data structure that can be used seamlessly as model for any Jspresso view. In your case, the map will only contain 1 key-value pair (the property you want your user to enter). When finishing the wizard, the action context will contain the map with all the key-value pairs the user has created/modified through the wizard steps. It will be accessible in the action context under the ActionContextConstants.ACTION\_PARAM key and will typically serve as input for the finish chained action.
 
-3.  The wizard action is configured using chained
-    org.jspresso.framework.application
-    .frontend.action.wizard.IWizardStepDescriptor. A concrete, directly
-    usable, implementation of this interface is
-    org.jspresso.framework.application.frontend
-    .action.wizard.StaticWizardStepDescriptor. Each wizard step is
-    highly configurable (name, description, icon, ...) but its most
-    important properties are :
+3.  The wizard action is configured using chained org.jspresso.framework.application .frontend.action.wizard.IWizardStepDescriptor. A concrete, directly usable, implementation of this interface is org.jspresso.framework.application.frontend .action.wizard.StaticWizardStepDescriptor. Each wizard step is highly configurable (name, description, icon, ...) but its most important properties are :
 
-    1.  {@code viewDescriptor} : the Jspresso view descriptor to be
-        shown in the wizard GUI when the user enters this step. It can
-        be arbitrarily complex (even with master-detail like views,
-        inner actions, constraints, security enforcements, ...). Of
-        course, the view descriptor needs a model descriptor. So you
-        must describe the wizard model as you would do for persistent
-        entities or components (so that step views can configure
-        themselves). You will typically use a BasicComponentDescriptor
-        without name so that it is automatically excluded from code
-        generation. Note that your actual model object will be a map
-        (and not Jspresso generated java bean) but Jspresso connectors
-        are "smart" enough to detect the situation and work with the
-        hierarchy of maps as if it was a hierarchy of java beans.
+    1.  {@code viewDescriptor} : the Jspresso view descriptor to be shown in the wizard GUI when the user enters this step. It can be arbitrarily complex (even with master-detail like views, inner actions, constraints, security enforcements, ...). Of course, the view descriptor needs a model descriptor. So you must describe the wizard model as you would do for persistent entities or components (so that step views can configure themselves). You will typically use a BasicComponentDescriptor without name so that it is automatically excluded from code generation. Note that your actual model object will be a map (and not Jspresso generated java bean) but Jspresso connectors are "smart" enough to detect the situation and work with the hierarchy of maps as if it was a hierarchy of java beans.
 
-    2.  optional {@code onEnterAction} and {@code onLeaveAction} :
-        actions that will respectively be executed when entering and
-        when exiting the wizard step.
+    2.  optional {@code onEnterAction} and {@code onLeaveAction} : actions that will respectively be executed when entering and when exiting the wizard step.
 
-    3.  optional {@code nextLabelKey} and {@code previousLabelKey} :
-        i18n keys for next and previous buttons if you want to change
-        the default ones.
+    3.  optional {@code nextLabelKey} and {@code previousLabelKey} : i18n keys for next and previous buttons if you want to change the default ones.
 
-    4.  optional {@code nextStepDescriptor} : the next wizard step. If
-        null, the wizard GUI will enable the finish action.
+    4.  optional {@code nextStepDescriptor} : the next wizard step. If null, the wizard GUI will enable the finish action.
 
-4.  The first wizard step is registered on the wizard action using the
-    {@code firstWizardStep} property.
+4.  The first wizard step is registered on the wizard action using the {@code firstWizardStep} property.
 
-5.  When the user leaves the last wizard step (clicking the finish
-    action button), the finish action is triggered. The finish action
-    can be registered on the wizard action using the {@code
-    finishAction} property. This is typically the place where you
-    explore the wizard map model - {@code ACTION\_PARAM} - to get back
-    all the data the user has worked on. Note that the finish button is
-    entirely configured from the finish action (label and icon).
+5.  When the user leaves the last wizard step (clicking the finish action button), the finish action is triggered. The finish action can be registered on the wizard action using the {@code finishAction} property. This is typically the place where you explore the wizard map model - {@code ACTION\_PARAM} - to get back all the data the user has worked on. Note that the finish button is entirely configured from the finish action (label and icon).
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

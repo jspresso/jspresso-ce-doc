@@ -10,8 +10,7 @@ BasicRelationshipEndPropertyDescriptor
 
 -   **Sub-types** : ``, ``
 
-This is the abstract base descriptor for all relationship properties.
-relationship properties include :
+This is the abstract base descriptor for all relationship properties. relationship properties include :
 
 -   *reference* properties, i.e. "N to 1" or "1 to 1" properties
 
@@ -121,8 +120,7 @@ BasicCollectionPropertyDescriptor
 
 -   **Super-type** : ``
 
-This descriptor is used to describe collection properties that are used
-either as "1-N" or "N-N" "N" relationship end.
+This descriptor is used to describe collection properties that are used either as "1-N" or "N-N" "N" relationship end.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

@@ -10,16 +10,7 @@ BasicCompositeViewDescriptor
 
 -   **Sub-types** : ``, ``, ``, ``, ``, ``
 
-This is the abstract base class for all composite views. A composite
-view is a view that arranges a collection of nested views in a
-predefined layout. Nested views can also be composite views which makes
-it possible to build complex UIs out of simple combinations. Composite
-views are also the foundation of master-detail views by allowing a
-nested view to take its model out of the selection of the previous one.
-This behaviour can be activated using the {@code cascadingModels}
-property that "cascades" the view models based on the selected elements.
-Whenever this behaviour is not activated, all nested views share the
-same model than their parent composite unless specified otherwise.
+This is the abstract base class for all composite views. A composite view is a view that arranges a collection of nested views in a predefined layout. Nested views can also be composite views which makes it possible to build complex UIs out of simple combinations. Composite views are also the foundation of master-detail views by allowing a nested view to take its model out of the selection of the previous one. This behaviour can be activated using the {@code cascadingModels} property that "cascades" the view models based on the selected elements. Whenever this behaviour is not activated, all nested views share the same model than their parent composite unless specified otherwise.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -133,8 +124,7 @@ MobileCompositePageViewDescriptor
 
 -   **Super-type** : ``
 
-A composite view descriptor that aggregates view sections on a single
-page.
+A composite view descriptor that aggregates view sections on a single page.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -166,8 +156,7 @@ MobileNavPageViewDescriptor
 
 -   **Super-type** : ``
 
-Navigation page view descriptors that are able to navigate to another
-page based on a selection component.
+Navigation page view descriptors that are able to navigate to another page based on a selection component.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -203,15 +192,11 @@ BasicBorderViewDescriptor
 
 -   **Sub-types** : ``
 
-A border view is a composite view that arranges its children to the
-*north*, *west*, *east*, *south* and *center*. Depending its position in
-the container, the resizing rules apply differently :
+A border view is a composite view that arranges its children to the *north*, *west*, *east*, *south* and *center*. Depending its position in the container, the resizing rules apply differently :
 
--   *north* and *south* are resized horizontally and kept to their
-    preferred size vertically
+-   *north* and *south* are resized horizontally and kept to their preferred size vertically
 
--   *west* and *east* are resized vertically and kept to their preferred
-    size horizontally
+-   *west* and *east* are resized vertically and kept to their preferred size horizontally
 
 -   *center* is resized both horizontally and vertically
 
@@ -307,28 +292,21 @@ BasicConstrainedGridViewDescriptor
 
 -   **Super-type** : ``
 
-This composite view arranges its children in a grid where cell behaviour
-and dimensions are configured using cell constraints. A cell constraint
-is a simple data structure holding the following properties :
+This composite view arranges its children in a grid where cell behaviour and dimensions are configured using cell constraints. A cell constraint is a simple data structure holding the following properties :
 
 -   {@code row}: the row to which the cell belongs
 
 -   {@code column}: the column to which the cell belongs
 
--   {@code width}: the number of columns the cell spans horizontally
-    (default value is 1)
+-   {@code width}: the number of columns the cell spans horizontally (default value is 1)
 
--   {@code height}: the number of rows the cell spans vertically
-    (default value is 1)
+-   {@code height}: the number of rows the cell spans vertically (default value is 1)
 
--   {@code heightResizable}: whether the cell should be resized to take
-    all the available space vertically
+-   {@code heightResizable}: whether the cell should be resized to take all the available space vertically
 
--   {@code widthResizable}: whether the cell should be resized to take
-    all the available space horizontally
+-   {@code widthResizable}: whether the cell should be resized to take all the available space horizontally
 
-Default cascading order follows the order of nested view registrations
-in the container.
+Default cascading order follows the order of nested view registrations in the container.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -352,24 +330,13 @@ BasicEvenGridViewDescriptor
 
 -   **Super-type** : ``
 
-This composite view arranges its children in a grid where cells are
-distributed evenly. All cells are resized horizontally and vertically to
-fill its available space.
+This composite view arranges its children in a grid where cells are distributed evenly. All cells are resized horizontally and vertically to fill its available space.
 
-The number of cells in a row / column is determined by the combination
-of the {@code drivingDimension} and {@code drivingDimensionCellCount}
-properties. the cells are spread along the driving dimension (row or
-column) until the maximum number of cells in the dimension has been
-reached. Then a new row (or column) is added. The process repeats until
-all the cells have been added.
+The number of cells in a row / column is determined by the combination of the {@code drivingDimension} and {@code drivingDimensionCellCount} properties. the cells are spread along the driving dimension (row or column) until the maximum number of cells in the dimension has been reached. Then a new row (or column) is added. The process repeats until all the cells have been added.
 
-This container does not allow for individual cell configuration like
-row/column spanning. Whenever cell disposition has to be customized more
-finely, a {@code BasicConstrainedGridViewDescriptor} should be used
-instead.
+This container does not allow for individual cell configuration like row/column spanning. Whenever cell disposition has to be customized more finely, a {@code BasicConstrainedGridViewDescriptor} should be used instead.
 
-Default cascading order follows the order of nested view registrations
-in the container.
+Default cascading order follows the order of nested view registrations in the container.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -408,11 +375,7 @@ BasicSplitViewDescriptor
 
 -   **Super-type** : ``
 
-This composite view arranges its children in a container split either
-horizontally or vertically. An horizontal split disposes its 2 children
-*left* and *right* whereas a vertical split disposes its 2 children
-*top* and *bottom*. The dividing bar can typically be moved by the user
-to distribute the available space.
+This composite view arranges its children in a container split either horizontally or vertically. An horizontal split disposes its 2 children *left* and *right* whereas a vertical split disposes its 2 children *top* and *bottom*. The dividing bar can typically be moved by the user to distribute the available space.
 
 Default cascading order for master-detail is :
 
@@ -459,13 +422,9 @@ BasicTabViewDescriptor
 
 -   **Sub-types** : ``
 
-This composite view arranges its children in tabs. Each tab potentially
-displays a label (that is translated based on the name of the view in
-the tab), an icon (based on the icon of the view in the tab) and a
-toolTip (based on the description of the view in the tab).
+This composite view arranges its children in tabs. Each tab potentially displays a label (that is translated based on the name of the view in the tab), an icon (based on the icon of the view in the tab) and a toolTip (based on the description of the view in the tab).
 
-Default cascading order follows the order of nested view registrations
-in the container.
+Default cascading order follows the order of nested view registrations in the container.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

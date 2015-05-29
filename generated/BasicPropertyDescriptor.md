@@ -10,15 +10,7 @@ BasicPropertyDescriptor
 
 -   **Sub-types** : ``, ``
 
-This is the abstract base class for all property descriptors. It mainly
-serves for factorizing all commons properties for property descriptors.
-A property descriptor is used for describing a
-component/entity/interface property (*Java Beans* semantic). You will
-never use {@code BasicPropertyDescriptor} as such but rather use its
-concrete descendants. Please note that {@code BasicPropertyDescriptor}
-enforces its name to start with a lower case letter, following the
-JavaBean convention. So even if you name it "MyProperty", it will
-actually end up to "myProperty".
+This is the abstract base class for all property descriptors. It mainly serves for factorizing all commons properties for property descriptors. A property descriptor is used for describing a component/entity/interface property (*Java Beans* semantic). You will never use {@code BasicPropertyDescriptor} as such but rather use its concrete descendants. Please note that {@code BasicPropertyDescriptor} enforces its name to start with a lower case letter, following the JavaBean convention. So even if you name it "MyProperty", it will actually end up to "myProperty".
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

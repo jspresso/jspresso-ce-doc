@@ -8,22 +8,13 @@ BasicTreeLevelDescriptor
 
 -   **Sub-types** : ``, ``
 
-This is the base descriptor for all tree levels. A tree level is a
-collection of sibling nodes that belong to the same formal collection
-(usually a component collection property). This base descriptor does not
-accept nested subtrees so it is only used to describe a collection of
-leaf nodes. If you need to describe intermediary tree levels, yous will
-use one of the 2 subtypes :
+This is the base descriptor for all tree levels. A tree level is a collection of sibling nodes that belong to the same formal collection (usually a component collection property). This base descriptor does not accept nested subtrees so it is only used to describe a collection of leaf nodes. If you need to describe intermediary tree levels, yous will use one of the 2 subtypes :
 
--   *BasicSimpleTreeLevelDescriptor* to define a collection of tree
-    nodes that accept a single subtree
+-   *BasicSimpleTreeLevelDescriptor* to define a collection of tree nodes that accept a single subtree
 
--   *BasicCompositeTreeLevelDescriptor* to define a collection of tree
-    nodes that accept a list of subtrees
+-   *BasicCompositeTreeLevelDescriptor* to define a collection of tree nodes that accept a list of subtrees
 
-Defining a tree level is mainly a matter of defining its representation
-as an individual list of components (i.e. the {@code
-nodeGroupDescriptor} property).
+Defining a tree level is mainly a matter of defining its representation as an individual list of components (i.e. the {@code nodeGroupDescriptor} property).
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -73,12 +64,7 @@ BasicCompositeTreeLevelDescriptor
 
 -   **Super-type** : ``
 
-This descriptor is used to describe a collection of sibling nodes that
-each nest multiple subtrees. The children subtrees are each placed under
-an intermediary grouping node. For instance, given a composite tree
-level mapping a collection of *A*s and whose children are 2 tree levels
-mapping respectively a collection *Y*s and *Z*s, the tree would look
-like :
+This descriptor is used to describe a collection of sibling nodes that each nest multiple subtrees. The children subtrees are each placed under an intermediary grouping node. For instance, given a composite tree level mapping a collection of *A*s and whose children are 2 tree levels mapping respectively a collection *Y*s and *Z*s, the tree would look like :
 
      parent
        -1
@@ -105,8 +91,7 @@ like :
            -3.2
      
 
-You can notice the intermediary grouping nodes that are installed to
-visually separate the 2 collection families (*Y* and *Z*).
+You can notice the intermediary grouping nodes that are installed to visually separate the 2 collection families (*Y* and *Z*).
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -129,11 +114,7 @@ BasicSimpleTreeLevelDescriptor
 
 -   **Sub-types** :
 
-This descriptor is used to describe a collection of sibling nodes that
-only nest a single subtree. The child subtree is directly placed under
-each node without any intermediary grouping node. For instance, given a
-simple tree level mapping a collection of *A*s and whose child is a tree
-level mapping a collection of *B*s, the tree would look like :
+This descriptor is used to describe a collection of sibling nodes that only nest a single subtree. The child subtree is directly placed under each node without any intermediary grouping node. For instance, given a simple tree level mapping a collection of *A*s and whose child is a tree level mapping a collection of *B*s, the tree would look like :
 
      parent
        -1

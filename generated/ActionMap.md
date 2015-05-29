@@ -6,16 +6,7 @@ ActionMap
 
 -   **Full name** : ``
 
-An action map is used to structure a set of actions. The actions are not
-directly registered but are placed into action lists that in turn are
-assigned to the action map. Action maps can be merged together, i.e. an
-action map can have multiple parent action maps. In that case, Action
-lists that have the same name are merged together. The way action maps
-are rendered depends on the place where they are declared. For instance
-an action map that is assigned to a view might be rendered as a toolbar
-with each action list separated into its own group. On the other hand,
-an action map declared on the frontend controller might be represented
-as a menu bar on the main application frame.
+An action map is used to structure a set of actions. The actions are not directly registered but are placed into action lists that in turn are assigned to the action map. Action maps can be merged together, i.e. an action map can have multiple parent action maps. In that case, Action lists that have the same name are merged together. The way action maps are rendered depends on the place where they are declared. For instance an action map that is assigned to a view might be rendered as a toolbar with each action list separated into its own group. On the other hand, an action map declared on the frontend controller might be represented as a menu bar on the main application frame.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

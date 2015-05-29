@@ -10,16 +10,11 @@ AbstractController
 
 -   **Sub-types** : ``, ``
 
-Abstract base class for controllers. Controllers role is to adapt the
-application to its environment. Jspresso relies on two different types
-of controllers :
+Abstract base class for controllers. Controllers role is to adapt the application to its environment. Jspresso relies on two different types of controllers :
 
--   The frontend controller is responsible for managing UI interactions.
-    Naturally, the type of frontend controller used depends on the UI
-    channel.
+-   The frontend controller is responsible for managing UI interactions. Naturally, the type of frontend controller used depends on the UI channel.
 
--   The backend controller is responsible for managing the application
-    session as well as transactions and persistence operations.
+-   The backend controller is responsible for managing the application session as well as transactions and persistence operations.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -59,8 +54,7 @@ AbstractBackendController
 
 -   **Sub-types** : ``
 
-Base class for backend application controllers. Backend controllers are
-responsible for :
+Base class for backend application controllers. Backend controllers are responsible for :
 
 -   keeping a reference to the application session
 
@@ -68,22 +62,13 @@ responsible for :
 
 -   keeping a reference to the application clipboard
 
--   keeping a reference to the entity registry that guarantees the
-    in-memory entity reference unicity in the user session
+-   keeping a reference to the entity registry that guarantees the in-memory entity reference unicity in the user session
 
--   keeping a reference to the entity dirt recorder that keeps track of
-    entity changes to afterwards optimize the ORM operations
+-   keeping a reference to the entity dirt recorder that keeps track of entity changes to afterwards optimize the ORM operations
 
--   keeping a reference to the Spring transaction template and its peer
-    "Unit of Work" -aka UOW- that is responsible to manage application
-    transactions and adapt the underlying transaction system (Hibernate,
-    JTA, ...)
+-   keeping a reference to the Spring transaction template and its peer "Unit of Work" -aka UOW- that is responsible to manage application transactions and adapt the underlying transaction system (Hibernate, JTA, ...)
 
-Moreover, the backend controller will provide several model related
-factories that can be configured to customize default, built-in
-behaviour. Most of these configured properties will be accessible using
-the corresponding getters. Those getters should be used by the service
-layer.
+Moreover, the backend controller will provide several model related factories that can be configured to customize default, built-in behaviour. Most of these configured properties will be accessible using the corresponding getters. Those getters should be used by the service layer.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -206,8 +191,7 @@ HibernateBackendController
 
 -   **Super-type** : ``
 
-This is the default Jspresso implementation of Hibernate-based backend
-controller.
+This is the default Jspresso implementation of Hibernate-based backend controller.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -244,15 +228,9 @@ AbstractFrontendController
 
 -   **Sub-types** : ``, ``
 
-Base class for frontend application controllers. Frontend controllers
-are responsible for adapting the Jspresso application to the UI channel.
-Although this generic abstract class centralizes most of the
-controller's configuration, it will be subclassed by concrete, UI
-dependent subclasses to implement polymorphic behaviour.
+Base class for frontend application controllers. Frontend controllers are responsible for adapting the Jspresso application to the UI channel. Although this generic abstract class centralizes most of the controller's configuration, it will be subclassed by concrete, UI dependent subclasses to implement polymorphic behaviour.
 
-More than a behavioural adapter, the frontend controller will also be
-the place where you define the top-level application structure like the
-workspace list, the name, the application-wide actions, ...
+More than a behavioural adapter, the frontend controller will also be the place where you define the top-level application structure like the workspace list, the name, the application-wide actions, ...
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -425,8 +403,7 @@ AbstractRemoteController
 
 -   **Sub-types** : ``, ``
 
-This is is the base implementation of all "remotable" frontend
-controller.
+This is is the base implementation of all "remotable" frontend controller.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -445,13 +422,7 @@ DefaultRemoteController
 
 -   **Super-type** : ``
 
-This is is the default implementation of a "remotable" frontend
-controller. It will implement a 3-tier architecture. The remote
-controller lives on server-side and communicates with generic UI engines
-that are deployed on client side. As of now, the remote frontend
-controller is used by the **Flex** and **qooxdoo** frontends.
-Communication happens through the use of generic UI commands that are
-produced/consumed on both sides of the network.
+This is is the default implementation of a "remotable" frontend controller. It will implement a 3-tier architecture. The remote controller lives on server-side and communicates with generic UI engines that are deployed on client side. As of now, the remote frontend controller is used by the **Flex** and **qooxdoo** frontends. Communication happens through the use of generic UI commands that are produced/consumed on both sides of the network.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -470,8 +441,7 @@ MobileRemoteController
 
 -   **Super-type** : ``
 
-This is is the mobile implementation of a "remotable" frontend
-controller.
+This is is the mobile implementation of a "remotable" frontend controller.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -490,10 +460,7 @@ DefaultSwingController
 
 -   **Super-type** : ``
 
-This is is the default implementation of the **Swing** frontend
-controller. It will implement a 2-tier architecture that is particularly
-useful for the development/debugging phases. Workspaces are displayed
-using an MDI UI using internal frames.
+This is is the default implementation of the **Swing** frontend controller. It will implement a 2-tier architecture that is particularly useful for the development/debugging phases. Workspaces are displayed using an MDI UI using internal frames.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

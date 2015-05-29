@@ -10,17 +10,11 @@ BasicCollectionDescriptor
 
 -   **Sub-types** : ``, ``
 
-This descriptor is used to describe a collection of components
-(entities, interfaces or components). This descriptor is mainly used to
-qualify the collection referenced by a collection property descriptor.
-As of now, Jspresso supports :
+This descriptor is used to describe a collection of components (entities, interfaces or components). This descriptor is mainly used to qualify the collection referenced by a collection property descriptor. As of now, Jspresso supports :
 
--   collections with {@code Set} semantic: do not allow for duplicates
-    and do not preserve the order of the elements in the data store
+-   collections with {@code Set} semantic: do not allow for duplicates and do not preserve the order of the elements in the data store
 
--   collections with {@code List} semantic: allows for duplicates and
-    preserves the order of the elements in the data store through an
-    implicit index column
+-   collections with {@code List} semantic: allows for duplicates and preserves the order of the elements in the data store through an implicit index column
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -85,10 +79,7 @@ BasicListDescriptor
 
 -   **Super-type** : ``
 
-This descriptor is equivalent to a {@code BasicCollectionDescriptor}
-with its {@code collectionInterface} property set to {@code
-java.util.List}. Using this descriptor prevents messing up with
-technical implementation details.
+This descriptor is equivalent to a {@code BasicCollectionDescriptor} with its {@code collectionInterface} property set to {@code java.util.List}. Using this descriptor prevents messing up with technical implementation details.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -106,10 +97,7 @@ BasicSetDescriptor
 
 -   **Super-type** : ``
 
-This descriptor is equivalent to a {@code BasicCollectionDescriptor}
-with its {@code collectionInterface} property set to {@code
-java.util.Set}. Using this descriptor prevents messing up with technical
-implementation details.
+This descriptor is equivalent to a {@code BasicCollectionDescriptor} with its {@code collectionInterface} property set to {@code java.util.Set}. Using this descriptor prevents messing up with technical implementation details.
 
   -------------------------------------------------------------------------
   Property                 Description

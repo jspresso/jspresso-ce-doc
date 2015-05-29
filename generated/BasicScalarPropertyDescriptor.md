@@ -10,9 +10,7 @@ BasicScalarPropertyDescriptor
 
 -   **Sub-types** : ``, ``, ``, ``, ``, ``, ``, ``, ``
 
-This is the root abstract descriptor for all property descriptors that
-are not relationship end properties. This includes, for instance,
-strings, numbers, dates, binary content, and so on.
+This is the root abstract descriptor for all property descriptors that are not relationship end properties. This includes, for instance, strings, numbers, dates, binary content, and so on.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -40,11 +38,7 @@ AbstractEnumerationPropertyDescriptor
 
 -   **Sub-types** : ``, ``, ``
 
-Abstract base descriptor for properties whose values are enumerated
-strings. An example of such a property is *gender* whose value can be
-*M* (for "Male") or *F* (for "Female"). Actual property values can be
-codes that are translated for inclusion in the UI. Such properties are
-usually rendered as combo-boxes.
+Abstract base descriptor for properties whose values are enumerated strings. An example of such a property is *gender* whose value can be *M* (for "Male") or *F* (for "Female"). Actual property values can be codes that are translated for inclusion in the UI. Such properties are usually rendered as combo-boxes.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -115,12 +109,7 @@ TypeEnumerationPropertyDescriptor
 
 -   **Super-type** : ``
 
-This is a special enumeration descriptor that allows to build the
-enumeration out of a list of component descriptors. Enumeration values
-and icons are the names and icons of the registered component
-descriptors. For instance, this can be useful in the UI if you want to
-visually indicate the actual type of a element contained in a
-polymorphic collection.
+This is a special enumeration descriptor that allows to build the enumeration out of a list of component descriptors. Enumeration values and icons are the names and icons of the registered component descriptors. For instance, this can be useful in the UI if you want to visually indicate the actual type of a element contained in a polymorphic collection.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -139,9 +128,7 @@ RangeEnumerationPropertyDescriptor
 
 -   **Super-type** : ``
 
-This is a special enumeration descriptor that allows to build the
-enumeration values out of a list of integer values. Obviously, no icon
-is provided for a given value.
+This is a special enumeration descriptor that allows to build the enumeration values out of a list of integer values. Obviously, no icon is provided for a given value.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -168,8 +155,7 @@ TimeZoneEnumerationPropertyDescriptor
 
 -   **Super-type** : ``
 
-This is a special enumeration descriptor that holds all available
-timezones.
+This is a special enumeration descriptor that holds all available timezones.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -189,8 +175,7 @@ BasicBinaryPropertyDescriptor
 
 -   **Sub-types** : ``, ``
 
-Describes a property used to store a binary value in the form of a byte
-array.
+Describes a property used to store a binary value in the form of a byte array.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -245,9 +230,7 @@ BasicImageBinaryPropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a property used to store an image binary value. This type of
-descriptor instructs Jspresso to use an image component to interact with
-this type of property.
+Describes a property used to store an image binary value. This type of descriptor instructs Jspresso to use an image component to interact with this type of property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -278,10 +261,7 @@ BasicJavaSerializablePropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a property used to store any java {@code Serializable} object.
-The property value is serialized/de-serialized to/from the data store.
-The operation is completely transparent to the developer, i.e. the
-developer never plays with the serialized form.
+Describes a property used to store any java {@code Serializable} object. The property value is serialized/de-serialized to/from the data store. The operation is completely transparent to the developer, i.e. the developer never plays with the serialized form.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -317,12 +297,7 @@ BasicColorPropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a property used for storing a color. Color values are stored
-in the property as their string hexadecimal representation (*0xargb*
-encoded). Jspresso cleanly handles color properties in views for both
-visually displaying and editing them without any extra effort. Moreover
-the {@code ColorHelper} helper class eases colors manipulation and helps
-converting to/from their hexadecimal representation.
+Describes a property used for storing a color. Color values are stored in the property as their string hexadecimal representation (*0xargb* encoded). Jspresso cleanly handles color properties in views for both visually displaying and editing them without any extra effort. Moreover the {@code ColorHelper} helper class eases colors manipulation and helps converting to/from their hexadecimal representation.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -340,9 +315,7 @@ BasicDatePropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a date based property. Whether the date property should
-include time information or not, can be configured using the type
-property.
+Describes a date based property. Whether the date property should include time information or not, can be configured using the type property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -385,10 +358,7 @@ BasicDurationPropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a property used to store a duration value. Duration is stored
-in the form of a number of milliseconds. duration properties are cleanly
-handled by Jspresso UI layer for both displaying / editing duration
-properties in a convenient human format.
+Describes a property used to store a duration value. Duration is stored in the form of a number of milliseconds. duration properties are cleanly handled by Jspresso UI layer for both displaying / editing duration properties in a convenient human format.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -439,9 +409,7 @@ BasicDecimalPropertyDescriptor
 
 -   **Sub-types** : ``
 
-Describes a decimal property. Property value is either stored as a
-{@code Double} or as a {@code BigDecimal} depending on the {@code
-usingBigDecimal} property.
+Describes a decimal property. Property value is either stored as a {@code Double} or as a {@code BigDecimal} depending on the {@code usingBigDecimal} property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -465,10 +433,7 @@ BasicPercentPropertyDescriptor
 
 -   **Super-type** : ``
 
-This is a specialization of decimal descriptor to handle percentage
-values. The impact of using this descriptor is only on the UI level that
-will be configured accordingly, i.e. displaying/editing properties as
-percentage instead of their raw decimal values.
+This is a specialization of decimal descriptor to handle percentage values. The impact of using this descriptor is only on the UI level that will be configured accordingly, i.e. displaying/editing properties as percentage instead of their raw decimal values.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -486,9 +451,7 @@ BasicIntegerPropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes an integer property. The property is either represented as an
-{@code Integer} or a {@code Long} depending on the {@code usingLong}
-property.
+Describes an integer property. The property is either represented as an {@code Integer} or a {@code Long} depending on the {@code usingLong} property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -558,9 +521,7 @@ BasicImageUrlPropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes an image URL property. This type of descriptor instructs
-Jspresso to use an image component to interact with this type of
-property.
+Describes an image URL property. This type of descriptor instructs Jspresso to use an image component to interact with this type of property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -587,12 +548,7 @@ BasicPasswordPropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a property used for password values. For obvious security
-reasons, this type of properties will hardly be part of a persistent
-entity. However it is useful for defining transient view models, e.g.
-for implementing a change password action. Jspresso will automatically
-adapt view fields accordingly, using password fields, to interact with
-password properties.
+Describes a property used for password values. For obvious security reasons, this type of properties will hardly be part of a persistent entity. However it is useful for defining transient view models, e.g. for implementing a change password action. Jspresso will automatically adapt view fields accordingly, using password fields, to interact with password properties.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -612,9 +568,7 @@ BasicTextPropertyDescriptor
 
 -   **Sub-types** : ``, ``
 
-Describes a multi-line text property. This type of descriptor instructs
-Jspresso to use a multi-line text component to interact with this type
-of property.
+Describes a multi-line text property. This type of descriptor instructs Jspresso to use a multi-line text component to interact with this type of property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -671,8 +625,7 @@ BasicHtmlPropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a property as handing HTML content. This instructs Jspresso to
-display the property value as HTML instead of raw text content.
+Describes a property as handing HTML content. This instructs Jspresso to display the property value as HTML instead of raw text content.
 
   -------------------------------------------------------------------------
   Property                 Description
@@ -690,11 +643,7 @@ BasicSourceCodePropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a property as handing sourcecode content. This instructs
-Jspresso to display the property value as sourcecode, using syntax
-coloring for instance, instead of displaying un-formatted raw content.
-The language used to format the property text content may be defined
-explicitly using the {@code language} property.
+Describes a property as handing sourcecode content. This instructs Jspresso to display the property value as sourcecode, using syntax coloring for instance, instead of displaying un-formatted raw content. The language used to format the property text content may be defined explicitly using the {@code language} property.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -714,9 +663,7 @@ BasicTimePropertyDescriptor
 
 -   **Super-type** : ``
 
-Describes a property used to hold time only values. These properties use
-a {@code Date} to store their value but only the time part of the value
-is relevant.
+Describes a property used to hold time only values. These properties use a {@code Date} to store their value but only the time part of the value is relevant.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

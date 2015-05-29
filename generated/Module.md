@@ -10,18 +10,7 @@ Module
 
 -   **Sub-types** : ``, ``
 
-A module is an entry point in the application. Modules are organized in
-bi-directional, parent-children hierarchy. As such, they can be viewed
-(and they are materialized in the UI) as trees. Modules can be
-(re)organized dynamically by changing their parent-children relationship
-and their owning workspace UI will reflect the change seamlessly, as
-with any Jspresso model (in fact workspaces and modules are regular
-beans that are used as model in standard Jspresso views). Modules, among
-other features, are capable of providing a view to be installed in the
-UI wen they are selected. This makes Jspresso applications really
-modular and their architecture flexible enough to embed and run a large
-variety of different module types. A module can also be as simple as a
-grouping structure for other modules (intermediary nodes).
+A module is an entry point in the application. Modules are organized in bi-directional, parent-children hierarchy. As such, they can be viewed (and they are materialized in the UI) as trees. Modules can be (re)organized dynamically by changing their parent-children relationship and their owning workspace UI will reflect the change seamlessly, as with any Jspresso model (in fact workspaces and modules are regular beans that are used as model in standard Jspresso views). Modules, among other features, are capable of providing a view to be installed in the UI wen they are selected. This makes Jspresso applications really modular and their architecture flexible enough to embed and run a large variety of different module types. A module can also be as simple as a grouping structure for other modules (intermediary nodes).
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -119,15 +108,9 @@ BeanCollectionModule
 
 -   **Sub-types** : ``, ``
 
-This type of module keeps a reference on a beans collection. There is no
-assumption made on whether these beans are actually persistent entities
-or any other type of java beans.
+This type of module keeps a reference on a beans collection. There is no assumption made on whether these beans are actually persistent entities or any other type of java beans.
 
-Simple bean collection modules must have their collection of referenced
-beans initialized somehow. There is no standard built-in action to do
-so, since it is highly dependent on what's needed. So it's rather common
-to have the module content initialized through a startup action
-depending on the session state.
+Simple bean collection modules must have their collection of referenced beans initialized somehow. There is no standard built-in action to do so, since it is highly dependent on what's needed. So it's rather common to have the module content initialized through a startup action depending on the session state.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -178,10 +161,7 @@ FilterableBeanCollectionModule
 
 -   **Sub-types** : ``
 
-This is a specialized type of bean collection module that provides a
-filter ( an instance of {@code IQueryComponent} ). This type of module,
-coupled with a generic, built-in, action map is perfectly suited for
-CRUD-like operations.
+This is a specialized type of bean collection module that provides a filter ( an instance of {@code IQueryComponent} ). This type of module, coupled with a generic, built-in, action map is perfectly suited for CRUD-like operations.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -279,10 +259,7 @@ MobileFilterableBeanCollectionModule
 
 -   **Super-type** : ``
 
-This is a specialized type of filterable bean collection module that
-provides a filter ( an instance of {@code IQueryComponent} ). This type
-of module, coupled with a generic, built-in, action map is perfectly
-suited for CRUD-like operations.
+This is a specialized type of filterable bean collection module that provides a filter ( an instance of {@code IQueryComponent} ). This type of module, coupled with a generic, built-in, action map is perfectly suited for CRUD-like operations.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -321,13 +298,7 @@ MobileBeanCollectionModule
 
 -   **Super-type** : ``
 
-This type of module keeps a reference on a beans collection. There is no
-assumption made on whether these beans are actually persistent entities
-or any other type of java beans. Simple bean collection modules must
-have their collection of referenced beans initialized somehow. There is
-no standard built-in action to do so, since it is highly dependent on
-what's needed. So it's rather common to have the module content
-initialized through a startup action depending on the session state.
+This type of module keeps a reference on a beans collection. There is no assumption made on whether these beans are actually persistent entities or any other type of java beans. Simple bean collection modules must have their collection of referenced beans initialized somehow. There is no standard built-in action to do so, since it is highly dependent on what's needed. So it's rather common to have the module content initialized through a startup action depending on the session state.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -354,17 +325,11 @@ BeanModule
 
 -   **Sub-types** : ``
 
-This type of module keeps a reference on a single bean. There is no
-assumption made on whether this bean is actually a persistent entity or
-any other type of java bean.
+This type of module keeps a reference on a single bean. There is no assumption made on whether this bean is actually a persistent entity or any other type of java bean.
 
-Bean modules must have their referenced bean initialized somehow. So
-it's rather common to have the module content initialized through a
-startup action depending on the session state or dynamically constructed
-by a standard action like {@code AddBeanAsSubModuleAction}.
+Bean modules must have their referenced bean initialized somehow. So it's rather common to have the module content initialized through a startup action depending on the session state or dynamically constructed by a standard action like {@code AddBeanAsSubModuleAction}.
 
-This type of module is definitely the one that offers maximum
-flexibility to handle arbitrary models.
+This type of module is definitely the one that offers maximum flexibility to handle arbitrary models.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -397,14 +362,7 @@ MobileBeanModule
 
 -   **Super-type** : ``
 
-This type of module keeps a reference on a single bean. There is no
-assumption made on whether this bean is actually a persistent entity or
-any other type of java bean. Bean modules must have their referenced
-bean initialized somehow. So it's rather common to have the module
-content initialized through a startup action depending on the session
-state or dynamically constructed by a standard action like {@code
-AddBeanAsSubModuleAction}. This type of module is definitely the one
-that offers maximum flexibility to handle arbitrary models.
+This type of module keeps a reference on a single bean. There is no assumption made on whether this bean is actually a persistent entity or any other type of java bean. Bean modules must have their referenced bean initialized somehow. So it's rather common to have the module content initialized through a startup action depending on the session state or dynamically constructed by a standard action like {@code AddBeanAsSubModuleAction}. This type of module is definitely the one that offers maximum flexibility to handle arbitrary models.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |

@@ -10,19 +10,7 @@ Workspace
 
 -   **Sub-types** : ``
 
-A workspace is an group of functional application modules. You may
-decide arbitrarily how to group modules into workspaces but a good
-approach might be to design the workspaces based on roles (i.e. business
-activities). This helps to clearly separates tasks-unrelated modules and
-eases authorization management since a workspace can be granted or
-forbidden as a whole by Jspresso security. Workspaces might be
-graphically represented differently depending on the UI technology used.
-For instance, the Swing and ULC channels use a MDI UI in which each
-workspace is represented as an internal frame (document). On the other
-hand, Flex and qooxdoo channels represent workspaces stacked in an
-accordion. Whatever the graphical representation is, there is at most
-one workspace active at a time for a user session - either the active
-(focused) internal frame or the expanded accordion section.
+A workspace is an group of functional application modules. You may decide arbitrarily how to group modules into workspaces but a good approach might be to design the workspaces based on roles (i.e. business activities). This helps to clearly separates tasks-unrelated modules and eases authorization management since a workspace can be granted or forbidden as a whole by Jspresso security. Workspaces might be graphically represented differently depending on the UI technology used. For instance, the Swing and ULC channels use a MDI UI in which each workspace is represented as an internal frame (document). On the other hand, Flex and qooxdoo channels represent workspaces stacked in an accordion. Whatever the graphical representation is, there is at most one workspace active at a time for a user session - either the active (focused) internal frame or the expanded accordion section.
 
 +--------------------------+--------------------------------------------------+
 | Property                 | Description                                      |
@@ -125,21 +113,9 @@ MobileWorkspace
 
 -   **Super-type** : ``
 
-A workspace is an group of functional application modules. You may
-decide arbitrarily how to group modules into workspaces but a good
-approach might be to design the workspaces based on roles (i.e. business
-activities). This helps to clearly separates tasks-unrelated modules and
-eases authorization management since a workspace can be granted or
-forbidden as a whole by Jspresso security.
+A workspace is an group of functional application modules. You may decide arbitrarily how to group modules into workspaces but a good approach might be to design the workspaces based on roles (i.e. business activities). This helps to clearly separates tasks-unrelated modules and eases authorization management since a workspace can be granted or forbidden as a whole by Jspresso security.
 
-Workspaces might be graphically represented differently depending on the
-UI technology used. For instance, the Swing and ULC channels use a MDI
-UI in which each workspace is represented as an internal frame
-(document). On the other hand, Flex and qooxdoo channels represent
-workspaces stacked in an accordion. Whatever the graphical
-representation is, there is at most one workspace active at a time for a
-user session - either the active (focused) internal frame or the
-expanded accordion section.
+Workspaces might be graphically represented differently depending on the UI technology used. For instance, the Swing and ULC channels use a MDI UI in which each workspace is represented as an internal frame (document). On the other hand, Flex and qooxdoo channels represent workspaces stacked in an accordion. Whatever the graphical representation is, there is at most one workspace active at a time for a user session - either the active (focused) internal frame or the expanded accordion section.
 
   -------------------------------------------------------------------------
   Property                 Description
