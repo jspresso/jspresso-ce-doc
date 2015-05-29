@@ -26,4 +26,4 @@ Overview
 
 Reference
 ---------
-!INCLUDE "../generated/BasicCompositeViewDescriptor.xml"
+!INCLUDE "../generated/BasicCompositeViewDescriptor.md"
