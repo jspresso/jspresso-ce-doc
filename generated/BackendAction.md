@@ -1,16 +1,20 @@
-Reference for BackendAction hierarchy
-=====================================
+## BackendAction
 
-BackendAction
--------------
+### org.jspresso.framework.application.backend.action.BackendAction
+#### BackendAction
 
--   **Full name** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.BackendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/BackendAction.html)
++ **Super-type** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction)
++ **Sub-types** : [`AbstractChangePasswordAction`](org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction), [`AbstractCloneAction`](org.jspresso.framework.application.backend.action.AbstractCloneAction), [`AbstractCollectionAction`](org.jspresso.framework.application.backend.action.AbstractCollectionAction), [`AbstractLdapAction`](org.jspresso.framework.application.backend.action.AbstractLdapAction), [`AbstractQbeAction`](org.jspresso.framework.application.backend.action.AbstractQbeAction), [`AbstractQueryComponentsAction`](org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction), [`AddBeanAsSubModuleAction`](org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction), [`CreateQueryComponentAction`](org.jspresso.framework.application.backend.action.CreateQueryComponentAction), [`DeleteEntityAction`](org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction), [`GenerateJasperReportAction`](org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction), [`InitModuleFilterAction`](org.jspresso.framework.application.backend.action.module.InitModuleFilterAction), [`PurgeCompletedAsynExecutorsAction`](org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction), [`ReloadAction`](org.jspresso.framework.application.backend.action.persistence.ReloadAction), [`RemoveFromModuleObjectsAction`](org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction), [`ResetConnectorValueAction`](org.jspresso.framework.application.backend.action.ResetConnectorValueAction), [`SaveAction`](org.jspresso.framework.application.backend.action.persistence.SaveAction), [`ScriptedBackendAction`](org.jspresso.framework.application.backend.action.ScriptedBackendAction), [`SelectEntityPropertyAction`](org.jspresso.framework.application.backend.action.SelectEntityPropertyAction), [`TransferCollectionAction`](org.jspresso.framework.application.backend.action.TransferCollectionAction)
 
--   **Super-type** : ``
 
--   **Sub-types** : ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``
 
-This class should serve as base class for implementing actions that execute on the backend (domain model) of the application. It provides accessors on the context elements that are generally used through the action execution process.
+This class should serve as base class for implementing actions that execute
+ on the backend (domain model) of the application. It provides accessors on
+ the context elements that are generally used through the action execution
+ process.
+
+
 
 <table>
 <caption>BackendAction properties</caption>
@@ -26,35 +30,48 @@ This class should serve as base class for implementing actions that execute on t
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>badFrontendAccessChecked</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Sets the badFrontendAccessChecked.</p></td>
+<td align="left"><p><strong>badFrontendAccessChecked</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets the badFrontendAccessChecked.</p></td>
 </tr>
 </tbody>
 </table>
 
-AbstractChangePasswordAction
-----------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction
+#### AbstractChangePasswordAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/AbstractChangePasswordAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`DatabaseChangePasswordAction`](org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction), [`LdapChangePasswordAction`](org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction), [`MockChangePasswordAction`](org.jspresso.framework.application.backend.action.security.MockChangePasswordAction)
 
--   **Sub-types** : ``, ``, ``
 
-This is the base class for implementing an action that performs actual modification of a logged-in user password. This implementation delegates to subclasses the actual change in the concrete JAAS store. This backend action expects a Map\<String,Object\> in as action parameter in the context. This map must contain :
 
--   {@code password\_current} entry containing current password. Entry key can be referred to as PASSWD\_CURRENT static constant.
+This is the base class for implementing an action that performs actual
+ modification of a logged-in user password. This implementation delegates to
+ subclasses the actual change in the concrete JAAS store. This backend action
+ expects a Map&lt;String,Object&gt; in as action parameter in the context.
+ This map must contain :
+ <p>
+ <ul>
+ <li><code>password_current</code> entry containing current password. Entry
+ key can be referred to as PASSWD_CURRENT static constant.</li>
+ <li><code>password_typed</code> entry containing the new password. Entry key
+ can be referred to as PASSWD_TYPED static constant.</li>
+ <li><code>password_retyped</code> entry containing the new password retyped.
+ Entry key can be referred to as PASSWD_RETYPED static constant.</li>
+ </ul>
+ For the action to succeed, <code>current_password</code> must match the
+ logged-in user current password and <code>password_typed</code> and
+ <code>password_retyped</code> mut match between each other. The only method to
+ be implemented by concrete subclasses is :
+ <p>
 
--   {@code password\_typed} entry containing the new password. Entry key can be referred to as PASSWD\_TYPED static constant.
+ <pre>
+ protected abstract boolean changePassword(UserPrincipal userPrincipal,
+           String currentPassword, String newPassword)
+ </pre>
 
--   {@code password\_retyped} entry containing the new password retyped. Entry key can be referred to as PASSWD\_RETYPED static constant.
 
-For the action to succeed, {@code current\_password} must match the logged-in user current password and {@code password\_typed} and {@code password\_retyped} mut match between each other. The only method to be implemented by concrete subclasses is :
-
-     protected abstract boolean changePassword(UserPrincipal userPrincipal,
-               String currentPassword, String newPassword)
-     
 
 <table>
 <caption>AbstractChangePasswordAction properties</caption>
@@ -70,54 +87,58 @@ For the action to succeed, {@code current\_password} must match the logged-in us
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>allowEmptyPasswords</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Configures the possibility to choose an empty password.</p>
-<p>Default value is {@code true}, i.e. allow for empty passwords.</p></td>
+<td align="left"><p><strong>allowEmptyPasswords</strong></p><p><code>boolean</code></p></td>
+<td><p>Configures the possibility to choose an empty password.
+ <p>
+ Default value is <code>true</code>, i.e. allow for empty passwords.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>allowLoginPasswords</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Configures the possibility to choose a password that equals the login.</p>
-<p>Default value is {@code true}, i.e. allow for password equals login.</p></td>
+<td align="left"><p><strong>allowLoginPasswords</strong></p><p><code>boolean</code></p></td>
+<td><p>Configures the possibility to choose a password that equals the login.
+ <p>
+ Default value is <code>true</code>, i.e. allow for password equals login.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>digestAlgorithm</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Sets the digestAlgorithm to use to hash the password before storing it (MD5 for instance).</p></td>
+<td align="left"><p><strong>digestAlgorithm</strong></p><p><code>String</code></p></td>
+<td><p>Sets the digestAlgorithm to use to hash the password before storing it (MD5
+ for instance).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>hashEncoding</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Sets the hashEncoding to encode the password hash before storing it. You may choose between :</p>
-<ul>
-<li><p>{@code BASE64} for base 64 encoding.</p></li>
-<li><p>{@code HEX} for base 16 encoding.</p></li>
-</ul>
-<p>Default encoding is {@code BASE64}.</p></td>
+<td align="left"><p><strong>hashEncoding</strong></p><p><code>String</code></p></td>
+<td><p>Sets the hashEncoding to encode the password hash before storing it. You
+ may choose between :
+ <ul>
+ <li><code>BASE64</code> for base 64 encoding.</li>
+ <li><code>HEX</code> for base 16 encoding.</li>
+ </ul>
+ Default encoding is <code>BASE64</code>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>passwordRegex</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Configures a regex that new passwords must match.</p>
-<p>Default value is {@code null}, i.e. no regex is enforced.</p></td>
+<td align="left"><p><strong>passwordRegex</strong></p><p><code>String</code></p></td>
+<td><p>Configures a regex that new passwords must match.
+ <p>
+ Default value is <code>null</code>, i.e. no regex is enforced.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>passwordRegexSample</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Configures an example of a valid password to explain the regex rules.</p></td>
+<td align="left"><p><strong>passwordRegexSample</strong></p><p><code>String</code></p></td>
+<td><p>Configures an example of a valid password to explain the regex rules.</p></td>
 </tr>
 </tbody>
 </table>
 
-DatabaseChangePasswordAction
-----------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction
+#### DatabaseChangePasswordAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/DatabaseChangePasswordAction.html)
++ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
 
-Concrete backend implementation of a change password action where password is stored in a relational database.
+
+
+Concrete backend implementation of a change password action where password is
+ stored in a relational database.
+
+
 
 <table>
 <caption>DatabaseChangePasswordAction properties</caption>
@@ -133,31 +154,36 @@ Concrete backend implementation of a change password action where password is st
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>jdbcTemplate</strong></p>
-<p><code>Jdbc​Template</code></p></td>
-<td align="left"><p>Configures the Spring jdbcTemplate to use to issue the update statement.</p></td>
+<td align="left"><p><strong>jdbcTemplate</strong></p><p><code>Jdbc&#x200B;Template</code></p></td>
+<td><p>Configures the Spring jdbcTemplate to use to issue the update statement.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>updateQuery</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Configures the update query to execute to change the password. The prepared statement parameters that will be bound are, in order :</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>&quot;new password&quot;</strong> potentially hashed.</p></li>
-<li><p><strong>&quot;user name&quot;</strong>.</p></li>
-<li><p><strong>&quot;current password&quot;</strong> potentially hashed.</p></li>
-</ol></td>
+<td align="left"><p><strong>updateQuery</strong></p><p><code>String</code></p></td>
+<td><p>Configures the update query to execute to change the password. The prepared
+ statement parameters that will be bound are, in order :
+ <ol>
+ <li><b>&quot;new password&quot;</b> potentially hashed.</li>
+ <li><b>&quot;user name&quot;</b>.</li>
+ <li><b>&quot;current password&quot;</b> potentially hashed.</li>
+ </ol></p></td>
 </tr>
 </tbody>
 </table>
 
-LdapChangePasswordAction
-------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction
+#### LdapChangePasswordAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/LdapChangePasswordAction.html)
++ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
 
-Concrete backend implementation of a change password action where password is stored in an LDAP directory. The user DN to use to connect to the LDAP directory is the one stored in the user principal from the login process.
+
+
+Concrete backend implementation of a change password action where password is
+ stored in an LDAP directory. The user DN to use to connect to the LDAP
+ directory is the one stored in the user principal from the login process.
+
+
 
 <table>
 <caption>LdapChangePasswordAction properties</caption>
@@ -173,21 +199,26 @@ Concrete backend implementation of a change password action where password is st
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>ldapUrl</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Configures the LDAP url (e.g. <em>http://localhost:389</em>) of the LDAP directory. The user must be authorized to change its own password in the LDAP backend.</p></td>
+<td align="left"><p><strong>ldapUrl</strong></p><p><code>String</code></p></td>
+<td><p>Configures the LDAP url (e.g. <i>http://localhost:389</i>) of the LDAP
+ directory. The user must be authorized to change its own password in the
+ LDAP backend.</p></td>
 </tr>
 </tbody>
 </table>
 
-MockChangePasswordAction
-------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.security.MockChangePasswordAction
+#### MockChangePasswordAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.security.MockChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/MockChangePasswordAction.html)
++ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
+
+
 
 Mocks up password change.
+
+
 
 <table>
 <caption>MockChangePasswordAction properties</caption>
@@ -202,26 +233,31 @@ Mocks up password change.
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-AbstractCloneAction
--------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AbstractCloneAction
+#### AbstractCloneAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AbstractCloneAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractCloneAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`CloneComponentAction`](org.jspresso.framework.application.backend.action.CloneComponentAction)
 
--   **Sub-types** : ``
+
 
 An action used duplicate a domain object. the cloned domain object is set as model for the current view.
+ 
+ <pre>
+ protected abstract Object cloneElement(Object element,
+     Map&lt;String, Object&gt; context)
+ </pre>
 
-     protected abstract Object cloneElement(Object element,
-         Map<String, Object> context)
-     
+
 
 <table>
 <caption>AbstractCloneAction properties</caption>
@@ -236,20 +272,28 @@ An action used duplicate a domain object. the cloned domain object is set as mod
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-CloneComponentAction
---------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.CloneComponentAction
+#### CloneComponentAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.CloneComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CloneComponentAction.html)
++ **Super-type** : [`AbstractCloneAction`](#org.jspresso.framework.application.backend.action.AbstractCloneAction)
 
-An action used duplicate an entity or a component. This action is parametrized with a clone factory ({@code IEntityCloneFactory}) to perform the actual component cloning. Executing this action will result in setting the cloned component to the underlying view.
+
+
+An action used duplicate an entity or a component. This action
+ is parametrized with a clone factory (<code>IEntityCloneFactory</code>) to
+ perform the actual component cloning. Executing this action will result in
+ setting the cloned component to the underlying view.
+
+
 
 <table>
 <caption>CloneComponentAction properties</caption>
@@ -265,23 +309,27 @@ An action used duplicate an entity or a component. This action is parametrized w
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>entityCloneFactory</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Configures the entity clone factory to use to clone the components or entities.</p></td>
+<td align="left"><p><strong>entityCloneFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/entity/IEntityCloneFactory.html">IEntity&#x200B;Clone&#x200B;Factory</a></code></p></td>
+<td><p>Configures the entity clone factory to use to clone the components or
+ entities.</p></td>
 </tr>
 </tbody>
 </table>
 
-AbstractCollectionAction
-------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AbstractCollectionAction
+#### AbstractCollectionAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AbstractCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractCollectionAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`AbstractAddCollectionToMasterAction`](org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction), [`CollectionElementMoveAction`](org.jspresso.framework.application.backend.action.CollectionElementMoveAction), [`RemoveCollectionFromMasterAction`](org.jspresso.framework.application.backend.action.RemoveCollectionFromMasterAction), [`RemoveCollectionFromMasterAction`](org.jspresso.framework.application.backend.action.persistence.RemoveCollectionFromMasterAction), [`RemoveFromModuleObjectsAction`](org.jspresso.framework.application.backend.action.module.RemoveFromModuleObjectsAction), [`RemoveModuleObjectAction`](org.jspresso.framework.application.backend.action.persistence.module.RemoveModuleObjectAction), [`SetActionParamFromSelectedComponentsAction`](org.jspresso.framework.application.backend.action.SetActionParamFromSelectedComponentsAction)
 
--   **Sub-types** : ``, ``, ``, ``, ``, ``, ``
 
-Base class for backend actions acting on collection models. This class is just used to refine certain protected methods return types.
+
+Base class for backend actions acting on collection models. This class is
+ just used to refine certain protected methods return types.
+
+
 
 <table>
 <caption>AbstractCollectionAction properties</caption>
@@ -297,27 +345,33 @@ Base class for backend actions acting on collection models. This class is just u
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>viewPath</strong></p>
-<p><code>int</code></p></td>
-<td align="left"><p>Sets view path.</p></td>
+<td align="left"><p><strong>viewPath</strong></p><p><code>int</code></p></td>
+<td><p>Sets view path.</p></td>
 </tr>
 </tbody>
 </table>
 
-AbstractAddCollectionToMasterAction
------------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction
+#### AbstractAddCollectionToMasterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractAddCollectionToMasterAction.html)
++ **Super-type** : [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction)
++ **Sub-types** : [`AbstractCloneCollectionAction`](org.jspresso.framework.application.backend.action.AbstractCloneCollectionAction), [`AddAnyCollectionToMasterAction`](org.jspresso.framework.application.backend.action.AddAnyCollectionToMasterAction), [`AddComponentCollectionToMasterAction`](org.jspresso.framework.application.backend.action.AddComponentCollectionToMasterAction), [`AddMapToMasterAction`](org.jspresso.framework.application.backend.action.AddMapToMasterAction), [`PasteCollectionToMasterAction`](org.jspresso.framework.application.backend.action.PasteCollectionToMasterAction)
 
--   **Sub-types** : ``, ``, ``, ``, ``
 
-An action used in master/detail views to create and add a new detail to a master domain object. The only method to be implemented by concrete subclasses to retrieve the instances to be added to the master is :
 
-     protected abstract List<?>
-               getAddedComponents(Map<String, Object> context)
-     
+An action used in master/detail views to create and add a new detail to a
+ master domain object. The only method to be implemented by concrete subclasses
+ to retrieve the instances to be added to the master is :
+ <p>
+ 
+ <pre>
+ protected abstract List&lt;?&gt;
+           getAddedComponents(Map&lt;String, Object&gt; context)
+ </pre>
+
+
 
 <table>
 <caption>AbstractAddCollectionToMasterAction properties</caption>
@@ -333,27 +387,34 @@ An action used in master/detail views to create and add a new detail to a master
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>initializationMapping</strong></p>
-<p><code>Map​&lt;​String​,Object​&gt;​</code></p></td>
-<td align="left"><p>Sets initialization mapping.</p></td>
+<td align="left"><p><strong>initializationMapping</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,Object&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets initialization mapping.</p></td>
 </tr>
 </tbody>
 </table>
 
-AbstractCloneCollectionAction
------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AbstractCloneCollectionAction
+#### AbstractCloneCollectionAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AbstractCloneCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractCloneCollectionAction.html)
++ **Super-type** : [`AbstractAddCollectionToMasterAction`](#org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction)
++ **Sub-types** : [`CloneComponentCollectionAction`](org.jspresso.framework.application.backend.action.CloneComponentCollectionAction)
 
--   **Sub-types** : ``
 
-An action used duplicate a collection of domain objects. Cloning an entity should result in adding it to the collection the action was triggered on. Components to clone are retrieved from the context using the selected indices of the model collection connector. Actual cloning of components is left to concrete implementations that must implement :
 
-     protected abstract Object cloneElement(Object element,
-         Map<String, Object> context)
-     
+An action used duplicate a collection of domain objects. Cloning an entity
+ should result in adding it to the collection the action was triggered on.
+ Components to clone are retrieved from the context using the selected indices
+ of the model collection connector. Actual cloning of components is left to
+ concrete implementations that must implement :
+ 
+ <pre>
+ protected abstract Object cloneElement(Object element,
+     Map&lt;String, Object&gt; context)
+ </pre>
+
+
 
 <table>
 <caption>AbstractCloneCollectionAction properties</caption>
@@ -368,20 +429,28 @@ An action used duplicate a collection of domain objects. Cloning an entity shoul
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-CloneComponentCollectionAction
-------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.CloneComponentCollectionAction
+#### CloneComponentCollectionAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.CloneComponentCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CloneComponentCollectionAction.html)
++ **Super-type** : [`AbstractCloneCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCloneCollectionAction)
 
-An action used duplicate a collection of entities or components. This action is parametrized with a clone factory ({@code IEntityCloneFactory}) to perform the actual component cloning. Executing this action will result in adding the cloned component(s) to the underlying model collection.
+
+
+An action used duplicate a collection of entities or components. This action
+ is parametrized with a clone factory (<code>IEntityCloneFactory</code>) to
+ perform the actual component cloning. Executing this action will result in
+ adding the cloned component(s) to the underlying model collection.
+
+
 
 <table>
 <caption>CloneComponentCollectionAction properties</caption>
@@ -397,21 +466,27 @@ An action used duplicate a collection of entities or components. This action is 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>entityCloneFactory</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Configures the entity clone factory to use to clone the components or entities.</p></td>
+<td align="left"><p><strong>entityCloneFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/entity/IEntityCloneFactory.html">IEntity&#x200B;Clone&#x200B;Factory</a></code></p></td>
+<td><p>Configures the entity clone factory to use to clone the components or
+ entities.</p></td>
 </tr>
 </tbody>
 </table>
 
-AddAnyCollectionToMasterAction
-------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AddAnyCollectionToMasterAction
+#### AddAnyCollectionToMasterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AddAnyCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AddAnyCollectionToMasterAction.html)
++ **Super-type** : [`AbstractAddCollectionToMasterAction`](#org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction)
 
-An action used in master/detail views to add new detail(s) to a master domain object. The details to add are taken from the action context through the {@code ActionParameter} context value.
+
+
+An action used in master/detail views to add new detail(s) to a master domain
+ object. The details to add are taken from the action context through the
+ <code>ActionParameter</code> context value.
+
+
 
 <table>
 <caption>AddAnyCollectionToMasterAction properties</caption>
@@ -426,24 +501,34 @@ An action used in master/detail views to add new detail(s) to a master domain ob
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-AddComponentCollectionToMasterAction
-------------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AddComponentCollectionToMasterAction
+#### AddComponentCollectionToMasterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AddComponentCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AddComponentCollectionToMasterAction.html)
++ **Super-type** : [`AbstractAddCollectionToMasterAction`](#org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction)
 
-An action used in master/detail views to create and add a new detail to a master domain object. Entity (or component) to add are actually created by the entity factory retrieved from the action context. The class of entity (component) to create is either taken :
 
-1.  from the action context under the key {@code ELEMENT\_DESCRIPTOR}
 
-2.  or, if it does not exist, taken from the view model descriptor. In this case, the component descriptor to use is the element descriptor of the underlying collection descriptor.
+An action used in master/detail views to create and add a new detail to a
+ master domain object. Entity (or component) to add are actually created by
+ the entity factory retrieved from the action context. The class of entity
+ (component) to create is either taken :
+ <ol>
+ <li>from the action context under the key <code>ELEMENT_DESCRIPTOR</code></li>
+ <li>or, if it does not exist, taken from the view model descriptor. In this
+ case, the component descriptor to use is the element descriptor of the
+ underlying collection descriptor.</li>
+ </ol>
+
+
 
 <table>
 <caption>AddComponentCollectionToMasterAction properties</caption>
@@ -458,22 +543,31 @@ An action used in master/detail views to create and add a new detail to a master
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-AddMapToMasterAction
---------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AddMapToMasterAction
+#### AddMapToMasterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AddMapToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AddMapToMasterAction.html)
++ **Super-type** : [`AbstractAddCollectionToMasterAction`](#org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction)
++ **Sub-types** : [`CloneMapCollectionAction`](org.jspresso.framework.application.backend.action.CloneMapCollectionAction)
 
--   **Sub-types** : ``
 
-An action used in master/detail views where models are backed by maps to create and add a new detail to a master domain object. The new instance created is an instance of {@code org.jspresso.framework.util.collection.ObjectEqualityMap}. Default property values as well as {@code onCreate} lifecycle interceptors registered on the component descriptor are supported.
+
+An action used in master/detail views where models are backed by maps to
+ create and add a new detail to a master domain object. The new instance
+ created is an instance of
+ <code>org.jspresso.framework.util.collection.ObjectEqualityMap</code>.
+ Default property values as well as <code>onCreate</code> lifecycle
+ interceptors registered on the component descriptor are supported.
+
+
 
 <table>
 <caption>AddMapToMasterAction properties</caption>
@@ -488,20 +582,29 @@ An action used in master/detail views where models are backed by maps to create 
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-CloneMapCollectionAction
-------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.CloneMapCollectionAction
+#### CloneMapCollectionAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.CloneMapCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CloneMapCollectionAction.html)
++ **Super-type** : [`AddMapToMasterAction`](#org.jspresso.framework.application.backend.action.AddMapToMasterAction)
 
-An action used duplicate a collection of domain objects implemented as maps. Newly created maps are instances of {@code org.jspresso.framework.util.collection.ObjectEqualityMap} that contains the same key/value pairs as the maps to clone. Executing this action will result in adding the cloned map to the underlying model collection.
+
+
+An action used duplicate a collection of domain objects implemented as maps.
+ Newly created maps are instances of
+ <code>org.jspresso.framework.util.collection.ObjectEqualityMap</code> that
+ contains the same key/value pairs as the maps to clone. Executing this action
+ will result in adding the cloned map to the underlying model collection.
+
+
 
 <table>
 <caption>CloneMapCollectionAction properties</caption>
@@ -516,20 +619,31 @@ An action used duplicate a collection of domain objects implemented as maps. New
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-PasteCollectionToMasterAction
------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.PasteCollectionToMasterAction
+#### PasteCollectionToMasterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.PasteCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/PasteCollectionToMasterAction.html)
++ **Super-type** : [`AbstractAddCollectionToMasterAction`](#org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction)
 
-An action used in master/detail views to paste previously copied or cut detail(s) to a master domain object. The application clipboard is used to retrieve the entities (or components) to paste. Whenever the components have been previously *copied* to the clipboard, the paste action will clone them when executed using the configured entity clone factory. Whenever the components have been previously *cut*, the paste action will simply use the exact same instances as the one placed on the clipboard.
+
+
+An action used in master/detail views to paste previously copied or cut
+ detail(s) to a master domain object. The application clipboard is used to
+ retrieve the entities (or components) to paste. Whenever the components have
+ been previously <i>copied</i> to the clipboard, the paste action will clone
+ them when executed using the configured entity clone factory. Whenever the
+ components have been previously <i>cut</i>, the paste action will simply use
+ the exact same instances as the one placed on the clipboard.
+
+
 
 <table>
 <caption>PasteCollectionToMasterAction properties</caption>
@@ -545,21 +659,28 @@ An action used in master/detail views to paste previously copied or cut detail(s
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>entityCloneFactory</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Configures the entity clone factory to use when the paste action is triggered after a copy.</p></td>
+<td align="left"><p><strong>entityCloneFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/entity/IEntityCloneFactory.html">IEntity&#x200B;Clone&#x200B;Factory</a></code></p></td>
+<td><p>Configures the entity clone factory to use when the paste action is
+ triggered after a copy.</p></td>
 </tr>
 </tbody>
 </table>
 
-CollectionElementMoveAction
----------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.CollectionElementMoveAction
+#### CollectionElementMoveAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.CollectionElementMoveAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CollectionElementMoveAction.html)
++ **Super-type** : [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction)
 
-This action can be declared on views that are backed by collections with list semantics (indexed collections). It allows to take a the selected elements and move them in the collection using a configured offset. It allows for re-ordering the list.
+
+
+This action can be declared on views that are backed by collections with list
+ semantics (indexed collections). It allows to take a the selected elements
+ and move them in the collection using a configured offset. It allows for
+ re-ordering the list.
+
+
 
 <table>
 <caption>CollectionElementMoveAction properties</caption>
@@ -575,31 +696,39 @@ This action can be declared on views that are backed by collections with list se
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>offset</strong></p>
-<p><code>int</code></p></td>
-<td align="left"><p>Configures the offset to use when moving the selected elements inside the list. A configured offset of <strong>1</strong> will increase (move down) by one the selected elements indices whereas an offset of <strong>-1</strong> will decrease (move up) the selected elements indices.</p></td>
+<td align="left"><p><strong>offset</strong></p><p><code>int</code></p></td>
+<td><p>Configures the offset to use when moving the selected elements inside the
+ list. A configured offset of <b>1</b> will increase (move down) by one the
+ selected elements indices whereas an offset of <b>-1</b> will decrease
+ (move up) the selected elements indices.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>toBottom</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Configures this action to move the selected elements to the bottom of the list.</p></td>
+<td align="left"><p><strong>toBottom</strong></p><p><code>boolean</code></p></td>
+<td><p>Configures this action to move the selected elements to the bottom of the
+ list.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>toTop</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Configures this action to move the selected elements to the top of the list.</p></td>
+<td align="left"><p><strong>toTop</strong></p><p><code>boolean</code></p></td>
+<td><p>Configures this action to move the selected elements to the top of the
+ list.</p></td>
 </tr>
 </tbody>
 </table>
 
-RemoveCollectionFromMasterAction
---------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.RemoveCollectionFromMasterAction
+#### RemoveCollectionFromMasterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.RemoveCollectionFromMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/RemoveCollectionFromMasterAction.html)
++ **Super-type** : [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction)
 
-An action used in master/detail views to remove selected details from a master domain object. No further operation (like actual removal from a persistent store) is performed by this action.
+
+
+An action used in master/detail views to remove selected details from a
+ master domain object. No further operation (like actual removal from a
+ persistent store) is performed by this action.
+
+
 
 <table>
 <caption>RemoveCollectionFromMasterAction properties</caption>
@@ -614,20 +743,33 @@ An action used in master/detail views to remove selected details from a master d
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-RemoveCollectionFromMasterAction
---------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.RemoveCollectionFromMasterAction
+#### RemoveCollectionFromMasterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.RemoveCollectionFromMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/RemoveCollectionFromMasterAction.html)
++ **Super-type** : [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction)
 
-An action used in master/detail views to remove selected details from a master domain object. More than just removing the selected details from their owning collection, this action "*cuts*" the existing links between the entities to remove and the rest of the domain then registers them for deletion on next save operation. Note that cleaning of relationships is a 2 pass process. The 1st one is a dry run that checks that no functional exception is thrown by the business rules. The second one performs the actual cleaning.
+
+
+An action used in master/detail views to remove selected details from a
+ master domain object. More than just removing the selected details from their
+ owning collection, this action &quot;<i>cuts</i>&quot; the existing links
+ between the entities to remove and the rest of the domain then registers them
+ for deletion on next save operation.
+ <p/>
+ Note that cleaning of relationships is a 2 pass process. The 1st one is a dry
+ run that checks that no functional exception is thrown by the business rules.
+ The second one performs the actual cleaning.
+
+
 
 <table>
 <caption>RemoveCollectionFromMasterAction properties</caption>
@@ -642,20 +784,28 @@ An action used in master/detail views to remove selected details from a master d
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-RemoveFromModuleObjectsAction
------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.module.RemoveFromModuleObjectsAction
+#### RemoveFromModuleObjectsAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.module.RemoveFromModuleObjectsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/RemoveFromModuleObjectsAction.html)
++ **Super-type** : [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction)
 
-This action, which is to be used on bean collection modules, removes the selected objects from the module's projected collection. If one (or more) of the removed objects are also used in children bean modules, the corresponding children bean modules are also removed accordingly.
+
+
+This action, which is to be used on bean collection modules, removes the
+ selected objects from the module's projected collection. If one (or more) of
+ the removed objects are also used in children bean modules, the corresponding
+ children bean modules are also removed accordingly.
+
+
 
 <table>
 <caption>RemoveFromModuleObjectsAction properties</caption>
@@ -670,20 +820,27 @@ This action, which is to be used on bean collection modules, removes the selecte
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-RemoveModuleObjectAction
-------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.module.RemoveModuleObjectAction
+#### RemoveModuleObjectAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.module.RemoveModuleObjectAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/module/RemoveModuleObjectAction.html)
++ **Super-type** : [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction)
 
-This action, which is to be used on bean modules, **deletes the module object from the persistent store**. The bean module is also removed from it's parent accordingly.
+
+
+This action, which is to be used on bean modules, <b>deletes the module
+ object from the persistent store</b>. The bean module is also removed from
+ it's parent accordingly.
+
+
 
 <table>
 <caption>RemoveModuleObjectAction properties</caption>
@@ -698,20 +855,27 @@ This action, which is to be used on bean modules, **deletes the module object fr
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-SetActionParamFromSelectedComponentsAction
-------------------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.SetActionParamFromSelectedComponentsAction
+#### SetActionParamFromSelectedComponentsAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.SetActionParamFromSelectedComponentsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/SetActionParamFromSelectedComponentsAction.html)
++ **Super-type** : [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction)
 
-A trivial backend action that updates the action context by setting the {@code ActionParameter} with the selected components of the underlying model.
+
+
+A trivial backend action that updates the action context by setting the
+ <code>ActionParameter</code> with the selected components of the underlying
+ model.
+
+
 
 <table>
 <caption>SetActionParamFromSelectedComponentsAction properties</caption>
@@ -726,20 +890,26 @@ A trivial backend action that updates the action context by setting the {@code A
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-AbstractLdapAction
-------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AbstractLdapAction
+#### AbstractLdapAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AbstractLdapAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractLdapAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
 
-Root abstract class of actions that deal with LDAP directory. It's only purpose is to standardize the use of Spring {@code LdapTemplate}.
+
+
+Root abstract class of actions that deal with LDAP directory. It's only
+ purpose is to standardize the use of Spring <code>LdapTemplate</code>.
+
+
 
 <table>
 <caption>AbstractLdapAction properties</caption>
@@ -755,23 +925,25 @@ Root abstract class of actions that deal with LDAP directory. It's only purpose 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>ldapTemplate</strong></p>
-<p><code>Ldap​Template</code></p></td>
-<td align="left"><p>Configures the Spring LDAP template to use with this action.</p></td>
+<td align="left"><p><strong>ldapTemplate</strong></p><p><code>Ldap&#x200B;Template</code></p></td>
+<td><p>Configures the Spring LDAP template to use with this action.</p></td>
 </tr>
 </tbody>
 </table>
 
-AbstractQbeAction
------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AbstractQbeAction
+#### AbstractQbeAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AbstractQbeAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractQbeAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`FindAction`](org.jspresso.framework.application.backend.action.FindAction), [`QueryModuleFilterAction`](org.jspresso.framework.application.backend.action.module.QueryModuleFilterAction)
 
--   **Sub-types** : ``, ``
+
 
 Abstract base class for QBE find actions.
+
+
 
 <table>
 <caption>AbstractQbeAction properties</caption>
@@ -787,26 +959,32 @@ Abstract base class for QBE find actions.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>queryAction</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Configures the query action used to actually perform the entity query.</p></td>
+<td align="left"><p><strong>queryAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
+<td><p>Configures the query action used to actually perform the entity query.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>sortOnly</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Sets the sortOnly.</p></td>
+<td align="left"><p><strong>sortOnly</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets the sortOnly.</p></td>
 </tr>
 </tbody>
 </table>
 
-FindAction
-----------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.FindAction
+#### FindAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.FindAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/FindAction.html)
++ **Super-type** : [`AbstractQbeAction`](#org.jspresso.framework.application.backend.action.AbstractQbeAction)
 
-This action will climb the model connector hierarchy to retrieve a query component used as QBE filter. It will then tailor paging status on this query component before continuing execution. This action is meant to be chained with an actual backend action to perform the query (like {@code QueryEntitiesAction}).
+
+
+This action will climb the model connector hierarchy to retrieve a query
+ component used as QBE filter. It will then tailor paging status on this query
+ component before continuing execution. This action is meant to be chained
+ with an actual backend action to perform the query (like
+ <code>QueryEntitiesAction</code>).
+
+
 
 <table>
 <caption>FindAction properties</caption>
@@ -821,20 +999,28 @@ This action will climb the model connector hierarchy to retrieve a query compone
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-QueryModuleFilterAction
------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.module.QueryModuleFilterAction
+#### QueryModuleFilterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.module.QueryModuleFilterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/QueryModuleFilterAction.html)
++ **Super-type** : [`AbstractQbeAction`](#org.jspresso.framework.application.backend.action.AbstractQbeAction)
 
-Retrieves the filter of a module and queries the persistent store to populate the module objects. The actual query is delegated to another backend action (defaulted to {@code QueryEntitiesAction}) that can be configured through the {@code queryAction} property.
+
+
+Retrieves the filter of a module and queries the persistent store to populate
+ the module objects. The actual query is delegated to another backend action
+ (defaulted to <code>QueryEntitiesAction</code>) that can be configured
+ through the <code>queryAction</code> property.
+
+
 
 <table>
 <caption>QueryModuleFilterAction properties</caption>
@@ -849,30 +1035,45 @@ Retrieves the filter of a module and queries the persistent store to populate th
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-AbstractQueryComponentsAction
------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction
+#### AbstractQueryComponentsAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractQueryComponentsAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`QueryEntitiesAction`](org.jspresso.framework.application.backend.action.persistence.hibernate.QueryEntitiesAction), [`StaticQueryComponentsAction`](org.jspresso.framework.application.backend.action.StaticQueryComponentsAction)
 
--   **Sub-types** : ``, ``
 
-This action is the base abstract class to query components by example. It is used behind the scene in several places in Jspresso based applications, as in filtered bean collection modules, list of values, ... The principles are to perform a search based on the Jspresso "{@code IQueryComponent} ". A Jspresso query component is a hierarchical data structure that mimics a portion of the domain model headed by an entity. It is essentially a set of property/value pairs where values can be :
 
-1.  a scalar value
+This action is the base abstract class to query components by example. It is used behind
+ the scene in several places in Jspresso based applications, as in filtered
+ bean collection modules, list of values, ... The principles are to perform a search
+ based on the Jspresso &quot;<code>IQueryComponent</code>
+ &quot;. A Jspresso query component is a hierarchical data structure that
+ mimics a portion of the domain model headed by an entity. It is essentially a
+ set of property/value pairs where values can be :
+ <ol>
+ <li>a scalar value</li>
+ <li>a comparable query structure (operator, inf and sup value) to place a
+ constraint on a comparable property (date, number, ...)</li>
+ <li>a sub query component</li>
+ </ol>
+ <p/>
+ Whenever the query is successful, the result is merged back to the
+ application session and assigned to the query component
+ <code>queriedComponents</code> property.
+ <p/>
+ Note that there is 1 hook that can be configured by injection to fine-tune
+ the performed query : <code>queryComponentRefiner</code>.
 
-2.  a comparable query structure (operator, inf and sup value) to place a constraint on a comparable property (date, number, ...)
 
-3.  a sub query component
-
-Whenever the query is successful, the result is merged back to the application session and assigned to the query component {@code queriedComponents} property. Note that there is 1 hook that can be configured by injection to fine-tune the performed query : {@code queryComponentRefiner}.
 
 <table>
 <caption>AbstractQueryComponentsAction properties</caption>
@@ -888,39 +1089,66 @@ Whenever the query is successful, the result is merged back to the application s
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>mergeMode</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Sets the mergeMode to use when assigning the queried components to the filter query component. A {@code null} value means that the queried components will assigned without being merged at all. In that case, the merging has to be performed later on in the action chain. Forgetting to do so will lead to unexpected results. Default value is {@code EMergeMode.MERGE_CLEAN_LAZY}.</p></td>
+<td align="left"><p><strong>mergeMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/session/EMergeMode.html">EMerge&#x200B;Mode</a></code></p></td>
+<td><p>Sets the mergeMode to use when assigning the queried components to the
+ filter query component. A <code>null</code> value means that the queried
+ components will assigned without being merged at all. In that case, the
+ merging has to be performed later on in the action chain. Forgetting to do
+ so will lead to unexpected results. Default value is
+ <code>EMergeMode.MERGE_CLEAN_LAZY</code>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>queryComponentRefiner</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Configures a query component refiner that will be called before the query component is processed to extract the Hibernate detached criteria. This allows for instance to force query values.</p></td>
+<td align="left"><p><strong>queryComponentRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/IQueryComponentRefiner.html">IQuery&#x200B;Component&#x200B;Refiner</a></code></p></td>
+<td><p>Configures a query component refiner that will be called before the query
+ component is processed to extract the Hibernate detached criteria. This
+ allows for instance to force query values.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>useCountForPagination</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Sets use count for pagination.</p></td>
+<td align="left"><p><strong>useCountForPagination</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets use count for pagination.</p></td>
 </tr>
 </tbody>
 </table>
 
-QueryEntitiesAction
--------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.hibernate.QueryEntitiesAction
+#### QueryEntitiesAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.hibernate.QueryEntitiesAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/hibernate/QueryEntitiesAction.html)
++ **Super-type** : [`AbstractQueryComponentsAction`](#org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction)
 
-This action is used to Hibernate query entities by example. It is used behind the scene in several places in Jspresso based applications, as in filtered bean collection modules, list of values, ... The principles are to tailor an Hibernate Criterion based on the Jspresso "{@code IQueryComponent} ". A Jspresso query component is a hierarchical data structure that mimics a portion of the domain model headed by an entity. It is essentially a set of property/value pairs where values can be :
 
-1.  a scalar value
 
-2.  a comparable query structure (operator, inf and sup value) to place a constraint on a comparable property (date, number, ...)
+This action is used to Hibernate query entities by example. It is used behind
+ the scene in several places in Jspresso based applications, as in filtered
+ bean collection modules, list of values, ... The principles are to tailor an
+ Hibernate Criterion based on the Jspresso &quot;<code>IQueryComponent</code>
+ &quot;. A Jspresso query component is a hierarchical data structure that
+ mimics a portion of the domain model headed by an entity. It is essentially a
+ set of property/value pairs where values can be :
+ <ol>
+ <li>a scalar value</li>
+ <li>a comparable query structure (operator, inf and sup value) to place a
+ constraint on a comparable property (date, number, ...)</li>
+ <li>a sub query component</li>
+ </ol>
+ <p/>
+ Out of this query component, the action will build an Hibernate detached
+ criteria by constructing all join sub-criteria whenever necessary.
+ <p/>
+ Once the detached criteria is complete, the action will perform the Hibernate
+ query while using paging information taken from the query component as well
+ as custom sorting properties.
+ <p/>
+ Whenever the query is successful, the result is merged back to the
+ application session and assigned to the query component
+ <code>queriedComponents</code> property.
+ <p/>
+ Note that there are 2 hooks that can be configured by injection to fine-tune
+ the performed query : <code>queryComponentRefiner</code> and
+ <code>criteriaRefiner</code>.
 
-3.  a sub query component
 
-Out of this query component, the action will build an Hibernate detached criteria by constructing all join sub-criteria whenever necessary. Once the detached criteria is complete, the action will perform the Hibernate query while using paging information taken from the query component as well as custom sorting properties. Whenever the query is successful, the result is merged back to the application session and assigned to the query component {@code queriedComponents} property. Note that there are 2 hooks that can be configured by injection to fine-tune the performed query : {@code queryComponentRefiner} and {@code criteriaRefiner}.
 
 <table>
 <caption>QueryEntitiesAction properties</caption>
@@ -936,31 +1164,35 @@ Out of this query component, the action will build an Hibernate detached criteri
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>criteriaFactory</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Sets the criteriaFactory.</p></td>
+<td align="left"><p><strong>criteriaFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/persistence/hibernate/criterion/ICriteriaFactory.html">ICriteria&#x200B;Factory</a></code></p></td>
+<td><p>Sets the criteriaFactory.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>criteriaRefiner</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Configures a criteria refiner that will be called before the Hibernate detached criteria is actually used to perform the query. It allows to complement the criteria with arbitrary complex clauses that cannot be simply expressed in a &quot;<em>Query by Example</em>&quot; semantics.</p></td>
+<td align="left"><p><strong>criteriaRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/hibernate/ICriteriaRefiner.html">ICriteria&#x200B;Refiner</a></code></p></td>
+<td><p>Configures a criteria refiner that will be called before the Hibernate
+ detached criteria is actually used to perform the query. It allows to
+ complement the criteria with arbitrary complex clauses that cannot be
+ simply expressed in a &quot;<i>Query by Example</i>&quot; semantics.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>useInListForPagination</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Sets the useInListForPagination.</p></td>
+<td align="left"><p><strong>useInListForPagination</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets the useInListForPagination.</p></td>
 </tr>
 </tbody>
 </table>
 
-StaticQueryComponentsAction
----------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.StaticQueryComponentsAction
+#### StaticQueryComponentsAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.StaticQueryComponentsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/StaticQueryComponentsAction.html)
++ **Super-type** : [`AbstractQueryComponentsAction`](#org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction)
+
+
 
 This action filters an arbitrary component list against the query component using a query component matcher.
+
+
 
 <table>
 <caption>StaticQueryComponentsAction properties</caption>
@@ -976,29 +1208,36 @@ This action filters an arbitrary component list against the query component usin
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>componentStore</strong></p>
-<p><code>List​&lt;​?​&gt;​</code></p></td>
-<td align="left"><p>Sets component store.</p></td>
+<td align="left"><p><strong>componentStore</strong></p><p><code>List&#x200B;&lt;&#x200B;?&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets component store.</p></td>
 </tr>
 </tbody>
 </table>
 
-AddBeanAsSubModuleAction
-------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction
+#### AddBeanAsSubModuleAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/AddBeanAsSubModuleAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
+
+
 
 This action can be installed on any collection view and will :
+ <ol>
+ <li>take the selected elements in the underlying model collection,</li>
+ <li>create bean modules out of them, using the
+ <code>childModuleProjectedViewDescriptor</code> as projected view if it has
+ been configured,</li>
+ <li>add the created bean modules as children of the currently selected
+ module, visualizing them in the workspace navigation tree.</li>
+ </ol>
+ Whenever there is no <code>childModuleProjectedViewDescriptor</code>
+ configured, and the currently selected module is a bean collection module,
+ the created modules projected view descriptor is taken from the bean
+ collection module (<code>elementViewDescriptor</code>).
 
-1.  take the selected elements in the underlying model collection,
 
-2.  create bean modules out of them, using the {@code childModuleProjectedViewDescriptor} as projected view if it has been configured,
-
-3.  add the created bean modules as children of the currently selected module, visualizing them in the workspace navigation tree.
-
-Whenever there is no {@code childModuleProjectedViewDescriptor} configured, and the currently selected module is a bean collection module, the created modules projected view descriptor is taken from the bean collection module ({@code elementViewDescriptor}).
 
 <table>
 <caption>AddBeanAsSubModuleAction properties</caption>
@@ -1014,21 +1253,27 @@ Whenever there is no {@code childModuleProjectedViewDescriptor} configured, and 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>childModuleProjectedViewDescriptor</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Sets the childModuleProjectedViewDescriptor.</p></td>
+<td align="left"><p><strong>childModuleProjectedViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
+<td><p>Sets the childModuleProjectedViewDescriptor.</p></td>
 </tr>
 </tbody>
 </table>
 
-CreateQueryComponentAction
---------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.CreateQueryComponentAction
+#### CreateQueryComponentAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.CreateQueryComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CreateQueryComponentAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
 
-Creates a query component to be used in filters or list of values. The created query component is stored in the context under the key {@code IQueryComponent.QUERY\_COMPONENT}. Further explanations are given about query components in the {@code QueryEntitiesAction} documentation.
+
+
+Creates a query component to be used in filters or list of values. The
+ created query component is stored in the context under the key
+ <code>IQueryComponent.QUERY_COMPONENT</code>. Further explanations are given
+ about query components in the <code>QueryEntitiesAction</code> documentation.
+
+
 
 <table>
 <caption>CreateQueryComponentAction properties</caption>
@@ -1044,26 +1289,32 @@ Creates a query component to be used in filters or list of values. The created q
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>queryComponentDescriptorFactory</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Sets the queryComponentDescriptorFactory.</p></td>
+<td align="left"><p><strong>queryComponentDescriptorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/IQueryComponentDescriptorFactory.html">IQuery&#x200B;Component&#x200B;Descriptor&#x200B;Factory</a></code></p></td>
+<td><p>Sets the queryComponentDescriptorFactory.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>queryComponentRefiner</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Sets the queryComponentRefiner.</p></td>
+<td align="left"><p><strong>queryComponentRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/IQueryComponentRefiner.html">IQuery&#x200B;Component&#x200B;Refiner</a></code></p></td>
+<td><p>Sets the queryComponentRefiner.</p></td>
 </tr>
 </tbody>
 </table>
 
-DeleteEntityAction
-------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction
+#### DeleteEntityAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/DeleteEntityAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
 
-An action used to delete the entity that is model of the view. Note that cleaning of relationships is a 2 pass process. The 1st one is a dry run that checks that no functional exception is thrown by the business rules. The second one performs the actual cleaning.
+
+
+An action used to delete the entity that is model of the view.
+ <p/>
+ Note that cleaning of relationships is a 2 pass process. The 1st one is a dry
+ run that checks that no functional exception is thrown by the business rules.
+ The second one performs the actual cleaning.
+
+
 
 <table>
 <caption>DeleteEntityAction properties</caption>
@@ -1078,22 +1329,34 @@ An action used to delete the entity that is model of the view. Note that cleanin
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-GenerateJasperReportAction
---------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction
+#### GenerateJasperReportAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/printing/backend/action/GenerateJasperReportAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
 
-This action performs the actual Jasper report generation using a JDBC data source. The report design is retrieved from the action context (under the key {@code IReport.REPORT\_ACTION\_PARAM}). The report context used during the generation includes the action context so that all Jspresso managed objects can be leveraged in the report itself. The logged-in user locale is used as the report locale.
 
-The resulting {@code JasperPrint} report is then placed into the action context as action parameter for further processing (like PDF production for instance).
+
+This action performs the actual Jasper report generation using a JDBC
+ data source. The report design is retrieved from the action context (under the
+ key <code>IReport.REPORT_ACTION_PARAM</code>). The report context used during
+ the generation includes the action context so that all Jspresso managed
+ objects can be leveraged in the report itself. The logged-in user locale is
+ used as the report locale.
+ <p>
+ The resulting <code>JasperPrint</code> report is then placed into the action
+ context as action parameter for further processing (like PDF production for
+ instance).
+
+
 
 <table>
 <caption>GenerateJasperReportAction properties</caption>
@@ -1109,21 +1372,26 @@ The resulting {@code JasperPrint} report is then placed into the action context 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>jdbcTemplate</strong></p>
-<p><code>Jdbc​Template</code></p></td>
-<td align="left"><p>Configures the JDBC template (wrapping a data source) to use for filling the report.</p></td>
+<td align="left"><p><strong>jdbcTemplate</strong></p><p><code>Jdbc&#x200B;Template</code></p></td>
+<td><p>Configures the JDBC template (wrapping a data source) to use for filling the
+ report.</p></td>
 </tr>
 </tbody>
 </table>
 
-InitModuleFilterAction
-----------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.module.InitModuleFilterAction
+#### InitModuleFilterAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.module.InitModuleFilterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/InitModuleFilterAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
 
-Initialize a module filter with a brand new query component and resets the module objects collection.
+
+
+Initialize a module filter with a brand new query component and resets the
+ module objects collection.
+
+
 
 <table>
 <caption>InitModuleFilterAction properties</caption>
@@ -1139,26 +1407,28 @@ Initialize a module filter with a brand new query component and resets the modul
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>createQueryComponentAction</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Sets the createQueryComponentAction.</p></td>
+<td align="left"><p><strong>createQueryComponentAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CreateQueryComponentAction.html">Create&#x200B;Query&#x200B;Component&#x200B;Action</a></code></p></td>
+<td><p>Sets the createQueryComponentAction.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>queryComponentRefiner</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Sets the queryComponentRefiner.</p></td>
+<td align="left"><p><strong>queryComponentRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/IQueryComponentRefiner.html">IQuery&#x200B;Component&#x200B;Refiner</a></code></p></td>
+<td><p>Sets the queryComponentRefiner.</p></td>
 </tr>
 </tbody>
 </table>
 
-PurgeCompletedAsynExecutorsAction
----------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction
+#### PurgeCompletedAsynExecutorsAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/PurgeCompletedAsynExecutorsAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
+
+
 
 Purges completed asynchronous action executors.
+
+
 
 <table>
 <caption>PurgeCompletedAsynExecutorsAction properties</caption>
@@ -1173,22 +1443,27 @@ Purges completed asynchronous action executors.
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-ReloadAction
-------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.ReloadAction
+#### ReloadAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.ReloadAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/ReloadAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`ReloadModuleObjectAction`](org.jspresso.framework.application.backend.action.persistence.ReloadModuleObjectAction)
 
--   **Sub-types** : ``
 
-Reloads the entities provided by the context {@code ActionParameter}. The whole entities graphs are reloaded from the persistent store.
+
+Reloads the entities provided by the context <code>ActionParameter</code>.
+ The whole entities graphs are reloaded from the persistent store.
+
+
 
 <table>
 <caption>ReloadAction properties</caption>
@@ -1204,21 +1479,26 @@ Reloads the entities provided by the context {@code ActionParameter}. The whole 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>transactional</strong></p>
-<p><code>boolean</code></p></td>
-<td align="left"><p>Sets transactional.</p></td>
+<td align="left"><p><strong>transactional</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets transactional.</p></td>
 </tr>
 </tbody>
 </table>
 
-ReloadModuleObjectAction
-------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.ReloadModuleObjectAction
+#### ReloadModuleObjectAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.ReloadModuleObjectAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/ReloadModuleObjectAction.html)
++ **Super-type** : [`ReloadAction`](#org.jspresso.framework.application.backend.action.persistence.ReloadAction)
 
-Reloads all the module entities as well as all its sub-modules entities recursively. The whole entities graphs are reloaded from the persistent store.
+
+
+Reloads all the module entities as well as all its sub-modules entities
+ recursively. The whole entities graphs are reloaded from the persistent
+ store.
+
+
 
 <table>
 <caption>ReloadModuleObjectAction properties</caption>
@@ -1233,20 +1513,30 @@ Reloads all the module entities as well as all its sub-modules entities recursiv
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-RemoveFromModuleObjectsAction
------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction
+#### RemoveFromModuleObjectsAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/module/RemoveFromModuleObjectsAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
 
-This action, which is to be used on bean collection modules, removes the selected objects from the module's projected collection **and deletes them from the persistent store**. If one (or more) of the removed objects are also used in children bean modules, the corresponding children bean modules are also removed accordingly. It is versatile enough to work on mobile collection module details.
+
+
+This action, which is to be used on bean collection modules, removes the
+ selected objects from the module's projected collection <b>and deletes them
+ from the persistent store</b>. If one (or more) of the removed objects are
+ also used in children bean modules, the corresponding children bean modules
+ are also removed accordingly. It is versatile enough to work on mobile collection module
+ details.
+
+
 
 <table>
 <caption>RemoveFromModuleObjectsAction properties</caption>
@@ -1261,20 +1551,25 @@ This action, which is to be used on bean collection modules, removes the selecte
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-ResetConnectorValueAction
--------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.ResetConnectorValueAction
+#### ResetConnectorValueAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.ResetConnectorValueAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/ResetConnectorValueAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
+
+
 
 Resets the model connector value to null.
+
+
 
 <table>
 <caption>ResetConnectorValueAction properties</caption>
@@ -1289,22 +1584,27 @@ Resets the model connector value to null.
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-SaveAction
-----------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.SaveAction
+#### SaveAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.SaveAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/SaveAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`SaveModuleObjectAction`](org.jspresso.framework.application.backend.action.persistence.SaveModuleObjectAction)
 
--   **Sub-types** : ``
 
-Saves the entities provided by the context {@code ActionParameter}. All previously registered persistence operations are also performed.
+
+Saves the entities provided by the context <code>ActionParameter</code>. All
+ previously registered persistence operations are also performed.
+
+
 
 <table>
 <caption>SaveAction properties</caption>
@@ -1319,20 +1619,27 @@ Saves the entities provided by the context {@code ActionParameter}. All previous
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-SaveModuleObjectAction
-----------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.persistence.SaveModuleObjectAction
+#### SaveModuleObjectAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.persistence.SaveModuleObjectAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/SaveModuleObjectAction.html)
++ **Super-type** : [`SaveAction`](#org.jspresso.framework.application.backend.action.persistence.SaveAction)
 
-Saves all the module entities as well as all its sub-modules entities recursively. All previously registered persistence operations are also performed.
+
+
+Saves all the module entities as well as all its sub-modules entities
+ recursively. All previously registered persistence operations are also
+ performed.
+
+
 
 <table>
 <caption>SaveModuleObjectAction properties</caption>
@@ -1347,22 +1654,30 @@ Saves all the module entities as well as all its sub-modules entities recursivel
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-ScriptedBackendAction
----------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.ScriptedBackendAction
+#### ScriptedBackendAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.ScriptedBackendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/ScriptedBackendAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`StaticScriptedBackendAction`](org.jspresso.framework.application.backend.action.StaticScriptedBackendAction)
 
--   **Sub-types** : ``
 
-A scripted backend action. The action takes the script to execute (an {@code IScript} implementation) out of its context (using {@code ActionParameter}) and delegates the actual script execution to a {@code IScriptHandler} configured through the {@code scriptHandler} property.
+
+A scripted backend action. The action takes the script to execute (an
+ <code>IScript</code> implementation) out of its context (using
+ <code>ActionParameter</code>) and delegates the actual script execution to a
+ <code>IScriptHandler</code> configured through the <code>scriptHandler</code>
+ property.
+
+
 
 <table>
 <caption>ScriptedBackendAction properties</caption>
@@ -1378,21 +1693,25 @@ A scripted backend action. The action takes the script to execute (an {@code ISc
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>scriptHandler</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Configures the script handler to use to perform the script execution.</p></td>
+<td align="left"><p><strong>scriptHandler</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/scripting/IScriptHandler.html">IScript&#x200B;Handler</a></code></p></td>
+<td><p>Configures the script handler to use to perform the script execution.</p></td>
 </tr>
 </tbody>
 </table>
 
-StaticScriptedBackendAction
----------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.StaticScriptedBackendAction
+#### StaticScriptedBackendAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.StaticScriptedBackendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/StaticScriptedBackendAction.html)
++ **Super-type** : [`ScriptedBackendAction`](#org.jspresso.framework.application.backend.action.ScriptedBackendAction)
 
-A statically scripted backend action. The script and the scripting language are statically configured in the action itself.
+
+
+A statically scripted backend action. The script and the scripting language
+ are statically configured in the action itself.
+
+
 
 <table>
 <caption>StaticScriptedBackendAction properties</caption>
@@ -1408,26 +1727,29 @@ A statically scripted backend action. The script and the scripting language are 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>script</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Sets the script source code.</p></td>
+<td align="left"><p><strong>script</strong></p><p><code>String</code></p></td>
+<td><p>Sets the script source code.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>scriptLanguage</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Sets the script language this scripted action is written in.</p></td>
+<td align="left"><p><strong>scriptLanguage</strong></p><p><code>String</code></p></td>
+<td><p>Sets the script language this scripted action is written in.</p></td>
 </tr>
 </tbody>
 </table>
 
-SelectEntityPropertyAction
---------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.SelectEntityPropertyAction
+#### SelectEntityPropertyAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.SelectEntityPropertyAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/SelectEntityPropertyAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
 
-A generic action to fill-in the context {@code ActionParameter} with the value of an entity property.
+
+
+A generic action to fill-in the context <code>ActionParameter</code> with the
+ value of an entity property.
+
+
 
 <table>
 <caption>SelectEntityPropertyAction properties</caption>
@@ -1443,21 +1765,25 @@ A generic action to fill-in the context {@code ActionParameter} with the value o
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>property</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Configures the property to extract out of the underlying model.</p></td>
+<td align="left"><p><strong>property</strong></p><p><code>String</code></p></td>
+<td><p>Configures the property to extract out of the underlying model.</p></td>
 </tr>
 </tbody>
 </table>
 
-TransferCollectionAction
-------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.application.backend.action.TransferCollectionAction
+#### TransferCollectionAction
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.application.backend.action.TransferCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/TransferCollectionAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
 
-An action used to register a collection of domain objects into the application's clipboard along with a transfer mode semantics.
+
+
+An action used to register a collection of domain objects into the
+ application's clipboard along with a transfer mode semantics.
+
+
 
 <table>
 <caption>TransferCollectionAction properties</caption>
@@ -1473,13 +1799,12 @@ An action used to register a collection of domain objects into the application's
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>transferMode</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Configures the transferMode to use when pasting will be requested, i.e. :</p>
-<ul>
-<li><p>{@code ETransferMode.COPY} for copy semantics.</p></li>
-<li><p>{@code ETransferMode.MOVE} for move/cut semantics.</p></li>
-</ul></td>
+<td align="left"><p><strong>transferMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/datatransfer/ETransferMode.html">ETransfer&#x200B;Mode</a></code></p></td>
+<td><p>Configures the transferMode to use when pasting will be requested, i.e. :
+ <ul>
+ <li><code>ETransferMode.COPY</code> for copy semantics.</li>
+ <li><code>ETransferMode.MOVE</code> for move/cut semantics.</li>
+ </ul></p></td>
 </tr>
 </tbody>
 </table>

@@ -1,12 +1,24 @@
-Reference for ActionMap hierarchy
-=================================
+## ActionMap
 
-ActionMap
----------
+### org.jspresso.framework.view.action.ActionMap
+#### ActionMap
 
--   **Full name** : ``
++ **Full name** : [`org.jspresso.framework.view.action.ActionMap`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionMap.html)
 
-An action map is used to structure a set of actions. The actions are not directly registered but are placed into action lists that in turn are assigned to the action map. Action maps can be merged together, i.e. an action map can have multiple parent action maps. In that case, Action lists that have the same name are merged together. The way action maps are rendered depends on the place where they are declared. For instance an action map that is assigned to a view might be rendered as a toolbar with each action list separated into its own group. On the other hand, an action map declared on the frontend controller might be represented as a menu bar on the main application frame.
+
+
+An action map is used to structure a set of actions. The actions are not
+ directly registered but are placed into action lists that in turn are
+ assigned to the action map. Action maps can be merged together, i.e. an
+ action map can have multiple parent action maps. In that case, Action lists
+ that have the same name are merged together. The way action maps are rendered
+ depends on the place where they are declared. For instance an action map that
+ is assigned to a view might be rendered as a toolbar with each action list
+ separated into its own group. On the other hand, an action map declared on
+ the frontend controller might be represented as a menu bar on the main
+ application frame.
+
+
 
 <table>
 <caption>ActionMap properties</caption>
@@ -22,35 +34,51 @@ An action map is used to structure a set of actions. The actions are not directl
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>actionLists</strong></p>
-<p><code>List​&lt;​​&gt;​</code></p></td>
-<td align="left"><p>Assigns the action lists that are directly owned by this action map. The action lists that will actually be rendered will be the merge of the directly owned action lists and of the parent action maps. Action lists that have the same name are merged together and into a merged action list, local actions will replace parent actions with the same name.</p></td>
+<td align="left"><p><strong>actionLists</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionList.html">Action&#x200B;List</a>&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Assigns the action lists that are directly owned by this action map. The
+ action lists that will actually be rendered will be the merge of the
+ directly owned action lists and of the parent action maps. Action lists
+ that have the same name are merged together and into a merged action list,
+ local actions will replace parent actions with the same name.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>grantedRoles</strong></p>
-<p><code>Collection​&lt;​String​&gt;​</code></p></td>
-<td align="left"><p>Assigns the roles that are authorized to use this action map. It supports &quot;<strong>!</strong>&quot; prefix to negate the role(s). Whenever the user is not granted sufficient privileges, the action map is simply not displayed at runtime. Setting the collection of granted roles to {@code null} (default value) disables role based authorization, then access is granted to anyone.</p></td>
+<td align="left"><p><strong>grantedRoles</strong></p><p><code>Collection&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Assigns the roles that are authorized to use this action map. It supports
+ &quot;<b>!</b>&quot; prefix to negate the role(s). Whenever the user is not
+ granted sufficient privileges, the action map is simply not displayed at
+ runtime. Setting the collection of granted roles to <code>null</code>
+ (default value) disables role based authorization, then access is granted
+ to anyone.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>parentActionMaps</strong></p>
-<p><code>List​&lt;​​&gt;​</code></p></td>
-<td align="left"><p>Assigns the parent action maps. The action lists that will actually be rendered will be the merge of the directly owned action lists and of the parent action maps. Action lists that have the same name are merged together and into a merged action list, local actions will replace parent actions with the same name.</p></td>
+<td align="left"><p><strong>parentActionMaps</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionMap.html">Action&#x200B;Map</a>&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Assigns the parent action maps. The action lists that will actually be
+ rendered will be the merge of the directly owned action lists and of the
+ parent action maps. Action lists that have the same name are merged
+ together and into a merged action list, local actions will replace parent
+ actions with the same name.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>permId</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Sets the permanent identifier to this application element. Permanent identifiers are used by different framework parts, like dynamic security or record/replay controllers to uniquely identify an application element. Permanent identifiers are generated by the SJS build based on the element id but must be explicitly set if Spring XML is used.</p></td>
+<td align="left"><p><strong>permId</strong></p><p><code>String</code></p></td>
+<td><p>Sets the permanent identifier to this application element. Permanent
+ identifiers are used by different framework parts, like dynamic security or
+ record/replay controllers to uniquely identify an application element.
+ Permanent identifiers are generated by the SJS build based on the element
+ id but must be explicitly set if Spring XML is used.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>renderingOptions</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Indicates how the actions should be rendered. This is either a value of the {@code ERenderingOptions} enum or its equivalent string representation :</p>
-<ul>
-<li><p>{@code LABEL_ICON} for label and icon</p></li>
-<li><p>{@code LABEL} for label only</p></li>
-<li><p>{@code ICON} for icon only.</p></li>
-</ul>
-<p>Default value is {@code null}, i.e. determined from outside, e.g. the view factory.</p></td>
+<td align="left"><p><strong>renderingOptions</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ERenderingOptions.html">ERendering&#x200B;Options</a></code></p></td>
+<td><p>Indicates how the actions should be rendered. This is either a value of the
+ <code>ERenderingOptions</code> enum or its equivalent string representation
+ :
+ <ul>
+ <li><code>LABEL_ICON</code> for label and icon</li>
+ <li><code>LABEL</code> for label only</li>
+ <li><code>ICON</code> for icon only.</li>
+ </ul>
+ <p>
+ Default value is <code>null</code>, i.e. determined from outside, e.g. the
+ view factory.</p></td>
 </tr>
 </tbody>
 </table>

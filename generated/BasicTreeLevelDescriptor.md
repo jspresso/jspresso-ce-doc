@@ -1,20 +1,30 @@
-Reference for BasicTreeLevelDescriptor hierarchy
-================================================
+## BasicTreeLevelDescriptor
 
-BasicTreeLevelDescriptor
-------------------------
+### org.jspresso.framework.view.descriptor.basic.BasicTreeLevelDescriptor
+#### BasicTreeLevelDescriptor
 
--   **Full name** : ``
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicTreeLevelDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTreeLevelDescriptor.html)
++ **Sub-types** : [`BasicCompositeTreeLevelDescriptor`](org.jspresso.framework.view.descriptor.basic.BasicCompositeTreeLevelDescriptor), [`BasicSimpleTreeLevelDescriptor`](org.jspresso.framework.view.descriptor.basic.BasicSimpleTreeLevelDescriptor)
 
--   **Sub-types** : ``, ``
 
-This is the base descriptor for all tree levels. A tree level is a collection of sibling nodes that belong to the same formal collection (usually a component collection property). This base descriptor does not accept nested subtrees so it is only used to describe a collection of leaf nodes. If you need to describe intermediary tree levels, yous will use one of the 2 subtypes :
 
--   *BasicSimpleTreeLevelDescriptor* to define a collection of tree nodes that accept a single subtree
+This is the base descriptor for all tree levels. A tree level is a collection
+ of sibling nodes that belong to the same formal collection (usually a
+ component collection property). This base descriptor does not accept nested
+ subtrees so it is only used to describe a collection of leaf nodes. If you
+ need to describe intermediary tree levels, yous will use one of the 2
+ subtypes :
+ <ul>
+ <li><i>BasicSimpleTreeLevelDescriptor</i> to define a collection of tree
+ nodes that accept a single subtree</li>
+ <li><i>BasicCompositeTreeLevelDescriptor</i> to define a collection of tree
+ nodes that accept a list of subtrees</li>
+ </ul>
+ Defining a tree level is mainly a matter of defining its representation as an
+ individual list of components (i.e. the <code>nodeGroupDescriptor</code>
+ property).
 
--   *BasicCompositeTreeLevelDescriptor* to define a collection of tree nodes that accept a list of subtrees
 
-Defining a tree level is mainly a matter of defining its representation as an individual list of components (i.e. the {@code nodeGroupDescriptor} property).
 
 <table>
 <caption>BasicTreeLevelDescriptor properties</caption>
@@ -30,58 +40,84 @@ Defining a tree level is mainly a matter of defining its representation as an in
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>grantedRoles</strong></p>
-<p><code>Collection​&lt;​String​&gt;​</code></p></td>
-<td align="left"><p>Assigns the roles that are authorized to use this subtree. It supports &quot;<strong>!</strong>&quot; prefix to negate the role(s). Whenever the user is not granted sufficient privileges, the subtree is simply hidden. Setting the collection of granted roles to {@code null} (default value) disables role based authorization on the node group level. The framework then checks for the model roles authorizations and will apply the same restrictions. If both view and model granted roles collections are {@code null}, then access is granted to anyone.</p></td>
+<td align="left"><p><strong>grantedRoles</strong></p><p><code>Collection&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Assigns the roles that are authorized to use this subtree. It supports
+ &quot;<b>!</b>&quot; prefix to negate the role(s). Whenever the user is not
+ granted sufficient privileges, the subtree is simply hidden. Setting the
+ collection of granted roles to <code>null</code> (default value) disables
+ role based authorization on the node group level. The framework then checks
+ for the model roles authorizations and will apply the same restrictions. If
+ both view and model granted roles collections are <code>null</code>, then
+ access is granted to anyone.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>nodeGroupDescriptor</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Describes the collection of sibling nodes (node group) as a if it were a list view. This is how you instruct Jspresso the type of the components that are used as model behind the tree nodes and which model property is used to compute the node labels. Most of the other properties defined on the node group descriptor itself are ignored (font, color, selection action, ...) since a tree group is not a &quot;real&quot; view but just a mean of defining a subtree. All these properties that are ignored on the tree group can be defined on the tree view itself.</p></td>
+<td align="left"><p><strong>nodeGroupDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IListViewDescriptor.html">IList&#x200B;View&#x200B;Descriptor</a></code></p></td>
+<td><p>Describes the collection of sibling nodes (node group) as a if it were a
+ list view. This is how you instruct Jspresso the type of the components
+ that are used as model behind the tree nodes and which model property is
+ used to compute the node labels. Most of the other properties defined on
+ the node group descriptor itself are ignored (font, color, selection
+ action, ...) since a tree group is not a "real" view but just a mean of
+ defining a subtree. All these properties that are ignored on the tree group
+ can be defined on the tree view itself.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>permId</strong></p>
-<p><code>String</code></p></td>
-<td align="left"><p>Sets the permanent identifier to this application element. Permanent identifiers are used by different framework parts, like dynamic security or record/replay controllers to uniquely identify an application element. Permanent identifiers are generated by the SJS build based on the element id but must be explicitly set if Spring XML is used.</p></td>
+<td align="left"><p><strong>permId</strong></p><p><code>String</code></p></td>
+<td><p>Sets the permanent identifier to this application element. Permanent
+ identifiers are used by different framework parts, like dynamic security or
+ record/replay controllers to uniquely identify an application element.
+ Permanent identifiers are generated by the SJS build based on the element
+ id but must be explicitly set if Spring XML is used.</p></td>
 </tr>
 </tbody>
 </table>
 
-BasicCompositeTreeLevelDescriptor
----------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.view.descriptor.basic.BasicCompositeTreeLevelDescriptor
+#### BasicCompositeTreeLevelDescriptor
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicCompositeTreeLevelDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicCompositeTreeLevelDescriptor.html)
++ **Super-type** : [`BasicTreeLevelDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTreeLevelDescriptor)
 
-This descriptor is used to describe a collection of sibling nodes that each nest multiple subtrees. The children subtrees are each placed under an intermediary grouping node. For instance, given a composite tree level mapping a collection of *A*s and whose children are 2 tree levels mapping respectively a collection *Y*s and *Z*s, the tree would look like :
 
-     parent
-       -1
-         
-           -1.1
-           -1.2
-         
-           -1.1
-           -1.2
-           -1.3
-       -2
-         
-           -2.1
-           -2.2
-           -2.3
-         
-           -2.1
-       -3
-         
-           -3.1
-           -3.2
-         
-           -3.1
-           -3.2
-     
 
-You can notice the intermediary grouping nodes that are installed to visually separate the 2 collection families (*Y* and *Z*).
+This descriptor is used to describe a collection of sibling nodes that each
+ nest multiple subtrees. The children subtrees are each placed under an
+ intermediary grouping node. For instance, given a composite tree level
+ mapping a collection of <i>A</i>s and whose children are 2 tree levels
+ mapping respectively a collection <i>Y</i>s and <i>Z</i>s, the tree would
+ look like :
+ 
+ <pre>
+ parent
+   <b>A</b>-1
+     <b>collY</b>
+       <b>Y</b>-1.1
+       <b>Y</b>-1.2
+     <b>collZ</b>
+       <b>Z</b>-1.1
+       <b>Z</b>-1.2
+       <b>Z</b>-1.3
+   <b>A</b>-2
+     <b>collY</b>
+       <b>Y</b>-2.1
+       <b>Y</b>-2.2
+       <b>Y</b>-2.3
+     <b>collZ</b>
+       <b>Z</b>-2.1
+   <b>A</b>-3
+     <b>collY</b>
+       <b>Y</b>-3.1
+       <b>Y</b>-3.2
+     <b>collZ</b>
+       <b>Z</b>-3.1
+       <b>Z</b>-3.2
+ </pre>
+ 
+ You can notice the intermediary grouping nodes that are installed to visually
+ separate the 2 collection families (<i>Y</i> and <i>Z</i>).
+
+
 
 <table>
 <caption>BasicCompositeTreeLevelDescriptor properties</caption>
@@ -97,35 +133,44 @@ You can notice the intermediary grouping nodes that are installed to visually se
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>childrenDescriptors</strong></p>
-<p><code>List​&lt;​​&gt;​</code></p></td>
-<td align="left"><p>Assigns the list children tree level descriptors. A {@code null} value (default) makes this tree level a leaf tree level and is strictly equivalent to declaring a {@code BasicTreeLevelDescriptor} instead.</p></td>
+<td align="left"><p><strong>childrenDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ITreeLevelDescriptor.html">ITree&#x200B;Level&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Assigns the list children tree level descriptors. A <code>null</code> value
+ (default) makes this tree level a leaf tree level and is strictly
+ equivalent to declaring a <code>BasicTreeLevelDescriptor</code> instead.</p></td>
 </tr>
 </tbody>
 </table>
 
-BasicSimpleTreeLevelDescriptor
-------------------------------
 
--   **Full name** : ``
+### org.jspresso.framework.view.descriptor.basic.BasicSimpleTreeLevelDescriptor
+#### BasicSimpleTreeLevelDescriptor
 
--   **Super-type** : ``
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicSimpleTreeLevelDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicSimpleTreeLevelDescriptor.html)
++ **Super-type** : [`BasicTreeLevelDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTreeLevelDescriptor)
++ **Sub-types** : 
 
--   **Sub-types** :
 
-This descriptor is used to describe a collection of sibling nodes that only nest a single subtree. The child subtree is directly placed under each node without any intermediary grouping node. For instance, given a simple tree level mapping a collection of *A*s and whose child is a tree level mapping a collection of *B*s, the tree would look like :
 
-     parent
-       -1
-         -1.1
-         -1.2
-         -1.3
-       -2
-         -2.1
-       -3
-         -3.1
-         -3.2
-     
+This descriptor is used to describe a collection of sibling nodes that only
+ nest a single subtree. The child subtree is directly placed under each node
+ without any intermediary grouping node. For instance, given a simple tree
+ level mapping a collection of <i>A</i>s and whose child is a tree level
+ mapping a collection of <i>B</i>s, the tree would look like :
+ 
+ <pre>
+ parent
+   <b>A</b>-1
+     <b>B</b>-1.1
+     <b>B</b>-1.2
+     <b>B</b>-1.3
+   <b>A</b>-2
+     <b>B</b>-2.1
+   <b>A</b>-3
+     <b>B</b>-3.1
+     <b>B</b>-3.2
+ </pre>
+
+
 
 <table>
 <caption>BasicSimpleTreeLevelDescriptor properties</caption>
@@ -141,9 +186,10 @@ This descriptor is used to describe a collection of sibling nodes that only nest
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>childDescriptor</strong></p>
-<p><code></code></p></td>
-<td align="left"><p>Assigns the single child tree level descriptor. A {@code null} value (default) makes this tree level a leaf tree level and is strictly equivalent to declaring a {@code BasicTreeLevelDescriptor} instead.</p></td>
+<td align="left"><p><strong>childDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ITreeLevelDescriptor.html">ITree&#x200B;Level&#x200B;Descriptor</a></code></p></td>
+<td><p>Assigns the single child tree level descriptor. A <code>null</code> value
+ (default) makes this tree level a leaf tree level and is strictly
+ equivalent to declaring a <code>BasicTreeLevelDescriptor</code> instead.</p></td>
 </tr>
 </tbody>
 </table>
