@@ -13,10 +13,8 @@ Overview
 
 Reference
 ---------
-      <xi:include href="../generated/BasicViewDescriptor.xml"
-                  xmlns:xi="http://www.w3.org/2001/XInclude" />
-      <xi:include href="../generated/BasicTreeLevelDescriptor.xml"
-                  xmlns:xi="http://www.w3.org/2001/XInclude" />
+!INCLUDE "../generated/BasicViewDescriptor.md"
+!INCLUDE "../generated/BasicTreeLevelDescriptor.md"
 
 Composite views
 ===============
@@ -28,3 +26,4 @@ Overview
 
 Reference
 ---------
+!INCLUDE "../generated/BasicCompositeViewDescriptor.xml"
