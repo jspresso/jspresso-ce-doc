@@ -1,2 +1,2 @@
-# jspresso-ce-doc
+# Jspresso CE reference documentation
 Jspresso CE documentation
