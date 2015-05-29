@@ -13,20 +13,23 @@ Common part
 
 Reference
 ---------
-      <xi:include href="../generated/BackendAction.xml"
-                  xmlns:xi="http://www.w3.org/2001/XInclude" />
+!INCLUDE "../generated/AbstractActionContextAware.md"
+!INCLUDE "../generated/ActionMap.md"
+!INCLUDE "../generated/ActionList.md"
 
 Backend actions
 ===============
 
 Reference
 ---------
+!INCLUDE "../generated/BackendAction.md"
 
 Frontend actions
 ================
 
 Reference
 ---------
+!INCLUDE "../generated/FrontendAction.md"
 
 Built-in actions
 ================
