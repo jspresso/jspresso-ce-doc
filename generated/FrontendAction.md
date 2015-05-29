@@ -16,110 +16,91 @@ This base class allows for visual (name, icon, toolTip) as well as accessibility
 
 A frontend action is to be executed by the frontend controller in the context of the UI. It can thus access the view structure, interact visually with the user, and so on. A frontend action can chain a backend action but the opposite will be prevented.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **acceleratorAsString**  | Configures a keyboard accelerator shortcut on    |
-|                          | this action. Support of this feature depends on  |
-| `String`                 | the UI execution platform. The syntax used       |
-|                          | consists of listing keys that should be pressed  |
-|                          | to trigger the action, i.e. {@code alt d} or     |
-|                          | {@code ctrl c}. This is the syntax supported by  |
-|                          | the {@code                                       |
-|                          | javax.swing.KeyStroke\#getKeyStroke(...)} swing  |
-|                          | static method.                                   |
-+--------------------------+--------------------------------------------------+
-| **actionabilityGates**   | Assigns a collection of gates to determine       |
-|                          | action *actionability*. An action will be        |
-| `Collection​<​​>​`       | considered actionable (enabled) if and only if   |
-|                          | all gates are open. This mechanism is mainly     |
-|                          | used for dynamic UI authorization based on model |
-|                          | state, e.g. a validated invoice should not be    |
-|                          | validated twice.                                 |
-|                          |                                                  |
-|                          | Action assigned gates will be cloned for each    |
-|                          | concrete action instance created and bound to    |
-|                          | its respective UI component (usually a button).  |
-|                          | So basically, each action instance will have its |
-|                          | own, unshared collection of actionability gates. |
-|                          |                                                  |
-|                          | Jspresso provides a useful set of gate types,    |
-|                          | like the binary property gate that open/close    |
-|                          | based on the value of a boolean property of the  |
-|                          | view model the action is installed to.           |
-|                          |                                                  |
-|                          | By default, frontend actions are assigned a      |
-|                          | generic gate that closes (disables the action)   |
-|                          | when the view is not assigned any model.         |
-+--------------------------+--------------------------------------------------+
-| **collectionBased**      | Declares the action as working on a collection   |
-|                          | of objects. Collection based actions will        |
-| `boolean`                | typically be installed on selectable views       |
-|                          | (table, list, tree) and will be enabled only     |
-|                          | when the view selection is not empty (a default  |
-|                          | gate is installed for this purpose). Moreover,   |
-|                          | model gates that are configured on collection    |
-|                          | based actions take their model from the view     |
-|                          | selected components instead of the view model    |
-|                          | itself. In case of multi-selection enabled UI    |
-|                          | views, the actionability gates will actually     |
-|                          | open if and only if their opening condition is   |
-|                          | met for all the selected items.                  |
-+--------------------------+--------------------------------------------------+
-| **description**          | Sets the key used to compute the                 |
-|                          | internationalized description of the action. The |
-| `String`                 | translated description is then usually used as   |
-|                          | toolTip for the action.                          |
-+--------------------------+--------------------------------------------------+
-| **icon**                 | Sets the icon.                                   |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **iconImageURL**         | Sets the icon image URL used to decorate the     |
-|                          | action UI component peer.                        |
-| `String`                 |                                                  |
-|                          | Supported URL protocols include :                |
-|                          |                                                  |
-|                          | -   all JVM supported protocols                  |
-|                          |                                                  |
-|                          | -   the **jar:/** pseudo URL protocol            |
-|                          |                                                  |
-|                          | -   the **classpath:/** pseudo URL protocol      |
-+--------------------------+--------------------------------------------------+
-| **iconPreferredHeight**  | Sets the icon preferred height.                  |
-|                          |                                                  |
-| `int`                    |                                                  |
-+--------------------------+--------------------------------------------------+
-| **iconPreferredWidth**   | Sets the icon preferred width.                   |
-|                          |                                                  |
-| `int`                    |                                                  |
-+--------------------------+--------------------------------------------------+
-| **mnemonicAsString**     | Configures the mnemonic key used for this        |
-|                          | action. Support of this feature depends on the   |
-| `String`                 | UI execution platform. Mnemonics are typically   |
-|                          | used in menu and menu items.                     |
-+--------------------------+--------------------------------------------------+
-| **multiSelectionEnabled* | Declares the action as being able to run on a    |
-| *                        | collection containing more than 1 element. A     |
-|                          | multiSelectionEnabled = false action will be     |
-| `boolean`                | disabled when the selection contains no or more  |
-|                          | than one element.                                |
-+--------------------------+--------------------------------------------------+
-| **name**                 | Sets the key used to compute the                 |
-|                          | internationalized name of the action. The        |
-| `String`                 | translated name is then usually used as label    |
-|                          | for the action (button label, menu label, ...).  |
-+--------------------------+--------------------------------------------------+
-| **styleName**            | Assigns the style name to use for this view. The |
-|                          | way it is actually leveraged depends on the UI   |
-| `String`                 | channel. It will generally be mapped to some     |
-|                          | sort of CSS style name.                          |
-|                          |                                                  |
-|                          | Default value is {@code null}, meaning that a    |
-|                          | default style is used.                           |
-+--------------------------+--------------------------------------------------+
-
-: FrontendAction properties
+<table>
+<caption>FrontendAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>acceleratorAsString</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures a keyboard accelerator shortcut on this action. Support of this feature depends on the UI execution platform. The syntax used consists of listing keys that should be pressed to trigger the action, i.e. {@code alt d} or {@code ctrl c}. This is the syntax supported by the {@code javax.swing.KeyStroke#getKeyStroke(...)} swing static method.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>actionabilityGates</strong></p>
+<p><code>Collection​&lt;​​&gt;​</code></p></td>
+<td align="left"><p>Assigns a collection of gates to determine action <em>actionability</em>. An action will be considered actionable (enabled) if and only if all gates are open. This mechanism is mainly used for dynamic UI authorization based on model state, e.g. a validated invoice should not be validated twice.</p>
+<p>Action assigned gates will be cloned for each concrete action instance created and bound to its respective UI component (usually a button). So basically, each action instance will have its own, unshared collection of actionability gates.</p>
+<p>Jspresso provides a useful set of gate types, like the binary property gate that open/close based on the value of a boolean property of the view model the action is installed to.</p>
+<p>By default, frontend actions are assigned a generic gate that closes (disables the action) when the view is not assigned any model.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>collectionBased</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Declares the action as working on a collection of objects. Collection based actions will typically be installed on selectable views (table, list, tree) and will be enabled only when the view selection is not empty (a default gate is installed for this purpose). Moreover, model gates that are configured on collection based actions take their model from the view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates will actually open if and only if their opening condition is met for all the selected items.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>description</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the key used to compute the internationalized description of the action. The translated description is then usually used as toolTip for the action.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>icon</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the icon.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>iconImageURL</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the icon image URL used to decorate the action UI component peer.</p>
+<p>Supported URL protocols include :</p>
+<ul>
+<li><p>all JVM supported protocols</p></li>
+<li><p>the <strong>jar:/</strong> pseudo URL protocol</p></li>
+<li><p>the <strong>classpath:/</strong> pseudo URL protocol</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>iconPreferredHeight</strong></p>
+<p><code>int</code></p></td>
+<td align="left"><p>Sets the icon preferred height.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>iconPreferredWidth</strong></p>
+<p><code>int</code></p></td>
+<td align="left"><p>Sets the icon preferred width.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>mnemonicAsString</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the mnemonic key used for this action. Support of this feature depends on the UI execution platform. Mnemonics are typically used in menu and menu items.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>multiSelectionEnabled</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Declares the action as being able to run on a collection containing more than 1 element. A multiSelectionEnabled = false action will be disabled when the selection contains no or more than one element.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>name</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the key used to compute the internationalized name of the action. The translated name is then usually used as label for the action (button label, menu label, ...).</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>styleName</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Assigns the style name to use for this view. The way it is actually leveraged depends on the UI channel. It will generally be mapped to some sort of CSS style name.</p>
+<p>Default value is {@code null}, meaning that a default style is used.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractChartAction
 -------------------
@@ -132,34 +113,42 @@ AbstractChartAction
 
 This is the abstract base class for *Fusioncharts* (flash based charting library) display actions. It holds several common properties that are independent from the actual, concrete, implementations.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **actions**              | Configures a list of actions to install in the   |
-|                          | chart modal dialog.                              |
-| `List​<​​>​`             |                                                  |
-+--------------------------+--------------------------------------------------+
-| **chartDescriptor**      | This property describes the chart to compute and |
-|                          | display. A chart descriptor is a simple data     |
-| ``                       | structure that provides :                        |
-|                          |                                                  |
-|                          | -   the URL of the chart SWF archive (can be     |
-|                          |     loaded by the classloader using a classpath  |
-|                          |     pseudo URL)                                  |
-|                          |                                                  |
-|                          | -   the title of the chart                       |
-|                          |                                                  |
-|                          | -   the width/height of the chart area           |
-|                          |                                                  |
-|                          | -   an abstract method to implement in order to  |
-|                          |     compute the chart XML data                   |
-+--------------------------+--------------------------------------------------+
-| **jdbcTemplate**         | Configures the JDBC template to be used by the   |
-|                          | chart to compute its data.                       |
-| `Jdbc​Template`          |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AbstractChartAction properties
+<table>
+<caption>AbstractChartAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>actions</strong></p>
+<p><code>List​&lt;​​&gt;​</code></p></td>
+<td align="left"><p>Configures a list of actions to install in the chart modal dialog.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>chartDescriptor</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>This property describes the chart to compute and display. A chart descriptor is a simple data structure that provides :</p>
+<ul>
+<li><p>the URL of the chart SWF archive (can be loaded by the classloader using a classpath pseudo URL)</p></li>
+<li><p>the title of the chart</p></li>
+<li><p>the width/height of the chart area</p></li>
+<li><p>an abstract method to implement in order to compute the chart XML data</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>jdbcTemplate</strong></p>
+<p><code>Jdbc​Template</code></p></td>
+<td align="left"><p>Configures the JDBC template to be used by the chart to compute its data.</p></td>
+</tr>
+</tbody>
+</table>
 
 DisplayChartAction
 ------------------
@@ -170,14 +159,24 @@ DisplayChartAction
 
 This is the concrete implementation of the Fusionchart display action. This action is specialized by UI channel, i.e. server based UI channels (Ajax, Flex, ULC) will use *{@code server}* {@code .DisplayChartAction} whereas standalone UI channels (Swing) will use *{@code standalone}*{@code .DisplayChartAction}.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : DisplayChartAction properties
+<table>
+<caption>DisplayChartAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 AbstractEditComponentAction
 ---------------------------
@@ -190,19 +189,31 @@ AbstractEditComponentAction
 
 This action serves as a base class for actions that pop-pup a dialog to edit a component.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **complementaryActions** | Installs a list of complementary actions to      |
-|                          | install between the ok and cancel actions.       |
-| `List​<​?​>​`            |                                                  |
-+--------------------------+--------------------------------------------------+
-| **viewDescriptor**       | Configures the view descriptor to be used to     |
-|                          | create the component editing view that will be   |
-| ``                       | installed in the dialog.                         |
-+--------------------------+--------------------------------------------------+
-
-: AbstractEditComponentAction properties
+<table>
+<caption>AbstractEditComponentAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>complementaryActions</strong></p>
+<p><code>List​&lt;​?​&gt;​</code></p></td>
+<td align="left"><p>Installs a list of complementary actions to install between the ok and cancel actions.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>viewDescriptor</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the view descriptor to be used to create the component editing view that will be installed in the dialog.</p></td>
+</tr>
+</tbody>
+</table>
 
 EditComponentAction
 -------------------
@@ -215,19 +226,31 @@ EditComponentAction
 
 This action pulls a model out of the context (action parameter or selected model if action parameter is not filled), creates a view, binds it on the model and prepares for chaining with a modal dialog action to pop-up the result. The translated name of the action, whenever not empty, will be used as the dialog title. If the context extracted model is a collection, the first element of the collection is used. Custom actions ( {@code okAction} and {@code cancelAction}) can be configured to take care of user decision when closing the dialog.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **cancelAction**         | Configures the action to be installed in the     |
-|                          | dialog when the user cancels the component       |
-| ``                       | edition.                                         |
-+--------------------------+--------------------------------------------------+
-| **okAction**             | Configures the action to be installed in the     |
-|                          | dialog when the user confirms the component      |
-| ``                       | edition.                                         |
-+--------------------------+--------------------------------------------------+
-
-: EditComponentAction properties
+<table>
+<caption>EditComponentAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>cancelAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action to be installed in the dialog when the user cancels the component edition.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>okAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action to be installed in the dialog when the user confirms the component edition.</p></td>
+</tr>
+</tbody>
+</table>
 
 ChangePasswordAction
 --------------------
@@ -250,14 +273,24 @@ This action must be combined (setting {@code okAction}) with a concrete subclass
 
 -   {@code DatabaseChangePasswordAction} for JDBC based authentication backend
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ChangePasswordAction properties
+<table>
+<caption>ChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 EditBackendControllerAction
 ---------------------------
@@ -268,14 +301,24 @@ EditBackendControllerAction
 
 This is a frontend action to display a view backed by the session backend controller itself. It is used, for instance, to display the running asynchronous actions.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : EditBackendControllerAction properties
+<table>
+<caption>EditBackendControllerAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 EditFrontendControllerAction
 ----------------------------
@@ -286,14 +329,24 @@ EditFrontendControllerAction
 
 This is a frontend action to display a view backed by the session backend controller itself. It is used, for instance, to display the running asynchronous actions.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : EditFrontendControllerAction properties
+<table>
+<caption>EditFrontendControllerAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 EditReportParametersAction
 --------------------------
@@ -304,14 +357,24 @@ EditReportParametersAction
 
 This action takes a report ({@code IReport}) from the context ( {@code REPORT\_ACTION\_PARAM} key) and pops-up a form to allow for the report input parameters customization.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : EditReportParametersAction properties
+<table>
+<caption>EditReportParametersAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 MobileEditComponentAction
 -------------------------
@@ -322,14 +385,24 @@ MobileEditComponentAction
 
 This is the mobile version of the edit component action. {@code okAction} and {@code cancelAction}) are added as page actions instead of dialog ones.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : MobileEditComponentAction properties
+<table>
+<caption>MobileEditComponentAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 EditSelectedComponentAction
 ---------------------------
@@ -340,19 +413,31 @@ EditSelectedComponentAction
 
 This action should be installed on collection views. It takes the selected component and edit it in a modal dialog. Editing happens in a "Unit of Work" meaning that it can be rolled-back when canceling.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **cancelAction**         | Sets the cancelAction.                           |
-|                          |                                                  |
-| `​<​E​,F​,G​>​`          |                                                  |
-+--------------------------+--------------------------------------------------+
-| **okAction**             | Sets the okAction.                               |
-|                          |                                                  |
-| `​<​E​,F​,G​>​`          |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: EditSelectedComponentAction properties
+<table>
+<caption>EditSelectedComponentAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>cancelAction</strong></p>
+<p><code>​&lt;​E​,F​,G​&gt;​</code></p></td>
+<td align="left"><p>Sets the cancelAction.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>okAction</strong></p>
+<p><code>​&lt;​E​,F​,G​&gt;​</code></p></td>
+<td align="left"><p>Sets the okAction.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractMessageAction
 ---------------------
@@ -365,14 +450,24 @@ AbstractMessageAction
 
 This is the base class for all UI message based communication actions. This type of action generally opens a modal dialog to display an informational message, ask a question, and so on. It takes the message from the action context parameter and supports basic HTML formatting. In order for the message to be interpreted as HTML, it must be surrounded by {@code \<HTML\>} tags.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : AbstractMessageAction properties
+<table>
+<caption>AbstractMessageAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 InfoAction
 ----------
@@ -385,14 +480,24 @@ InfoAction
 
 This action pops-up an informational message to the user.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : InfoAction properties
+<table>
+<caption>InfoAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 StaticInfoAction
 ----------------
@@ -403,17 +508,26 @@ StaticInfoAction
 
 This action pops-up an informational message to the user. The message, instead of being extracted out of the context, is parametrized statically into the action through its internationalization key.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **messageCode**          | Configures the i18n key used to translate the    |
-|                          | message that is to be displayed to the user.     |
-| `String`                 | When the action executes, the statically         |
-|                          | configured message is first translated, then     |
-|                          | placed into the action context to be popped-up.  |
-+--------------------------+--------------------------------------------------+
-
-: StaticInfoAction properties
+<table>
+<caption>StaticInfoAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>messageCode</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the i18n key used to translate the message that is to be displayed to the user. When the action executes, the statically configured message is first translated, then placed into the action context to be popped-up.</p></td>
+</tr>
+</tbody>
+</table>
 
 OkCancelAction
 --------------
@@ -426,19 +540,31 @@ OkCancelAction
 
 This action pops-up an Ok - Cancel confirmation option. Depending on user answer, another action is triggered. The Ok - Cancel alternative actions are parametrized statically.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **cancelAction**         | Assigns the action to execute when the user      |
-|                          | cancels the option.                              |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **okAction**             | Assigns the action to execute when the user      |
-|                          | confirms the option.                             |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: OkCancelAction properties
+<table>
+<caption>OkCancelAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>cancelAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Assigns the action to execute when the user cancels the option.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>okAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Assigns the action to execute when the user confirms the option.</p></td>
+</tr>
+</tbody>
+</table>
 
 StaticOkCancelAction
 --------------------
@@ -449,17 +575,26 @@ StaticOkCancelAction
 
 This action pops-up an Ok - Cancel confirmation option. The message, instead of being extracted out of the context, is parametrized statically into the action through its internationalization key.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **messageCode**          | Configures the i18n key used to translate the    |
-|                          | message that is to be displayed to the user.     |
-| `String`                 | When the action executes, the statically         |
-|                          | configured message is first translated, then     |
-|                          | placed into the action context to be popped-up.  |
-+--------------------------+--------------------------------------------------+
-
-: StaticOkCancelAction properties
+<table>
+<caption>StaticOkCancelAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>messageCode</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the i18n key used to translate the message that is to be displayed to the user. When the action executes, the statically configured message is first translated, then placed into the action context to be popped-up.</p></td>
+</tr>
+</tbody>
+</table>
 
 YesNoAction
 -----------
@@ -472,19 +607,31 @@ YesNoAction
 
 This action pops-up a binary question. Depending on user answer, another action is triggered. The Yes - No alternative actions are parametrized statically.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **noAction**             | Assigns the action to execute when the user      |
-|                          | answers negatively to the question.              |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **yesAction**            | Assigns the action to execute when the user      |
-|                          | answers positively to the question.              |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: YesNoAction properties
+<table>
+<caption>YesNoAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>noAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Assigns the action to execute when the user answers negatively to the question.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>yesAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Assigns the action to execute when the user answers positively to the question.</p></td>
+</tr>
+</tbody>
+</table>
 
 StaticYesNoAction
 -----------------
@@ -495,17 +642,26 @@ StaticYesNoAction
 
 This action pops-up a binary question. The message, instead of being extracted out of the context, is parametrized statically into the action through its internationalization key.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **messageCode**          | Configures the i18n key used to translate the    |
-|                          | message that is to be displayed to the user.     |
-| `String`                 | When the action executes, the statically         |
-|                          | configured message is first translated, then     |
-|                          | placed into the action context to be popped-up.  |
-+--------------------------+--------------------------------------------------+
-
-: StaticYesNoAction properties
+<table>
+<caption>StaticYesNoAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>messageCode</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the i18n key used to translate the message that is to be displayed to the user. When the action executes, the statically configured message is first translated, then placed into the action context to be popped-up.</p></td>
+</tr>
+</tbody>
+</table>
 
 YesNoCancelAction
 -----------------
@@ -518,23 +674,36 @@ YesNoCancelAction
 
 This action pops-up a binary question with Cancel option. Depending on user answer, another action is triggered. The Yes - No - Cancel alternative actions are parametrized statically.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **cancelAction**         | Assigns the action to execute when the user      |
-|                          | cancels the option.                              |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **noAction**             | Assigns the action to execute when the user      |
-|                          | answers negatively to the question.              |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **yesAction**            | Assigns the action to execute when the user      |
-|                          | answers positively to the question.              |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: YesNoCancelAction properties
+<table>
+<caption>YesNoCancelAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>cancelAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Assigns the action to execute when the user cancels the option.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>noAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Assigns the action to execute when the user answers negatively to the question.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>yesAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Assigns the action to execute when the user answers positively to the question.</p></td>
+</tr>
+</tbody>
+</table>
 
 StaticYesNoCancelAction
 -----------------------
@@ -545,17 +714,26 @@ StaticYesNoCancelAction
 
 This action pops-up a binary question with Cancel option. The message, instead of being extracted out of the context, is parametrized statically into the action through its internationalization key.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **messageCode**          | Configures the i18n key used to translate the    |
-|                          | message that is to be displayed to the user.     |
-| `String`                 | When the action executes, the statically         |
-|                          | configured message is first translated, then     |
-|                          | placed into the action context to be popped-up.  |
-+--------------------------+--------------------------------------------------+
-
-: StaticYesNoCancelAction properties
+<table>
+<caption>StaticYesNoCancelAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>messageCode</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the i18n key used to translate the message that is to be displayed to the user. When the action executes, the statically configured message is first translated, then placed into the action context to be popped-up.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractModuleDirtyStateAction
 ------------------------------
@@ -568,14 +746,24 @@ AbstractModuleDirtyStateAction
 
 This is the base abstract class for actions that are responsible for checking module dirty state. *Dirty* is taken in the sense of an entity needing to be flushed to the persistent store. Among modules that are to be checked, a collection module is marked dirty if and only if one of its module objects is an entity which is dirty. On the other hand, a bean module is marked dirty if and only if its (single) module object is an entity and is dirty.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : AbstractModuleDirtyStateAction properties
+<table>
+<caption>AbstractModuleDirtyStateAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 CheckAllModulesDirtyStateAction
 -------------------------------
@@ -586,14 +774,24 @@ CheckAllModulesDirtyStateAction
 
 This action recomputes all application modules dirty state. All the workspaces are traversed as well as, for each workspace, the whole module hierarchy. This action is typically triggered before a user exists the application to bring up a notification of potentially lost pending changes.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : CheckAllModulesDirtyStateAction properties
+<table>
+<caption>CheckAllModulesDirtyStateAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 CheckModuleDirtyStateAction
 ---------------------------
@@ -604,14 +802,24 @@ CheckModuleDirtyStateAction
 
 This action recomputes the dirty state of the current selected module. It is typically triggered when the user navigates (leaves) out of the module to compute a visual notification of a pending change.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : CheckModuleDirtyStateAction properties
+<table>
+<caption>CheckModuleDirtyStateAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 AnimateAction
 -------------
@@ -622,35 +830,51 @@ AnimateAction
 
 Selects animates current page.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **animation**            | Sets animation.                                  |
-|                          |                                                  |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **callbackAction**       | Sets callback action.                            |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **direction**            | Sets direction.                                  |
-|                          |                                                  |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **duration**             | Sets duration.                                   |
-|                          |                                                  |
-| `int`                    |                                                  |
-+--------------------------+--------------------------------------------------+
-| **hideView**             | Sets hide view.                                  |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-| **reverse**              | Sets reverse.                                    |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AnimateAction properties
+<table>
+<caption>AnimateAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>animation</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets animation.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>callbackAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets callback action.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>direction</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets direction.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>duration</strong></p>
+<p><code>int</code></p></td>
+<td align="left"><p>Sets duration.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>hideView</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets hide view.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>reverse</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets reverse.</p></td>
+</tr>
+</tbody>
+</table>
 
 BackPageAction
 --------------
@@ -661,14 +885,24 @@ BackPageAction
 
 Triggers back navigation of current page.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : BackPageAction properties
+<table>
+<caption>BackPageAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ChooseFileAction
 ----------------
@@ -683,28 +917,36 @@ This is the abstract base class for actions dealing with client file system oper
 
 {@code org.jspresso.framework.application.frontend.action.}**{@code [ui]}**{@code .file.SaveFileAction}
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **defaultFileName**      | Configures a default file name to be used        |
-|                          | whenever a file needs to be chosen. Subclasses   |
-| `String`                 | ma use their specific callback to override this  |
-|                          | name with a more dynamically computed one.       |
-+--------------------------+--------------------------------------------------+
-| **fileFilter**           | Configures the file filters to be used whenever  |
-|                          | the UI technology supports it in the file        |
-| `Map​<​String​,List​>​`  | choosing dialog. Filter file types are a map of  |
-|                          | descriptions keying file extension lists.        |
-|                          |                                                  |
-|                          | For instance, an entry in this map could be :    |
-|                          |                                                  |
-|                          | -   key : {@code "images"}                       |
-|                          |                                                  |
-|                          | -   value : {@code                               |
-|                          |     [".png",".jpg",".gif",".bmp"]}               |
-+--------------------------+--------------------------------------------------+
-
-: ChooseFileAction properties
+<table>
+<caption>ChooseFileAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>defaultFileName</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures a default file name to be used whenever a file needs to be chosen. Subclasses ma use their specific callback to override this name with a more dynamically computed one.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>fileFilter</strong></p>
+<p><code>Map​&lt;​String​,List​&gt;​</code></p></td>
+<td align="left"><p>Configures the file filters to be used whenever the UI technology supports it in the file choosing dialog. Filter file types are a map of descriptions keying file extension lists.</p>
+<p>For instance, an entry in this map could be :</p>
+<ul>
+<li><p>key : {@code &quot;images&quot;}</p></li>
+<li><p>value : {@code [&quot;.png&quot;,&quot;.jpg&quot;,&quot;.gif&quot;,&quot;.bmp&quot;]}</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 OpenFileAction
 --------------
@@ -717,28 +959,30 @@ OpenFileAction
 
 This action lets the user browse his local file system and choose a file to read some content from. What is done with the file content is determined by the configured {@code fileOpenCallback} instance.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **fileOpenCallback**     | Configures the file open callback instance that  |
-|                          | will be used to deal with the file dialog        |
-| ``                       | events. Two methods must be implemented :        |
-|                          |                                                  |
-|                          | -   {@code fileChosen(InputStream,               |
-|                          |     IActionHandler, Map[String, Object])} that   |
-|                          |     is called whenever a file has been chosen.   |
-|                          |     The input stream that is passed as parameter |
-|                          |     allows for reading from the chosen file. The |
-|                          |     developer doesn't have to cope with closing  |
-|                          |     the stream.                                  |
-|                          |                                                  |
-|                          | -   {@code cancel(IActionHandler, Map[String,    |
-|                          |     Object])} that is called whenever the file   |
-|                          |     selection is cancelled. It is perfectly      |
-|                          |     legal not to do anything.                    |
-+--------------------------+--------------------------------------------------+
-
-: OpenFileAction properties
+<table>
+<caption>OpenFileAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>fileOpenCallback</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the file open callback instance that will be used to deal with the file dialog events. Two methods must be implemented :</p>
+<ul>
+<li><p>{@code fileChosen(InputStream, IActionHandler, Map[String, Object])} that is called whenever a file has been chosen. The input stream that is passed as parameter allows for reading from the chosen file. The developer doesn't have to cope with closing the stream.</p></li>
+<li><p>{@code cancel(IActionHandler, Map[String, Object])} that is called whenever the file selection is cancelled. It is perfectly legal not to do anything.</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 OpenFileAsBinaryPropertyAction
 ------------------------------
@@ -749,14 +993,24 @@ OpenFileAsBinaryPropertyAction
 
 This action lets the user browse the local file system and choose a file to update the content of a binary property. Files are filtered based on the file filter defined in the binary property descriptor. This file action must be installed on a property view. A suitable (built-in) file open callback is installed upon action instantiation and thus, nothing has to be configured for the action to be immediately operational.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : OpenFileAsBinaryPropertyAction properties
+<table>
+<caption>OpenFileAsBinaryPropertyAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 SaveFileAction
 --------------
@@ -769,41 +1023,36 @@ SaveFileAction
 
 This action lets the user browse his local file system and choose a file to write some content to. What is done with the file content is determined by the configured {@code fileSaveCallback} instance.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **contentType**          | Configures the content type to be used whenever  |
-|                          | the UI technology used requires a download. The  |
-| `String`                 | content type defaults to {@code                  |
-|                          | "application/octet-stream"}.                     |
-+--------------------------+--------------------------------------------------+
-| **fileSaveCallback**     | Configures the file save callback instance that  |
-|                          | will be used to deal with the file dialog        |
-| ``                       | events. Three methods must be implemented :      |
-|                          |                                                  |
-|                          | -   {@code fileChosen(OutputStream,              |
-|                          |     IActionHandler, Map[String, Object])} that   |
-|                          |     is called whenever a file has been chosen.   |
-|                          |     The output stream that is passed as          |
-|                          |     parameter allows for writing to the chosen   |
-|                          |     file. The developer doesn't have to cope     |
-|                          |     with flushing nor closing the stream.        |
-|                          |                                                  |
-|                          | -   {@code getFileName(Map[String, Object])}     |
-|                          |     that is called to give a chance top the      |
-|                          |     callback to compute a file name dynamically  |
-|                          |     depending on the action context. Whenever    |
-|                          |     the callback returns a {@code null} or empty |
-|                          |     file name, the default file name             |
-|                          |     parametrized in the application is used.     |
-|                          |                                                  |
-|                          | -   {@code cancel(IActionHandler, Map[String,    |
-|                          |     Object])} that is called whenever the file   |
-|                          |     selection is cancelled. It is perfectly      |
-|                          |     legal not to do anything.                    |
-+--------------------------+--------------------------------------------------+
-
-: SaveFileAction properties
+<table>
+<caption>SaveFileAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>contentType</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the content type to be used whenever the UI technology used requires a download. The content type defaults to {@code &quot;application/octet-stream&quot;}.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>fileSaveCallback</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the file save callback instance that will be used to deal with the file dialog events. Three methods must be implemented :</p>
+<ul>
+<li><p>{@code fileChosen(OutputStream, IActionHandler, Map[String, Object])} that is called whenever a file has been chosen. The output stream that is passed as parameter allows for writing to the chosen file. The developer doesn't have to cope with flushing nor closing the stream.</p></li>
+<li><p>{@code getFileName(Map[String, Object])} that is called to give a chance top the callback to compute a file name dynamically depending on the action context. Whenever the callback returns a {@code null} or empty file name, the default file name parametrized in the application is used.</p></li>
+<li><p>{@code cancel(IActionHandler, Map[String, Object])} that is called whenever the file selection is cancelled. It is perfectly legal not to do anything.</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 SaveBinaryPropertyAsFileAction
 ------------------------------
@@ -814,14 +1063,24 @@ SaveBinaryPropertyAsFileAction
 
 This action lets the user browse the local file system and choose a file to save the content of a binary property to. Files are filtered based on the file filter defined in the binary property descriptor. This file action must be installed on a property view. A suitable (built-in) file open callback is installed upon action instantiation and thus, nothing has to be configured for the action to be immediately operational.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : SaveBinaryPropertyAsFileAction properties
+<table>
+<caption>SaveBinaryPropertyAsFileAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 CleanModuleAndGoBackIfTransientAction
 -------------------------------------
@@ -832,14 +1091,24 @@ CleanModuleAndGoBackIfTransientAction
 
 Check current selected module object. If it is transient, removes it from the current module and go back.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : CleanModuleAndGoBackIfTransientAction properties
+<table>
+<caption>CleanModuleAndGoBackIfTransientAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 DisplayJasperReportAction
 -------------------------
@@ -850,14 +1119,24 @@ DisplayJasperReportAction
 
 This action will take a {@code JasperPrint} (a processed Jasper report instance), produce a PDF output and open a browser window (tab) to display it.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : DisplayJasperReportAction properties
+<table>
+<caption>DisplayJasperReportAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 EditCurrentPageAction
 ---------------------
@@ -868,14 +1147,24 @@ EditCurrentPageAction
 
 Triggers editing of current page.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : EditCurrentPageAction properties
+<table>
+<caption>EditCurrentPageAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 NearElementAction
 -----------------
@@ -886,23 +1175,36 @@ NearElementAction
 
 Selects next / previous element.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **onFailureAction**      | Sets on failure action.                          |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **onSuccessAction**      | Sets on success action.                          |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **reverse**              | Sets reverse.                                    |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: NearElementAction properties
+<table>
+<caption>NearElementAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>onFailureAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets on failure action.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>onSuccessAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets on success action.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>reverse</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets reverse.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractReportAction
 --------------------
@@ -915,16 +1217,26 @@ AbstractReportAction
 
 Abstract base class for Jasper report actions.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **reportFactory**        | Configures the report factory to use. The report |
-|                          | factory is responsible for creating an {@code    |
-| ``                       | IReport} (a concrete report instance) from a     |
-|                          | report descriptor ({@code IReportDescriptor}).   |
-+--------------------------+--------------------------------------------------+
-
-: AbstractReportAction properties
+<table>
+<caption>AbstractReportAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>reportFactory</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the report factory to use. The report factory is responsible for creating an {@code IReport} (a concrete report instance) from a report descriptor ({@code IReportDescriptor}).</p></td>
+</tr>
+</tbody>
+</table>
 
 ReportAction
 ------------
@@ -935,14 +1247,24 @@ ReportAction
 
 This action allows the user to select a report to generate on the collection view where it has been installed. The collection backing the view can either be a collection of {@code IReport} or {@code IReportDescriptor}. In the latter situation, the corresponding {@code IReport} instances are created on the fly using the configured report factory.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ReportAction properties
+<table>
+<caption>ReportAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 StaticReportAction
 ------------------
@@ -953,15 +1275,26 @@ StaticReportAction
 
 This action generates and displays a report that is statically configured through the {@code reportDescriptor} parameter. The report context is augmented with the identifier of the entity that is selected in the view were the action is installed, under the key {@code ENTITY\_ID}.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **reportDescriptor**     | Configures the report to execute.                |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: StaticReportAction properties
+<table>
+<caption>StaticReportAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>reportDescriptor</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the report to execute.</p></td>
+</tr>
+</tbody>
+</table>
 
 ActionParamToSelectedModelAction
 --------------------------------
@@ -972,14 +1305,24 @@ ActionParamToSelectedModelAction
 
 A very simple frontend action that uses the puts the context action param as selected model.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ActionParamToSelectedModelAction properties
+<table>
+<caption>ActionParamToSelectedModelAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 AddBeanAsSubModuleFrontAction
 -----------------------------
@@ -990,29 +1333,41 @@ AddBeanAsSubModuleFrontAction
 
 This action can be installed on any collection view and will take the selected elements in the underlying model collection and create a bean module out of them.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **childModuleProjectedVi | Sets the childModuleProjectedViewDescriptor.     |
-| ewDescriptor**           |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **parentModuleName**     | Sets the parent module where to add components   |
-|                          | to.                                              |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **parentWorkspaceName**  | Sets the WorkspaceName where to add components   |
-|                          | to.                                              |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **referencePath**        | Allows to configure a property path to extract   |
-|                          | the bean(s) to add from the selected models. If  |
-| `String`                 | {@code null}, which is the default value, the    |
-|                          | selected models are used themselves.             |
-+--------------------------+--------------------------------------------------+
-
-: AddBeanAsSubModuleFrontAction properties
+<table>
+<caption>AddBeanAsSubModuleFrontAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>childModuleProjectedViewDescriptor</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the childModuleProjectedViewDescriptor.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>parentModuleName</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the parent module where to add components to.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>parentWorkspaceName</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the WorkspaceName where to add components to.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>referencePath</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Allows to configure a property path to extract the bean(s) to add from the selected models. If {@code null}, which is the default value, the selected models are used themselves.</p></td>
+</tr>
+</tbody>
+</table>
 
 AddCollectionToMasterAction
 ---------------------------
@@ -1023,28 +1378,30 @@ AddCollectionToMasterAction
 
 This action is designed to wrap a backend action that will create and add a (collection of) component(s) to the model collection of the view it's installed on. Its objective is to complete the action context with the descriptor of the component (or entity) to be added so that the backend action explicitly knows what to create. Moreover, the name, description and icon used for the graphical representation are all computed out of the configured {@code elementEntityDescriptor}.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **elementEntityDescripto | Configures the descriptor of the entities that   |
-| r**                      | are to be added by the action to the underlying  |
-|                          | model collection. Setting this property serves   |
-| `​<​​>​`                 | multiple objectives :                            |
-|                          |                                                  |
-|                          | -   complete the application context with the    |
-|                          |     {@code                                       |
-|                          |     AddComponentCollectionToMasterAction.ELEMENT |
-|                          | \_DESCRIPTOR}                                    |
-|                          |     key so that the chained backend action knows |
-|                          |     what type of entity to create.               |
-|                          |                                                  |
-|                          | -   customize the name, description and icon     |
-|                          |     used to represent the action in the UI. All  |
-|                          |     three are derived from the configured        |
-|                          |     element entity descriptor.                   |
-+--------------------------+--------------------------------------------------+
-
-: AddCollectionToMasterAction properties
+<table>
+<caption>AddCollectionToMasterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>elementEntityDescriptor</strong></p>
+<p><code>​&lt;​​&gt;​</code></p></td>
+<td align="left"><p>Configures the descriptor of the entities that are to be added by the action to the underlying model collection. Setting this property serves multiple objectives :</p>
+<ul>
+<li><p>complete the application context with the {@code AddComponentCollectionToMasterAction.ELEMENT_DESCRIPTOR} key so that the chained backend action knows what type of entity to create.</p></li>
+<li><p>customize the name, description and icon used to represent the action in the UI. All three are derived from the configured element entity descriptor.</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 AddPageAction
 -------------
@@ -1055,14 +1412,24 @@ AddPageAction
 
 A special mobile pagination action that adds a page to the current results.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : AddPageAction properties
+<table>
+<caption>AddPageAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 BinaryPropertyInfoAction
 ------------------------
@@ -1073,14 +1440,24 @@ BinaryPropertyInfoAction
 
 This action displays information about a binary property content. The displayed information mainly consists in the content size. The action must be installed on a property view and supports textual and binary properties.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : BinaryPropertyInfoAction properties
+<table>
+<caption>BinaryPropertyInfoAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ChooseActionAction
 ------------------
@@ -1091,15 +1468,26 @@ ChooseActionAction
 
 This action displays a list of frontend actions so that the user can choose and launch one of them. This action is meant to be chained with the generic {@code ChooseComponentAction} so that the action list is actually displayed.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **actions**              | Configures the list of actions to choose from.   |
-|                          |                                                  |
-| `List​<​​>​`             |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: ChooseActionAction properties
+<table>
+<caption>ChooseActionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>actions</strong></p>
+<p><code>List​&lt;​​&gt;​</code></p></td>
+<td align="left"><p>Configures the list of actions to choose from.</p></td>
+</tr>
+</tbody>
+</table>
 
 ChooseComponentAction
 ---------------------
@@ -1110,29 +1498,41 @@ ChooseComponentAction
 
 This action takes an arbitrary model collection connector from the action context parameter and binds it to a newly created table view. This action is meant to be chained to the generic {@code ModalDialogAction} so that the table is actually popped-up in a dialog. Two actions ({@code okAction} and {@code cancelAction}) can be configured to react to the user decision.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **cancelAction**         | Configures the action that will be triggered     |
-|                          | when the user cancels the component choice.      |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **collectionViewDescript | Sets the collectionViewDescriptor.               |
-| or**                     |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **componentDescriptor**  | Sets the componentDescriptor.                    |
-|                          |                                                  |
-| `​<​?​>​`                |                                                  |
-+--------------------------+--------------------------------------------------+
-| **okAction**             | Configures the action that will be triggered     |
-|                          | when the user confirms the component choice. the |
-| ``                       | chosen component will then be retrieved from the |
-|                          | selected view item.                              |
-+--------------------------+--------------------------------------------------+
-
-: ChooseComponentAction properties
+<table>
+<caption>ChooseComponentAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>cancelAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action that will be triggered when the user cancels the component choice.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>collectionViewDescriptor</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the collectionViewDescriptor.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>componentDescriptor</strong></p>
+<p><code>​&lt;​?​&gt;​</code></p></td>
+<td align="left"><p>Sets the componentDescriptor.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>okAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action that will be triggered when the user confirms the component choice. the chosen component will then be retrieved from the selected view item.</p></td>
+</tr>
+</tbody>
+</table>
 
 CloseDialogAction
 -----------------
@@ -1145,14 +1545,24 @@ CloseDialogAction
 
 This is a very generic action that closes (disposes) the currently opened dialog. The dialog is actually closed between the *wrapped* action and the *next* action if and only if the wrapped action succeeds.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : CloseDialogAction properties
+<table>
+<caption>CloseDialogAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 EditSelectedComponentAction.DefaultOkAction
 -------------------------------------------
@@ -1163,14 +1573,24 @@ EditSelectedComponentAction.DefaultOkAction
 
 Default OK action.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : EditSelectedComponentAction.DefaultOkAction properties
+<table>
+<caption>EditSelectedComponentAction.DefaultOkAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 DisplayNextPinnedModuleAction
 -----------------------------
@@ -1181,14 +1601,24 @@ DisplayNextPinnedModuleAction
 
 This action triggers a *"forward"* navigation in the recorded module history. The frontend controller automatically keeps track of the traversed modules so that a user can go back and forward his navigation history, much like for a web navigation.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : DisplayNextPinnedModuleAction properties
+<table>
+<caption>DisplayNextPinnedModuleAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 DisplayPreviousPinnedModuleAction
 ---------------------------------
@@ -1199,14 +1629,24 @@ DisplayPreviousPinnedModuleAction
 
 This action triggers a *"backward"* navigation in the recorded module history. The frontend controller automatically keeps track of the traversed modules so that a user can go back and forward his navigation history, much like for a web navigation.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : DisplayPreviousPinnedModuleAction properties
+<table>
+<caption>DisplayPreviousPinnedModuleAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 DisplayUrlAction
 ----------------
@@ -1219,19 +1659,31 @@ DisplayUrlAction
 
 This action opens a browser (or a browser tab) targeted at a URL. The actual URL is a composition of a static parametrized prefix ({@code baseUrl}) and a dynamic part taken from the action context parameter.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **baseUrl**              | Configures the static prefix that is prepended   |
-|                          | (if not {@code null}) to the opened URL.         |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **target**               | Sets the target window.                          |
-|                          |                                                  |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: DisplayUrlAction properties
+<table>
+<caption>DisplayUrlAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>baseUrl</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the static prefix that is prepended (if not {@code null}) to the opened URL.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>target</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the target window.</p></td>
+</tr>
+</tbody>
+</table>
 
 DisplayStaticUrlAction
 ----------------------
@@ -1242,15 +1694,26 @@ DisplayStaticUrlAction
 
 Like its parent, this action opens a URL in a browser (or a browser tab). But instead of taking the URL out of the context, it uses a statically parametrized URL, or rather a key ({@code urlKey}) used to translate the URL based on the logged-in user language. This is particularly useful for linking to static internationalized content, like an online manual. Be aware that once the URL is translated, it is still appended to the {@code baseUrl}.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **urlKey**               | Configures the translation key used to           |
-|                          | internationalize the URL to open.                |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: DisplayStaticUrlAction properties
+<table>
+<caption>DisplayStaticUrlAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>urlKey</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the translation key used to internationalize the URL to open.</p></td>
+</tr>
+</tbody>
+</table>
 
 EditSelectionAction
 -------------------
@@ -1261,14 +1724,24 @@ EditSelectionAction
 
 This action is meant to trigger editing on the current collection view whenever a single element is selected.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : EditSelectionAction properties
+<table>
+<caption>EditSelectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ExecuteActionAction
 -------------------
@@ -1279,14 +1752,24 @@ ExecuteActionAction
 
 This generic action takes another arbitrary action out of the context parameter and executes it.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ExecuteActionAction properties
+<table>
+<caption>ExecuteActionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ExitAction
 ----------
@@ -1297,19 +1780,26 @@ ExitAction
 
 This action exits the application. Before doing so, user activated application modules are traversed ton check that no pending changes need to be forwarded to the persistent store. Whenever the dirty checking is positive, then the user is notified and given a chance to cancel the exit.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **checkCurrentModuleDirt | Configures the action used to perform dirty      |
-| yStateAction**           | checking on current module to update its dirty   |
-|                          | state. It will be triggered just before a global |
-| ``                       | iteration is performed on all the application    |
-|                          | modules to be able to notify the user that       |
-|                          | pending changes are not yet flushed to the       |
-|                          | persistent store.                                |
-+--------------------------+--------------------------------------------------+
-
-: ExitAction properties
+<table>
+<caption>ExitAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>checkCurrentModuleDirtyStateAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action used to perform dirty checking on current module to update its dirty state. It will be triggered just before a global iteration is performed on all the application modules to be able to notify the user that pending changes are not yet flushed to the persistent store.</p></td>
+</tr>
+</tbody>
+</table>
 
 ListApplicationElementsAction
 -----------------------------
@@ -1320,14 +1810,24 @@ ListApplicationElementsAction
 
 This is a special frontend action to list all application metamodel elements available along with their permIds. This is particularly useful to set-up the base of security referential setup.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ListApplicationElementsAction properties
+<table>
+<caption>ListApplicationElementsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 LoginAction
 -----------
@@ -1338,15 +1838,26 @@ LoginAction
 
 This is the frontend action to trigger the application login using the current credential in the frontend controller. If the action is configured with {@code anonymous = true}, then an anonymous login is attempted. If not, a normal login is performed.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **anonymous**            | Sets anonymous.                                  |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: LoginAction properties
+<table>
+<caption>LoginAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>anonymous</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets anonymous.</p></td>
+</tr>
+</tbody>
+</table>
 
 LovAction
 ---------
@@ -1359,85 +1870,91 @@ LovAction
 
 This is a standard "List Of Values" action for reference property views. Although this action is used by default in view factories on reference fields, it can also be used in a more standard way, i.e. registered as a view action. In the latter, the {@code okAction} must be configured to perform a custom treatment once the entity is chosen from the LOV. Additionally you can statically configure the descriptor of the searched entities using the {@code entityDescriptor} parameter so that the LOV will act on this type of entities. The LOV action prepares a QBE view (filter / result list) along with 3 actions that can be further refined : {@code findAction}, {@code okAction} and {@code cancelAction}. It must the be linked to a {@code ModalDialogAction} so that the LOV actually pops up.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **autoquery**            | Whenever setting autoquery to {@code true}, the  |
-|                          | LOV action will trigger the query as soon as it  |
-| `boolean`                | gets executed and the initial query filter is    |
-|                          | not empty (e.g. the user typed something in the  |
-|                          | reference field). This brings autocomplete       |
-|                          | feature to reference fields since, whenever the  |
-|                          | initial filter limits to exactly 1 result, the   |
-|                          | LOV dialog won't even open. Defaults to true.    |
-+--------------------------+--------------------------------------------------+
-| **cancelAction**         | Configures the action to be executed whenever    |
-|                          | the user cancels the LOV dialog.                 |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **componentDescriptorReg | Sets component descriptor registry.              |
-| istry**                  |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **createQueryComponentAc | Configures the action used to create the filter  |
-| tion**                   | query component based on the type of entities    |
-|                          | backing the LOV.                                 |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **defaultIconImageURL**  | Sets the defaultIconImageURL.                    |
-|                          |                                                  |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **entityDescriptor**     | Configures explicitly the type of entities the   |
-|                          | LOV relies on. This is automatically determined  |
-| `​<​?​>​`                | when installed on a reference field but must be  |
-|                          | set in any other case.                           |
-+--------------------------+--------------------------------------------------+
-| **findAction**           | Configures the action to be executed whenever    |
-|                          | the user queries the persistent store, either    |
-| ``                       | explicitly when using the action installed in    |
-|                          | the LOV dialog or implicitly through the auto    |
-|                          | query feature.                                   |
-+--------------------------+--------------------------------------------------+
-| **initializationMapping* | Whenever the LOV action is not used on a         |
-| *                        | reference field, in which case the filter        |
-|                          | initialization mapping is taken from the         |
-| `Map​<​String​,Object​>​ | reference field descriptor (see {@code           |
-| `                        | BasicReferencePropertyDescriptor}                |
-|                          | documentation), this property allows to          |
-|                          | initialize some of the LOV filter properties.    |
-|                          | Initialization is computed dynamically by        |
-|                          | transferring property values from the view model |
-|                          | to the filter.                                   |
-+--------------------------+--------------------------------------------------+
-| **lovViewDescriptorFacto | Configures the factory to be used to create the  |
-| ry**                     | QBE view used in the dialog.                     |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **okAction**             | Configures the action to be executed whenever    |
-|                          | the user validates the LOV selection.            |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **pageSize**             | Sets page size.                                  |
-|                          |                                                  |
-| `Integer`                |                                                  |
-+--------------------------+--------------------------------------------------+
-| **pagingAction**         | Sets the pagingAction.                           |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **selectionMode**        | Allows to force the result view selection mode.  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **staticComponentStore** | Sets static component store.                     |
-|                          |                                                  |
-| `List​<​?​>​`            |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: LovAction properties
+<table>
+<caption>LovAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>autoquery</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Whenever setting autoquery to {@code true}, the LOV action will trigger the query as soon as it gets executed and the initial query filter is not empty (e.g. the user typed something in the reference field). This brings autocomplete feature to reference fields since, whenever the initial filter limits to exactly 1 result, the LOV dialog won't even open. Defaults to true.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>cancelAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action to be executed whenever the user cancels the LOV dialog.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>componentDescriptorRegistry</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets component descriptor registry.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>createQueryComponentAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action used to create the filter query component based on the type of entities backing the LOV.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>defaultIconImageURL</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the defaultIconImageURL.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>entityDescriptor</strong></p>
+<p><code>​&lt;​?​&gt;​</code></p></td>
+<td align="left"><p>Configures explicitly the type of entities the LOV relies on. This is automatically determined when installed on a reference field but must be set in any other case.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>findAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action to be executed whenever the user queries the persistent store, either explicitly when using the action installed in the LOV dialog or implicitly through the auto query feature.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>initializationMapping</strong></p>
+<p><code>Map​&lt;​String​,Object​&gt;​</code></p></td>
+<td align="left"><p>Whenever the LOV action is not used on a reference field, in which case the filter initialization mapping is taken from the reference field descriptor (see {@code BasicReferencePropertyDescriptor} documentation), this property allows to initialize some of the LOV filter properties. Initialization is computed dynamically by transferring property values from the view model to the filter.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>lovViewDescriptorFactory</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the factory to be used to create the QBE view used in the dialog.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>okAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action to be executed whenever the user validates the LOV selection.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>pageSize</strong></p>
+<p><code>Integer</code></p></td>
+<td align="left"><p>Sets page size.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>pagingAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the pagingAction.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>selectionMode</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Allows to force the result view selection mode.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>staticComponentStore</strong></p>
+<p><code>List​&lt;​?​&gt;​</code></p></td>
+<td align="left"><p>Sets static component store.</p></td>
+</tr>
+</tbody>
+</table>
 
 MobileLovAction
 ---------------
@@ -1448,14 +1965,24 @@ MobileLovAction
 
 This is a standard "List Of Values" action for mobile environment.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : MobileLovAction properties
+<table>
+<caption>MobileLovAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ModalDialogAction
 -----------------
@@ -1474,14 +2001,24 @@ This is a very generic action that takes its specifications out of the action co
 
 -   {@code DIALOG\_SIZE} : the dialog preferred size. Whenever the dialog size is {@code null}, the dialog size is determined from the preferred size of the content view.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ModalDialogAction properties
+<table>
+<caption>ModalDialogAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ModuleRestartAction
 -------------------
@@ -1492,14 +2029,24 @@ ModuleRestartAction
 
 This action is used to restart a module. It cleans its children and executes its startup action.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ModuleRestartAction properties
+<table>
+<caption>ModuleRestartAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ModuleSelectionAction
 ---------------------
@@ -1510,19 +2057,31 @@ ModuleSelectionAction
 
 Displays a module, and the corresponding workspace if necessary based on their names. It can be used as startup action to select and display a module when the application launches.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **moduleName**           | Configures the name (untranslated) of the module |
-|                          | to be displayed.                                 |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **workspaceName**        | Configures the name (untranslated) of the        |
-|                          | workspace to be displayed.                       |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: ModuleSelectionAction properties
+<table>
+<caption>ModuleSelectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>moduleName</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the name (untranslated) of the module to be displayed.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>workspaceName</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the name (untranslated) of the workspace to be displayed.</p></td>
+</tr>
+</tbody>
+</table>
 
 OkChooseComponentAction
 -----------------------
@@ -1533,14 +2092,24 @@ OkChooseComponentAction
 
 This action augments the context by setting the action parameter to the selected component of the collection view (or null if none is selected).
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : OkChooseComponentAction properties
+<table>
+<caption>OkChooseComponentAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 OkLovAction
 -----------
@@ -1551,14 +2120,24 @@ OkLovAction
 
 This action augments the context by setting the action parameter to the selected entity of the LOV result list (or null if none is selected).
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : OkLovAction properties
+<table>
+<caption>OkLovAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 PageOffsetAction
 ----------------
@@ -1569,15 +2148,26 @@ PageOffsetAction
 
 This action simply augment the context with a page offset integer ( {@code PAGE\_OFFSET}). It is meant to be linked to a find/query action that will further leverage this offset to navigate a pageable result set.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **pageOffset**           | Configures the page offset to be set to the      |
-|                          | action context.                                  |
-| `Integer`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: PageOffsetAction properties
+<table>
+<caption>PageOffsetAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>pageOffset</strong></p>
+<p><code>Integer</code></p></td>
+<td align="left"><p>Configures the page offset to be set to the action context.</p></td>
+</tr>
+</tbody>
+</table>
 
 ParentModuleConnectorSelectionAction
 ------------------------------------
@@ -1588,14 +2178,24 @@ ParentModuleConnectorSelectionAction
 
 This action simply displays the parent of the currently selected module; i.e. it goes up one level in the module hierarchy of the current workspace.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ParentModuleConnectorSelectionAction properties
+<table>
+<caption>ParentModuleConnectorSelectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 PrintAction
 -----------
@@ -1606,20 +2206,31 @@ PrintAction
 
 This action allows the user to choose a report among a list and print it. The list of available reports is statically configured into the action.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **reportDescriptors**    | Configures the available report descriptors the  |
-|                          | user will be allowed to choose.                  |
-| `List​<​​>​`             |                                                  |
-+--------------------------+--------------------------------------------------+
-| **reportFactory**        | Configures the report factory to use. The report |
-|                          | factory is responsible for creating an {@code    |
-| ``                       | IReport} (a concrete report instance) from a     |
-|                          | report descriptor ({@code IReportDescriptor}).   |
-+--------------------------+--------------------------------------------------+
-
-: PrintAction properties
+<table>
+<caption>PrintAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>reportDescriptors</strong></p>
+<p><code>List​&lt;​​&gt;​</code></p></td>
+<td align="left"><p>Configures the available report descriptors the user will be allowed to choose.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>reportFactory</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the report factory to use. The report factory is responsible for creating an {@code IReport} (a concrete report instance) from a report descriptor ({@code IReportDescriptor}).</p></td>
+</tr>
+</tbody>
+</table>
 
 SaveModuleObjectFrontAction
 ---------------------------
@@ -1630,15 +2241,26 @@ SaveModuleObjectFrontAction
 
 This action is used to save module and sub-modules objects.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **dirtyTrackingEnabled** | Set dirty tracking enabled.                      |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: SaveModuleObjectFrontAction properties
+<table>
+<caption>SaveModuleObjectFrontAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>dirtyTrackingEnabled</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Set dirty tracking enabled.</p></td>
+</tr>
+</tbody>
+</table>
 
 SelectedModelToActionParamAction
 --------------------------------
@@ -1649,14 +2271,24 @@ SelectedModelToActionParamAction
 
 A very simple frontend action that puts the selected model(s) as context action param.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : SelectedModelToActionParamAction properties
+<table>
+<caption>SelectedModelToActionParamAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 SetConnectorValueAction
 -----------------------
@@ -1667,16 +2299,26 @@ SetConnectorValueAction
 
 This action retrieves the action parameter from the action context and assigns it as value to the targeted connector. The connector to target is itself retrieved from the action context using a parametrized key.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **connectorActionContext | Configures the key to look for the target        |
-| Key**                    | connector in the context, e.g. VIEW\_CONNECTOR.  |
-|                          |                                                  |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: SetConnectorValueAction properties
+<table>
+<caption>SetConnectorValueAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>connectorActionContextKey</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the key to look for the target connector in the context, e.g. VIEW_CONNECTOR.</p></td>
+</tr>
+</tbody>
+</table>
 
 TransferToClipboardAction
 -------------------------
@@ -1687,16 +2329,26 @@ TransferToClipboardAction
 
 An action used to transfer textual representation(s) of selected models to the system clipboard.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **clipboardTransferHandl | Sets the clipboardTransferHandler.               |
-| er**                     |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: TransferToClipboardAction properties
+<table>
+<caption>TransferToClipboardAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>clipboardTransferHandler</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the clipboardTransferHandler.</p></td>
+</tr>
+</tbody>
+</table>
 
 EditSelectedComponentAction.UowRollbackerAction
 -----------------------------------------------
@@ -1707,14 +2359,24 @@ EditSelectedComponentAction.UowRollbackerAction
 
 A wrapper action that roll backs the current UOW before delegating to its delegate.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : EditSelectedComponentAction.UowRollbackerAction properties
+<table>
+<caption>EditSelectedComponentAction.UowRollbackerAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 WizardAction
 ------------
@@ -1743,33 +2405,46 @@ This action implements a "wizard". It can be configured from the simplest use-ca
 
 5.  When the user leaves the last wizard step (clicking the finish action button), the finish action is triggered. The finish action can be registered on the wizard action using the {@code finishAction} property. This is typically the place where you explore the wizard map model - {@code ACTION\_PARAM} - to get back all the data the user has worked on. Note that the finish button is entirely configured from the finish action (label and icon).
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **cancelAction**         | Configures the action that will be executed      |
-|                          | whenever the user cancels the wizard.            |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **finishAction**         | Configures the action that will be executed      |
-|                          | whenever the user validates the wizard.          |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **firstWizardStep**      | Configures the first wizard step to display.     |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **height**               | Configures explicitly the height of the wizard   |
-|                          | dialog. It prevents the dialog from resizing     |
-| `Integer`                | dynamically depending on the displayed wizard    |
-|                          | step.                                            |
-+--------------------------+--------------------------------------------------+
-| **width**                | Configures explicitly the width of the wizard    |
-|                          | dialog. It prevents the dialog from resizing     |
-| `Integer`                | dynamically depending on the displayed wizard    |
-|                          | step.                                            |
-+--------------------------+--------------------------------------------------+
-
-: WizardAction properties
+<table>
+<caption>WizardAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>cancelAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action that will be executed whenever the user cancels the wizard.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>finishAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the action that will be executed whenever the user validates the wizard.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>firstWizardStep</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the first wizard step to display.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>height</strong></p>
+<p><code>Integer</code></p></td>
+<td align="left"><p>Configures explicitly the height of the wizard dialog. It prevents the dialog from resizing dynamically depending on the displayed wizard step.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>width</strong></p>
+<p><code>Integer</code></p></td>
+<td align="left"><p>Configures explicitly the width of the wizard dialog. It prevents the dialog from resizing dynamically depending on the displayed wizard step.</p></td>
+</tr>
+</tbody>
+</table>
 
 WorkspaceSelectionAction
 ------------------------
@@ -1780,14 +2455,25 @@ WorkspaceSelectionAction
 
 This action displays a workspace using its (untranslated) name.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **workspaceName**        | Configures the name of the workspace to display. |
-|                          |                                                  |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: WorkspaceSelectionAction properties
+<table>
+<caption>WorkspaceSelectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>workspaceName</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the name of the workspace to display.</p></td>
+</tr>
+</tbody>
+</table>
 
 

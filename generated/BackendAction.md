@@ -12,16 +12,26 @@ BackendAction
 
 This class should serve as base class for implementing actions that execute on the backend (domain model) of the application. It provides accessors on the context elements that are generally used through the action execution process.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **badFrontendAccessCheck | Sets the badFrontendAccessChecked.               |
-| ed**                     |                                                  |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: BackendAction properties
+<table>
+<caption>BackendAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>badFrontendAccessChecked</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets the badFrontendAccessChecked.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractChangePasswordAction
 ----------------------------
@@ -46,46 +56,59 @@ For the action to succeed, {@code current\_password} must match the logged-in us
                String currentPassword, String newPassword)
      
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **allowEmptyPasswords**  | Configures the possibility to choose an empty    |
-|                          | password.                                        |
-| `boolean`                |                                                  |
-|                          | Default value is {@code true}, i.e. allow for    |
-|                          | empty passwords.                                 |
-+--------------------------+--------------------------------------------------+
-| **allowLoginPasswords**  | Configures the possibility to choose a password  |
-|                          | that equals the login.                           |
-| `boolean`                |                                                  |
-|                          | Default value is {@code true}, i.e. allow for    |
-|                          | password equals login.                           |
-+--------------------------+--------------------------------------------------+
-| **digestAlgorithm**      | Sets the digestAlgorithm to use to hash the      |
-|                          | password before storing it (MD5 for instance).   |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **hashEncoding**         | Sets the hashEncoding to encode the password     |
-|                          | hash before storing it. You may choose between : |
-| `String`                 |                                                  |
-|                          | -   {@code BASE64} for base 64 encoding.         |
-|                          |                                                  |
-|                          | -   {@code HEX} for base 16 encoding.            |
-|                          |                                                  |
-|                          | Default encoding is {@code BASE64}.              |
-+--------------------------+--------------------------------------------------+
-| **passwordRegex**        | Configures a regex that new passwords must       |
-|                          | match.                                           |
-| `String`                 |                                                  |
-|                          | Default value is {@code null}, i.e. no regex is  |
-|                          | enforced.                                        |
-+--------------------------+--------------------------------------------------+
-| **passwordRegexSample**  | Configures an example of a valid password to     |
-|                          | explain the regex rules.                         |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AbstractChangePasswordAction properties
+<table>
+<caption>AbstractChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>allowEmptyPasswords</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Configures the possibility to choose an empty password.</p>
+<p>Default value is {@code true}, i.e. allow for empty passwords.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>allowLoginPasswords</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Configures the possibility to choose a password that equals the login.</p>
+<p>Default value is {@code true}, i.e. allow for password equals login.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>digestAlgorithm</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the digestAlgorithm to use to hash the password before storing it (MD5 for instance).</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>hashEncoding</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the hashEncoding to encode the password hash before storing it. You may choose between :</p>
+<ul>
+<li><p>{@code BASE64} for base 64 encoding.</p></li>
+<li><p>{@code HEX} for base 16 encoding.</p></li>
+</ul>
+<p>Default encoding is {@code BASE64}.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>passwordRegex</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures a regex that new passwords must match.</p>
+<p>Default value is {@code null}, i.e. no regex is enforced.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>passwordRegexSample</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures an example of a valid password to explain the regex rules.</p></td>
+</tr>
+</tbody>
+</table>
 
 DatabaseChangePasswordAction
 ----------------------------
@@ -96,25 +119,36 @@ DatabaseChangePasswordAction
 
 Concrete backend implementation of a change password action where password is stored in a relational database.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **jdbcTemplate**         | Configures the Spring jdbcTemplate to use to     |
-|                          | issue the update statement.                      |
-| `Jdbc​Template`          |                                                  |
-+--------------------------+--------------------------------------------------+
-| **updateQuery**          | Configures the update query to execute to change |
-|                          | the password. The prepared statement parameters  |
-| `String`                 | that will be bound are, in order :               |
-|                          |                                                  |
-|                          | 1.  **"new password"** potentially hashed.       |
-|                          |                                                  |
-|                          | 2.  **"user name"**.                             |
-|                          |                                                  |
-|                          | 3.  **"current password"** potentially hashed.   |
-+--------------------------+--------------------------------------------------+
-
-: DatabaseChangePasswordAction properties
+<table>
+<caption>DatabaseChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>jdbcTemplate</strong></p>
+<p><code>Jdbc​Template</code></p></td>
+<td align="left"><p>Configures the Spring jdbcTemplate to use to issue the update statement.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>updateQuery</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the update query to execute to change the password. The prepared statement parameters that will be bound are, in order :</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>&quot;new password&quot;</strong> potentially hashed.</p></li>
+<li><p><strong>&quot;user name&quot;</strong>.</p></li>
+<li><p><strong>&quot;current password&quot;</strong> potentially hashed.</p></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
 
 LdapChangePasswordAction
 ------------------------
@@ -125,16 +159,26 @@ LdapChangePasswordAction
 
 Concrete backend implementation of a change password action where password is stored in an LDAP directory. The user DN to use to connect to the LDAP directory is the one stored in the user principal from the login process.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **ldapUrl**              | Configures the LDAP url (e.g.                    |
-|                          | *http://localhost:389*) of the LDAP directory.   |
-| `String`                 | The user must be authorized to change its own    |
-|                          | password in the LDAP backend.                    |
-+--------------------------+--------------------------------------------------+
-
-: LdapChangePasswordAction properties
+<table>
+<caption>LdapChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>ldapUrl</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the LDAP url (e.g. <em>http://localhost:389</em>) of the LDAP directory. The user must be authorized to change its own password in the LDAP backend.</p></td>
+</tr>
+</tbody>
+</table>
 
 MockChangePasswordAction
 ------------------------
@@ -145,14 +189,24 @@ MockChangePasswordAction
 
 Mocks up password change.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : MockChangePasswordAction properties
+<table>
+<caption>MockChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 AbstractCloneAction
 -------------------
@@ -169,14 +223,24 @@ An action used duplicate a domain object. the cloned domain object is set as mod
          Map<String, Object> context)
      
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : AbstractCloneAction properties
+<table>
+<caption>AbstractCloneAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 CloneComponentAction
 --------------------
@@ -187,15 +251,26 @@ CloneComponentAction
 
 An action used duplicate an entity or a component. This action is parametrized with a clone factory ({@code IEntityCloneFactory}) to perform the actual component cloning. Executing this action will result in setting the cloned component to the underlying view.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **entityCloneFactory**   | Configures the entity clone factory to use to    |
-|                          | clone the components or entities.                |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: CloneComponentAction properties
+<table>
+<caption>CloneComponentAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>entityCloneFactory</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the entity clone factory to use to clone the components or entities.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractCollectionAction
 ------------------------
@@ -208,15 +283,26 @@ AbstractCollectionAction
 
 Base class for backend actions acting on collection models. This class is just used to refine certain protected methods return types.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **viewPath**             | Sets view path.                                  |
-|                          |                                                  |
-| `int`                    |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AbstractCollectionAction properties
+<table>
+<caption>AbstractCollectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>viewPath</strong></p>
+<p><code>int</code></p></td>
+<td align="left"><p>Sets view path.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractAddCollectionToMasterAction
 -----------------------------------
@@ -233,17 +319,26 @@ An action used in master/detail views to create and add a new detail to a master
                getAddedComponents(Map<String, Object> context)
      
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **initializationMapping* | Sets initialization mapping.                     |
-| *                        |                                                  |
-|                          |                                                  |
-| `Map​<​String​,Object​>​ |                                                  |
-| `                        |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AbstractAddCollectionToMasterAction properties
+<table>
+<caption>AbstractAddCollectionToMasterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>initializationMapping</strong></p>
+<p><code>Map​&lt;​String​,Object​&gt;​</code></p></td>
+<td align="left"><p>Sets initialization mapping.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractCloneCollectionAction
 -----------------------------
@@ -260,14 +355,24 @@ An action used duplicate a collection of domain objects. Cloning an entity shoul
          Map<String, Object> context)
      
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : AbstractCloneCollectionAction properties
+<table>
+<caption>AbstractCloneCollectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 CloneComponentCollectionAction
 ------------------------------
@@ -278,15 +383,26 @@ CloneComponentCollectionAction
 
 An action used duplicate a collection of entities or components. This action is parametrized with a clone factory ({@code IEntityCloneFactory}) to perform the actual component cloning. Executing this action will result in adding the cloned component(s) to the underlying model collection.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **entityCloneFactory**   | Configures the entity clone factory to use to    |
-|                          | clone the components or entities.                |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: CloneComponentCollectionAction properties
+<table>
+<caption>CloneComponentCollectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>entityCloneFactory</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the entity clone factory to use to clone the components or entities.</p></td>
+</tr>
+</tbody>
+</table>
 
 AddAnyCollectionToMasterAction
 ------------------------------
@@ -297,14 +413,24 @@ AddAnyCollectionToMasterAction
 
 An action used in master/detail views to add new detail(s) to a master domain object. The details to add are taken from the action context through the {@code ActionParameter} context value.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : AddAnyCollectionToMasterAction properties
+<table>
+<caption>AddAnyCollectionToMasterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 AddComponentCollectionToMasterAction
 ------------------------------------
@@ -319,14 +445,24 @@ An action used in master/detail views to create and add a new detail to a master
 
 2.  or, if it does not exist, taken from the view model descriptor. In this case, the component descriptor to use is the element descriptor of the underlying collection descriptor.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : AddComponentCollectionToMasterAction properties
+<table>
+<caption>AddComponentCollectionToMasterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 AddMapToMasterAction
 --------------------
@@ -339,14 +475,24 @@ AddMapToMasterAction
 
 An action used in master/detail views where models are backed by maps to create and add a new detail to a master domain object. The new instance created is an instance of {@code org.jspresso.framework.util.collection.ObjectEqualityMap}. Default property values as well as {@code onCreate} lifecycle interceptors registered on the component descriptor are supported.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : AddMapToMasterAction properties
+<table>
+<caption>AddMapToMasterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 CloneMapCollectionAction
 ------------------------
@@ -357,14 +503,24 @@ CloneMapCollectionAction
 
 An action used duplicate a collection of domain objects implemented as maps. Newly created maps are instances of {@code org.jspresso.framework.util.collection.ObjectEqualityMap} that contains the same key/value pairs as the maps to clone. Executing this action will result in adding the cloned map to the underlying model collection.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : CloneMapCollectionAction properties
+<table>
+<caption>CloneMapCollectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 PasteCollectionToMasterAction
 -----------------------------
@@ -375,15 +531,26 @@ PasteCollectionToMasterAction
 
 An action used in master/detail views to paste previously copied or cut detail(s) to a master domain object. The application clipboard is used to retrieve the entities (or components) to paste. Whenever the components have been previously *copied* to the clipboard, the paste action will clone them when executed using the configured entity clone factory. Whenever the components have been previously *cut*, the paste action will simply use the exact same instances as the one placed on the clipboard.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **entityCloneFactory**   | Configures the entity clone factory to use when  |
-|                          | the paste action is triggered after a copy.      |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: PasteCollectionToMasterAction properties
+<table>
+<caption>PasteCollectionToMasterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>entityCloneFactory</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the entity clone factory to use when the paste action is triggered after a copy.</p></td>
+</tr>
+</tbody>
+</table>
 
 CollectionElementMoveAction
 ---------------------------
@@ -394,26 +561,36 @@ CollectionElementMoveAction
 
 This action can be declared on views that are backed by collections with list semantics (indexed collections). It allows to take a the selected elements and move them in the collection using a configured offset. It allows for re-ordering the list.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **offset**               | Configures the offset to use when moving the     |
-|                          | selected elements inside the list. A configured  |
-| `int`                    | offset of **1** will increase (move down) by one |
-|                          | the selected elements indices whereas an offset  |
-|                          | of **-1** will decrease (move up) the selected   |
-|                          | elements indices.                                |
-+--------------------------+--------------------------------------------------+
-| **toBottom**             | Configures this action to move the selected      |
-|                          | elements to the bottom of the list.              |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-| **toTop**                | Configures this action to move the selected      |
-|                          | elements to the top of the list.                 |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: CollectionElementMoveAction properties
+<table>
+<caption>CollectionElementMoveAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>offset</strong></p>
+<p><code>int</code></p></td>
+<td align="left"><p>Configures the offset to use when moving the selected elements inside the list. A configured offset of <strong>1</strong> will increase (move down) by one the selected elements indices whereas an offset of <strong>-1</strong> will decrease (move up) the selected elements indices.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>toBottom</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Configures this action to move the selected elements to the bottom of the list.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>toTop</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Configures this action to move the selected elements to the top of the list.</p></td>
+</tr>
+</tbody>
+</table>
 
 RemoveCollectionFromMasterAction
 --------------------------------
@@ -424,14 +601,24 @@ RemoveCollectionFromMasterAction
 
 An action used in master/detail views to remove selected details from a master domain object. No further operation (like actual removal from a persistent store) is performed by this action.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : RemoveCollectionFromMasterAction properties
+<table>
+<caption>RemoveCollectionFromMasterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 RemoveCollectionFromMasterAction
 --------------------------------
@@ -442,14 +629,24 @@ RemoveCollectionFromMasterAction
 
 An action used in master/detail views to remove selected details from a master domain object. More than just removing the selected details from their owning collection, this action "*cuts*" the existing links between the entities to remove and the rest of the domain then registers them for deletion on next save operation. Note that cleaning of relationships is a 2 pass process. The 1st one is a dry run that checks that no functional exception is thrown by the business rules. The second one performs the actual cleaning.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : RemoveCollectionFromMasterAction properties
+<table>
+<caption>RemoveCollectionFromMasterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 RemoveFromModuleObjectsAction
 -----------------------------
@@ -460,14 +657,24 @@ RemoveFromModuleObjectsAction
 
 This action, which is to be used on bean collection modules, removes the selected objects from the module's projected collection. If one (or more) of the removed objects are also used in children bean modules, the corresponding children bean modules are also removed accordingly.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : RemoveFromModuleObjectsAction properties
+<table>
+<caption>RemoveFromModuleObjectsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 RemoveModuleObjectAction
 ------------------------
@@ -478,14 +685,24 @@ RemoveModuleObjectAction
 
 This action, which is to be used on bean modules, **deletes the module object from the persistent store**. The bean module is also removed from it's parent accordingly.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : RemoveModuleObjectAction properties
+<table>
+<caption>RemoveModuleObjectAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 SetActionParamFromSelectedComponentsAction
 ------------------------------------------
@@ -496,14 +713,24 @@ SetActionParamFromSelectedComponentsAction
 
 A trivial backend action that updates the action context by setting the {@code ActionParameter} with the selected components of the underlying model.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : SetActionParamFromSelectedComponentsAction properties
+<table>
+<caption>SetActionParamFromSelectedComponentsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 AbstractLdapAction
 ------------------
@@ -514,15 +741,26 @@ AbstractLdapAction
 
 Root abstract class of actions that deal with LDAP directory. It's only purpose is to standardize the use of Spring {@code LdapTemplate}.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **ldapTemplate**         | Configures the Spring LDAP template to use with  |
-|                          | this action.                                     |
-| `Ldap​Template`          |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AbstractLdapAction properties
+<table>
+<caption>AbstractLdapAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>ldapTemplate</strong></p>
+<p><code>Ldap​Template</code></p></td>
+<td align="left"><p>Configures the Spring LDAP template to use with this action.</p></td>
+</tr>
+</tbody>
+</table>
 
 AbstractQbeAction
 -----------------
@@ -535,19 +773,31 @@ AbstractQbeAction
 
 Abstract base class for QBE find actions.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **queryAction**          | Configures the query action used to actually     |
-|                          | perform the entity query.                        |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **sortOnly**             | Sets the sortOnly.                               |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AbstractQbeAction properties
+<table>
+<caption>AbstractQbeAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>queryAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the query action used to actually perform the entity query.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>sortOnly</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets the sortOnly.</p></td>
+</tr>
+</tbody>
+</table>
 
 FindAction
 ----------
@@ -558,14 +808,24 @@ FindAction
 
 This action will climb the model connector hierarchy to retrieve a query component used as QBE filter. It will then tailor paging status on this query component before continuing execution. This action is meant to be chained with an actual backend action to perform the query (like {@code QueryEntitiesAction}).
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : FindAction properties
+<table>
+<caption>FindAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 QueryModuleFilterAction
 -----------------------
@@ -576,14 +836,24 @@ QueryModuleFilterAction
 
 Retrieves the filter of a module and queries the persistent store to populate the module objects. The actual query is delegated to another backend action (defaulted to {@code QueryEntitiesAction}) that can be configured through the {@code queryAction} property.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : QueryModuleFilterAction properties
+<table>
+<caption>QueryModuleFilterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 AbstractQueryComponentsAction
 -----------------------------
@@ -604,32 +874,36 @@ This action is the base abstract class to query components by example. It is use
 
 Whenever the query is successful, the result is merged back to the application session and assigned to the query component {@code queriedComponents} property. Note that there is 1 hook that can be configured by injection to fine-tune the performed query : {@code queryComponentRefiner}.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **mergeMode**            | Sets the mergeMode to use when assigning the     |
-|                          | queried components to the filter query           |
-| ``                       | component. A {@code null} value means that the   |
-|                          | queried components will assigned without being   |
-|                          | merged at all. In that case, the merging has to  |
-|                          | be performed later on in the action chain.       |
-|                          | Forgetting to do so will lead to unexpected      |
-|                          | results. Default value is {@code                 |
-|                          | EMergeMode.MERGE\_CLEAN\_LAZY}.                  |
-+--------------------------+--------------------------------------------------+
-| **queryComponentRefiner* | Configures a query component refiner that will   |
-| *                        | be called before the query component is          |
-|                          | processed to extract the Hibernate detached      |
-| ``                       | criteria. This allows for instance to force      |
-|                          | query values.                                    |
-+--------------------------+--------------------------------------------------+
-| **useCountForPagination* | Sets use count for pagination.                   |
-| *                        |                                                  |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AbstractQueryComponentsAction properties
+<table>
+<caption>AbstractQueryComponentsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>mergeMode</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the mergeMode to use when assigning the queried components to the filter query component. A {@code null} value means that the queried components will assigned without being merged at all. In that case, the merging has to be performed later on in the action chain. Forgetting to do so will lead to unexpected results. Default value is {@code EMergeMode.MERGE_CLEAN_LAZY}.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>queryComponentRefiner</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures a query component refiner that will be called before the query component is processed to extract the Hibernate detached criteria. This allows for instance to force query values.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>useCountForPagination</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets use count for pagination.</p></td>
+</tr>
+</tbody>
+</table>
 
 QueryEntitiesAction
 -------------------
@@ -648,27 +922,36 @@ This action is used to Hibernate query entities by example. It is used behind th
 
 Out of this query component, the action will build an Hibernate detached criteria by constructing all join sub-criteria whenever necessary. Once the detached criteria is complete, the action will perform the Hibernate query while using paging information taken from the query component as well as custom sorting properties. Whenever the query is successful, the result is merged back to the application session and assigned to the query component {@code queriedComponents} property. Note that there are 2 hooks that can be configured by injection to fine-tune the performed query : {@code queryComponentRefiner} and {@code criteriaRefiner}.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **criteriaFactory**      | Sets the criteriaFactory.                        |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **criteriaRefiner**      | Configures a criteria refiner that will be       |
-|                          | called before the Hibernate detached criteria is |
-| ``                       | actually used to perform the query. It allows to |
-|                          | complement the criteria with arbitrary complex   |
-|                          | clauses that cannot be simply expressed in a     |
-|                          | "*Query by Example*" semantics.                  |
-+--------------------------+--------------------------------------------------+
-| **useInListForPagination | Sets the useInListForPagination.                 |
-| **                       |                                                  |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: QueryEntitiesAction properties
+<table>
+<caption>QueryEntitiesAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>criteriaFactory</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the criteriaFactory.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>criteriaRefiner</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures a criteria refiner that will be called before the Hibernate detached criteria is actually used to perform the query. It allows to complement the criteria with arbitrary complex clauses that cannot be simply expressed in a &quot;<em>Query by Example</em>&quot; semantics.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>useInListForPagination</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets the useInListForPagination.</p></td>
+</tr>
+</tbody>
+</table>
 
 StaticQueryComponentsAction
 ---------------------------
@@ -679,15 +962,26 @@ StaticQueryComponentsAction
 
 This action filters an arbitrary component list against the query component using a query component matcher.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **componentStore**       | Sets component store.                            |
-|                          |                                                  |
-| `List​<​?​>​`            |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: StaticQueryComponentsAction properties
+<table>
+<caption>StaticQueryComponentsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>componentStore</strong></p>
+<p><code>List​&lt;​?​&gt;​</code></p></td>
+<td align="left"><p>Sets component store.</p></td>
+</tr>
+</tbody>
+</table>
 
 AddBeanAsSubModuleAction
 ------------------------
@@ -706,16 +1000,26 @@ This action can be installed on any collection view and will :
 
 Whenever there is no {@code childModuleProjectedViewDescriptor} configured, and the currently selected module is a bean collection module, the created modules projected view descriptor is taken from the bean collection module ({@code elementViewDescriptor}).
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **childModuleProjectedVi | Sets the childModuleProjectedViewDescriptor.     |
-| ewDescriptor**           |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: AddBeanAsSubModuleAction properties
+<table>
+<caption>AddBeanAsSubModuleAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>childModuleProjectedViewDescriptor</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the childModuleProjectedViewDescriptor.</p></td>
+</tr>
+</tbody>
+</table>
 
 CreateQueryComponentAction
 --------------------------
@@ -726,21 +1030,31 @@ CreateQueryComponentAction
 
 Creates a query component to be used in filters or list of values. The created query component is stored in the context under the key {@code IQueryComponent.QUERY\_COMPONENT}. Further explanations are given about query components in the {@code QueryEntitiesAction} documentation.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **queryComponentDescript | Sets the queryComponentDescriptorFactory.        |
-| orFactory**              |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **queryComponentRefiner* | Sets the queryComponentRefiner.                  |
-| *                        |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: CreateQueryComponentAction properties
+<table>
+<caption>CreateQueryComponentAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>queryComponentDescriptorFactory</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the queryComponentDescriptorFactory.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>queryComponentRefiner</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the queryComponentRefiner.</p></td>
+</tr>
+</tbody>
+</table>
 
 DeleteEntityAction
 ------------------
@@ -751,14 +1065,24 @@ DeleteEntityAction
 
 An action used to delete the entity that is model of the view. Note that cleaning of relationships is a 2 pass process. The 1st one is a dry run that checks that no functional exception is thrown by the business rules. The second one performs the actual cleaning.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : DeleteEntityAction properties
+<table>
+<caption>DeleteEntityAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 GenerateJasperReportAction
 --------------------------
@@ -771,15 +1095,26 @@ This action performs the actual Jasper report generation using a JDBC data sourc
 
 The resulting {@code JasperPrint} report is then placed into the action context as action parameter for further processing (like PDF production for instance).
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **jdbcTemplate**         | Configures the JDBC template (wrapping a data    |
-|                          | source) to use for filling the report.           |
-| `Jdbc​Template`          |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: GenerateJasperReportAction properties
+<table>
+<caption>GenerateJasperReportAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>jdbcTemplate</strong></p>
+<p><code>Jdbc​Template</code></p></td>
+<td align="left"><p>Configures the JDBC template (wrapping a data source) to use for filling the report.</p></td>
+</tr>
+</tbody>
+</table>
 
 InitModuleFilterAction
 ----------------------
@@ -790,21 +1125,31 @@ InitModuleFilterAction
 
 Initialize a module filter with a brand new query component and resets the module objects collection.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **createQueryComponentAc | Sets the createQueryComponentAction.             |
-| tion**                   |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-| **queryComponentRefiner* | Sets the queryComponentRefiner.                  |
-| *                        |                                                  |
-|                          |                                                  |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: InitModuleFilterAction properties
+<table>
+<caption>InitModuleFilterAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>createQueryComponentAction</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the createQueryComponentAction.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>queryComponentRefiner</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Sets the queryComponentRefiner.</p></td>
+</tr>
+</tbody>
+</table>
 
 PurgeCompletedAsynExecutorsAction
 ---------------------------------
@@ -815,14 +1160,24 @@ PurgeCompletedAsynExecutorsAction
 
 Purges completed asynchronous action executors.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : PurgeCompletedAsynExecutorsAction properties
+<table>
+<caption>PurgeCompletedAsynExecutorsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ReloadAction
 ------------
@@ -835,15 +1190,26 @@ ReloadAction
 
 Reloads the entities provided by the context {@code ActionParameter}. The whole entities graphs are reloaded from the persistent store.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **transactional**        | Sets transactional.                              |
-|                          |                                                  |
-| `boolean`                |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: ReloadAction properties
+<table>
+<caption>ReloadAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>transactional</strong></p>
+<p><code>boolean</code></p></td>
+<td align="left"><p>Sets transactional.</p></td>
+</tr>
+</tbody>
+</table>
 
 ReloadModuleObjectAction
 ------------------------
@@ -854,14 +1220,24 @@ ReloadModuleObjectAction
 
 Reloads all the module entities as well as all its sub-modules entities recursively. The whole entities graphs are reloaded from the persistent store.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ReloadModuleObjectAction properties
+<table>
+<caption>ReloadModuleObjectAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 RemoveFromModuleObjectsAction
 -----------------------------
@@ -872,14 +1248,24 @@ RemoveFromModuleObjectsAction
 
 This action, which is to be used on bean collection modules, removes the selected objects from the module's projected collection **and deletes them from the persistent store**. If one (or more) of the removed objects are also used in children bean modules, the corresponding children bean modules are also removed accordingly. It is versatile enough to work on mobile collection module details.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : RemoveFromModuleObjectsAction properties
+<table>
+<caption>RemoveFromModuleObjectsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ResetConnectorValueAction
 -------------------------
@@ -890,14 +1276,24 @@ ResetConnectorValueAction
 
 Resets the model connector value to null.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : ResetConnectorValueAction properties
+<table>
+<caption>ResetConnectorValueAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 SaveAction
 ----------
@@ -910,14 +1306,24 @@ SaveAction
 
 Saves the entities provided by the context {@code ActionParameter}. All previously registered persistence operations are also performed.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : SaveAction properties
+<table>
+<caption>SaveAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 SaveModuleObjectAction
 ----------------------
@@ -928,14 +1334,24 @@ SaveModuleObjectAction
 
 Saves all the module entities as well as all its sub-modules entities recursively. All previously registered persistence operations are also performed.
 
-  -------------------------------------------------------------------------
-  Property                 Description
-  ------------------------ ------------------------------------------------
-  This class does not have
-  any specific property.
-  -------------------------------------------------------------------------
-
-  : SaveModuleObjectAction properties
+<table>
+<caption>SaveModuleObjectAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">This class does not have any specific property.</td>
+</tr>
+</tbody>
+</table>
 
 ScriptedBackendAction
 ---------------------
@@ -948,15 +1364,26 @@ ScriptedBackendAction
 
 A scripted backend action. The action takes the script to execute (an {@code IScript} implementation) out of its context (using {@code ActionParameter}) and delegates the actual script execution to a {@code IScriptHandler} configured through the {@code scriptHandler} property.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **scriptHandler**        | Configures the script handler to use to perform  |
-|                          | the script execution.                            |
-| ``                       |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: ScriptedBackendAction properties
+<table>
+<caption>ScriptedBackendAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>scriptHandler</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the script handler to use to perform the script execution.</p></td>
+</tr>
+</tbody>
+</table>
 
 StaticScriptedBackendAction
 ---------------------------
@@ -967,19 +1394,31 @@ StaticScriptedBackendAction
 
 A statically scripted backend action. The script and the scripting language are statically configured in the action itself.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **script**               | Sets the script source code.                     |
-|                          |                                                  |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-| **scriptLanguage**       | Sets the script language this scripted action is |
-|                          | written in.                                      |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: StaticScriptedBackendAction properties
+<table>
+<caption>StaticScriptedBackendAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>script</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the script source code.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>scriptLanguage</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Sets the script language this scripted action is written in.</p></td>
+</tr>
+</tbody>
+</table>
 
 SelectEntityPropertyAction
 --------------------------
@@ -990,15 +1429,26 @@ SelectEntityPropertyAction
 
 A generic action to fill-in the context {@code ActionParameter} with the value of an entity property.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **property**             | Configures the property to extract out of the    |
-|                          | underlying model.                                |
-| `String`                 |                                                  |
-+--------------------------+--------------------------------------------------+
-
-: SelectEntityPropertyAction properties
+<table>
+<caption>SelectEntityPropertyAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>property</strong></p>
+<p><code>String</code></p></td>
+<td align="left"><p>Configures the property to extract out of the underlying model.</p></td>
+</tr>
+</tbody>
+</table>
 
 TransferCollectionAction
 ------------------------
@@ -1009,19 +1459,29 @@ TransferCollectionAction
 
 An action used to register a collection of domain objects into the application's clipboard along with a transfer mode semantics.
 
-+--------------------------+--------------------------------------------------+
-| Property                 | Description                                      |
-+==========================+==================================================+
-| **transferMode**         | Configures the transferMode to use when pasting  |
-|                          | will be requested, i.e. :                        |
-| ``                       |                                                  |
-|                          | -   {@code ETransferMode.COPY} for copy          |
-|                          |     semantics.                                   |
-|                          |                                                  |
-|                          | -   {@code ETransferMode.MOVE} for move/cut      |
-|                          |     semantics.                                   |
-+--------------------------+--------------------------------------------------+
-
-: TransferCollectionAction properties
+<table>
+<caption>TransferCollectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>transferMode</strong></p>
+<p><code></code></p></td>
+<td align="left"><p>Configures the transferMode to use when pasting will be requested, i.e. :</p>
+<ul>
+<li><p>{@code ETransferMode.COPY} for copy semantics.</p></li>
+<li><p>{@code ETransferMode.MOVE} for move/cut semantics.</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 
