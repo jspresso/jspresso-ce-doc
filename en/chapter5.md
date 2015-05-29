@@ -13,6 +13,7 @@ Overview
 
 Reference
 ---------
+!INCLUDE "../generated/AbstractController.md"
 
 Modules
 =======
@@ -24,6 +25,8 @@ Overview
 
 Reference
 ---------
+!INCLUDE "../generated/Workspace.md"
+!INCLUDE "../generated/Module.md"
 
 Enabling/Disabling
 ==================
@@ -58,6 +61,7 @@ Overview
 
 Reference
 ---------
+!INCLUDE "../generated/AbstractGate.md"
 
 Startup
 =======
