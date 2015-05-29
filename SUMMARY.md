@@ -1,5 +1,4 @@
 # Summary
 
-* [introduction](README.md)
-* [introduction](en/reference-guide.md)
+* [Preface](en/reference-guide.md)
 
