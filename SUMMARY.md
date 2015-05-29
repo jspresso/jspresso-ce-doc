@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
 * [Preface](en/reference-guide.md)
 * [A Jspresso application from A to Z](en/chapter1.md)
 * [Domain Model](en/chapter2.md)
