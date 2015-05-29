@@ -4,6 +4,6 @@
         "readme": "en/reference-guide.md"
     },
     "plugins": [
-        "gitbook-plugin-toc"
+        "toc"
     ]
 }
