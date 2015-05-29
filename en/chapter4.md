@@ -13,6 +13,8 @@ Common part
 
 Reference
 ---------
+      <xi:include href="../generated/BackendAction.xml"
+                  xmlns:xi="http://www.w3.org/2001/XInclude" />
 
 Backend actions
 ===============
