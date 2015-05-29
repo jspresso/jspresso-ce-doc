@@ -4,7 +4,8 @@ A Jspresso application from A to Z
 This chapter will help you to understand the basics of the Jspresso
 application framework and how to work with it.
 
-<!--toc-->
+<!-- toc -->
+
 Setting-up the development environment
 ======================================
 
