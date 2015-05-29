@@ -99,31 +99,3 @@ To quickly introduce the HR domain model, let's dive into the following
 UML class diagrams. As a general rule to make the diagrams more
 readable, attributes must be considered as getter / setter pairs.
 
-The [commons class diagram](#commons-cd) describes commonly used
-interfaces and classes.
-
-A few hints :
-
--   The traceable interface is implemented by entities for which we need
-    to record when it was saved for the first time and when it was last
-    updated. Of course, these tracing elements must be made read-only to
-    the end-user since they are automatically managed by the
-    application.
-
--   The nameable is implemented by entities having a name. A name has a
-    max length of 64 characters and is mandatory. Nameable implements a
-    service which formats its name (a really simple service only for
-    demonstration purpose).
-
--   The contact information component is used by entities that have
-    contact details (address, phone, email, ...). A contact information
-    points to one and only one city. A city is nameable and has a zip
-    code of maximum length 10 characters.
-
--   An event is a piece of text which is traceable
-
-![Commons class diagram](../uml/commons-cd.PNG)
-
-The [employees class diagram](#employee-cd) describes what an employee
-is.
-
