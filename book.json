@@ -1,6 +1,6 @@
 {
   "gitbook": ">=2.0.0",
   "structure": {
-    "readme": "reference-guide.md"
+    "readme": "en/reference-guide.md"
   }
 }
