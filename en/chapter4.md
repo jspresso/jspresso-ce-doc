@@ -29,6 +29,7 @@ Frontend actions
 
 Reference
 ---------
+
 !INCLUDE "../generated/FrontendAction.md"
 
 Built-in actions
