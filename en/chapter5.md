@@ -1,36 +1,28 @@
-Application Structure
-=====================
+# Application Structure
 
 <!-- toc -->
 
-Controllers
-===========
+# Controllers
 
-Overview
---------
+## Overview
 
 ![Controllers class diagram](../uml/controllers.PNG)
 
-Reference
----------
+## Reference
 !INCLUDE "../generated/AbstractController.md"
 
 
-Modules
-=======
+# Modules
 
-Overview
---------
+## Overview
 
 ![Modules class diagram](../uml/modules.PNG)
 
-Reference
----------
+## Reference
 !INCLUDE "../generated/Workspace.md"
 !INCLUDE "../generated/Module.md"
 
-Enabling/Disabling
-==================
+# Enabling/Disabling
 
 Jspresso goes beyond static, role-based, authorization by introducing
 the concept of *gate*. A gate is a simple monitor that can open or close
@@ -55,20 +47,15 @@ gates. The combination is conjunctive, meaning that *all* gates must be
 open for the property (writability, actionability) to be allowed. In
 other words, a single closed gate is sufficient to forbid the property.
 
-Overview
---------
+## Overview
 
 ![Gates class diagram](../uml/enablement.PNG)
 
-Reference
----------
+## Reference
 !INCLUDE "../generated/AbstractGate.md"
 
-Startup
-=======
+# Startup
 
-Overview
---------
+## Overview
 
 ![Startup class diagram](../uml/startup.PNG)
-
