@@ -291,7 +291,9 @@ Default implementation of a criteria factory.
 <tbody>
 <tr class="odd">
 <td align="left"><p><strong>triStateBooleanSupported</strong></p><p><code>boolean</code></p></td>
-<td><p>Sets the triStateBooleanSupported.</p></td>
+<td><p>Configures the criteria factory whether to consider use 3-states booleans, i.e. true, false or undefined. If
+ <strong>triStateBooleanSupported</strong> is set to false, then a <code>false</code> boolean value will simply be
+ ignored in the generated criteria.</p></td>
 </tr>
 </tbody>
 </table>
