@@ -295,6 +295,8 @@ This is the abstract base descriptor for all component-like part of the
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor"></a>BasicComponentDescriptor
@@ -347,6 +349,8 @@ This type of descriptor is used to describe :
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.entity.basic.BasicEntityDescriptor
@@ -410,6 +414,8 @@ This descriptor key to the description of the application model. It is used
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor"></a>BasicInterfaceDescriptor
@@ -452,4 +458,5 @@ This descriptor is a mean of factorizing state/behaviour among components,
 </tbody>
 </table>
 
+---
 

@@ -194,6 +194,8 @@ This is the abstract base descriptor for all views. Its main purpose, since
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor"></a>AbstractCardViewDescriptor
@@ -245,6 +247,8 @@ This descriptor serves as abstract base implementation for card view
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor"></a>BasicCardViewDescriptor
@@ -294,6 +298,8 @@ Describes a multi-purpose card view that is configurable with a custom card
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor"></a>EntityCardViewDescriptor
@@ -331,6 +337,8 @@ This card view provides a simple card determination strategy that is based on
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.AbstractComponentViewDescriptor
@@ -451,6 +459,8 @@ Abstract class for component view descriptors.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicComponentViewDescriptor
@@ -598,6 +608,8 @@ Component view descriptors are surely one of the most commonly used view
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileComponentViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileComponentViewDescriptor"></a>MobileComponentViewDescriptor
@@ -642,6 +654,8 @@ A mobile form view descriptor.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.AbstractTreeViewDescriptor
@@ -789,6 +803,8 @@ This descriptor is use to design a tree view. The way to define a tree view
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicTreeViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicTreeViewDescriptor"></a>BasicTreeViewDescriptor
@@ -830,6 +846,8 @@ This descriptor is use to design a tree view. The way to define a tree view
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileTreeViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileTreeViewDescriptor"></a>MobileTreeViewDescriptor
@@ -868,6 +886,8 @@ This descriptor is use to design a tree view. The way to define a tree view
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicActionViewDescriptor
@@ -921,6 +941,8 @@ This type of view allows to make an action available as a view and thus
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor
@@ -1017,6 +1039,8 @@ This is the abstract base descriptor of all views used to display a
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor"></a>AbstractListViewDescriptor
@@ -1080,6 +1104,8 @@ This type of descriptor is used to implement a list view. A list view is a
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor"></a>BasicListViewDescriptor
@@ -1123,6 +1149,8 @@ This type of descriptor is used to implement a list view. A list view is a
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor
@@ -1173,6 +1201,8 @@ This type of descriptor is used to implement a list view. A list view is a
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicTableViewDescriptor
@@ -1312,6 +1342,8 @@ This descriptor is used to implement a table view. This is certainly the most
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicMapViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicMapViewDescriptor"></a>BasicMapViewDescriptor
@@ -1350,6 +1382,8 @@ This descriptor is used to implement a map view.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileMapViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileMapViewDescriptor"></a>MobileMapViewDescriptor
@@ -1386,6 +1420,8 @@ A mobile map view descriptor.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor
@@ -1543,6 +1579,8 @@ This view descriptor serves 2 purposes :
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor"></a>BasicEnumerationPropertyViewDescriptor
@@ -1609,6 +1647,8 @@ This specialized property view descriptor is used in order to be able to
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor"></a>BasicHtmlViewDescriptor
@@ -1648,6 +1688,8 @@ This type of view descriptor is used to display a a string property
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor
@@ -1709,6 +1751,8 @@ This type of view descriptor is used to display a binary property or a string
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor"></a>BasicStringPropertyViewDescriptor
@@ -1743,6 +1787,8 @@ This type of view descriptor is used to display a a string property.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicReferencePropertyViewDescriptor
@@ -1789,4 +1835,5 @@ This specialized property view descriptor is used in order to be able to
 </tbody>
 </table>
 
+---
 

@@ -82,6 +82,8 @@ This descriptor is used to describe a collection of components (entities,
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicListDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicListDescriptor"></a>BasicListDescriptor
@@ -117,6 +119,8 @@ This descriptor is equivalent to a <code>BasicCollectionDescriptor</code>
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicSetDescriptor
@@ -154,4 +158,5 @@ This descriptor is equivalent to a <code>BasicCollectionDescriptor</code>
 </tbody>
 </table>
 
+---
 

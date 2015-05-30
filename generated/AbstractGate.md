@@ -34,6 +34,8 @@ This is the base abstract class of all Jspresso built-in gates. Open/close
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.util.gate.AbstractModelGate
 #### <a name="org.jspresso.framework.util.gate.AbstractModelGate"></a>AbstractModelGate
@@ -67,6 +69,8 @@ This is the base abstract implementation for gates that are model-based.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.binding.model.AbstractPropertyModelGate
@@ -120,6 +124,8 @@ This is the base abstract class of gates whose opening rules are based on a
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.binding.model.BooleanPropertyModelGate
 #### <a name="org.jspresso.framework.binding.model.BooleanPropertyModelGate"></a>BooleanPropertyModelGate
@@ -159,6 +165,8 @@ This gate opens and closes based on the value of a boolean property of the
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.binding.model.EnumerationPropertyModelGate
 #### <a name="org.jspresso.framework.binding.model.EnumerationPropertyModelGate"></a>EnumerationPropertyModelGate
@@ -193,6 +201,8 @@ This gate opens and closes based on the value of an enumeration property
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.binding.model.RegexPropertyModelGate
@@ -230,6 +240,8 @@ This gate opens and closes based on the value of a string property matching a
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.util.gate.ClosedGate
 #### <a name="org.jspresso.framework.util.gate.ClosedGate"></a>ClosedGate
@@ -262,6 +274,8 @@ An always closed gate.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.security.GrantedRolesGate
@@ -302,4 +316,5 @@ This is a role based gate. The gate depends only on the roles of the
 </tbody>
 </table>
 
+---
 

@@ -114,6 +114,8 @@ This is the abstract base descriptor for all relationship properties.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor"></a>BasicCollectionPropertyDescriptor
@@ -184,6 +186,8 @@ This descriptor is used to describe collection properties that are used
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicReferencePropertyDescriptor
@@ -284,6 +288,8 @@ Default implementation of a reference descriptor.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor"></a>EnumQueryStructureDescriptor
@@ -317,4 +323,5 @@ A query structure used to implement enumeration disjunctions in filters.
 </tbody>
 </table>
 
+---
 

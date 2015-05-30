@@ -55,6 +55,8 @@ Abstract base class for controllers. Controllers role is to adapt the
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.AbstractBackendController
 #### <a name="org.jspresso.framework.application.backend.AbstractBackendController"></a>AbstractBackendController
@@ -208,6 +210,8 @@ Base class for backend application controllers. Backend controllers are
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController
 #### <a name="org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController"></a>HibernateBackendController
@@ -256,6 +260,8 @@ This is the default Jspresso implementation of Hibernate-based backend
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.frontend.controller.AbstractFrontendController
@@ -457,6 +463,8 @@ Base class for frontend application controllers. Frontend controllers are
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController
 #### <a name="org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController"></a>AbstractRemoteController
@@ -491,6 +499,8 @@ This is is the base implementation of all &quot;remotable&quot; frontend
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.frontend.controller.remote.DefaultRemoteController
@@ -531,6 +541,8 @@ This is is the default implementation of a &quot;remotable&quot; frontend
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController
 #### <a name="org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController"></a>MobileRemoteController
@@ -566,6 +578,8 @@ This is is the mobile implementation of a &quot;remotable&quot; frontend
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.frontend.controller.swing.DefaultSwingController
@@ -607,4 +621,5 @@ This is is the default implementation of the <b>Swing</b> frontend
 </tbody>
 </table>
 
+---
 

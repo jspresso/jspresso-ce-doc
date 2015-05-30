@@ -51,6 +51,8 @@ This is a utility class from which most named descriptors inherit for
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.util.descriptor.DefaultIconDescriptor
 #### <a name="org.jspresso.framework.util.descriptor.DefaultIconDescriptor"></a>DefaultIconDescriptor
@@ -104,4 +106,5 @@ This is a utility class from which most displayable descriptors inherit for
 </tbody>
 </table>
 
+---
 

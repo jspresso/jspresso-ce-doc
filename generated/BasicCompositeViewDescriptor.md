@@ -52,6 +52,8 @@ This is the abstract base class for all composite views. A composite view is
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor"></a>AbstractMobilePageViewDescriptor
@@ -122,6 +124,8 @@ Abstract base class for mobile page view descriptors.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileCardPageViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileCardPageViewDescriptor"></a>MobileCardPageViewDescriptor
@@ -158,6 +162,8 @@ A card view descriptor that aggregates other pages as card.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileCompositePageViewDescriptor
@@ -204,6 +210,8 @@ A composite view descriptor that aggregates view sections on a single page.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileNavPageViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileNavPageViewDescriptor"></a>MobileNavPageViewDescriptor
@@ -248,6 +256,8 @@ Navigation page view descriptors that are able to navigate to another page based
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicBorderViewDescriptor
@@ -316,6 +326,8 @@ A border view is a composite view that arranges its children to the
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileBorderViewDescriptor
@@ -390,6 +402,8 @@ A composite view descriptor that aggregates mobile views.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicConstrainedGridViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicConstrainedGridViewDescriptor"></a>BasicConstrainedGridViewDescriptor
@@ -443,6 +457,8 @@ This composite view arranges its children in a grid where cell behaviour and
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicEvenGridViewDescriptor
@@ -512,6 +528,8 @@ This composite view arranges its children in a grid where cells are
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.basic.BasicSplitViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicSplitViewDescriptor"></a>BasicSplitViewDescriptor
@@ -572,6 +590,8 @@ This composite view arranges its children in a container split either
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicTabViewDescriptor
@@ -635,6 +655,8 @@ This composite view arranges its children in tabs. Each tab potentially
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileTabViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileTabViewDescriptor"></a>MobileTabViewDescriptor
@@ -682,4 +704,5 @@ A composite view descriptor that aggregates mobile views.
 </tbody>
 </table>
 
+---
 

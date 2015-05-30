@@ -36,6 +36,8 @@ This class should serve as base class for implementing actions that execute
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction
 #### <a name="org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction"></a>AbstractChangePasswordAction
@@ -126,6 +128,8 @@ This is the base class for implementing an action that performs actual
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction
 #### <a name="org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction"></a>DatabaseChangePasswordAction
@@ -170,6 +174,8 @@ Concrete backend implementation of a change password action where password is
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction
 #### <a name="org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction"></a>LdapChangePasswordAction
@@ -207,6 +213,8 @@ Concrete backend implementation of a change password action where password is
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.security.MockChangePasswordAction
 #### <a name="org.jspresso.framework.application.backend.action.security.MockChangePasswordAction"></a>MockChangePasswordAction
@@ -239,6 +247,8 @@ Mocks up password change.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.AbstractCloneAction
@@ -279,6 +289,8 @@ An action used duplicate a domain object. the cloned domain object is set as mod
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.CloneComponentAction
 #### <a name="org.jspresso.framework.application.backend.action.CloneComponentAction"></a>CloneComponentAction
@@ -316,6 +328,8 @@ An action used duplicate an entity or a component. This action
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.AbstractCollectionAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractCollectionAction"></a>AbstractCollectionAction
@@ -350,6 +364,8 @@ Base class for backend actions acting on collection models. This class is
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction
@@ -392,6 +408,8 @@ An action used in master/detail views to create and add a new detail to a
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.AbstractCloneCollectionAction
@@ -436,6 +454,8 @@ An action used duplicate a collection of domain objects. Cloning an entity
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.CloneComponentCollectionAction
 #### <a name="org.jspresso.framework.application.backend.action.CloneComponentCollectionAction"></a>CloneComponentCollectionAction
@@ -473,6 +493,8 @@ An action used duplicate a collection of entities or components. This action
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.AddAnyCollectionToMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.AddAnyCollectionToMasterAction"></a>AddAnyCollectionToMasterAction
@@ -507,6 +529,8 @@ An action used in master/detail views to add new detail(s) to a master domain
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.AddComponentCollectionToMasterAction
@@ -550,6 +574,8 @@ An action used in master/detail views to create and add a new detail to a
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.AddMapToMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.AddMapToMasterAction"></a>AddMapToMasterAction
@@ -589,6 +615,8 @@ An action used in master/detail views where models are backed by maps to
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.CloneMapCollectionAction
 #### <a name="org.jspresso.framework.application.backend.action.CloneMapCollectionAction"></a>CloneMapCollectionAction
@@ -625,6 +653,8 @@ An action used duplicate a collection of domain objects implemented as maps.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.PasteCollectionToMasterAction
@@ -665,6 +695,8 @@ An action used in master/detail views to paste previously copied or cut
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.CollectionElementMoveAction
@@ -715,6 +747,8 @@ This action can be declared on views that are backed by collections with list
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.RemoveCollectionFromMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.RemoveCollectionFromMasterAction"></a>RemoveCollectionFromMasterAction
@@ -749,6 +783,8 @@ An action used in master/detail views to remove selected details from a
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.persistence.RemoveCollectionFromMasterAction
@@ -791,6 +827,8 @@ An action used in master/detail views to remove selected details from a
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.module.RemoveFromModuleObjectsAction
 #### <a name="org.jspresso.framework.application.backend.action.module.RemoveFromModuleObjectsAction"></a>RemoveFromModuleObjectsAction
@@ -827,6 +865,8 @@ This action, which is to be used on bean collection modules, removes the
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.persistence.module.RemoveModuleObjectAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.module.RemoveModuleObjectAction"></a>RemoveModuleObjectAction
@@ -861,6 +901,8 @@ This action, which is to be used on bean modules, <b>deletes the module
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.SetActionParamFromSelectedComponentsAction
@@ -897,6 +939,8 @@ A trivial backend action that updates the action context by setting the
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.AbstractLdapAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractLdapAction"></a>AbstractLdapAction
@@ -930,6 +974,8 @@ Root abstract class of actions that deal with LDAP directory. It's only
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.AbstractQbeAction
@@ -969,6 +1015,8 @@ Abstract base class for QBE find actions.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.FindAction
 #### <a name="org.jspresso.framework.application.backend.action.FindAction"></a>FindAction
@@ -1006,6 +1054,8 @@ This action will climb the model connector hierarchy to retrieve a query
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.module.QueryModuleFilterAction
 #### <a name="org.jspresso.framework.application.backend.action.module.QueryModuleFilterAction"></a>QueryModuleFilterAction
@@ -1041,6 +1091,8 @@ Retrieves the filter of a module and queries the persistent store to populate
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction
@@ -1109,6 +1161,8 @@ This action is the base abstract class to query components by example. It is use
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.persistence.hibernate.QueryEntitiesAction
@@ -1181,6 +1235,8 @@ This action is used to Hibernate query entities by example. It is used behind
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.StaticQueryComponentsAction
 #### <a name="org.jspresso.framework.application.backend.action.StaticQueryComponentsAction"></a>StaticQueryComponentsAction
@@ -1213,6 +1269,8 @@ This action filters an arbitrary component list against the query component usin
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction
@@ -1259,6 +1317,8 @@ This action can be installed on any collection view and will :
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.CreateQueryComponentAction
 #### <a name="org.jspresso.framework.application.backend.action.CreateQueryComponentAction"></a>CreateQueryComponentAction
@@ -1299,6 +1359,8 @@ Creates a query component to be used in filters or list of values. The
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction"></a>DeleteEntityAction
@@ -1335,6 +1397,8 @@ An action used to delete the entity that is model of the view.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction
@@ -1379,6 +1443,8 @@ This action performs the actual Jasper report generation using a JDBC
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.module.InitModuleFilterAction
 #### <a name="org.jspresso.framework.application.backend.action.module.InitModuleFilterAction"></a>InitModuleFilterAction
@@ -1417,6 +1483,8 @@ Initialize a module filter with a brand new query component and resets the
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction
 #### <a name="org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction"></a>PurgeCompletedAsynExecutorsAction
@@ -1449,6 +1517,8 @@ Purges completed asynchronous action executors.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.persistence.ReloadAction
@@ -1485,6 +1555,8 @@ Reloads the entities provided by the context <code>ActionParameter</code>.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.persistence.ReloadModuleObjectAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.ReloadModuleObjectAction"></a>ReloadModuleObjectAction
@@ -1519,6 +1591,8 @@ Reloads all the module entities as well as all its sub-modules entities
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction
@@ -1558,6 +1632,8 @@ This action, which is to be used on bean collection modules, removes the
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.ResetConnectorValueAction
 #### <a name="org.jspresso.framework.application.backend.action.ResetConnectorValueAction"></a>ResetConnectorValueAction
@@ -1590,6 +1666,8 @@ Resets the model connector value to null.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.persistence.SaveAction
@@ -1626,6 +1704,8 @@ Saves the entities provided by the context <code>ActionParameter</code>. All
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.persistence.SaveModuleObjectAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.SaveModuleObjectAction"></a>SaveModuleObjectAction
@@ -1660,6 +1740,8 @@ Saves all the module entities as well as all its sub-modules entities
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.ScriptedBackendAction
@@ -1699,6 +1781,8 @@ A scripted backend action. The action takes the script to execute (an
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.StaticScriptedBackendAction
 #### <a name="org.jspresso.framework.application.backend.action.StaticScriptedBackendAction"></a>StaticScriptedBackendAction
@@ -1737,6 +1821,8 @@ A statically scripted backend action. The script and the scripting language
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.backend.action.SelectEntityPropertyAction
 #### <a name="org.jspresso.framework.application.backend.action.SelectEntityPropertyAction"></a>SelectEntityPropertyAction
@@ -1770,6 +1856,8 @@ A generic action to fill-in the context <code>ActionParameter</code> with the
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.backend.action.TransferCollectionAction
@@ -1809,4 +1897,5 @@ An action used to register a collection of domain objects into the
 </tbody>
 </table>
 
+---
 

@@ -124,6 +124,8 @@ A module is an entry point in the application. Modules are organized in
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.model.BeanCollectionModule
 #### <a name="org.jspresso.framework.application.model.BeanCollectionModule"></a>BeanCollectionModule
@@ -192,6 +194,8 @@ This type of module keeps a reference on a beans collection. There is no
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.model.FilterableBeanCollectionModule
@@ -313,6 +317,8 @@ This is a specialized type of bean collection module that provides a filter (
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.model.mobile.MobileFilterableBeanCollectionModule
 #### <a name="org.jspresso.framework.application.model.mobile.MobileFilterableBeanCollectionModule"></a>MobileFilterableBeanCollectionModule
@@ -376,6 +382,8 @@ This is a specialized type of filterable bean collection module that provides a 
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.model.mobile.MobileBeanCollectionModule
 #### <a name="org.jspresso.framework.application.model.mobile.MobileBeanCollectionModule"></a>MobileBeanCollectionModule
@@ -426,6 +434,8 @@ This type of module keeps a reference on a beans collection. There is no
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.application.model.BeanModule
@@ -484,6 +494,8 @@ This type of module keeps a reference on a single bean. There is no
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.application.model.mobile.MobileBeanModule
 #### <a name="org.jspresso.framework.application.model.mobile.MobileBeanModule"></a>MobileBeanModule
@@ -530,4 +542,5 @@ This type of module keeps a reference on a single bean. There is no
 </tbody>
 </table>
 
+---
 

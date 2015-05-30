@@ -41,6 +41,8 @@ This is the root abstract descriptor for all property descriptors that are
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.AbstractEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.AbstractEnumerationPropertyDescriptor"></a>AbstractEnumerationPropertyDescriptor
@@ -96,6 +98,8 @@ Abstract base descriptor for properties whose values are enumerated strings.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicEnumerationPropertyDescriptor"></a>BasicEnumerationPropertyDescriptor
@@ -142,6 +146,8 @@ Describes an enumerated property containing arbitrary values.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.TypeEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.TypeEnumerationPropertyDescriptor"></a>TypeEnumerationPropertyDescriptor
@@ -179,6 +185,8 @@ This is a special enumeration descriptor that allows to build the enumeration
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.RangeEnumerationPropertyDescriptor
@@ -225,6 +233,8 @@ This is a special enumeration descriptor that allows to build the enumeration
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.TimeZoneEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.TimeZoneEnumerationPropertyDescriptor"></a>TimeZoneEnumerationPropertyDescriptor
@@ -257,6 +267,8 @@ This is a special enumeration descriptor that holds all available timezones.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicBinaryPropertyDescriptor
@@ -325,6 +337,8 @@ Describes a property used to store a binary value in the form of a byte
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicImageBinaryPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicImageBinaryPropertyDescriptor"></a>BasicImageBinaryPropertyDescriptor
@@ -373,6 +387,8 @@ Describes a property used to store an image binary value. This type of
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicJavaSerializablePropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicJavaSerializablePropertyDescriptor"></a>BasicJavaSerializablePropertyDescriptor
@@ -409,6 +425,8 @@ Describes a property used to store any java <code>Serializable</code> object.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicBooleanPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicBooleanPropertyDescriptor"></a>BasicBooleanPropertyDescriptor
@@ -441,6 +459,8 @@ Describes a boolean property.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicColorPropertyDescriptor
@@ -479,6 +499,8 @@ Describes a property used for storing a color. Color values are stored in the
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicDatePropertyDescriptor
@@ -538,6 +560,8 @@ Describes a date based property. Whether the date property should include time
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicDurationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicDurationPropertyDescriptor"></a>BasicDurationPropertyDescriptor
@@ -574,6 +598,8 @@ Describes a property used to store a duration value. Duration is stored in
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicNumberPropertyDescriptor
@@ -619,6 +645,8 @@ This is the abstract base descriptor of all numeric based properties.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicDecimalPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicDecimalPropertyDescriptor"></a>BasicDecimalPropertyDescriptor
@@ -662,6 +690,8 @@ Describes a decimal property. Property value is either stored as a
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicPercentPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicPercentPropertyDescriptor"></a>BasicPercentPropertyDescriptor
@@ -697,6 +727,8 @@ This is a specialization of decimal descriptor to handle percentage values.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicIntegerPropertyDescriptor
@@ -734,6 +766,8 @@ Describes an integer property. The property is either represented as an
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicStringPropertyDescriptor
@@ -797,6 +831,8 @@ Describes a string based property.
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicImageUrlPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicImageUrlPropertyDescriptor"></a>BasicImageUrlPropertyDescriptor
@@ -839,6 +875,8 @@ Describes an image URL property. This type of descriptor instructs Jspresso
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicPasswordPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicPasswordPropertyDescriptor"></a>BasicPasswordPropertyDescriptor
@@ -875,6 +913,8 @@ Describes a property used for password values. For obvious security reasons,
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicTextPropertyDescriptor
@@ -946,6 +986,8 @@ Describes a multi-line text property. This type of descriptor instructs
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicHtmlPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicHtmlPropertyDescriptor"></a>BasicHtmlPropertyDescriptor
@@ -979,6 +1021,8 @@ Describes a property as handing HTML content. This instructs Jspresso to
 </tr>
 </tbody>
 </table>
+
+---
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicSourceCodePropertyDescriptor
@@ -1019,6 +1063,8 @@ Describes a property as handing sourcecode content. This instructs Jspresso
 </tbody>
 </table>
 
+---
+
 
 ### org.jspresso.framework.model.descriptor.basic.BasicTimePropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicTimePropertyDescriptor"></a>BasicTimePropertyDescriptor
@@ -1058,4 +1104,5 @@ Describes a property used to hold time only values. These properties use a
 </tbody>
 </table>
 
+---
 
