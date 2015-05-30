@@ -1,10 +1,11 @@
 ## DefaultDescriptor
 
 ### org.jspresso.framework.util.descriptor.DefaultDescriptor
+<a name="DefaultDescriptor"></a>
 #### DefaultDescriptor
 
 + **Full name** : [`org.jspresso.framework.util.descriptor.DefaultDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/descriptor/DefaultDescriptor.html)
-+ **Sub-types** : [`BasicCollectionDescriptor`](org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor), [`DefaultIconDescriptor`](org.jspresso.framework.util.descriptor.DefaultIconDescriptor)
++ **Sub-types** : [`BasicCollectionDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor), [`DefaultIconDescriptor`](#org.jspresso.framework.util.descriptor.DefaultIconDescriptor)
 
 
 
@@ -53,11 +54,12 @@ This is a utility class from which most named descriptors inherit for
 
 
 ### org.jspresso.framework.util.descriptor.DefaultIconDescriptor
+<a name="DefaultIconDescriptor"></a>
 #### DefaultIconDescriptor
 
 + **Full name** : [`org.jspresso.framework.util.descriptor.DefaultIconDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/descriptor/DefaultIconDescriptor.html)
 + **Super-type** : [`DefaultDescriptor`](#org.jspresso.framework.util.descriptor.DefaultDescriptor)
-+ **Sub-types** : [`AbstractComponentDescriptor`](org.jspresso.framework.model.descriptor.basic.AbstractComponentDescriptor), [`ActionList`](org.jspresso.framework.view.action.ActionList), [`BasicPropertyDescriptor`](org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor), [`BasicViewDescriptor`](org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
++ **Sub-types** : [`AbstractComponentDescriptor`](#org.jspresso.framework.model.descriptor.basic.AbstractComponentDescriptor), [`ActionList`](#org.jspresso.framework.view.action.ActionList), [`BasicPropertyDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor), [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
 
 
 

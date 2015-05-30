@@ -1,11 +1,12 @@
 ## BasicRelationshipEndPropertyDescriptor
 
 ### org.jspresso.framework.model.descriptor.basic.BasicRelationshipEndPropertyDescriptor
+<a name="BasicRelationshipEndPropertyDescriptor"></a>
 #### BasicRelationshipEndPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicRelationshipEndPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicRelationshipEndPropertyDescriptor.html)
 + **Super-type** : [`BasicPropertyDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor)
-+ **Sub-types** : [`BasicCollectionPropertyDescriptor`](org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor), [`BasicReferencePropertyDescriptor`](org.jspresso.framework.model.descriptor.basic.BasicReferencePropertyDescriptor)
++ **Sub-types** : [`BasicCollectionPropertyDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor), [`BasicReferencePropertyDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicReferencePropertyDescriptor)
 
 
 
@@ -116,6 +117,7 @@ This is the abstract base descriptor for all relationship properties.
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor
+<a name="BasicCollectionPropertyDescriptor"></a>
 #### BasicCollectionPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicCollectionPropertyDescriptor.html)
@@ -187,11 +189,12 @@ This descriptor is used to describe collection properties that are used
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicReferencePropertyDescriptor
+<a name="BasicReferencePropertyDescriptor"></a>
 #### BasicReferencePropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicReferencePropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicReferencePropertyDescriptor.html)
 + **Super-type** : [`BasicRelationshipEndPropertyDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicRelationshipEndPropertyDescriptor)
-+ **Sub-types** : [`EnumQueryStructureDescriptor`](org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor)
++ **Sub-types** : [`EnumQueryStructureDescriptor`](#org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor)
 
 
 
@@ -286,6 +289,7 @@ Default implementation of a reference descriptor.
 
 
 ### org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor
+<a name="EnumQueryStructureDescriptor"></a>
 #### EnumQueryStructureDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/query/EnumQueryStructureDescriptor.html)

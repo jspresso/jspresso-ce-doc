@@ -1,11 +1,12 @@
 ## AbstractComponentDescriptor
 
 ### org.jspresso.framework.model.descriptor.basic.AbstractComponentDescriptor
+<a name="AbstractComponentDescriptor"></a>
 #### AbstractComponentDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.AbstractComponentDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/AbstractComponentDescriptor.html)
 + **Super-type** : [`DefaultIconDescriptor`](#org.jspresso.framework.util.descriptor.DefaultIconDescriptor)
-+ **Sub-types** : [`BasicComponentDescriptor`](org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor), [`BasicEntityDescriptor`](org.jspresso.framework.model.descriptor.entity.basic.BasicEntityDescriptor), [`BasicInterfaceDescriptor`](org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor)
++ **Sub-types** : [`BasicComponentDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor), [`BasicEntityDescriptor`](#org.jspresso.framework.model.descriptor.entity.basic.BasicEntityDescriptor), [`BasicInterfaceDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor)
 
 
 
@@ -297,6 +298,7 @@ This is the abstract base descriptor for all component-like part of the
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor
+<a name="BasicComponentDescriptor"></a>
 #### BasicComponentDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicComponentDescriptor.html)
@@ -350,6 +352,7 @@ This type of descriptor is used to describe :
 
 
 ### org.jspresso.framework.model.descriptor.entity.basic.BasicEntityDescriptor
+<a name="BasicEntityDescriptor"></a>
 #### BasicEntityDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.entity.basic.BasicEntityDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/entity/basic/BasicEntityDescriptor.html)
@@ -412,6 +415,7 @@ This descriptor key to the description of the application model. It is used
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor
+<a name="BasicInterfaceDescriptor"></a>
 #### BasicInterfaceDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicInterfaceDescriptor.html)

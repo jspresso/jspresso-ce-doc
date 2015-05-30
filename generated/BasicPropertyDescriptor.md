@@ -1,11 +1,12 @@
 ## BasicPropertyDescriptor
 
 ### org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor
+<a name="BasicPropertyDescriptor"></a>
 #### BasicPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicPropertyDescriptor.html)
 + **Super-type** : [`DefaultIconDescriptor`](#org.jspresso.framework.util.descriptor.DefaultIconDescriptor)
-+ **Sub-types** : [`BasicRelationshipEndPropertyDescriptor`](org.jspresso.framework.model.descriptor.basic.BasicRelationshipEndPropertyDescriptor), [`BasicScalarPropertyDescriptor`](org.jspresso.framework.model.descriptor.basic.BasicScalarPropertyDescriptor)
++ **Sub-types** : [`BasicRelationshipEndPropertyDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicRelationshipEndPropertyDescriptor), [`BasicScalarPropertyDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicScalarPropertyDescriptor)
 
 
 

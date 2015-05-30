@@ -1,11 +1,12 @@
 ## FrontendAction
 
 ### org.jspresso.framework.application.frontend.action.FrontendAction
+<a name="FrontendAction"></a>
 #### FrontendAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.FrontendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/FrontendAction.html)
 + **Super-type** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction)
-+ **Sub-types** : [`AbstractChartAction`](org.jspresso.framework.application.charting.frontend.action.AbstractChartAction), [`AbstractEditComponentAction`](org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction), [`AbstractMessageAction`](org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction), [`AbstractModuleDirtyStateAction`](org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction), [`AbstractReportAction`](org.jspresso.framework.application.printing.frontend.action.AbstractReportAction), [`ActionParamToSelectedModelAction`](org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction), [`AddBeanAsSubModuleFrontAction`](org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction), [`AddCollectionToMasterAction`](org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction), [`AddPageAction`](org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction), [`BinaryPropertyInfoAction`](org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction), [`ChooseActionAction`](org.jspresso.framework.application.frontend.action.flow.ChooseActionAction), [`ChooseComponentAction`](org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction), [`CloseDialogAction`](org.jspresso.framework.application.frontend.action.CloseDialogAction), [`DisplayNextPinnedModuleAction`](org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction), [`DisplayPreviousPinnedModuleAction`](org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction), [`DisplayUrlAction`](org.jspresso.framework.application.frontend.action.std.DisplayUrlAction), [`EditSelectionAction`](org.jspresso.framework.application.frontend.action.EditSelectionAction), [`ExecuteActionAction`](org.jspresso.framework.application.frontend.action.std.ExecuteActionAction), [`ExitAction`](org.jspresso.framework.application.frontend.action.workspace.ExitAction), [`ListApplicationElementsAction`](org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction), [`LoginAction`](org.jspresso.framework.application.frontend.action.security.LoginAction), [`LovAction`](org.jspresso.framework.application.frontend.action.lov.LovAction), [`ModalDialogAction`](org.jspresso.framework.application.frontend.action.ModalDialogAction), [`ModuleRestartAction`](org.jspresso.framework.application.frontend.action.module.ModuleRestartAction), [`ModuleSelectionAction`](org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction), [`OkChooseComponentAction`](org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction), [`OkLovAction`](org.jspresso.framework.application.frontend.action.lov.OkLovAction), [`PageOffsetAction`](org.jspresso.framework.application.frontend.action.std.PageOffsetAction), [`ParentModuleConnectorSelectionAction`](org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction), [`PrintAction`](org.jspresso.framework.application.printing.frontend.action.PrintAction), [`SaveModuleObjectFrontAction`](org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction), [`SelectedModelToActionParamAction`](org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction), [`SetConnectorValueAction`](org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction), [`TransferToClipboardAction`](org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction), [`EditSelectedComponentAction.UowRollbackerAction`](org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction), [`WizardAction`](org.jspresso.framework.application.frontend.action.wizard.WizardAction), [`WorkspaceSelectionAction`](org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction)
++ **Sub-types** : [`AbstractChartAction`](#org.jspresso.framework.application.charting.frontend.action.AbstractChartAction), [`AbstractEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction), [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction), [`AbstractModuleDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction), [`AbstractReportAction`](#org.jspresso.framework.application.printing.frontend.action.AbstractReportAction), [`ActionParamToSelectedModelAction`](#org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction), [`AddBeanAsSubModuleFrontAction`](#org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction), [`AddCollectionToMasterAction`](#org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction), [`AddPageAction`](#org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction), [`BinaryPropertyInfoAction`](#org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction), [`ChooseActionAction`](#org.jspresso.framework.application.frontend.action.flow.ChooseActionAction), [`ChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction), [`CloseDialogAction`](#org.jspresso.framework.application.frontend.action.CloseDialogAction), [`DisplayNextPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction), [`DisplayPreviousPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction), [`DisplayUrlAction`](#org.jspresso.framework.application.frontend.action.std.DisplayUrlAction), [`EditSelectionAction`](#org.jspresso.framework.application.frontend.action.EditSelectionAction), [`ExecuteActionAction`](#org.jspresso.framework.application.frontend.action.std.ExecuteActionAction), [`ExitAction`](#org.jspresso.framework.application.frontend.action.workspace.ExitAction), [`ListApplicationElementsAction`](#org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction), [`LoginAction`](#org.jspresso.framework.application.frontend.action.security.LoginAction), [`LovAction`](#org.jspresso.framework.application.frontend.action.lov.LovAction), [`ModalDialogAction`](#org.jspresso.framework.application.frontend.action.ModalDialogAction), [`ModuleRestartAction`](#org.jspresso.framework.application.frontend.action.module.ModuleRestartAction), [`ModuleSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction), [`OkChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction), [`OkLovAction`](#org.jspresso.framework.application.frontend.action.lov.OkLovAction), [`PageOffsetAction`](#org.jspresso.framework.application.frontend.action.std.PageOffsetAction), [`ParentModuleConnectorSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction), [`PrintAction`](#org.jspresso.framework.application.printing.frontend.action.PrintAction), [`SaveModuleObjectFrontAction`](#org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction), [`SelectedModelToActionParamAction`](#org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction), [`SetConnectorValueAction`](#org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction), [`TransferToClipboardAction`](#org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction), [`EditSelectedComponentAction.UowRollbackerAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction), [`WizardAction`](#org.jspresso.framework.application.frontend.action.wizard.WizardAction), [`WorkspaceSelectionAction`](#org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction)
 
 
 
@@ -137,11 +138,12 @@ This is the base class for frontend actions. To get a better understanding of
 
 
 ### org.jspresso.framework.application.charting.frontend.action.AbstractChartAction
+<a name="AbstractChartAction"></a>
 #### AbstractChartAction
 
 + **Full name** : [`org.jspresso.framework.application.charting.frontend.action.AbstractChartAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/charting/frontend/action/AbstractChartAction.html)
 + **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
-+ **Sub-types** : [`DisplayChartAction`](org.jspresso.framework.application.charting.frontend.action.server.DisplayChartAction)
++ **Sub-types** : [`DisplayChartAction`](#org.jspresso.framework.application.charting.frontend.action.server.DisplayChartAction)
 
 
 
@@ -189,6 +191,7 @@ This is the abstract base class for <i>Fusioncharts</i> (flash based charting
 
 
 ### org.jspresso.framework.application.charting.frontend.action.server.DisplayChartAction
+<a name="DisplayChartAction"></a>
 #### DisplayChartAction
 
 + **Full name** : [`org.jspresso.framework.application.charting.frontend.action.server.DisplayChartAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/charting/frontend/action/server/DisplayChartAction.html)
@@ -226,11 +229,12 @@ This is the concrete implementation of the Fusionchart display action. This
 
 
 ### org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction
+<a name="AbstractEditComponentAction"></a>
 #### AbstractEditComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/AbstractEditComponentAction.html)
 + **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
-+ **Sub-types** : [`EditComponentAction`](org.jspresso.framework.application.frontend.action.std.EditComponentAction), [`EditSelectedComponentAction`](org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction)
++ **Sub-types** : [`EditComponentAction`](#org.jspresso.framework.application.frontend.action.std.EditComponentAction), [`EditSelectedComponentAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction)
 
 
 
@@ -267,11 +271,12 @@ This action serves as a base class for actions that pop-pup a dialog to edit
 
 
 ### org.jspresso.framework.application.frontend.action.std.EditComponentAction
+<a name="EditComponentAction"></a>
 #### EditComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.EditComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/EditComponentAction.html)
 + **Super-type** : [`AbstractEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction)
-+ **Sub-types** : [`ChangePasswordAction`](org.jspresso.framework.application.frontend.action.security.ChangePasswordAction), [`EditBackendControllerAction`](org.jspresso.framework.application.frontend.action.controller.EditBackendControllerAction), [`EditFrontendControllerAction`](org.jspresso.framework.application.frontend.action.controller.EditFrontendControllerAction), [`EditReportParametersAction`](org.jspresso.framework.application.printing.frontend.action.EditReportParametersAction), [`MobileEditComponentAction`](org.jspresso.framework.application.frontend.action.std.mobile.MobileEditComponentAction)
++ **Sub-types** : [`ChangePasswordAction`](#org.jspresso.framework.application.frontend.action.security.ChangePasswordAction), [`EditBackendControllerAction`](#org.jspresso.framework.application.frontend.action.controller.EditBackendControllerAction), [`EditFrontendControllerAction`](#org.jspresso.framework.application.frontend.action.controller.EditFrontendControllerAction), [`EditReportParametersAction`](#org.jspresso.framework.application.printing.frontend.action.EditReportParametersAction), [`MobileEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.mobile.MobileEditComponentAction)
 
 
 
@@ -314,6 +319,7 @@ This action pulls a model out of the context (action parameter or selected
 
 
 ### org.jspresso.framework.application.frontend.action.security.ChangePasswordAction
+<a name="ChangePasswordAction"></a>
 #### ChangePasswordAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.security.ChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/security/ChangePasswordAction.html)
@@ -363,6 +369,7 @@ This is the frontend action to initiate the logged-in user password change.
 
 
 ### org.jspresso.framework.application.frontend.action.controller.EditBackendControllerAction
+<a name="EditBackendControllerAction"></a>
 #### EditBackendControllerAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.controller.EditBackendControllerAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/controller/EditBackendControllerAction.html)
@@ -398,6 +405,7 @@ This is a frontend action to display a view backed by the session backend
 
 
 ### org.jspresso.framework.application.frontend.action.controller.EditFrontendControllerAction
+<a name="EditFrontendControllerAction"></a>
 #### EditFrontendControllerAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.controller.EditFrontendControllerAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/controller/EditFrontendControllerAction.html)
@@ -433,6 +441,7 @@ This is a frontend action to display a view backed by the session backend
 
 
 ### org.jspresso.framework.application.printing.frontend.action.EditReportParametersAction
+<a name="EditReportParametersAction"></a>
 #### EditReportParametersAction
 
 + **Full name** : [`org.jspresso.framework.application.printing.frontend.action.EditReportParametersAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/printing/frontend/action/EditReportParametersAction.html)
@@ -468,6 +477,7 @@ This action takes a report (<code>IReport</code>) from the context (
 
 
 ### org.jspresso.framework.application.frontend.action.std.mobile.MobileEditComponentAction
+<a name="MobileEditComponentAction"></a>
 #### MobileEditComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.mobile.MobileEditComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/mobile/MobileEditComponentAction.html)
@@ -502,6 +512,7 @@ This is the mobile version of the edit component action.
 
 
 ### org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction
+<a name="EditSelectedComponentAction"></a>
 #### EditSelectedComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/EditSelectedComponentAction.html)
@@ -541,11 +552,12 @@ This action should be installed on collection views. It takes the selected
 
 
 ### org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction
+<a name="AbstractMessageAction"></a>
 #### AbstractMessageAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/AbstractMessageAction.html)
 + **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
-+ **Sub-types** : [`InfoAction`](org.jspresso.framework.application.frontend.action.flow.InfoAction), [`OkCancelAction`](org.jspresso.framework.application.frontend.action.flow.OkCancelAction), [`YesNoAction`](org.jspresso.framework.application.frontend.action.flow.YesNoAction), [`YesNoCancelAction`](org.jspresso.framework.application.frontend.action.flow.YesNoCancelAction)
++ **Sub-types** : [`InfoAction`](#org.jspresso.framework.application.frontend.action.flow.InfoAction), [`OkCancelAction`](#org.jspresso.framework.application.frontend.action.flow.OkCancelAction), [`YesNoAction`](#org.jspresso.framework.application.frontend.action.flow.YesNoAction), [`YesNoCancelAction`](#org.jspresso.framework.application.frontend.action.flow.YesNoCancelAction)
 
 
 
@@ -580,11 +592,12 @@ This is the base class for all UI message based communication actions. This
 
 
 ### org.jspresso.framework.application.frontend.action.flow.InfoAction
+<a name="InfoAction"></a>
 #### InfoAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.InfoAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/InfoAction.html)
 + **Super-type** : [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction)
-+ **Sub-types** : [`StaticInfoAction`](org.jspresso.framework.application.frontend.action.flow.StaticInfoAction)
++ **Sub-types** : [`StaticInfoAction`](#org.jspresso.framework.application.frontend.action.flow.StaticInfoAction)
 
 
 
@@ -614,6 +627,7 @@ This action pops-up an informational message to the user.
 
 
 ### org.jspresso.framework.application.frontend.action.flow.StaticInfoAction
+<a name="StaticInfoAction"></a>
 #### StaticInfoAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.StaticInfoAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/StaticInfoAction.html)
@@ -652,11 +666,12 @@ This action pops-up an informational message to the user. The message,
 
 
 ### org.jspresso.framework.application.frontend.action.flow.OkCancelAction
+<a name="OkCancelAction"></a>
 #### OkCancelAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.OkCancelAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/OkCancelAction.html)
 + **Super-type** : [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction)
-+ **Sub-types** : [`StaticOkCancelAction`](org.jspresso.framework.application.frontend.action.flow.StaticOkCancelAction)
++ **Sub-types** : [`StaticOkCancelAction`](#org.jspresso.framework.application.frontend.action.flow.StaticOkCancelAction)
 
 
 
@@ -692,6 +707,7 @@ This action pops-up an Ok - Cancel confirmation option. Depending on user
 
 
 ### org.jspresso.framework.application.frontend.action.flow.StaticOkCancelAction
+<a name="StaticOkCancelAction"></a>
 #### StaticOkCancelAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.StaticOkCancelAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/StaticOkCancelAction.html)
@@ -730,11 +746,12 @@ This action pops-up an Ok - Cancel confirmation option. The message, instead
 
 
 ### org.jspresso.framework.application.frontend.action.flow.YesNoAction
+<a name="YesNoAction"></a>
 #### YesNoAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.YesNoAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/YesNoAction.html)
 + **Super-type** : [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction)
-+ **Sub-types** : [`StaticYesNoAction`](org.jspresso.framework.application.frontend.action.flow.StaticYesNoAction)
++ **Sub-types** : [`StaticYesNoAction`](#org.jspresso.framework.application.frontend.action.flow.StaticYesNoAction)
 
 
 
@@ -772,6 +789,7 @@ This action pops-up a binary question. Depending on user answer, another
 
 
 ### org.jspresso.framework.application.frontend.action.flow.StaticYesNoAction
+<a name="StaticYesNoAction"></a>
 #### StaticYesNoAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.StaticYesNoAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/StaticYesNoAction.html)
@@ -810,11 +828,12 @@ This action pops-up a binary question. The message, instead of being
 
 
 ### org.jspresso.framework.application.frontend.action.flow.YesNoCancelAction
+<a name="YesNoCancelAction"></a>
 #### YesNoCancelAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.YesNoCancelAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/YesNoCancelAction.html)
 + **Super-type** : [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction)
-+ **Sub-types** : [`StaticYesNoCancelAction`](org.jspresso.framework.application.frontend.action.flow.StaticYesNoCancelAction)
++ **Sub-types** : [`StaticYesNoCancelAction`](#org.jspresso.framework.application.frontend.action.flow.StaticYesNoCancelAction)
 
 
 
@@ -856,6 +875,7 @@ This action pops-up a binary question with Cancel option. Depending on user
 
 
 ### org.jspresso.framework.application.frontend.action.flow.StaticYesNoCancelAction
+<a name="StaticYesNoCancelAction"></a>
 #### StaticYesNoCancelAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.StaticYesNoCancelAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/StaticYesNoCancelAction.html)
@@ -894,11 +914,12 @@ This action pops-up a binary question with Cancel option. The message,
 
 
 ### org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction
+<a name="AbstractModuleDirtyStateAction"></a>
 #### AbstractModuleDirtyStateAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/AbstractModuleDirtyStateAction.html)
 + **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
-+ **Sub-types** : [`CheckAllModulesDirtyStateAction`](org.jspresso.framework.application.backend.action.module.CheckAllModulesDirtyStateAction), [`CheckModuleDirtyStateAction`](org.jspresso.framework.application.backend.action.module.CheckModuleDirtyStateAction)
++ **Sub-types** : [`CheckAllModulesDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.CheckAllModulesDirtyStateAction), [`CheckModuleDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.CheckModuleDirtyStateAction)
 
 
 
@@ -933,6 +954,7 @@ This is the base abstract class for actions that are responsible for checking
 
 
 ### org.jspresso.framework.application.backend.action.module.CheckAllModulesDirtyStateAction
+<a name="CheckAllModulesDirtyStateAction"></a>
 #### CheckAllModulesDirtyStateAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.module.CheckAllModulesDirtyStateAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/CheckAllModulesDirtyStateAction.html)
@@ -969,6 +991,7 @@ This action recomputes all application modules dirty state. All the
 
 
 ### org.jspresso.framework.application.backend.action.module.CheckModuleDirtyStateAction
+<a name="CheckModuleDirtyStateAction"></a>
 #### CheckModuleDirtyStateAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.module.CheckModuleDirtyStateAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/CheckModuleDirtyStateAction.html)
@@ -1004,6 +1027,7 @@ This action recomputes the dirty state of the current selected module. It is
 
 
 ### org.jspresso.framework.application.frontend.action.remote.mobile.AnimateAction
+<a name="AnimateAction"></a>
 #### AnimateAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.mobile.AnimateAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/mobile/AnimateAction.html)
@@ -1057,6 +1081,7 @@ Selects animates current page.
 
 
 ### org.jspresso.framework.application.frontend.action.remote.mobile.BackPageAction
+<a name="BackPageAction"></a>
 #### BackPageAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.mobile.BackPageAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/mobile/BackPageAction.html)
@@ -1090,11 +1115,12 @@ Triggers back navigation of current page.
 
 
 ### org.jspresso.framework.application.frontend.action.remote.file.ChooseFileAction
+<a name="ChooseFileAction"></a>
 #### ChooseFileAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.file.ChooseFileAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/file/ChooseFileAction.html)
 + **Super-type** : `AbstractRemoteAction`
-+ **Sub-types** : [`OpenFileAction`](org.jspresso.framework.application.frontend.action.remote.file.OpenFileAction), [`SaveFileAction`](org.jspresso.framework.application.frontend.action.remote.file.SaveFileAction)
++ **Sub-types** : [`OpenFileAction`](#org.jspresso.framework.application.frontend.action.remote.file.OpenFileAction), [`SaveFileAction`](#org.jspresso.framework.application.frontend.action.remote.file.SaveFileAction)
 
 
 
@@ -1149,11 +1175,12 @@ This is the abstract base class for actions dealing with client file system
 
 
 ### org.jspresso.framework.application.frontend.action.remote.file.OpenFileAction
+<a name="OpenFileAction"></a>
 #### OpenFileAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.file.OpenFileAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/file/OpenFileAction.html)
 + **Super-type** : [`ChooseFileAction`](#org.jspresso.framework.application.frontend.action.remote.file.ChooseFileAction)
-+ **Sub-types** : [`OpenFileAsBinaryPropertyAction`](org.jspresso.framework.application.frontend.action.remote.file.OpenFileAsBinaryPropertyAction)
++ **Sub-types** : [`OpenFileAsBinaryPropertyAction`](#org.jspresso.framework.application.frontend.action.remote.file.OpenFileAsBinaryPropertyAction)
 
 
 
@@ -1196,6 +1223,7 @@ This action lets the user browse his local file system and choose a file to
 
 
 ### org.jspresso.framework.application.frontend.action.remote.file.OpenFileAsBinaryPropertyAction
+<a name="OpenFileAsBinaryPropertyAction"></a>
 #### OpenFileAsBinaryPropertyAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.file.OpenFileAsBinaryPropertyAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/file/OpenFileAsBinaryPropertyAction.html)
@@ -1234,11 +1262,12 @@ This action lets the user browse the local file system and choose a file to
 
 
 ### org.jspresso.framework.application.frontend.action.remote.file.SaveFileAction
+<a name="SaveFileAction"></a>
 #### SaveFileAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.file.SaveFileAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/file/SaveFileAction.html)
 + **Super-type** : [`ChooseFileAction`](#org.jspresso.framework.application.frontend.action.remote.file.ChooseFileAction)
-+ **Sub-types** : [`SaveBinaryPropertyAsFileAction`](org.jspresso.framework.application.frontend.action.remote.file.SaveBinaryPropertyAsFileAction)
++ **Sub-types** : [`SaveBinaryPropertyAsFileAction`](#org.jspresso.framework.application.frontend.action.remote.file.SaveBinaryPropertyAsFileAction)
 
 
 
@@ -1292,6 +1321,7 @@ This action lets the user browse his local file system and choose a file to
 
 
 ### org.jspresso.framework.application.frontend.action.remote.file.SaveBinaryPropertyAsFileAction
+<a name="SaveBinaryPropertyAsFileAction"></a>
 #### SaveBinaryPropertyAsFileAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.file.SaveBinaryPropertyAsFileAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/file/SaveBinaryPropertyAsFileAction.html)
@@ -1330,6 +1360,7 @@ This action lets the user browse the local file system and choose a file to
 
 
 ### org.jspresso.framework.application.frontend.action.remote.mobile.CleanModuleAndGoBackIfTransientAction
+<a name="CleanModuleAndGoBackIfTransientAction"></a>
 #### CleanModuleAndGoBackIfTransientAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.mobile.CleanModuleAndGoBackIfTransientAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/mobile/CleanModuleAndGoBackIfTransientAction.html)
@@ -1363,6 +1394,7 @@ Check current selected module object. If it is transient, removes it from the cu
 
 
 ### org.jspresso.framework.application.printing.frontend.action.remote.DisplayJasperReportAction
+<a name="DisplayJasperReportAction"></a>
 #### DisplayJasperReportAction
 
 + **Full name** : [`org.jspresso.framework.application.printing.frontend.action.remote.DisplayJasperReportAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/printing/frontend/action/remote/DisplayJasperReportAction.html)
@@ -1398,6 +1430,7 @@ This action will take a <code>JasperPrint</code> (a processed Jasper report
 
 
 ### org.jspresso.framework.application.frontend.action.remote.mobile.EditCurrentPageAction
+<a name="EditCurrentPageAction"></a>
 #### EditCurrentPageAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.mobile.EditCurrentPageAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/mobile/EditCurrentPageAction.html)
@@ -1431,6 +1464,7 @@ Triggers editing of current page.
 
 
 ### org.jspresso.framework.application.frontend.action.remote.mobile.NearElementAction
+<a name="NearElementAction"></a>
 #### NearElementAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.remote.mobile.NearElementAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/remote/mobile/NearElementAction.html)
@@ -1472,11 +1506,12 @@ Selects next / previous element.
 
 
 ### org.jspresso.framework.application.printing.frontend.action.AbstractReportAction
+<a name="AbstractReportAction"></a>
 #### AbstractReportAction
 
 + **Full name** : [`org.jspresso.framework.application.printing.frontend.action.AbstractReportAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/printing/frontend/action/AbstractReportAction.html)
 + **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
-+ **Sub-types** : [`ReportAction`](org.jspresso.framework.application.printing.frontend.action.ReportAction), [`StaticReportAction`](org.jspresso.framework.application.printing.frontend.action.StaticReportAction)
++ **Sub-types** : [`ReportAction`](#org.jspresso.framework.application.printing.frontend.action.ReportAction), [`StaticReportAction`](#org.jspresso.framework.application.printing.frontend.action.StaticReportAction)
 
 
 
@@ -1508,6 +1543,7 @@ Abstract base class for Jasper report actions.
 
 
 ### org.jspresso.framework.application.printing.frontend.action.ReportAction
+<a name="ReportAction"></a>
 #### ReportAction
 
 + **Full name** : [`org.jspresso.framework.application.printing.frontend.action.ReportAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/printing/frontend/action/ReportAction.html)
@@ -1545,6 +1581,7 @@ This action allows the user to select a report to generate on the collection
 
 
 ### org.jspresso.framework.application.printing.frontend.action.StaticReportAction
+<a name="StaticReportAction"></a>
 #### StaticReportAction
 
 + **Full name** : [`org.jspresso.framework.application.printing.frontend.action.StaticReportAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/printing/frontend/action/StaticReportAction.html)
@@ -1581,6 +1618,7 @@ This action generates and displays a report that is statically configured
 
 
 ### org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction
+<a name="ActionParamToSelectedModelAction"></a>
 #### ActionParamToSelectedModelAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/ActionParamToSelectedModelAction.html)
@@ -1615,6 +1653,7 @@ A very simple frontend action that uses the puts the context
 
 
 ### org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction
+<a name="AddBeanAsSubModuleFrontAction"></a>
 #### AddBeanAsSubModuleFrontAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/AddBeanAsSubModuleFrontAction.html)
@@ -1663,6 +1702,7 @@ This action can be installed on any collection view and will take the
 
 
 ### org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction
+<a name="AddCollectionToMasterAction"></a>
 #### AddCollectionToMasterAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/AddCollectionToMasterAction.html)
@@ -1712,6 +1752,7 @@ This action is designed to wrap a backend action that will create and add a
 
 
 ### org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction
+<a name="AddPageAction"></a>
 #### AddPageAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/mobile/AddPageAction.html)
@@ -1745,6 +1786,7 @@ A special mobile pagination action that adds a page to the current results.
 
 
 ### org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction
+<a name="BinaryPropertyInfoAction"></a>
 #### BinaryPropertyInfoAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/BinaryPropertyInfoAction.html)
@@ -1780,6 +1822,7 @@ This action displays information about a binary property content. The
 
 
 ### org.jspresso.framework.application.frontend.action.flow.ChooseActionAction
+<a name="ChooseActionAction"></a>
 #### ChooseActionAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.flow.ChooseActionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/flow/ChooseActionAction.html)
@@ -1816,6 +1859,7 @@ This action displays a list of frontend actions so that the user can choose
 
 
 ### org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction
+<a name="ChooseComponentAction"></a>
 #### ChooseComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/ChooseComponentAction.html)
@@ -1869,11 +1913,12 @@ This action takes an arbitrary model collection connector from the action
 
 
 ### org.jspresso.framework.application.frontend.action.CloseDialogAction
+<a name="CloseDialogAction"></a>
 #### CloseDialogAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.CloseDialogAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/CloseDialogAction.html)
 + **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
-+ **Sub-types** : [`EditSelectedComponentAction.DefaultOkAction`](org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.DefaultOkAction)
++ **Sub-types** : [`EditSelectedComponentAction.DefaultOkAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.DefaultOkAction)
 
 
 
@@ -1905,6 +1950,7 @@ This is a very generic action that closes (disposes) the currently opened
 
 
 ### org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.DefaultOkAction
+<a name="EditSelectedComponentAction.DefaultOkAction"></a>
 #### EditSelectedComponentAction.DefaultOkAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.DefaultOkAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/EditSelectedComponentAction/DefaultOkAction.html)
@@ -1938,6 +1984,7 @@ Default OK action.
 
 
 ### org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction
+<a name="DisplayNextPinnedModuleAction"></a>
 #### DisplayNextPinnedModuleAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/module/DisplayNextPinnedModuleAction.html)
@@ -1974,6 +2021,7 @@ This action triggers a <i>&quot;forward&quot;</i> navigation in the recorded
 
 
 ### org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction
+<a name="DisplayPreviousPinnedModuleAction"></a>
 #### DisplayPreviousPinnedModuleAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/module/DisplayPreviousPinnedModuleAction.html)
@@ -2010,11 +2058,12 @@ This action triggers a <i>&quot;backward&quot;</i> navigation in the recorded
 
 
 ### org.jspresso.framework.application.frontend.action.std.DisplayUrlAction
+<a name="DisplayUrlAction"></a>
 #### DisplayUrlAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.DisplayUrlAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/DisplayUrlAction.html)
 + **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
-+ **Sub-types** : [`DisplayStaticUrlAction`](org.jspresso.framework.application.frontend.action.std.DisplayStaticUrlAction)
++ **Sub-types** : [`DisplayStaticUrlAction`](#org.jspresso.framework.application.frontend.action.std.DisplayStaticUrlAction)
 
 
 
@@ -2051,6 +2100,7 @@ This action opens a browser (or a browser tab) targeted at a URL. The actual
 
 
 ### org.jspresso.framework.application.frontend.action.std.DisplayStaticUrlAction
+<a name="DisplayStaticUrlAction"></a>
 #### DisplayStaticUrlAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.DisplayStaticUrlAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/DisplayStaticUrlAction.html)
@@ -2090,6 +2140,7 @@ Like its parent, this action opens a URL in a browser (or a browser tab). But
 
 
 ### org.jspresso.framework.application.frontend.action.EditSelectionAction
+<a name="EditSelectionAction"></a>
 #### EditSelectionAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.EditSelectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/EditSelectionAction.html)
@@ -2124,6 +2175,7 @@ This action is meant to trigger editing on the current collection view
 
 
 ### org.jspresso.framework.application.frontend.action.std.ExecuteActionAction
+<a name="ExecuteActionAction"></a>
 #### ExecuteActionAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.ExecuteActionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/ExecuteActionAction.html)
@@ -2158,6 +2210,7 @@ This generic action takes another arbitrary action out of the context
 
 
 ### org.jspresso.framework.application.frontend.action.workspace.ExitAction
+<a name="ExitAction"></a>
 #### ExitAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.workspace.ExitAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/workspace/ExitAction.html)
@@ -2197,6 +2250,7 @@ This action exits the application. Before doing so, user activated application
 
 
 ### org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction
+<a name="ListApplicationElementsAction"></a>
 #### ListApplicationElementsAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/controller/ListApplicationElementsAction.html)
@@ -2232,6 +2286,7 @@ This is a special frontend action to list all application metamodel elements
 
 
 ### org.jspresso.framework.application.frontend.action.security.LoginAction
+<a name="LoginAction"></a>
 #### LoginAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.security.LoginAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/security/LoginAction.html)
@@ -2267,11 +2322,12 @@ This is the frontend action to trigger the application login using the current c
 
 
 ### org.jspresso.framework.application.frontend.action.lov.LovAction
+<a name="LovAction"></a>
 #### LovAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.LovAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/LovAction.html)
 + **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
-+ **Sub-types** : [`MobileLovAction`](org.jspresso.framework.application.frontend.action.lov.mobile.MobileLovAction)
++ **Sub-types** : [`MobileLovAction`](#org.jspresso.framework.application.frontend.action.lov.mobile.MobileLovAction)
 
 
 
@@ -2383,6 +2439,7 @@ This is a standard &quot;List Of Values&quot; action for reference property
 
 
 ### org.jspresso.framework.application.frontend.action.lov.mobile.MobileLovAction
+<a name="MobileLovAction"></a>
 #### MobileLovAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.mobile.MobileLovAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/mobile/MobileLovAction.html)
@@ -2416,6 +2473,7 @@ This is a standard &quot;List Of Values&quot; action for mobile environment.
 
 
 ### org.jspresso.framework.application.frontend.action.ModalDialogAction
+<a name="ModalDialogAction"></a>
 #### ModalDialogAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.ModalDialogAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/ModalDialogAction.html)
@@ -2462,6 +2520,7 @@ This is a very generic action that takes its specifications out of the action
 
 
 ### org.jspresso.framework.application.frontend.action.module.ModuleRestartAction
+<a name="ModuleRestartAction"></a>
 #### ModuleRestartAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.module.ModuleRestartAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/module/ModuleRestartAction.html)
@@ -2496,6 +2555,7 @@ This action is used to restart a module. It cleans its children and executes
 
 
 ### org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction
+<a name="ModuleSelectionAction"></a>
 #### ModuleSelectionAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/module/ModuleSelectionAction.html)
@@ -2535,6 +2595,7 @@ Displays a module, and the corresponding workspace if necessary based on
 
 
 ### org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction
+<a name="OkChooseComponentAction"></a>
 #### OkChooseComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/OkChooseComponentAction.html)
@@ -2569,6 +2630,7 @@ This action augments the context by setting the action parameter to the
 
 
 ### org.jspresso.framework.application.frontend.action.lov.OkLovAction
+<a name="OkLovAction"></a>
 #### OkLovAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.OkLovAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/OkLovAction.html)
@@ -2603,6 +2665,7 @@ This action augments the context by setting the action parameter to the
 
 
 ### org.jspresso.framework.application.frontend.action.std.PageOffsetAction
+<a name="PageOffsetAction"></a>
 #### PageOffsetAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.PageOffsetAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/PageOffsetAction.html)
@@ -2638,6 +2701,7 @@ This action simply augment the context with a page offset integer (
 
 
 ### org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction
+<a name="ParentModuleConnectorSelectionAction"></a>
 #### ParentModuleConnectorSelectionAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/module/ParentModuleConnectorSelectionAction.html)
@@ -2672,6 +2736,7 @@ This action simply displays the parent of the currently selected module; i.e.
 
 
 ### org.jspresso.framework.application.printing.frontend.action.PrintAction
+<a name="PrintAction"></a>
 #### PrintAction
 
 + **Full name** : [`org.jspresso.framework.application.printing.frontend.action.PrintAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/printing/frontend/action/PrintAction.html)
@@ -2713,6 +2778,7 @@ This action allows the user to choose a report among a list and print it. The
 
 
 ### org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction
+<a name="SaveModuleObjectFrontAction"></a>
 #### SaveModuleObjectFrontAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/module/SaveModuleObjectFrontAction.html)
@@ -2746,6 +2812,7 @@ This action is used to save module and sub-modules objects.
 
 
 ### org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction
+<a name="SelectedModelToActionParamAction"></a>
 #### SelectedModelToActionParamAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/SelectedModelToActionParamAction.html)
@@ -2780,6 +2847,7 @@ A very simple frontend action that puts the selected model(s) as context
 
 
 ### org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction
+<a name="SetConnectorValueAction"></a>
 #### SetConnectorValueAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/SetConnectorValueAction.html)
@@ -2816,6 +2884,7 @@ This action retrieves the action parameter from the action context and
 
 
 ### org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction
+<a name="TransferToClipboardAction"></a>
 #### TransferToClipboardAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/TransferToClipboardAction.html)
@@ -2850,6 +2919,7 @@ An action used to transfer textual representation(s) of selected models to
 
 
 ### org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction
+<a name="EditSelectedComponentAction.UowRollbackerAction"></a>
 #### EditSelectedComponentAction.UowRollbackerAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/EditSelectedComponentAction/UowRollbackerAction.html)
@@ -2884,6 +2954,7 @@ A wrapper action that roll backs the current UOW before delegating to its
 
 
 ### org.jspresso.framework.application.frontend.action.wizard.WizardAction
+<a name="WizardAction"></a>
 #### WizardAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.wizard.WizardAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/wizard/WizardAction.html)
@@ -2992,6 +3063,7 @@ This action implements a &quot;wizard&quot;. It can be configured from the
 
 
 ### org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction
+<a name="WorkspaceSelectionAction"></a>
 #### WorkspaceSelectionAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/workspace/WorkspaceSelectionAction.html)

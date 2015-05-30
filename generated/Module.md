@@ -1,11 +1,12 @@
 ## Module
 
 ### org.jspresso.framework.application.model.Module
+<a name="Module"></a>
 #### Module
 
 + **Full name** : [`org.jspresso.framework.application.model.Module`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/Module.html)
 + **Super-type** : `AbstractPropertyChangeCapable`
-+ **Sub-types** : [`BeanCollectionModule`](org.jspresso.framework.application.model.BeanCollectionModule), [`BeanModule`](org.jspresso.framework.application.model.BeanModule)
++ **Sub-types** : [`BeanCollectionModule`](#org.jspresso.framework.application.model.BeanCollectionModule), [`BeanModule`](#org.jspresso.framework.application.model.BeanModule)
 
 
 
@@ -126,11 +127,12 @@ A module is an entry point in the application. Modules are organized in
 
 
 ### org.jspresso.framework.application.model.BeanCollectionModule
+<a name="BeanCollectionModule"></a>
 #### BeanCollectionModule
 
 + **Full name** : [`org.jspresso.framework.application.model.BeanCollectionModule`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/BeanCollectionModule.html)
 + **Super-type** : [`Module`](#org.jspresso.framework.application.model.Module)
-+ **Sub-types** : [`FilterableBeanCollectionModule`](org.jspresso.framework.application.model.FilterableBeanCollectionModule), [`MobileBeanCollectionModule`](org.jspresso.framework.application.model.mobile.MobileBeanCollectionModule)
++ **Sub-types** : [`FilterableBeanCollectionModule`](#org.jspresso.framework.application.model.FilterableBeanCollectionModule), [`MobileBeanCollectionModule`](#org.jspresso.framework.application.model.mobile.MobileBeanCollectionModule)
 
 
 
@@ -195,11 +197,12 @@ This type of module keeps a reference on a beans collection. There is no
 
 
 ### org.jspresso.framework.application.model.FilterableBeanCollectionModule
+<a name="FilterableBeanCollectionModule"></a>
 #### FilterableBeanCollectionModule
 
 + **Full name** : [`org.jspresso.framework.application.model.FilterableBeanCollectionModule`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/FilterableBeanCollectionModule.html)
 + **Super-type** : [`BeanCollectionModule`](#org.jspresso.framework.application.model.BeanCollectionModule)
-+ **Sub-types** : [`MobileFilterableBeanCollectionModule`](org.jspresso.framework.application.model.mobile.MobileFilterableBeanCollectionModule)
++ **Sub-types** : [`MobileFilterableBeanCollectionModule`](#org.jspresso.framework.application.model.mobile.MobileFilterableBeanCollectionModule)
 
 
 
@@ -315,6 +318,7 @@ This is a specialized type of bean collection module that provides a filter (
 
 
 ### org.jspresso.framework.application.model.mobile.MobileFilterableBeanCollectionModule
+<a name="MobileFilterableBeanCollectionModule"></a>
 #### MobileFilterableBeanCollectionModule
 
 + **Full name** : [`org.jspresso.framework.application.model.mobile.MobileFilterableBeanCollectionModule`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/mobile/MobileFilterableBeanCollectionModule.html)
@@ -378,6 +382,7 @@ This is a specialized type of filterable bean collection module that provides a 
 
 
 ### org.jspresso.framework.application.model.mobile.MobileBeanCollectionModule
+<a name="MobileBeanCollectionModule"></a>
 #### MobileBeanCollectionModule
 
 + **Full name** : [`org.jspresso.framework.application.model.mobile.MobileBeanCollectionModule`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/mobile/MobileBeanCollectionModule.html)
@@ -429,11 +434,12 @@ This type of module keeps a reference on a beans collection. There is no
 
 
 ### org.jspresso.framework.application.model.BeanModule
+<a name="BeanModule"></a>
 #### BeanModule
 
 + **Full name** : [`org.jspresso.framework.application.model.BeanModule`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/BeanModule.html)
 + **Super-type** : [`Module`](#org.jspresso.framework.application.model.Module)
-+ **Sub-types** : [`MobileBeanModule`](org.jspresso.framework.application.model.mobile.MobileBeanModule)
++ **Sub-types** : [`MobileBeanModule`](#org.jspresso.framework.application.model.mobile.MobileBeanModule)
 
 
 
@@ -486,6 +492,7 @@ This type of module keeps a reference on a single bean. There is no
 
 
 ### org.jspresso.framework.application.model.mobile.MobileBeanModule
+<a name="MobileBeanModule"></a>
 #### MobileBeanModule
 
 + **Full name** : [`org.jspresso.framework.application.model.mobile.MobileBeanModule`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/mobile/MobileBeanModule.html)
