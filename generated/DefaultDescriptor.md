@@ -1,8 +1,7 @@
 ## DefaultDescriptor
 
 ### org.jspresso.framework.util.descriptor.DefaultDescriptor
-<a name="org.jspresso.framework.util.descriptor.DefaultDescriptor"></a>
-#### DefaultDescriptor
+#### <a name="org.jspresso.framework.util.descriptor.DefaultDescriptor"></a>DefaultDescriptor
 
 + **Full name** : [`org.jspresso.framework.util.descriptor.DefaultDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/descriptor/DefaultDescriptor.html)
 + **Sub-types** : [`BasicCollectionDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor), [`DefaultIconDescriptor`](#org.jspresso.framework.util.descriptor.DefaultIconDescriptor)
@@ -54,8 +53,7 @@ This is a utility class from which most named descriptors inherit for
 
 
 ### org.jspresso.framework.util.descriptor.DefaultIconDescriptor
-<a name="org.jspresso.framework.util.descriptor.DefaultIconDescriptor"></a>
-#### DefaultIconDescriptor
+#### <a name="org.jspresso.framework.util.descriptor.DefaultIconDescriptor"></a>DefaultIconDescriptor
 
 + **Full name** : [`org.jspresso.framework.util.descriptor.DefaultIconDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/descriptor/DefaultIconDescriptor.html)
 + **Super-type** : [`DefaultDescriptor`](#org.jspresso.framework.util.descriptor.DefaultDescriptor)

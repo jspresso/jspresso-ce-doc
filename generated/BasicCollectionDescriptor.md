@@ -1,8 +1,7 @@
 ## BasicCollectionDescriptor
 
 ### org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor
-<a name="org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor"></a>
-#### BasicCollectionDescriptor
+#### <a name="org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor"></a>BasicCollectionDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicCollectionDescriptor.html)
 + **Super-type** : [`DefaultDescriptor`](#org.jspresso.framework.util.descriptor.DefaultDescriptor)
@@ -85,8 +84,7 @@ This descriptor is used to describe a collection of components (entities,
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicListDescriptor
-<a name="org.jspresso.framework.model.descriptor.basic.BasicListDescriptor"></a>
-#### BasicListDescriptor
+#### <a name="org.jspresso.framework.model.descriptor.basic.BasicListDescriptor"></a>BasicListDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicListDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicListDescriptor.html)
 + **Super-type** : [`BasicCollectionDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor)
@@ -122,8 +120,7 @@ This descriptor is equivalent to a <code>BasicCollectionDescriptor</code>
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicSetDescriptor
-<a name="org.jspresso.framework.model.descriptor.basic.BasicSetDescriptor"></a>
-#### BasicSetDescriptor
+#### <a name="org.jspresso.framework.model.descriptor.basic.BasicSetDescriptor"></a>BasicSetDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicSetDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicSetDescriptor.html)
 + **Super-type** : [`BasicCollectionDescriptor`](#org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor)

@@ -1,8 +1,7 @@
 ## Workspace
 
 ### org.jspresso.framework.application.model.Workspace
-<a name="org.jspresso.framework.application.model.Workspace"></a>
-#### Workspace
+#### <a name="org.jspresso.framework.application.model.Workspace"></a>Workspace
 
 + **Full name** : [`org.jspresso.framework.application.model.Workspace`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/Workspace.html)
 + **Super-type** : `AbstractPropertyChangeCapable`
@@ -132,8 +131,7 @@ A workspace is an group of functional application modules. You may decide
 
 
 ### org.jspresso.framework.application.model.mobile.MobileWorkspace
-<a name="org.jspresso.framework.application.model.mobile.MobileWorkspace"></a>
-#### MobileWorkspace
+#### <a name="org.jspresso.framework.application.model.mobile.MobileWorkspace"></a>MobileWorkspace
 
 + **Full name** : [`org.jspresso.framework.application.model.mobile.MobileWorkspace`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/mobile/MobileWorkspace.html)
 + **Super-type** : [`Workspace`](#org.jspresso.framework.application.model.Workspace)

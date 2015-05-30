@@ -1,8 +1,7 @@
 ## ActionList
 
 ### org.jspresso.framework.view.action.ActionList
-<a name="org.jspresso.framework.view.action.ActionList"></a>
-#### ActionList
+#### <a name="org.jspresso.framework.view.action.ActionList"></a>ActionList
 
 + **Full name** : [`org.jspresso.framework.view.action.ActionList`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionList.html)
 + **Super-type** : [`DefaultIconDescriptor`](#org.jspresso.framework.util.descriptor.DefaultIconDescriptor)

@@ -1,8 +1,7 @@
 ## BasicCompositeViewDescriptor
 
 ### org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor"></a>
-#### BasicCompositeViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor"></a>BasicCompositeViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicCompositeViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
@@ -55,8 +54,7 @@ This is the abstract base class for all composite views. A composite view is
 
 
 ### org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor"></a>
-#### AbstractMobilePageViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor"></a>AbstractMobilePageViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/AbstractMobilePageViewDescriptor.html)
 + **Super-type** : [`BasicCompositeViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor)
@@ -126,8 +124,7 @@ Abstract base class for mobile page view descriptors.
 
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileCardPageViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.mobile.MobileCardPageViewDescriptor"></a>
-#### MobileCardPageViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileCardPageViewDescriptor"></a>MobileCardPageViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileCardPageViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileCardPageViewDescriptor.html)
 + **Super-type** : [`AbstractMobilePageViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor)
@@ -164,8 +161,7 @@ A card view descriptor that aggregates other pages as card.
 
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileCompositePageViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.mobile.MobileCompositePageViewDescriptor"></a>
-#### MobileCompositePageViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileCompositePageViewDescriptor"></a>MobileCompositePageViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileCompositePageViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileCompositePageViewDescriptor.html)
 + **Super-type** : [`AbstractMobilePageViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor)
@@ -210,8 +206,7 @@ A composite view descriptor that aggregates view sections on a single page.
 
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileNavPageViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.mobile.MobileNavPageViewDescriptor"></a>
-#### MobileNavPageViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileNavPageViewDescriptor"></a>MobileNavPageViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileNavPageViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileNavPageViewDescriptor.html)
 + **Super-type** : [`AbstractMobilePageViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.AbstractMobilePageViewDescriptor)
@@ -256,8 +251,7 @@ Navigation page view descriptors that are able to navigate to another page based
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicBorderViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.basic.BasicBorderViewDescriptor"></a>
-#### BasicBorderViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicBorderViewDescriptor"></a>BasicBorderViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicBorderViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicBorderViewDescriptor.html)
 + **Super-type** : [`BasicCompositeViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor)
@@ -325,8 +319,7 @@ A border view is a composite view that arranges its children to the
 
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileBorderViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.mobile.MobileBorderViewDescriptor"></a>
-#### MobileBorderViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileBorderViewDescriptor"></a>MobileBorderViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileBorderViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileBorderViewDescriptor.html)
 + **Super-type** : [`BasicBorderViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicBorderViewDescriptor)
@@ -399,8 +392,7 @@ A composite view descriptor that aggregates mobile views.
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicConstrainedGridViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.basic.BasicConstrainedGridViewDescriptor"></a>
-#### BasicConstrainedGridViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicConstrainedGridViewDescriptor"></a>BasicConstrainedGridViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicConstrainedGridViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicConstrainedGridViewDescriptor.html)
 + **Super-type** : [`BasicCompositeViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor)
@@ -454,8 +446,7 @@ This composite view arranges its children in a grid where cell behaviour and
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicEvenGridViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.basic.BasicEvenGridViewDescriptor"></a>
-#### BasicEvenGridViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicEvenGridViewDescriptor"></a>BasicEvenGridViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicEvenGridViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicEvenGridViewDescriptor.html)
 + **Super-type** : [`BasicCompositeViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor)
@@ -523,8 +514,7 @@ This composite view arranges its children in a grid where cells are
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicSplitViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.basic.BasicSplitViewDescriptor"></a>
-#### BasicSplitViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicSplitViewDescriptor"></a>BasicSplitViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicSplitViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicSplitViewDescriptor.html)
 + **Super-type** : [`BasicCompositeViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor)
@@ -585,8 +575,7 @@ This composite view arranges its children in a container split either
 
 
 ### org.jspresso.framework.view.descriptor.basic.BasicTabViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.basic.BasicTabViewDescriptor"></a>
-#### BasicTabViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicTabViewDescriptor"></a>BasicTabViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicTabViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTabViewDescriptor.html)
 + **Super-type** : [`BasicCompositeViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor)
@@ -648,8 +637,7 @@ This composite view arranges its children in tabs. Each tab potentially
 
 
 ### org.jspresso.framework.view.descriptor.mobile.MobileTabViewDescriptor
-<a name="org.jspresso.framework.view.descriptor.mobile.MobileTabViewDescriptor"></a>
-#### MobileTabViewDescriptor
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileTabViewDescriptor"></a>MobileTabViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileTabViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileTabViewDescriptor.html)
 + **Super-type** : [`BasicTabViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTabViewDescriptor)

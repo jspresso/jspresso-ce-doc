@@ -1,8 +1,7 @@
 ## AbstractActionContextAware
 
 ### org.jspresso.framework.application.action.AbstractActionContextAware
-<a name="org.jspresso.framework.application.action.AbstractActionContextAware"></a>
-#### AbstractActionContextAware
+#### <a name="org.jspresso.framework.application.action.AbstractActionContextAware"></a>AbstractActionContextAware
 
 + **Full name** : [`org.jspresso.framework.application.action.AbstractActionContextAware`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/action/AbstractActionContextAware.html)
 + **Sub-types** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction), [`AbstractLovResultViewDescriptorFactory`](#org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory), [`AbstractLovViewDescriptorFactory`](#org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory), [`ConnectorValueGetterCallback`](#org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback), [`DefaultCriteriaFactory`](#org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory), [`FileToByteArrayCallback`](#org.jspresso.framework.application.frontend.file.FileToByteArrayCallback)
@@ -38,8 +37,7 @@ Abstract class for all objects that need to manipulate an action context. It
 
 
 ### org.jspresso.framework.application.action.AbstractAction
-<a name="org.jspresso.framework.application.action.AbstractAction"></a>
-#### AbstractAction
+#### <a name="org.jspresso.framework.application.action.AbstractAction"></a>AbstractAction
 
 + **Full name** : [`org.jspresso.framework.application.action.AbstractAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/action/AbstractAction.html)
 + **Super-type** : [`AbstractActionContextAware`](#org.jspresso.framework.application.action.AbstractActionContextAware)
@@ -157,8 +155,7 @@ This is the base class for all application actions. It establishes the
 
 
 ### org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory
-<a name="org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory"></a>
-#### AbstractLovResultViewDescriptorFactory
+#### <a name="org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory"></a>AbstractLovResultViewDescriptorFactory
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/AbstractLovResultViewDescriptorFactory.html)
 + **Super-type** : [`AbstractActionContextAware`](#org.jspresso.framework.application.action.AbstractActionContextAware)
@@ -192,8 +189,7 @@ The base abstract implementation for lov result view factories.
 
 
 ### org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory
-<a name="org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory"></a>
-#### AbstractLovViewDescriptorFactory
+#### <a name="org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory"></a>AbstractLovViewDescriptorFactory
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/AbstractLovViewDescriptorFactory.html)
 + **Super-type** : [`AbstractActionContextAware`](#org.jspresso.framework.application.action.AbstractActionContextAware)
@@ -235,8 +231,7 @@ The base abstract implementation for lov view factories.
 
 
 ### org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback
-<a name="org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback"></a>
-#### ConnectorValueGetterCallback
+#### <a name="org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback"></a>ConnectorValueGetterCallback
 
 + **Full name** : [`org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/file/ConnectorValueGetterCallback.html)
 + **Super-type** : [`AbstractActionContextAware`](#org.jspresso.framework.application.action.AbstractActionContextAware)
@@ -270,8 +265,7 @@ Default handler implementation to deal with getting binary properties storing
 
 
 ### org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory
-<a name="org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory"></a>
-#### DefaultCriteriaFactory
+#### <a name="org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory"></a>DefaultCriteriaFactory
 
 + **Full name** : [`org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/persistence/hibernate/criterion/DefaultCriteriaFactory.html)
 + **Super-type** : [`AbstractActionContextAware`](#org.jspresso.framework.application.action.AbstractActionContextAware)
@@ -306,8 +300,7 @@ Default implementation of a criteria factory.
 
 
 ### org.jspresso.framework.application.frontend.file.FileToByteArrayCallback
-<a name="org.jspresso.framework.application.frontend.file.FileToByteArrayCallback"></a>
-#### FileToByteArrayCallback
+#### <a name="org.jspresso.framework.application.frontend.file.FileToByteArrayCallback"></a>FileToByteArrayCallback
 
 + **Full name** : [`org.jspresso.framework.application.frontend.file.FileToByteArrayCallback`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/file/FileToByteArrayCallback.html)
 + **Super-type** : [`AbstractActionContextAware`](#org.jspresso.framework.application.action.AbstractActionContextAware)

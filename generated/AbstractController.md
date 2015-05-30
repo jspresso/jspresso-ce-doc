@@ -1,8 +1,7 @@
 ## AbstractController
 
 ### org.jspresso.framework.application.AbstractController
-<a name="org.jspresso.framework.application.AbstractController"></a>
-#### AbstractController
+#### <a name="org.jspresso.framework.application.AbstractController"></a>AbstractController
 
 + **Full name** : [`org.jspresso.framework.application.AbstractController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/AbstractController.html)
 + **Super-type** : `AbstractPropertyChangeCapable`
@@ -58,8 +57,7 @@ Abstract base class for controllers. Controllers role is to adapt the
 
 
 ### org.jspresso.framework.application.backend.AbstractBackendController
-<a name="org.jspresso.framework.application.backend.AbstractBackendController"></a>
-#### AbstractBackendController
+#### <a name="org.jspresso.framework.application.backend.AbstractBackendController"></a>AbstractBackendController
 
 + **Full name** : [`org.jspresso.framework.application.backend.AbstractBackendController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/AbstractBackendController.html)
 + **Super-type** : [`AbstractController`](#org.jspresso.framework.application.AbstractController)
@@ -212,8 +210,7 @@ Base class for backend application controllers. Backend controllers are
 
 
 ### org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController
-<a name="org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController"></a>
-#### HibernateBackendController
+#### <a name="org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController"></a>HibernateBackendController
 
 + **Full name** : [`org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/persistence/hibernate/HibernateBackendController.html)
 + **Super-type** : [`AbstractBackendController`](#org.jspresso.framework.application.backend.AbstractBackendController)
@@ -262,8 +259,7 @@ This is the default Jspresso implementation of Hibernate-based backend
 
 
 ### org.jspresso.framework.application.frontend.controller.AbstractFrontendController
-<a name="org.jspresso.framework.application.frontend.controller.AbstractFrontendController"></a>
-#### AbstractFrontendController
+#### <a name="org.jspresso.framework.application.frontend.controller.AbstractFrontendController"></a>AbstractFrontendController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.AbstractFrontendController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/AbstractFrontendController.html)
 + **Super-type** : [`AbstractController`](#org.jspresso.framework.application.AbstractController)
@@ -463,8 +459,7 @@ Base class for frontend application controllers. Frontend controllers are
 
 
 ### org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController
-<a name="org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController"></a>
-#### AbstractRemoteController
+#### <a name="org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController"></a>AbstractRemoteController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/remote/AbstractRemoteController.html)
 + **Super-type** : [`AbstractFrontendController`](#org.jspresso.framework.application.frontend.controller.AbstractFrontendController)
@@ -499,8 +494,7 @@ This is is the base implementation of all &quot;remotable&quot; frontend
 
 
 ### org.jspresso.framework.application.frontend.controller.remote.DefaultRemoteController
-<a name="org.jspresso.framework.application.frontend.controller.remote.DefaultRemoteController"></a>
-#### DefaultRemoteController
+#### <a name="org.jspresso.framework.application.frontend.controller.remote.DefaultRemoteController"></a>DefaultRemoteController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.remote.DefaultRemoteController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/remote/DefaultRemoteController.html)
 + **Super-type** : [`AbstractRemoteController`](#org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController)
@@ -539,8 +533,7 @@ This is is the default implementation of a &quot;remotable&quot; frontend
 
 
 ### org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController
-<a name="org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController"></a>
-#### MobileRemoteController
+#### <a name="org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController"></a>MobileRemoteController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/remote/mobile/MobileRemoteController.html)
 + **Super-type** : [`AbstractRemoteController`](#org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController)
@@ -576,8 +569,7 @@ This is is the mobile implementation of a &quot;remotable&quot; frontend
 
 
 ### org.jspresso.framework.application.frontend.controller.swing.DefaultSwingController
-<a name="org.jspresso.framework.application.frontend.controller.swing.DefaultSwingController"></a>
-#### DefaultSwingController
+#### <a name="org.jspresso.framework.application.frontend.controller.swing.DefaultSwingController"></a>DefaultSwingController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.swing.DefaultSwingController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/swing/DefaultSwingController.html)
 + **Super-type** : [`AbstractFrontendController`](#org.jspresso.framework.application.frontend.controller.AbstractFrontendController)
