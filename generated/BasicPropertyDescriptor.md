@@ -1,7 +1,7 @@
 ## BasicPropertyDescriptor
 
 ### org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor
-<a name="BasicPropertyDescriptor"></a>
+<a name="org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor"></a>
 #### BasicPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicPropertyDescriptor.html)

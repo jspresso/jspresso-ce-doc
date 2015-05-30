@@ -1,7 +1,7 @@
 ## BasicCollectionDescriptor
 
 ### org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor
-<a name="BasicCollectionDescriptor"></a>
+<a name="org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor"></a>
 #### BasicCollectionDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicCollectionDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicCollectionDescriptor.html)
@@ -85,7 +85,7 @@ This descriptor is used to describe a collection of components (entities,
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicListDescriptor
-<a name="BasicListDescriptor"></a>
+<a name="org.jspresso.framework.model.descriptor.basic.BasicListDescriptor"></a>
 #### BasicListDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicListDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicListDescriptor.html)
@@ -122,7 +122,7 @@ This descriptor is equivalent to a <code>BasicCollectionDescriptor</code>
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicSetDescriptor
-<a name="BasicSetDescriptor"></a>
+<a name="org.jspresso.framework.model.descriptor.basic.BasicSetDescriptor"></a>
 #### BasicSetDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicSetDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicSetDescriptor.html)

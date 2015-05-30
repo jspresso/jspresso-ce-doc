@@ -1,7 +1,7 @@
 ## ActionMap
 
 ### org.jspresso.framework.view.action.ActionMap
-<a name="ActionMap"></a>
+<a name="org.jspresso.framework.view.action.ActionMap"></a>
 #### ActionMap
 
 + **Full name** : [`org.jspresso.framework.view.action.ActionMap`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionMap.html)

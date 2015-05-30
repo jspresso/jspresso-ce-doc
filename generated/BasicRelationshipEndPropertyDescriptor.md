@@ -1,7 +1,7 @@
 ## BasicRelationshipEndPropertyDescriptor
 
 ### org.jspresso.framework.model.descriptor.basic.BasicRelationshipEndPropertyDescriptor
-<a name="BasicRelationshipEndPropertyDescriptor"></a>
+<a name="org.jspresso.framework.model.descriptor.basic.BasicRelationshipEndPropertyDescriptor"></a>
 #### BasicRelationshipEndPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicRelationshipEndPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicRelationshipEndPropertyDescriptor.html)
@@ -117,7 +117,7 @@ This is the abstract base descriptor for all relationship properties.
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor
-<a name="BasicCollectionPropertyDescriptor"></a>
+<a name="org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor"></a>
 #### BasicCollectionPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicCollectionPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicCollectionPropertyDescriptor.html)
@@ -189,7 +189,7 @@ This descriptor is used to describe collection properties that are used
 
 
 ### org.jspresso.framework.model.descriptor.basic.BasicReferencePropertyDescriptor
-<a name="BasicReferencePropertyDescriptor"></a>
+<a name="org.jspresso.framework.model.descriptor.basic.BasicReferencePropertyDescriptor"></a>
 #### BasicReferencePropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicReferencePropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicReferencePropertyDescriptor.html)
@@ -289,7 +289,7 @@ Default implementation of a reference descriptor.
 
 
 ### org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor
-<a name="EnumQueryStructureDescriptor"></a>
+<a name="org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor"></a>
 #### EnumQueryStructureDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.query.EnumQueryStructureDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/query/EnumQueryStructureDescriptor.html)
