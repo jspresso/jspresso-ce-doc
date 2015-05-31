@@ -1,29 +1,30 @@
-Views
-=====
+# Views
+
 
 <!-- toc -->
 
-Simple views
-============
+# Simple views
 
-Overview
---------
+## Overview
 
 ![View descriptors diagram](../uml/view-descriptors.PNG)
 
-Reference
----------
+## Reference
+
 !INCLUDE "../generated/BasicViewDescriptor.md"
+
+---
+
 !INCLUDE "../generated/BasicTreeLevelDescriptor.md"
 
-Composite views
-===============
+# Composite views
 
-Overview
---------
+## Overview
 
 ![View descriptors diagram](../uml/view-descriptors-composite.PNG)
 
-Reference
----------
+## Reference
+
 !INCLUDE "../generated/BasicCompositeViewDescriptor.md"
+
+---
