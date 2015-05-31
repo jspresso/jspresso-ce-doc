@@ -12,15 +12,9 @@
 
 !INCLUDE "../generated/AbstractActionContextAware.md"
 
----
-
 !INCLUDE "../generated/ActionMap.md"
 
----
-
 !INCLUDE "../generated/ActionList.md"
-
----
 
 # Backend actions
 
@@ -28,15 +22,11 @@
 
 !INCLUDE "../generated/BackendAction.md"
 
----
-
 # Frontend actions
 
 ## Reference
 
 !INCLUDE "../generated/FrontendAction.md"
-
----
 
 # Built-in actions
 
