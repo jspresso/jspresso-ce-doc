@@ -6,4 +6,3 @@
 * [Views](en/chapter3.md)
 * [Actions](en/chapter4.md)
 * [Application structure](en/chapter5.md)
-
