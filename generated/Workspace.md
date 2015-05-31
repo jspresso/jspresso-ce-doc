@@ -128,8 +128,6 @@ A workspace is an group of functional application modules. You may decide
 </tbody>
 </table>
 
----
-
 
 #### <a name="org.jspresso.framework.application.model.mobile.MobileWorkspace"></a>MobileWorkspace
 
@@ -174,7 +172,5 @@ A workspace is an group of functional application modules. You may decide
 </tr>
 </tbody>
 </table>
-
----
 
 

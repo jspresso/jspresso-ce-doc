@@ -34,8 +34,6 @@ Abstract class for all objects that need to manipulate an action context. It
 </tbody>
 </table>
 
----
-
 
 #### <a name="org.jspresso.framework.application.action.AbstractAction"></a>AbstractAction
 
@@ -153,8 +151,6 @@ This is the base class for all application actions. It establishes the
 </tbody>
 </table>
 
----
-
 
 #### <a name="org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory"></a>AbstractLovResultViewDescriptorFactory
 
@@ -187,8 +183,6 @@ The base abstract implementation for lov result view factories.
 </tr>
 </tbody>
 </table>
-
----
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory"></a>AbstractLovViewDescriptorFactory
@@ -231,8 +225,6 @@ The base abstract implementation for lov view factories.
 </tbody>
 </table>
 
----
-
 
 #### <a name="org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback"></a>ConnectorValueGetterCallback
 
@@ -265,8 +257,6 @@ Default handler implementation to deal with getting binary properties storing
 </tr>
 </tbody>
 </table>
-
----
 
 
 #### <a name="org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory"></a>DefaultCriteriaFactory
@@ -302,8 +292,6 @@ Default implementation of a criteria factory.
 </tbody>
 </table>
 
----
-
 
 #### <a name="org.jspresso.framework.application.frontend.file.FileToByteArrayCallback"></a>FileToByteArrayCallback
 
@@ -337,7 +325,5 @@ Default handler implementation to fully read the file input stream into a byte
 </tr>
 </tbody>
 </table>
-
----
 
 
