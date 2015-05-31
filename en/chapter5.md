@@ -12,9 +12,6 @@
 
 !INCLUDE "../generated/AbstractController.md"
 
----
-
-
 # Modules
 
 ## Overview
@@ -24,11 +21,7 @@
 ## Reference
 !INCLUDE "../generated/Workspace.md"
 
----
-
 !INCLUDE "../generated/Module.md"
-
----
 
 # Enabling/Disabling
 
@@ -63,12 +56,8 @@ other words, a single closed gate is sufficient to forbid the property.
 
 !INCLUDE "../generated/AbstractGate.md"
 
----
-
 # Startup
 
 ## Overview
 
 ![Startup class diagram](../uml/startup.PNG)
-
----
