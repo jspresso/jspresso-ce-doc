@@ -1,6 +1,5 @@
 ## BasicScalarPropertyDescriptor
 
-### org.jspresso.framework.model.descriptor.basic.BasicScalarPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicScalarPropertyDescriptor"></a>BasicScalarPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicScalarPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicScalarPropertyDescriptor.html)
@@ -44,7 +43,6 @@ This is the root abstract descriptor for all property descriptors that are
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.AbstractEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.AbstractEnumerationPropertyDescriptor"></a>AbstractEnumerationPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.AbstractEnumerationPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/AbstractEnumerationPropertyDescriptor.html)
@@ -101,7 +99,6 @@ Abstract base descriptor for properties whose values are enumerated strings.
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicEnumerationPropertyDescriptor"></a>BasicEnumerationPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicEnumerationPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicEnumerationPropertyDescriptor.html)
@@ -149,7 +146,6 @@ Describes an enumerated property containing arbitrary values.
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.TypeEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.TypeEnumerationPropertyDescriptor"></a>TypeEnumerationPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.TypeEnumerationPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/TypeEnumerationPropertyDescriptor.html)
@@ -189,7 +185,6 @@ This is a special enumeration descriptor that allows to build the enumeration
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.RangeEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.RangeEnumerationPropertyDescriptor"></a>RangeEnumerationPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.RangeEnumerationPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/RangeEnumerationPropertyDescriptor.html)
@@ -236,7 +231,6 @@ This is a special enumeration descriptor that allows to build the enumeration
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.TimeZoneEnumerationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.TimeZoneEnumerationPropertyDescriptor"></a>TimeZoneEnumerationPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.TimeZoneEnumerationPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/TimeZoneEnumerationPropertyDescriptor.html)
@@ -271,7 +265,6 @@ This is a special enumeration descriptor that holds all available timezones.
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicBinaryPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicBinaryPropertyDescriptor"></a>BasicBinaryPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicBinaryPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicBinaryPropertyDescriptor.html)
@@ -340,7 +333,6 @@ Describes a property used to store a binary value in the form of a byte
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicImageBinaryPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicImageBinaryPropertyDescriptor"></a>BasicImageBinaryPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicImageBinaryPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicImageBinaryPropertyDescriptor.html)
@@ -390,7 +382,6 @@ Describes a property used to store an image binary value. This type of
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicJavaSerializablePropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicJavaSerializablePropertyDescriptor"></a>BasicJavaSerializablePropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicJavaSerializablePropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicJavaSerializablePropertyDescriptor.html)
@@ -428,7 +419,6 @@ Describes a property used to store any java <code>Serializable</code> object.
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicBooleanPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicBooleanPropertyDescriptor"></a>BasicBooleanPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicBooleanPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicBooleanPropertyDescriptor.html)
@@ -463,7 +453,6 @@ Describes a boolean property.
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicColorPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicColorPropertyDescriptor"></a>BasicColorPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicColorPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicColorPropertyDescriptor.html)
@@ -503,7 +492,6 @@ Describes a property used for storing a color. Color values are stored in the
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicDatePropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicDatePropertyDescriptor"></a>BasicDatePropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicDatePropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicDatePropertyDescriptor.html)
@@ -563,7 +551,6 @@ Describes a date based property. Whether the date property should include time
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicDurationPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicDurationPropertyDescriptor"></a>BasicDurationPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicDurationPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicDurationPropertyDescriptor.html)
@@ -602,7 +589,6 @@ Describes a property used to store a duration value. Duration is stored in
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicNumberPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicNumberPropertyDescriptor"></a>BasicNumberPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicNumberPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicNumberPropertyDescriptor.html)
@@ -648,7 +634,6 @@ This is the abstract base descriptor of all numeric based properties.
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicDecimalPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicDecimalPropertyDescriptor"></a>BasicDecimalPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicDecimalPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicDecimalPropertyDescriptor.html)
@@ -693,7 +678,6 @@ Describes a decimal property. Property value is either stored as a
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicPercentPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicPercentPropertyDescriptor"></a>BasicPercentPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicPercentPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicPercentPropertyDescriptor.html)
@@ -731,7 +715,6 @@ This is a specialization of decimal descriptor to handle percentage values.
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicIntegerPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicIntegerPropertyDescriptor"></a>BasicIntegerPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicIntegerPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicIntegerPropertyDescriptor.html)
@@ -770,7 +753,6 @@ Describes an integer property. The property is either represented as an
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicStringPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicStringPropertyDescriptor"></a>BasicStringPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicStringPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicStringPropertyDescriptor.html)
@@ -834,7 +816,6 @@ Describes a string based property.
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicImageUrlPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicImageUrlPropertyDescriptor"></a>BasicImageUrlPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicImageUrlPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicImageUrlPropertyDescriptor.html)
@@ -878,7 +859,6 @@ Describes an image URL property. This type of descriptor instructs Jspresso
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicPasswordPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicPasswordPropertyDescriptor"></a>BasicPasswordPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicPasswordPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicPasswordPropertyDescriptor.html)
@@ -917,7 +897,6 @@ Describes a property used for password values. For obvious security reasons,
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicTextPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicTextPropertyDescriptor"></a>BasicTextPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicTextPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicTextPropertyDescriptor.html)
@@ -989,7 +968,6 @@ Describes a multi-line text property. This type of descriptor instructs
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicHtmlPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicHtmlPropertyDescriptor"></a>BasicHtmlPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicHtmlPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicHtmlPropertyDescriptor.html)
@@ -1025,7 +1003,6 @@ Describes a property as handing HTML content. This instructs Jspresso to
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicSourceCodePropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicSourceCodePropertyDescriptor"></a>BasicSourceCodePropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicSourceCodePropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicSourceCodePropertyDescriptor.html)
@@ -1066,7 +1043,6 @@ Describes a property as handing sourcecode content. This instructs Jspresso
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicTimePropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicTimePropertyDescriptor"></a>BasicTimePropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicTimePropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicTimePropertyDescriptor.html)
@@ -1105,4 +1081,5 @@ Describes a property used to hold time only values. These properties use a
 </table>
 
 ---
+
 

@@ -1,6 +1,5 @@
 ## BackendAction
 
-### org.jspresso.framework.application.backend.action.BackendAction
 #### <a name="org.jspresso.framework.application.backend.action.BackendAction"></a>BackendAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.BackendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/BackendAction.html)
@@ -39,7 +38,6 @@ This class should serve as base class for implementing actions that execute
 ---
 
 
-### org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction
 #### <a name="org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction"></a>AbstractChangePasswordAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/AbstractChangePasswordAction.html)
@@ -131,7 +129,6 @@ This is the base class for implementing an action that performs actual
 ---
 
 
-### org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction
 #### <a name="org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction"></a>DatabaseChangePasswordAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/DatabaseChangePasswordAction.html)
@@ -177,7 +174,6 @@ Concrete backend implementation of a change password action where password is
 ---
 
 
-### org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction
 #### <a name="org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction"></a>LdapChangePasswordAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/LdapChangePasswordAction.html)
@@ -216,7 +212,6 @@ Concrete backend implementation of a change password action where password is
 ---
 
 
-### org.jspresso.framework.application.backend.action.security.MockChangePasswordAction
 #### <a name="org.jspresso.framework.application.backend.action.security.MockChangePasswordAction"></a>MockChangePasswordAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.security.MockChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/MockChangePasswordAction.html)
@@ -251,7 +246,6 @@ Mocks up password change.
 ---
 
 
-### org.jspresso.framework.application.backend.action.AbstractCloneAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractCloneAction"></a>AbstractCloneAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AbstractCloneAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractCloneAction.html)
@@ -292,7 +286,6 @@ An action used duplicate a domain object. the cloned domain object is set as mod
 ---
 
 
-### org.jspresso.framework.application.backend.action.CloneComponentAction
 #### <a name="org.jspresso.framework.application.backend.action.CloneComponentAction"></a>CloneComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.CloneComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CloneComponentAction.html)
@@ -331,7 +324,6 @@ An action used duplicate an entity or a component. This action
 ---
 
 
-### org.jspresso.framework.application.backend.action.AbstractCollectionAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractCollectionAction"></a>AbstractCollectionAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AbstractCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractCollectionAction.html)
@@ -368,7 +360,6 @@ Base class for backend actions acting on collection models. This class is
 ---
 
 
-### org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction"></a>AbstractAddCollectionToMasterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AbstractAddCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractAddCollectionToMasterAction.html)
@@ -412,7 +403,6 @@ An action used in master/detail views to create and add a new detail to a
 ---
 
 
-### org.jspresso.framework.application.backend.action.AbstractCloneCollectionAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractCloneCollectionAction"></a>AbstractCloneCollectionAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AbstractCloneCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractCloneCollectionAction.html)
@@ -457,7 +447,6 @@ An action used duplicate a collection of domain objects. Cloning an entity
 ---
 
 
-### org.jspresso.framework.application.backend.action.CloneComponentCollectionAction
 #### <a name="org.jspresso.framework.application.backend.action.CloneComponentCollectionAction"></a>CloneComponentCollectionAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.CloneComponentCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CloneComponentCollectionAction.html)
@@ -496,7 +485,6 @@ An action used duplicate a collection of entities or components. This action
 ---
 
 
-### org.jspresso.framework.application.backend.action.AddAnyCollectionToMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.AddAnyCollectionToMasterAction"></a>AddAnyCollectionToMasterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AddAnyCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AddAnyCollectionToMasterAction.html)
@@ -533,7 +521,6 @@ An action used in master/detail views to add new detail(s) to a master domain
 ---
 
 
-### org.jspresso.framework.application.backend.action.AddComponentCollectionToMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.AddComponentCollectionToMasterAction"></a>AddComponentCollectionToMasterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AddComponentCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AddComponentCollectionToMasterAction.html)
@@ -577,7 +564,6 @@ An action used in master/detail views to create and add a new detail to a
 ---
 
 
-### org.jspresso.framework.application.backend.action.AddMapToMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.AddMapToMasterAction"></a>AddMapToMasterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AddMapToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AddMapToMasterAction.html)
@@ -618,7 +604,6 @@ An action used in master/detail views where models are backed by maps to
 ---
 
 
-### org.jspresso.framework.application.backend.action.CloneMapCollectionAction
 #### <a name="org.jspresso.framework.application.backend.action.CloneMapCollectionAction"></a>CloneMapCollectionAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.CloneMapCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CloneMapCollectionAction.html)
@@ -657,7 +642,6 @@ An action used duplicate a collection of domain objects implemented as maps.
 ---
 
 
-### org.jspresso.framework.application.backend.action.PasteCollectionToMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.PasteCollectionToMasterAction"></a>PasteCollectionToMasterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.PasteCollectionToMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/PasteCollectionToMasterAction.html)
@@ -699,7 +683,6 @@ An action used in master/detail views to paste previously copied or cut
 ---
 
 
-### org.jspresso.framework.application.backend.action.CollectionElementMoveAction
 #### <a name="org.jspresso.framework.application.backend.action.CollectionElementMoveAction"></a>CollectionElementMoveAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.CollectionElementMoveAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CollectionElementMoveAction.html)
@@ -750,7 +733,6 @@ This action can be declared on views that are backed by collections with list
 ---
 
 
-### org.jspresso.framework.application.backend.action.RemoveCollectionFromMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.RemoveCollectionFromMasterAction"></a>RemoveCollectionFromMasterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.RemoveCollectionFromMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/RemoveCollectionFromMasterAction.html)
@@ -787,7 +769,6 @@ An action used in master/detail views to remove selected details from a
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.RemoveCollectionFromMasterAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.RemoveCollectionFromMasterAction"></a>RemoveCollectionFromMasterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.RemoveCollectionFromMasterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/RemoveCollectionFromMasterAction.html)
@@ -830,7 +811,6 @@ An action used in master/detail views to remove selected details from a
 ---
 
 
-### org.jspresso.framework.application.backend.action.module.RemoveFromModuleObjectsAction
 #### <a name="org.jspresso.framework.application.backend.action.module.RemoveFromModuleObjectsAction"></a>RemoveFromModuleObjectsAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.module.RemoveFromModuleObjectsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/RemoveFromModuleObjectsAction.html)
@@ -868,7 +848,6 @@ This action, which is to be used on bean collection modules, removes the
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.module.RemoveModuleObjectAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.module.RemoveModuleObjectAction"></a>RemoveModuleObjectAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.module.RemoveModuleObjectAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/module/RemoveModuleObjectAction.html)
@@ -905,7 +884,6 @@ This action, which is to be used on bean modules, <b>deletes the module
 ---
 
 
-### org.jspresso.framework.application.backend.action.SetActionParamFromSelectedComponentsAction
 #### <a name="org.jspresso.framework.application.backend.action.SetActionParamFromSelectedComponentsAction"></a>SetActionParamFromSelectedComponentsAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.SetActionParamFromSelectedComponentsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/SetActionParamFromSelectedComponentsAction.html)
@@ -942,7 +920,6 @@ A trivial backend action that updates the action context by setting the
 ---
 
 
-### org.jspresso.framework.application.backend.action.AbstractLdapAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractLdapAction"></a>AbstractLdapAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AbstractLdapAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractLdapAction.html)
@@ -978,7 +955,6 @@ Root abstract class of actions that deal with LDAP directory. It's only
 ---
 
 
-### org.jspresso.framework.application.backend.action.AbstractQbeAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractQbeAction"></a>AbstractQbeAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AbstractQbeAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractQbeAction.html)
@@ -1018,7 +994,6 @@ Abstract base class for QBE find actions.
 ---
 
 
-### org.jspresso.framework.application.backend.action.FindAction
 #### <a name="org.jspresso.framework.application.backend.action.FindAction"></a>FindAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.FindAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/FindAction.html)
@@ -1057,7 +1032,6 @@ This action will climb the model connector hierarchy to retrieve a query
 ---
 
 
-### org.jspresso.framework.application.backend.action.module.QueryModuleFilterAction
 #### <a name="org.jspresso.framework.application.backend.action.module.QueryModuleFilterAction"></a>QueryModuleFilterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.module.QueryModuleFilterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/QueryModuleFilterAction.html)
@@ -1095,7 +1069,6 @@ Retrieves the filter of a module and queries the persistent store to populate
 ---
 
 
-### org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction
 #### <a name="org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction"></a>AbstractQueryComponentsAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractQueryComponentsAction.html)
@@ -1165,7 +1138,6 @@ This action is the base abstract class to query components by example. It is use
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.hibernate.QueryEntitiesAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.hibernate.QueryEntitiesAction"></a>QueryEntitiesAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.hibernate.QueryEntitiesAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/hibernate/QueryEntitiesAction.html)
@@ -1238,7 +1210,6 @@ This action is used to Hibernate query entities by example. It is used behind
 ---
 
 
-### org.jspresso.framework.application.backend.action.StaticQueryComponentsAction
 #### <a name="org.jspresso.framework.application.backend.action.StaticQueryComponentsAction"></a>StaticQueryComponentsAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.StaticQueryComponentsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/StaticQueryComponentsAction.html)
@@ -1273,7 +1244,6 @@ This action filters an arbitrary component list against the query component usin
 ---
 
 
-### org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction
 #### <a name="org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction"></a>AddBeanAsSubModuleAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/AddBeanAsSubModuleAction.html)
@@ -1320,7 +1290,6 @@ This action can be installed on any collection view and will :
 ---
 
 
-### org.jspresso.framework.application.backend.action.CreateQueryComponentAction
 #### <a name="org.jspresso.framework.application.backend.action.CreateQueryComponentAction"></a>CreateQueryComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.CreateQueryComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/CreateQueryComponentAction.html)
@@ -1362,7 +1331,6 @@ Creates a query component to be used in filters or list of values. The
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction"></a>DeleteEntityAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/DeleteEntityAction.html)
@@ -1401,7 +1369,6 @@ An action used to delete the entity that is model of the view.
 ---
 
 
-### org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction
 #### <a name="org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction"></a>GenerateJasperReportAction
 
 + **Full name** : [`org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/printing/backend/action/GenerateJasperReportAction.html)
@@ -1446,7 +1413,6 @@ This action performs the actual Jasper report generation using a JDBC
 ---
 
 
-### org.jspresso.framework.application.backend.action.module.InitModuleFilterAction
 #### <a name="org.jspresso.framework.application.backend.action.module.InitModuleFilterAction"></a>InitModuleFilterAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.module.InitModuleFilterAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/module/InitModuleFilterAction.html)
@@ -1486,7 +1452,6 @@ Initialize a module filter with a brand new query component and resets the
 ---
 
 
-### org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction
 #### <a name="org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction"></a>PurgeCompletedAsynExecutorsAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/PurgeCompletedAsynExecutorsAction.html)
@@ -1521,7 +1486,6 @@ Purges completed asynchronous action executors.
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.ReloadAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.ReloadAction"></a>ReloadAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.ReloadAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/ReloadAction.html)
@@ -1558,7 +1522,6 @@ Reloads the entities provided by the context <code>ActionParameter</code>.
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.ReloadModuleObjectAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.ReloadModuleObjectAction"></a>ReloadModuleObjectAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.ReloadModuleObjectAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/ReloadModuleObjectAction.html)
@@ -1595,7 +1558,6 @@ Reloads all the module entities as well as all its sub-modules entities
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction"></a>RemoveFromModuleObjectsAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/module/RemoveFromModuleObjectsAction.html)
@@ -1635,7 +1597,6 @@ This action, which is to be used on bean collection modules, removes the
 ---
 
 
-### org.jspresso.framework.application.backend.action.ResetConnectorValueAction
 #### <a name="org.jspresso.framework.application.backend.action.ResetConnectorValueAction"></a>ResetConnectorValueAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.ResetConnectorValueAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/ResetConnectorValueAction.html)
@@ -1670,7 +1631,6 @@ Resets the model connector value to null.
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.SaveAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.SaveAction"></a>SaveAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.SaveAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/SaveAction.html)
@@ -1707,7 +1667,6 @@ Saves the entities provided by the context <code>ActionParameter</code>. All
 ---
 
 
-### org.jspresso.framework.application.backend.action.persistence.SaveModuleObjectAction
 #### <a name="org.jspresso.framework.application.backend.action.persistence.SaveModuleObjectAction"></a>SaveModuleObjectAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.persistence.SaveModuleObjectAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/persistence/SaveModuleObjectAction.html)
@@ -1744,7 +1703,6 @@ Saves all the module entities as well as all its sub-modules entities
 ---
 
 
-### org.jspresso.framework.application.backend.action.ScriptedBackendAction
 #### <a name="org.jspresso.framework.application.backend.action.ScriptedBackendAction"></a>ScriptedBackendAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.ScriptedBackendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/ScriptedBackendAction.html)
@@ -1784,7 +1742,6 @@ A scripted backend action. The action takes the script to execute (an
 ---
 
 
-### org.jspresso.framework.application.backend.action.StaticScriptedBackendAction
 #### <a name="org.jspresso.framework.application.backend.action.StaticScriptedBackendAction"></a>StaticScriptedBackendAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.StaticScriptedBackendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/StaticScriptedBackendAction.html)
@@ -1824,7 +1781,6 @@ A statically scripted backend action. The script and the scripting language
 ---
 
 
-### org.jspresso.framework.application.backend.action.SelectEntityPropertyAction
 #### <a name="org.jspresso.framework.application.backend.action.SelectEntityPropertyAction"></a>SelectEntityPropertyAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.SelectEntityPropertyAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/SelectEntityPropertyAction.html)
@@ -1860,7 +1816,6 @@ A generic action to fill-in the context <code>ActionParameter</code> with the
 ---
 
 
-### org.jspresso.framework.application.backend.action.TransferCollectionAction
 #### <a name="org.jspresso.framework.application.backend.action.TransferCollectionAction"></a>TransferCollectionAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.TransferCollectionAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/TransferCollectionAction.html)
@@ -1898,4 +1853,5 @@ An action used to register a collection of domain objects into the
 </table>
 
 ---
+
 

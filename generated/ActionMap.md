@@ -1,6 +1,5 @@
 ## ActionMap
 
-### org.jspresso.framework.view.action.ActionMap
 #### <a name="org.jspresso.framework.view.action.ActionMap"></a>ActionMap
 
 + **Full name** : [`org.jspresso.framework.view.action.ActionMap`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionMap.html)
@@ -84,4 +83,5 @@ An action map is used to structure a set of actions. The actions are not
 </table>
 
 ---
+
 

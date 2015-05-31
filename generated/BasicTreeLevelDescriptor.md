@@ -1,6 +1,5 @@
 ## BasicTreeLevelDescriptor
 
-### org.jspresso.framework.view.descriptor.basic.BasicTreeLevelDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicTreeLevelDescriptor"></a>BasicTreeLevelDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicTreeLevelDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTreeLevelDescriptor.html)
@@ -75,7 +74,6 @@ This is the base descriptor for all tree levels. A tree level is a collection
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicCompositeTreeLevelDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicCompositeTreeLevelDescriptor"></a>BasicCompositeTreeLevelDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicCompositeTreeLevelDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicCompositeTreeLevelDescriptor.html)
@@ -146,7 +144,6 @@ This descriptor is used to describe a collection of sibling nodes that each
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicSimpleTreeLevelDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicSimpleTreeLevelDescriptor"></a>BasicSimpleTreeLevelDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicSimpleTreeLevelDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicSimpleTreeLevelDescriptor.html)
@@ -199,4 +196,5 @@ This descriptor is used to describe a collection of sibling nodes that only
 </table>
 
 ---
+
 

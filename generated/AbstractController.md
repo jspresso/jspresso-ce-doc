@@ -1,6 +1,5 @@
 ## AbstractController
 
-### org.jspresso.framework.application.AbstractController
 #### <a name="org.jspresso.framework.application.AbstractController"></a>AbstractController
 
 + **Full name** : [`org.jspresso.framework.application.AbstractController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/AbstractController.html)
@@ -58,7 +57,6 @@ Abstract base class for controllers. Controllers role is to adapt the
 ---
 
 
-### org.jspresso.framework.application.backend.AbstractBackendController
 #### <a name="org.jspresso.framework.application.backend.AbstractBackendController"></a>AbstractBackendController
 
 + **Full name** : [`org.jspresso.framework.application.backend.AbstractBackendController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/AbstractBackendController.html)
@@ -213,7 +211,6 @@ Base class for backend application controllers. Backend controllers are
 ---
 
 
-### org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController
 #### <a name="org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController"></a>HibernateBackendController
 
 + **Full name** : [`org.jspresso.framework.application.backend.persistence.hibernate.HibernateBackendController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/persistence/hibernate/HibernateBackendController.html)
@@ -264,7 +261,6 @@ This is the default Jspresso implementation of Hibernate-based backend
 ---
 
 
-### org.jspresso.framework.application.frontend.controller.AbstractFrontendController
 #### <a name="org.jspresso.framework.application.frontend.controller.AbstractFrontendController"></a>AbstractFrontendController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.AbstractFrontendController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/AbstractFrontendController.html)
@@ -466,7 +462,6 @@ Base class for frontend application controllers. Frontend controllers are
 ---
 
 
-### org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController
 #### <a name="org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController"></a>AbstractRemoteController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.remote.AbstractRemoteController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/remote/AbstractRemoteController.html)
@@ -503,7 +498,6 @@ This is is the base implementation of all &quot;remotable&quot; frontend
 ---
 
 
-### org.jspresso.framework.application.frontend.controller.remote.DefaultRemoteController
 #### <a name="org.jspresso.framework.application.frontend.controller.remote.DefaultRemoteController"></a>DefaultRemoteController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.remote.DefaultRemoteController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/remote/DefaultRemoteController.html)
@@ -544,7 +538,6 @@ This is is the default implementation of a &quot;remotable&quot; frontend
 ---
 
 
-### org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController
 #### <a name="org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController"></a>MobileRemoteController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.remote.mobile.MobileRemoteController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/remote/mobile/MobileRemoteController.html)
@@ -582,7 +575,6 @@ This is is the mobile implementation of a &quot;remotable&quot; frontend
 ---
 
 
-### org.jspresso.framework.application.frontend.controller.swing.DefaultSwingController
 #### <a name="org.jspresso.framework.application.frontend.controller.swing.DefaultSwingController"></a>DefaultSwingController
 
 + **Full name** : [`org.jspresso.framework.application.frontend.controller.swing.DefaultSwingController`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/controller/swing/DefaultSwingController.html)
@@ -622,4 +614,5 @@ This is is the default implementation of the <b>Swing</b> frontend
 </table>
 
 ---
+
 

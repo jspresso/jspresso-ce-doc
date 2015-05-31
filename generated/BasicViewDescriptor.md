@@ -1,6 +1,5 @@
 ## BasicViewDescriptor
 
-### org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor"></a>BasicViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicViewDescriptor.html)
@@ -197,7 +196,6 @@ This is the abstract base descriptor for all views. Its main purpose, since
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor"></a>AbstractCardViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractCardViewDescriptor.html)
@@ -250,7 +248,6 @@ This descriptor serves as abstract base implementation for card view
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor"></a>BasicCardViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicCardViewDescriptor.html)
@@ -301,7 +298,6 @@ Describes a multi-purpose card view that is configurable with a custom card
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor"></a>EntityCardViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/EntityCardViewDescriptor.html)
@@ -341,7 +337,6 @@ This card view provides a simple card determination strategy that is based on
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.AbstractComponentViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.AbstractComponentViewDescriptor"></a>AbstractComponentViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractComponentViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractComponentViewDescriptor.html)
@@ -463,7 +458,6 @@ Abstract class for component view descriptors.
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicComponentViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicComponentViewDescriptor"></a>BasicComponentViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicComponentViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicComponentViewDescriptor.html)
@@ -611,7 +605,6 @@ Component view descriptors are surely one of the most commonly used view
 ---
 
 
-### org.jspresso.framework.view.descriptor.mobile.MobileComponentViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileComponentViewDescriptor"></a>MobileComponentViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileComponentViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileComponentViewDescriptor.html)
@@ -658,7 +651,6 @@ A mobile form view descriptor.
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.AbstractTreeViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.AbstractTreeViewDescriptor"></a>AbstractTreeViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractTreeViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractTreeViewDescriptor.html)
@@ -806,7 +798,6 @@ This descriptor is use to design a tree view. The way to define a tree view
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicTreeViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicTreeViewDescriptor"></a>BasicTreeViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicTreeViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTreeViewDescriptor.html)
@@ -849,7 +840,6 @@ This descriptor is use to design a tree view. The way to define a tree view
 ---
 
 
-### org.jspresso.framework.view.descriptor.mobile.MobileTreeViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileTreeViewDescriptor"></a>MobileTreeViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileTreeViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileTreeViewDescriptor.html)
@@ -890,7 +880,6 @@ This descriptor is use to design a tree view. The way to define a tree view
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicActionViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicActionViewDescriptor"></a>BasicActionViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicActionViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicActionViewDescriptor.html)
@@ -945,7 +934,6 @@ This type of view allows to make an action available as a view and thus
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor"></a>BasicCollectionViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicCollectionViewDescriptor.html)
@@ -1042,7 +1030,6 @@ This is the abstract base descriptor of all views used to display a
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor"></a>AbstractListViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractListViewDescriptor.html)
@@ -1107,7 +1094,6 @@ This type of descriptor is used to implement a list view. A list view is a
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor"></a>BasicListViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicListViewDescriptor.html)
@@ -1153,7 +1139,6 @@ This type of descriptor is used to implement a list view. A list view is a
 ---
 
 
-### org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor"></a>MobileListViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileListViewDescriptor.html)
@@ -1205,7 +1190,6 @@ This type of descriptor is used to implement a list view. A list view is a
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicTableViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicTableViewDescriptor"></a>BasicTableViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicTableViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTableViewDescriptor.html)
@@ -1345,7 +1329,6 @@ This descriptor is used to implement a table view. This is certainly the most
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicMapViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicMapViewDescriptor"></a>BasicMapViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicMapViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicMapViewDescriptor.html)
@@ -1385,7 +1368,6 @@ This descriptor is used to implement a map view.
 ---
 
 
-### org.jspresso.framework.view.descriptor.mobile.MobileMapViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.mobile.MobileMapViewDescriptor"></a>MobileMapViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileMapViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileMapViewDescriptor.html)
@@ -1424,7 +1406,6 @@ A mobile map view descriptor.
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor"></a>BasicPropertyViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicPropertyViewDescriptor.html)
@@ -1582,7 +1563,6 @@ This view descriptor serves 2 purposes :
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor"></a>BasicEnumerationPropertyViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicEnumerationPropertyViewDescriptor.html)
@@ -1650,7 +1630,6 @@ This specialized property view descriptor is used in order to be able to
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor"></a>BasicHtmlViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicHtmlViewDescriptor.html)
@@ -1692,7 +1671,6 @@ This type of view descriptor is used to display a a string property
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor"></a>BasicImageViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicImageViewDescriptor.html)
@@ -1754,7 +1732,6 @@ This type of view descriptor is used to display a binary property or a string
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor"></a>BasicStringPropertyViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicStringPropertyViewDescriptor.html)
@@ -1791,7 +1768,6 @@ This type of view descriptor is used to display a a string property.
 ---
 
 
-### org.jspresso.framework.view.descriptor.basic.BasicReferencePropertyViewDescriptor
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicReferencePropertyViewDescriptor"></a>BasicReferencePropertyViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicReferencePropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicReferencePropertyViewDescriptor.html)
@@ -1836,4 +1812,5 @@ This specialized property view descriptor is used in order to be able to
 </table>
 
 ---
+
 

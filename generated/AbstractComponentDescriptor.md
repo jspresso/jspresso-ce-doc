@@ -1,6 +1,5 @@
 ## AbstractComponentDescriptor
 
-### org.jspresso.framework.model.descriptor.basic.AbstractComponentDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.AbstractComponentDescriptor"></a>AbstractComponentDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.AbstractComponentDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/AbstractComponentDescriptor.html)
@@ -298,7 +297,6 @@ This is the abstract base descriptor for all component-like part of the
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor"></a>BasicComponentDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicComponentDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicComponentDescriptor.html)
@@ -353,7 +351,6 @@ This type of descriptor is used to describe :
 ---
 
 
-### org.jspresso.framework.model.descriptor.entity.basic.BasicEntityDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.entity.basic.BasicEntityDescriptor"></a>BasicEntityDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.entity.basic.BasicEntityDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/entity/basic/BasicEntityDescriptor.html)
@@ -417,7 +414,6 @@ This descriptor key to the description of the application model. It is used
 ---
 
 
-### org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor"></a>BasicInterfaceDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicInterfaceDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicInterfaceDescriptor.html)
@@ -459,4 +455,5 @@ This descriptor is a mean of factorizing state/behaviour among components,
 </table>
 
 ---
+
 

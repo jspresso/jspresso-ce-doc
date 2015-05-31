@@ -1,6 +1,5 @@
 ## ActionList
 
-### org.jspresso.framework.view.action.ActionList
 #### <a name="org.jspresso.framework.view.action.ActionList"></a>ActionList
 
 + **Full name** : [`org.jspresso.framework.view.action.ActionList`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionList.html)
@@ -78,4 +77,5 @@ An action list is collection of actions tha can be described with a name, a
 </table>
 
 ---
+
 

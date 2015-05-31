@@ -1,6 +1,5 @@
 ## AbstractActionContextAware
 
-### org.jspresso.framework.application.action.AbstractActionContextAware
 #### <a name="org.jspresso.framework.application.action.AbstractActionContextAware"></a>AbstractActionContextAware
 
 + **Full name** : [`org.jspresso.framework.application.action.AbstractActionContextAware`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/action/AbstractActionContextAware.html)
@@ -38,7 +37,6 @@ Abstract class for all objects that need to manipulate an action context. It
 ---
 
 
-### org.jspresso.framework.application.action.AbstractAction
 #### <a name="org.jspresso.framework.application.action.AbstractAction"></a>AbstractAction
 
 + **Full name** : [`org.jspresso.framework.application.action.AbstractAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/action/AbstractAction.html)
@@ -158,7 +156,6 @@ This is the base class for all application actions. It establishes the
 ---
 
 
-### org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory
 #### <a name="org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory"></a>AbstractLovResultViewDescriptorFactory
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/AbstractLovResultViewDescriptorFactory.html)
@@ -194,7 +191,6 @@ The base abstract implementation for lov result view factories.
 ---
 
 
-### org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory
 #### <a name="org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory"></a>AbstractLovViewDescriptorFactory
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/AbstractLovViewDescriptorFactory.html)
@@ -238,7 +234,6 @@ The base abstract implementation for lov view factories.
 ---
 
 
-### org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback
 #### <a name="org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback"></a>ConnectorValueGetterCallback
 
 + **Full name** : [`org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/file/ConnectorValueGetterCallback.html)
@@ -274,7 +269,6 @@ Default handler implementation to deal with getting binary properties storing
 ---
 
 
-### org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory
 #### <a name="org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory"></a>DefaultCriteriaFactory
 
 + **Full name** : [`org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/persistence/hibernate/criterion/DefaultCriteriaFactory.html)
@@ -311,7 +305,6 @@ Default implementation of a criteria factory.
 ---
 
 
-### org.jspresso.framework.application.frontend.file.FileToByteArrayCallback
 #### <a name="org.jspresso.framework.application.frontend.file.FileToByteArrayCallback"></a>FileToByteArrayCallback
 
 + **Full name** : [`org.jspresso.framework.application.frontend.file.FileToByteArrayCallback`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/file/FileToByteArrayCallback.html)
@@ -346,4 +339,5 @@ Default handler implementation to fully read the file input stream into a byte
 </table>
 
 ---
+
 

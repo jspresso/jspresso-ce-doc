@@ -1,6 +1,5 @@
 ## BasicPropertyDescriptor
 
-### org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor
 #### <a name="org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor"></a>BasicPropertyDescriptor
 
 + **Full name** : [`org.jspresso.framework.model.descriptor.basic.BasicPropertyDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicPropertyDescriptor.html)
@@ -267,4 +266,5 @@ This is the abstract base class for all property descriptors. It mainly
 </table>
 
 ---
+
 

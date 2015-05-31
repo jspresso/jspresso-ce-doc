@@ -1,6 +1,5 @@
 ## DefaultDescriptor
 
-### org.jspresso.framework.util.descriptor.DefaultDescriptor
 #### <a name="org.jspresso.framework.util.descriptor.DefaultDescriptor"></a>DefaultDescriptor
 
 + **Full name** : [`org.jspresso.framework.util.descriptor.DefaultDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/descriptor/DefaultDescriptor.html)
@@ -54,7 +53,6 @@ This is a utility class from which most named descriptors inherit for
 ---
 
 
-### org.jspresso.framework.util.descriptor.DefaultIconDescriptor
 #### <a name="org.jspresso.framework.util.descriptor.DefaultIconDescriptor"></a>DefaultIconDescriptor
 
 + **Full name** : [`org.jspresso.framework.util.descriptor.DefaultIconDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/descriptor/DefaultIconDescriptor.html)
@@ -107,4 +105,5 @@ This is a utility class from which most displayable descriptors inherit for
 </table>
 
 ---
+
 
