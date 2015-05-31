@@ -1,6 +1,5 @@
 # Views
 
-
 <!-- toc -->
 
 # Simple views
@@ -13,11 +12,7 @@
 
 !INCLUDE "../generated/BasicViewDescriptor.md"
 
----
-
 !INCLUDE "../generated/BasicTreeLevelDescriptor.md"
-
----
 
 # Composite views
 
@@ -28,5 +23,3 @@
 ## Reference
 
 !INCLUDE "../generated/BasicCompositeViewDescriptor.md"
-
----
