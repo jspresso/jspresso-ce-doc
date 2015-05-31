@@ -9,7 +9,10 @@
 ![Controllers class diagram](../uml/controllers.PNG)
 
 ## Reference
+
 !INCLUDE "../generated/AbstractController.md"
+
+---
 
 
 # Modules
@@ -20,7 +23,12 @@
 
 ## Reference
 !INCLUDE "../generated/Workspace.md"
+
+---
+
 !INCLUDE "../generated/Module.md"
+
+---
 
 # Enabling/Disabling
 
@@ -52,10 +60,15 @@ other words, a single closed gate is sufficient to forbid the property.
 ![Gates class diagram](../uml/enablement.PNG)
 
 ## Reference
+
 !INCLUDE "../generated/AbstractGate.md"
+
+---
 
 # Startup
 
 ## Overview
 
 ![Startup class diagram](../uml/startup.PNG)
+
+---
