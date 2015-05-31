@@ -1,38 +1,44 @@
-Actions
-=======
+# Actions
 
 <!-- toc -->
 
-Overview
-========
+# Overview
 
 ![Actions class diagram](../uml/actions.PNG)
 
-Common part
-===========
+# Common part
 
-Reference
----------
+## Reference
+
 !INCLUDE "../generated/AbstractActionContextAware.md"
+
+---
+
 !INCLUDE "../generated/ActionMap.md"
+
+---
+
 !INCLUDE "../generated/ActionList.md"
 
-Backend actions
-===============
+---
 
-Reference
----------
+# Backend actions
+
+## Reference
+
 !INCLUDE "../generated/BackendAction.md"
 
-Frontend actions
-================
+---
 
-Reference
----------
+# Frontend actions
+
+## Reference
+
 !INCLUDE "../generated/FrontendAction.md"
 
-Built-in actions
-================
+---
+
+# Built-in actions
 
 You will find here the complete list of Jspresso built-in actions along
 with their Spring id and a short description.
