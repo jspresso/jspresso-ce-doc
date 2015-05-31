@@ -613,7 +613,7 @@ bean descriptor as below :
 
 ```groovy
 Interface('Traceable',
-    ,
+    interceptors:'TraceableLifecycleInterceptor',
     uncloned:['createTimestamp', 'lastUpdateTimestamp']) {
   ...
 }
@@ -842,7 +842,7 @@ The following SJS fragment will do the trick :
 ```groovy
 Component('ContactInfo') {
   ...
-  
+  reference 'city', ref:'City'
   ...
 }
 ```
@@ -1339,19 +1339,19 @@ it in the 3 entities above. The result will be :
 ```groovy
 Entity('Employee'...) {
   ...
-  reference 'contact', ref:'ContactInfo', 
+  reference 'contact', ref:'ContactInfo', id:'contact'
   ...
 }
 
 Entity('Company'...) {
   ...
-  
+  refId 'contact', id: 'contact'
   ...
 }
 
 Entity('OrganizationalUnit'...) {
   ...
-  
+  refId 'contact', id: 'contact'
   ...
 }
 ```
@@ -1386,7 +1386,7 @@ Entity('Company'...) {
 
 Entity('Department'...) {
   ...
-  reference 'company', ref:'Company', , mandatory:true
+  reference 'company', ref:'Company', reverse:'Company-departments', mandatory:true
 }
 ```
 
@@ -1476,7 +1476,7 @@ that both ends are reference property descriptors :
 ```groovy
 Entity('Employee'...) {
   ...
-  reference 'managedOu', ref:'OrganizationalUnit', 
+  reference 'managedOu', ref:'OrganizationalUnit', reverse:'OrganizationalUnit-manager'
 }
 
 Entity('OrganizationalUnit'...) {
@@ -1505,7 +1505,7 @@ Entity('Employee'...) {
 
 Entity('Team'...) {
   ...
-  set 'teamMembers', ref:'Employee', 
+  set 'teamMembers', ref:'Employee', reverse:'Employee-teams'
 }
 ```
 
@@ -1530,7 +1530,7 @@ passed-in date is null, the returned age will also be.
 Let's see how we can attach this service :
 
 ```groovy
-Entity('Employee',
+Entity('Employee', 
        ...
        services:[EmployeeService:'EmployeeServiceDelegate']) {
   ...
@@ -1648,7 +1648,7 @@ collection property or a reference property may be computed this way.
 Let's see how we can link it using Jspresso :
 
 ```groovy
-Entity('Employee',
+Entity('Employee', extension :'EmployeeExtension'
        ...
        ) {
   ...
@@ -1874,11 +1874,12 @@ The following SJS fragment declares these processors :
 ```groovy
 Entity('Employee'
        ...
+       processor:'EmployeePropertyProcessors'
        ) {
   ...
-  string_32 'firstName', mandatory:true, 
+  string_32 'firstName', mandatory:true, processors:'FirstNameProcessor'
   ...
-  date 'birthDate', 
+  date 'birthDate', processors:'BirthDateProcessor'
   ...
 }
 ```
@@ -2717,7 +2718,7 @@ view in a new tab of the company tab view. We do this by modifying the
 
 ```groovy
 tabs 'Company.tab.pane',
-  views:['Company.pane','Traceable.pane']
+  views:['Company.pane','Company.tree','Traceable.pane']
 ```
 
 We declare another tab in the tab view.
@@ -3304,6 +3305,7 @@ workspace('masterdata.workspace',
     icon:'geography-48x48.png') {
     filterModule('masterdata.cities.module',
       component:'City',
+      detailView:'City.module.view'
       )
   }
 }
