@@ -134,6 +134,8 @@ This is the base class for frontend actions. To get a better understanding of
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.charting.frontend.action.AbstractChartAction"></a>AbstractChartAction
 
@@ -185,6 +187,8 @@ This is the abstract base class for <i>Fusioncharts</i> (flash based charting
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.charting.frontend.action.server.DisplayChartAction"></a>DisplayChartAction
 
@@ -220,6 +224,8 @@ This is the concrete implementation of the Fusionchart display action. This
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction"></a>AbstractEditComponentAction
@@ -260,6 +266,8 @@ This action serves as a base class for actions that pop-pup a dialog to edit
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.EditComponentAction"></a>EditComponentAction
@@ -306,6 +314,8 @@ This action pulls a model out of the context (action parameter or selected
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.security.ChangePasswordAction"></a>ChangePasswordAction
@@ -355,6 +365,8 @@ This is the frontend action to initiate the logged-in user password change.
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.controller.EditBackendControllerAction"></a>EditBackendControllerAction
 
@@ -388,6 +400,8 @@ This is a frontend action to display a view backed by the session backend
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.controller.EditFrontendControllerAction"></a>EditFrontendControllerAction
@@ -423,6 +437,8 @@ This is a frontend action to display a view backed by the session backend
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.printing.frontend.action.EditReportParametersAction"></a>EditReportParametersAction
 
@@ -457,6 +473,8 @@ This action takes a report (<code>IReport</code>) from the context (
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.mobile.MobileEditComponentAction"></a>MobileEditComponentAction
 
@@ -489,6 +507,8 @@ This is the mobile version of the edit component action.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction"></a>EditSelectedComponentAction
@@ -528,6 +548,8 @@ This action should be installed on collection views. It takes the selected
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction"></a>AbstractMessageAction
 
@@ -566,6 +588,8 @@ This is the base class for all UI message based communication actions. This
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.InfoAction"></a>InfoAction
 
@@ -598,6 +622,8 @@ This action pops-up an informational message to the user.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.StaticInfoAction"></a>StaticInfoAction
@@ -635,6 +661,8 @@ This action pops-up an informational message to the user. The message,
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.OkCancelAction"></a>OkCancelAction
@@ -675,6 +703,8 @@ This action pops-up an Ok - Cancel confirmation option. Depending on user
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.StaticOkCancelAction"></a>StaticOkCancelAction
 
@@ -711,6 +741,8 @@ This action pops-up an Ok - Cancel confirmation option. The message, instead
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.YesNoAction"></a>YesNoAction
@@ -753,6 +785,8 @@ This action pops-up a binary question. Depending on user answer, another
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.StaticYesNoAction"></a>StaticYesNoAction
 
@@ -789,6 +823,8 @@ This action pops-up a binary question. The message, instead of being
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.YesNoCancelAction"></a>YesNoCancelAction
@@ -835,6 +871,8 @@ This action pops-up a binary question with Cancel option. Depending on user
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.StaticYesNoCancelAction"></a>StaticYesNoCancelAction
 
@@ -871,6 +909,8 @@ This action pops-up a binary question with Cancel option. The message,
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction"></a>AbstractModuleDirtyStateAction
@@ -910,6 +950,8 @@ This is the base abstract class for actions that are responsible for checking
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.backend.action.module.CheckAllModulesDirtyStateAction"></a>CheckAllModulesDirtyStateAction
 
@@ -945,6 +987,8 @@ This action recomputes all application modules dirty state. All the
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.backend.action.module.CheckModuleDirtyStateAction"></a>CheckModuleDirtyStateAction
 
@@ -978,6 +1022,8 @@ This action recomputes the dirty state of the current selected module. It is
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.mobile.AnimateAction"></a>AnimateAction
@@ -1031,6 +1077,8 @@ Selects animates current page.
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.mobile.BackPageAction"></a>BackPageAction
 
@@ -1062,6 +1110,8 @@ Triggers back navigation of current page.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.file.ChooseFileAction"></a>ChooseFileAction
@@ -1121,6 +1171,8 @@ This is the abstract base class for actions dealing with client file system
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.file.OpenFileAction"></a>OpenFileAction
 
@@ -1167,6 +1219,8 @@ This action lets the user browse his local file system and choose a file to
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.file.OpenFileAsBinaryPropertyAction"></a>OpenFileAsBinaryPropertyAction
 
@@ -1203,6 +1257,8 @@ This action lets the user browse the local file system and choose a file to
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.file.SaveFileAction"></a>SaveFileAction
@@ -1261,6 +1317,8 @@ This action lets the user browse his local file system and choose a file to
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.file.SaveBinaryPropertyAsFileAction"></a>SaveBinaryPropertyAsFileAction
 
@@ -1298,6 +1356,8 @@ This action lets the user browse the local file system and choose a file to
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.mobile.CleanModuleAndGoBackIfTransientAction"></a>CleanModuleAndGoBackIfTransientAction
 
@@ -1329,6 +1389,8 @@ Check current selected module object. If it is transient, removes it from the cu
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.printing.frontend.action.remote.DisplayJasperReportAction"></a>DisplayJasperReportAction
@@ -1364,6 +1426,8 @@ This action will take a <code>JasperPrint</code> (a processed Jasper report
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.mobile.EditCurrentPageAction"></a>EditCurrentPageAction
 
@@ -1395,6 +1459,8 @@ Triggers editing of current page.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.remote.mobile.NearElementAction"></a>NearElementAction
@@ -1436,6 +1502,8 @@ Selects next / previous element.
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.printing.frontend.action.AbstractReportAction"></a>AbstractReportAction
 
@@ -1470,6 +1538,8 @@ Abstract base class for Jasper report actions.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.printing.frontend.action.ReportAction"></a>ReportAction
@@ -1507,6 +1577,8 @@ This action allows the user to select a report to generate on the collection
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.printing.frontend.action.StaticReportAction"></a>StaticReportAction
 
@@ -1542,6 +1614,8 @@ This action generates and displays a report that is statically configured
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction"></a>ActionParamToSelectedModelAction
 
@@ -1574,6 +1648,8 @@ A very simple frontend action that uses the puts the context
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction"></a>AddBeanAsSubModuleFrontAction
@@ -1621,6 +1697,8 @@ This action can be installed on any collection view and will take the
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction"></a>AddCollectionToMasterAction
@@ -1670,6 +1748,8 @@ This action is designed to wrap a backend action that will create and add a
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction"></a>AddPageAction
 
@@ -1701,6 +1781,8 @@ A special mobile pagination action that adds a page to the current results.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction"></a>BinaryPropertyInfoAction
@@ -1736,6 +1818,8 @@ This action displays information about a binary property content. The
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.flow.ChooseActionAction"></a>ChooseActionAction
 
@@ -1770,6 +1854,8 @@ This action displays a list of frontend actions so that the user can choose
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction"></a>ChooseComponentAction
@@ -1823,6 +1909,8 @@ This action takes an arbitrary model collection connector from the action
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.CloseDialogAction"></a>CloseDialogAction
 
@@ -1858,6 +1946,8 @@ This is a very generic action that closes (disposes) the currently opened
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.DefaultOkAction"></a>EditSelectedComponentAction.DefaultOkAction
 
@@ -1889,6 +1979,8 @@ Default OK action.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction"></a>DisplayNextPinnedModuleAction
@@ -1925,6 +2017,8 @@ This action triggers a <i>&quot;forward&quot;</i> navigation in the recorded
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction"></a>DisplayPreviousPinnedModuleAction
 
@@ -1959,6 +2053,8 @@ This action triggers a <i>&quot;backward&quot;</i> navigation in the recorded
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.DisplayUrlAction"></a>DisplayUrlAction
@@ -2000,6 +2096,8 @@ This action opens a browser (or a browser tab) targeted at a URL. The actual
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.DisplayStaticUrlAction"></a>DisplayStaticUrlAction
 
@@ -2038,6 +2136,8 @@ Like its parent, this action opens a URL in a browser (or a browser tab). But
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.EditSelectionAction"></a>EditSelectionAction
 
@@ -2071,6 +2171,8 @@ This action is meant to trigger editing on the current collection view
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.ExecuteActionAction"></a>ExecuteActionAction
 
@@ -2103,6 +2205,8 @@ This generic action takes another arbitrary action out of the context
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.workspace.ExitAction"></a>ExitAction
@@ -2142,6 +2246,8 @@ This action exits the application. Before doing so, user activated application
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction"></a>ListApplicationElementsAction
 
@@ -2176,6 +2282,8 @@ This is a special frontend action to list all application metamodel elements
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.security.LoginAction"></a>LoginAction
 
@@ -2209,6 +2317,8 @@ This is the frontend action to trigger the application login using the current c
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.lov.LovAction"></a>LovAction
@@ -2325,6 +2435,8 @@ This is a standard &quot;List Of Values&quot; action for reference property
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.lov.mobile.MobileLovAction"></a>MobileLovAction
 
@@ -2356,6 +2468,8 @@ This is a standard &quot;List Of Values&quot; action for mobile environment.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.ModalDialogAction"></a>ModalDialogAction
@@ -2402,6 +2516,8 @@ This is a very generic action that takes its specifications out of the action
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.module.ModuleRestartAction"></a>ModuleRestartAction
 
@@ -2434,6 +2550,8 @@ This action is used to restart a module. It cleans its children and executes
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction"></a>ModuleSelectionAction
@@ -2473,6 +2591,8 @@ Displays a module, and the corresponding workspace if necessary based on
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction"></a>OkChooseComponentAction
 
@@ -2506,6 +2626,8 @@ This action augments the context by setting the action parameter to the
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.lov.OkLovAction"></a>OkLovAction
 
@@ -2538,6 +2660,8 @@ This action augments the context by setting the action parameter to the
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.PageOffsetAction"></a>PageOffsetAction
@@ -2573,6 +2697,8 @@ This action simply augment the context with a page offset integer (
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction"></a>ParentModuleConnectorSelectionAction
 
@@ -2605,6 +2731,8 @@ This action simply displays the parent of the currently selected module; i.e.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.printing.frontend.action.PrintAction"></a>PrintAction
@@ -2646,6 +2774,8 @@ This action allows the user to choose a report among a list and print it. The
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction"></a>SaveModuleObjectFrontAction
 
@@ -2677,6 +2807,8 @@ This action is used to save module and sub-modules objects.
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction"></a>SelectedModelToActionParamAction
@@ -2710,6 +2842,8 @@ A very simple frontend action that puts the selected model(s) as context
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction"></a>SetConnectorValueAction
@@ -2746,6 +2880,8 @@ This action retrieves the action parameter from the action context and
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction"></a>TransferToClipboardAction
 
@@ -2779,6 +2915,8 @@ An action used to transfer textual representation(s) of selected models to
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction"></a>EditSelectedComponentAction.UowRollbackerAction
 
@@ -2811,6 +2949,8 @@ A wrapper action that roll backs the current UOW before delegating to its
 </tr>
 </tbody>
 </table>
+
+---
 
 
 #### <a name="org.jspresso.framework.application.frontend.action.wizard.WizardAction"></a>WizardAction
@@ -2919,6 +3059,8 @@ This action implements a &quot;wizard&quot;. It can be configured from the
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction"></a>WorkspaceSelectionAction
 
@@ -2950,5 +3092,7 @@ This action displays a workspace using its (untranslated) name.
 </tr>
 </tbody>
 </table>
+
+---
 
 

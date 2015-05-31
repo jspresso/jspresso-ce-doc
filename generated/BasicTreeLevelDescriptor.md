@@ -71,6 +71,8 @@ This is the base descriptor for all tree levels. A tree level is a collection
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicCompositeTreeLevelDescriptor"></a>BasicCompositeTreeLevelDescriptor
 
@@ -139,6 +141,8 @@ This descriptor is used to describe a collection of sibling nodes that each
 </tbody>
 </table>
 
+---
+
 
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicSimpleTreeLevelDescriptor"></a>BasicSimpleTreeLevelDescriptor
 
@@ -190,5 +194,7 @@ This descriptor is used to describe a collection of sibling nodes that only
 </tr>
 </tbody>
 </table>
+
+---
 
 
