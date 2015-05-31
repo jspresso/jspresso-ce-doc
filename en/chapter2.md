@@ -1,29 +1,24 @@
-Domain model
-============
+# Domain model
 
 <!-- toc -->
 
-Components and entities
-=======================
+# Components and entities
 
-Overview
---------
+## Overview
 
 ![Component descriptors diagram](../uml/component-descriptors.PNG)
 
-Reference
----------
+## Reference
+
 !INCLUDE "../generated/DefaultDescriptor.md"
 
 ---
 
 !INCLUDE "../generated/AbstractComponentDescriptor.md"
 
-Properties
-==========
+# Properties
 
-Overview
---------
+## Overview
 
 ![Relationship property descriptors
 diagram](../uml/relation-property-descriptors.PNG)
@@ -31,8 +26,8 @@ diagram](../uml/relation-property-descriptors.PNG)
 ![Scalar property descriptors
 diagram](../uml/scalar-property-descriptors.PNG)
 
-Reference
----------
+## Reference
+
 !INCLUDE "../generated/BasicPropertyDescriptor.md"
 
 ---
@@ -46,3 +41,5 @@ Reference
 ---
 
 !INCLUDE "../generated/BasicScalarPropertyDescriptor.md"
+
+---
