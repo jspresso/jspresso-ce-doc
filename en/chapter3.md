@@ -17,6 +17,8 @@
 
 !INCLUDE "../generated/BasicTreeLevelDescriptor.md"
 
+---
+
 # Composite views
 
 ## Overview
