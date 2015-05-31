@@ -12,11 +12,7 @@
 
 !INCLUDE "../generated/DefaultDescriptor.md"
 
----
-
 !INCLUDE "../generated/AbstractComponentDescriptor.md"
-
----
 
 # Properties
 
@@ -32,16 +28,8 @@ diagram](../uml/scalar-property-descriptors.PNG)
 
 !INCLUDE "../generated/BasicPropertyDescriptor.md"
 
----
-
 !INCLUDE "../generated/BasicRelationshipEndPropertyDescriptor.md"
-
----
 
 !INCLUDE "../generated/BasicCollectionDescriptor.md"
 
----
-
 !INCLUDE "../generated/BasicScalarPropertyDescriptor.md"
-
----
