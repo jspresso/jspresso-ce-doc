@@ -16,6 +16,8 @@
 
 !INCLUDE "../generated/AbstractComponentDescriptor.md"
 
+---
+
 # Properties
 
 ## Overview
