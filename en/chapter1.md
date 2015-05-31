@@ -371,7 +371,7 @@ sure you've correctly installed it.
 
 Here is what the default generated `model.groovy` looks like :
 
-``` {.groovy}
+```groovy
 // Implement your domain here using the SJS DSL.
  
 ```
@@ -398,7 +398,7 @@ part.
 
 The `Nameable` interface may be described as follow :
 
-``` {.groovy}
+```groovy
 Interface ('Nameable') {
   string_64 'name', mandatory:true
 }
@@ -421,7 +421,7 @@ relationships with other components.
 
 So now, lets describe the `Traceable` interface as follow :
 
-``` {.groovy}
+```groovy
 Interface('Traceable',
           uncloned:['createTimestamp', 'lastUpdateTimestamp']) {
   date_time 'createTimestamp', readOnly:true, timeZoneAware:true
@@ -485,7 +485,7 @@ You should have now the 2 generated classes :
 
 -   `Traceable.java` for the Traceable interface.
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model;
 
 /**
@@ -551,7 +551,7 @@ life-cycle interceptor
 `org.jspresso.hrsample.model.service.TraceableLifecycleInterceptor` java
 class as follow :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model.service;
 
 import java.util.Date;
@@ -611,7 +611,7 @@ its `lastUpdateTimestamp`.
 We can now link the life-cycle interceptor to our `Traceable` interface
 bean descriptor as below :
 
-``` {.groovy}
+```groovy
 Interface('Traceable',
     ,
     uncloned:['createTimestamp', 'lastUpdateTimestamp']) {
@@ -633,7 +633,7 @@ that we make its descriptor an entity descriptor.
 
 So let's describe the `City` entity as below :
 
-``` {.groovy}
+```groovy
 Entity('City',
        extend:'Nameable') {
   string_10 'zip'
@@ -647,7 +647,7 @@ the name property.
 the Jspresso Maven compilation will produce the following class
 (`City.java`) :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model;
 
 /**
@@ -728,7 +728,7 @@ higher level model parts.
 
 So let's describe the `ContactInfo` component as below :
 
-``` {.groovy}
+```groovy
 Component('ContactInfo') {
   string_256 'address'
   string_32  'phone'
@@ -746,7 +746,7 @@ value for instance), this is an example of a correct value.
 Relaunching the Jspresso generator will produce the following class
 (`ContactInfo.java`) :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model;
 
 /**
@@ -839,7 +839,7 @@ the `ContactInfo` component.
 
 The following SJS fragment will do the trick :
 
-``` {.groovy}
+```groovy
 Component('ContactInfo') {
   ...
   
@@ -856,7 +856,7 @@ source file we generated above, but since this is a unidirectional
 relationship, the `City.java` file will remain untouched. The following
 lines are added in the `ContactInfo.java` source file :
 
-``` {.java}
+```java
   /**
    * Gets the city.
    *
@@ -882,7 +882,7 @@ relationship between the component and the entity.
 
 To end with the commons model part, let's define the Event entity :
 
-``` {.groovy}
+```groovy
 Entity('Event',extend:'Traceable'){
   html 'text', maxLength:2048 , id:'Event-text'
 }
@@ -915,7 +915,7 @@ already achieved.
 
 Let's look at the SJS code below :
 
-``` {.groovy}
+```groovy
 Entity ('Employee',
         extend:['Nameable','Traceable']) {
   string_32 'firstName', mandatory:true
@@ -973,7 +973,7 @@ And the SJS way (note that SJS will automatically generate a top-level
 bean for the collection property, with an id in the form of
 *Owner-property*, i.e. *Employee-events*) :
 
-``` {.groovy}
+```groovy
 Entity ('Employee'...) {
   ...
   list 'events', composition:true, ref:'Event'
@@ -999,7 +999,7 @@ the `Event` entity as being the element type of our collection.
 Launching the Jspresso generator will generate the `Employee.java`
 source file :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model;
 
 /**
@@ -1302,7 +1302,7 @@ involves entity inheritance (and polymorphism) and other kinds of
 relationships (1-1, bi-directional). So let's begin with the entity
 inheritance graph and we will deal with their relationships next :
 
-``` {.groovy}
+```groovy
 Entity('Company',
        extend:['Nameable', 'Traceable']) {
   reference 'contact', ref:'ContactInfo'
@@ -1336,7 +1336,7 @@ is a perfect candidate for factoring. So we can make the contact
 property descriptor a top level reference, name it contact and reference
 it in the 3 entities above. The result will be :
 
-``` {.groovy}
+```groovy
 Entity('Employee'...) {
   ...
   reference 'contact', ref:'ContactInfo', 
@@ -1378,7 +1378,7 @@ this composition, making it a top-level, referenceable bean and then
 make this N side the reverse end of the 1 side of the composition. This
 is achieved using the following SJS fragment :
 
-``` {.groovy}
+```groovy
 Entity('Company'...) {
   ...
   set 'departments', composition:true, ref:'Department'
@@ -1441,7 +1441,7 @@ updated consistently.
 
 We describe the `Department` \<-\> `Team` relationship the same way :
 
-``` {.groovy}
+```groovy
 Entity('Department'...) {
   ...
   set 'teams', composition:true, ref:'Team'
@@ -1454,7 +1454,7 @@ Entity('Team'...) {
 
 And, to be complete, the `Company` \<-\> `Employees` relationship :
 
-``` {.groovy}
+```groovy
 Entity('Company'...) {
   ...
   set 'employees', composition:true, ref:'Employee'
@@ -1473,7 +1473,7 @@ you have certainly already guessed that it is the exact same way to
 describe bi-directional 1-1 relationships than 1-N relationships except
 that both ends are reference property descriptors :
 
-``` {.groovy}
+```groovy
 Entity('Employee'...) {
   ...
   reference 'managedOu', ref:'OrganizationalUnit', 
@@ -1497,7 +1497,7 @@ need to do is to declare both ends of the relationship as being a
 collection property descriptor. The following SJS fragment illustrates
 this for the `Team` \<-\> `Employee` relationship :
 
-``` {.groovy}
+```groovy
 Entity('Employee'...) {
   ...
   set 'teams', ref:'Team'
@@ -1529,7 +1529,7 @@ passed-in date is null, the returned age will also be.
 
 Let's see how we can attach this service :
 
-``` {.groovy}
+```groovy
 Entity('Employee',
        ...
        services:[EmployeeService:'EmployeeServiceDelegate']) {
@@ -1547,7 +1547,7 @@ org.jspresso.hrsample.model.service.EmployeeServiceDelegate.
 
 Here is the `EmployeeService.java` source file :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model.service;
 
 import java.util.Date;
@@ -1571,7 +1571,7 @@ public interface EmployeeService {
 
 And the `EmployeeServiceDelegate.java` source file :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model.service;
 
 import java.util.Date;
@@ -1617,7 +1617,7 @@ share services delegates across multiple component instances.
 A re-generation of the `Employee.java` source updates the `Employee`
 definition so that it now implements the `EmployeeService` interface :
 
-``` {.java}
+```java
 ...
 public interface Employee extends
   org.jspresso.hrsample.model.Nameable,
@@ -1647,7 +1647,7 @@ collection property or a reference property may be computed this way.
 
 Let's see how we can link it using Jspresso :
 
-``` {.groovy}
+```groovy
 Entity('Employee',
        ...
        ) {
@@ -1667,7 +1667,7 @@ reference to the
 `org.jspresso.hrsample.model.extension.EmployeeExtension` java class
 that will be used to compute it. So let's code it :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model.extension;
 
 import org.jspresso.hrsample.model.Employee;
@@ -1730,7 +1730,7 @@ managed component can be listened to for property changes.
 The following update of the `Employee.java` source file fixes the 2
 caveats described above :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model.extension;
 
 import java.beans.PropertyChangeEvent;
@@ -1871,7 +1871,7 @@ Let's define some simple integrity constraints on our domain model :
 
 The following SJS fragment declares these processors :
 
-``` {.groovy}
+```groovy
 Entity('Employee'
        ...
        ) {
@@ -1899,7 +1899,7 @@ As described in the SJS fragment, we are going to create an
 Let's see what those processors look like by looking at the
 `EmployeePropertyProcessors.java` source file :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model.processor;
 
 import java.util.Date;
@@ -2021,7 +2021,7 @@ Eclipse “Open resource” function) :
 
 Here is what it looks like :
 
-``` {.groovy}
+```groovy
 // Implement your views here using the SJS DSL.
 ```
 
@@ -2063,7 +2063,7 @@ customize a component view.
 Let's describe our first component view on the company entity in the
 `view.groovy` file:
 
-``` {.groovy}
+```groovy
 form 'Company.pane',
   parent:'decoratedView',
   labelsPosition:'ABOVE',
@@ -2095,7 +2095,7 @@ The view tester launch configuration has been set-up to instanciate and
 display a view whose id is “testView”. As a result, we simply have to
 reference the view to test in the `view.`groovy file as follows :
 
-``` {.groovy}
+```groovy
 bean 'testView',
   parent:'Company.pane'
 ```
@@ -2211,7 +2211,7 @@ Then we keep the order name, address, city, phone and email.
 
 The following change to the view descriptor achieves that :
 
-``` {.groovy}
+```groovy
 form 'Company.pane',
   ...
   columnCount:2,
@@ -2276,7 +2276,7 @@ following SJS fragment, we will describe the component view to display
 the tracing properties and assemble the company view and the tracing
 view into a tab composite view :
 
-``` {.groovy}
+```groovy
 form 'Traceable.pane',
   model:'Traceable',
   labelsPosition:'ABOVE',
@@ -2317,7 +2317,7 @@ descriptors :
 The following SJS fragment assigns an icon image to the `Company` and
 the `Traceable` components :
 
-``` {.groovy}
+```groovy
 Interface('Traceable',
           ...
           icon:'traceable-48x48.png') {
@@ -2342,7 +2342,7 @@ for every potentially displayed string, these descriptions are entries
 in the I18N property files that we will translate. The following SJS
 fragments achieves that :
 
-``` {.groovy}
+```groovy
 form 'Traceable.pane',
   ...
   description:'traceable.editing'
@@ -2445,7 +2445,7 @@ displays 1 department per row and link this view to the company one.
 
 Let's consider the following SJS fragment :
 
-``` {.groovy}
+```groovy
 table 'Company-departments.table',
   parent:'decoratedView'
 
@@ -2490,7 +2490,7 @@ pre-defined, ready-to-use general purpose actions (and even action maps)
 that are sufficient for most classic operations. Look at the following
 SJS fragment :
 
-``` {.groovy}
+```groovy
 table 'Company-departments.table',
   ...
   actionMap:'masterDetailActionMap'
@@ -2520,7 +2520,7 @@ customized differently, we still have the option to override this global
 setting on the view descriptor itself. So let's go back to the
 department entity descriptor :
 
-``` {.groovy}
+```groovy
 Entity('Department',
     ...
     rendered:['ouId','name','manager','contact']) {
@@ -2582,7 +2582,7 @@ tutorial, we will refine the teams displayed columns on the view itself
 instead of globally configuring the rendered properties of the team
 entity :
 
-``` {.groovy}
+```groovy
 table 'Department-teams.table',
   parent:'decoratedView',
   actionMap:'masterDetailActionMap',
@@ -2597,7 +2597,7 @@ department view. We now need to assemble the `Company-departments.table`
 and the new `Department-teams.table` into a split view and tell Jspresso
 to drive the teams table content with the departments table selection :
 
-``` {.groovy}
+```groovy
 split_vertical 'Departments.and.teams.view',
   cascadingModels:true,
   top:'Company-departments.table',
@@ -2624,7 +2624,7 @@ Then, we need to refactor the `Company.organization.view` to substitute
 the current departments table view by our new
 `Departments.and.teams.view` :
 
-``` {.groovy}
+```groovy
 split_vertical 'Company.organization.view',
   model:'Company',
   top:'Company.tab.pane',
@@ -2674,7 +2674,7 @@ them. To describe the company organization tree, we are going to declare
 
 Look at the following SJS fragment :
 
-``` {.groovy}
+```groovy
 treeNode 'Department-teams.treeNode',
   rendered:'ouId',
   actionMap:'masterDetailActionMap'
@@ -2715,7 +2715,7 @@ The final step to reach the objective is to install the company tree
 view in a new tab of the company tab view. We do this by modifying the
 `Company.tab.pane` view as below :
 
-``` {.groovy}
+```groovy
 tabs 'Company.tab.pane',
   views:['Company.pane','Traceable.pane']
 ```
@@ -2812,7 +2812,7 @@ As for `model.groovy` and `view.groovy`, the archetype has generated a
 ready to use Spring configuration file for the backend named
 `backend.groovy`. Here is what it looks like :
 
-``` {.groovy}
+```groovy
 // Implement your application backend here using the SJS DSL.
 ```
 
@@ -2831,7 +2831,7 @@ does not generate any equivalent SJS file.
 
 Here is the file commented :
 
-``` {.xml}
+```xml
 <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close"> 
   <property name="driverClassName" value="org.hsqldb.jdbcDriver" /> 
   <property name="url" value="jdbc:hsqldb:mem:hrsample" /> 
@@ -2903,7 +2903,7 @@ The archetype generated a default `frontend.groovy` in the
 `org.jspresso.hrsample.frontend` package that contains a minimal
 frontend controller definition. Here is what it contains :
 
-``` {.groovy}
+```groovy
 // Implement your application frontend here using the SJS DSL.
 
 /*
@@ -3040,7 +3040,7 @@ version of the application.
 
 Here is the code commented :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.startup.swing;
 
 import org.jspresso.framework.application.startup.swing.SwingStartup;
@@ -3166,7 +3166,7 @@ definition and registration.
 
 Open the `frontend.groovy` SJS source file and add the following :
 
-``` {.groovy}
+```groovy
 workspace('masterdata.workspace',
   icon:'masterdata-48x48.png') {
   filterModule('masterdata.cities.module',
@@ -3228,7 +3228,7 @@ category. This is quite straightforward to declare; look at how we
 slightly modify the workspace description in the following SJS fragment
 :
 
-``` {.groovy}
+```groovy
 workspace('masterdata.workspace',
   icon:'masterdata-48x48.png') {
   nodeModule('masterdata.geography.module',
@@ -3274,7 +3274,7 @@ service on the single displayed city.
 Beforehand, we are going to declare the new city component view in the
 `view.groovy` :
 
-``` {.groovy}
+```groovy
 form('City.module.view',
   parent:'decoratedView'
   columnCount:1) {
@@ -3297,7 +3297,7 @@ standard built-in reload action.
 Once the customized view is declared, we need to register it in the bean
 collection module as follows :
 
-``` {.groovy}
+```groovy
 workspace('masterdata.workspace',
   icon:'masterdata-48x48.png') {
   nodeModule('masterdata.geography.module',
@@ -3372,7 +3372,7 @@ test data in place.
 So let's write this simple test data production class for the HR
 application :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.development;
 
 import java.text.ParseException;
@@ -3570,7 +3570,7 @@ You can now have a look to the Swing development startup class
 that already exists in your project code base and that is used by the
 development launch configuration :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.startup.swing.development;
 
 import org.jspresso.hrsample.development.TestDataPersister;
@@ -3691,7 +3691,7 @@ Let's have a look to the changes made to the application.
 
 In the `model.groovy` SJS source file :
 
-``` {.groovy}
+```groovy
 Entity('OrganizationalUnit',
     ...
     processor :'OrganizationalUnitPropertyProcessors',
@@ -3738,7 +3738,7 @@ class to implement the computed properties on the `OrganistionalUnit`
 entity; this is the exact same design as when we dealt with computing
 the age of the `Employee` entity :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model.extension;
 
 import org.jspresso.framework.model.component.AbstractComponentExtension;
@@ -3790,7 +3790,7 @@ that holds all property processors of the `OrganistionalUnit` entity;
 this is the exact same design as when we dealt with checking the birth
 date of the `Employee` entity :
 
-``` {.java}
+```java
 package org.jspresso.hrsample.model.processor;
 
 import org.jspresso.framework.util.bean.integrity.EmptyPropertyProcessor;
@@ -3879,7 +3879,7 @@ will be managed behind the scene without any extra effort.
 So let's replace the teams view by a master detail view presenting the
 team members in the `view.groovy` :
 
-``` {.groovy}
+```groovy
 listView('Team-teamMembers.list') {
   actionMap {
     actionList('EDIT'){
@@ -4024,7 +4024,7 @@ So let's use the 3 profiles we have collected during the business
 requirement : "organization-manager", "staff-manager" and
 "administrator". We will secure the application workspaces accordingly :
 
-``` {.groovy}
+```groovy
 workspace('employees.workspace',
   ...
   grantedRoles:['administrator','staff-manager']) {
