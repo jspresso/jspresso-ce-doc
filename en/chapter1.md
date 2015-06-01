@@ -13,8 +13,7 @@ handled in [Maven](http://maven.apache.org/). Jspresso also offers a
 Maven archetype to quickly setup your project and import it directly in
 [Eclipse](http://www.eclipse.org/).
 
-Installing the tools
---------------------
+## Installing the tools
 
 Download, install and configure the following tools :
 
@@ -39,8 +38,7 @@ You must also increase the java heap space allocated to Maven :
 -   on linux : `export MAVEN_OPTS=-Xmx512m` (or set it as a user env
     variable)
 
-Generating the skeleton project
--------------------------------
+## Generating the skeleton project
 
 This is a one-step operation using the Jspresso application Maven
 archetype. Move to your Eclipse workspace and perform :
@@ -71,8 +69,7 @@ the needed plugins and dependencies in its local repository. Just wait
 for the “BUILD SUCCESSFUL” message and you should have a packaged
 `hrsample-webapp.war` in the `hrsample/webapp/target/` directory.
 
-Importing the project in Eclipse
---------------------------------
+## Importing the project in Eclipse
 
 Follow the [installation steps](http://www.jspresso.org/page/crud-application-5-minutes) described on the Jspresso site and
 then import the project skeleton you've generated using the M2Eclipse
@@ -81,8 +78,7 @@ project import wizard.
 The development environment is now set-up. We can begin the Human
 Resources sample application coding.
 
-The human resources (HR) sample application
-===========================================
+# The human resources (HR) sample application
 
 The human resources application is a simple yet comprehensive business
 application targeted at managing a company organization and the
@@ -92,8 +88,7 @@ the end-user for manipulation through various built-in views and
 actions, handle security through profile management, distribute the
 frontend across the network, ...
 
-The domain model
-----------------
+## The domain model
 
 To quickly introduce the HR domain model, let's dive into the following
 UML class diagrams. As a general rule to make the diagrams more
@@ -186,8 +181,7 @@ A few hints :
 
 ![Organization class diagram](../uml/organization-cd.PNG)
 
-The application workspaces
---------------------------
+## The application workspaces
 
 The HR application is divided in 3 workspaces.
 
@@ -211,8 +205,7 @@ company employees and create/update/delete an employee.
 This module manages the application master data. As of now, the master
 data are only made of the cities available to compose the addresses.
 
-The profiles
-------------
+## The profiles
 
 The HR application offers 3 profiles.
 
@@ -234,8 +227,7 @@ management workspace.
 
 The administrator profile has no restriction in the application.
 
-Layering the application
-========================
+# Layering the application
 
 Now that we have collected the detailed specifications, it's time to
 feed the framework with them. As we saw before, most of the job will
@@ -269,8 +261,7 @@ layering strategy.
 
 Let's define now what precisely go in these layers.
 
-The domain model
-----------------
+## The domain model
 
 The domain model includes :
 
@@ -297,8 +288,7 @@ We will see later that there virtually any domain model can be
 extensively described using Jspresso. This includes for instance
 polymorphic entities or associations, multiple inheritance, and so on.
 
-The backend
------------
+## The backend
 
 The backend includes all the application parts that do not depend on the
 client :
@@ -318,8 +308,7 @@ client :
 -   The backend controller which holds the user backend application
     state and its configuration (in-memory model state)
 
-The frontend
-------------
+## The frontend
 
 The frontend includes all the application parts that interact directly
 with the end-user :
@@ -334,14 +323,12 @@ with the end-user :
 -   The frontend controller which holds the user frontend application
     state and its configuration (workspaces and modules state)
 
-Describing the domain model
-===========================
+# Describing the domain model
 
 In this chapter, you will learn how to feed the Jspresso framework with
 the sample domain model description.
 
-Using the "Sugar for Jspresso" DSL
-----------------------------------
+## Using the "Sugar for Jspresso" DSL
 
 The preferred way of writing applications is to use the new Jspresso
 Groovy based DSL (Domain Specific Language) : "Sugar for Jspresso" - aka
@@ -388,8 +375,8 @@ conventions. For instance, package names are most of the time inferred
 and you will rarely change the default. This feature makes SJS code much
 more compact and easier to read than plain Spring XML.
 
-Interfaces
-----------
+## Interfaces
+
 
 As a starting point, we will describe the [commons](#commons-cd) model
 part.
@@ -437,8 +424,7 @@ differently depending on the client timezone.The `Traceable` interface
 description is slightly more complicated than the `Nameable` interface
 since not all properties are eligible to cloning (`uncloned`).
 
-Generating the domain model code
---------------------------------
+## Generating the domain model code
 
 It is time now to get our interfaces generated before going further.
 Let's use the Jspresso generation tool to make it happen.
@@ -531,8 +517,7 @@ classes with [hibernate](http://www.hibernate.org/)
 [xDoclet](http://xdoclet.sourceforge.net/xdoclet/index.html) attributes.
 They will be used later to generate the necessary persistence meta-data.
 
-Adding life-cycle behaviour
----------------------------
+## Adding life-cycle behaviour
 
 What about the handling of the `Traceable` properties ? We want them to
 follow the life-cycle of any traceable entity, i.e. :
@@ -622,8 +607,7 @@ component. Note that, by convention, we can ommit the package of the
 TraceableLifecycleInterceptor class, since it will be inferred from the
 current namespace.
 
-Entities
---------
+## Entities
 
 As of now, we have only dealt with interfaces which are not entities by
 themselves. Describing an entity follows the exact same process except
@@ -715,8 +699,7 @@ specifics. But as for `Nameable` and `Traceable`, the `City` entity is
 not more than an interface and its implementation will be completely
 handled by the framework.
 
-Components
-----------
+## Components
 
 A component is a data structure which is intended to be inlined in other
 components or entities. Like entities and interfaces, you can define
@@ -824,8 +807,7 @@ public interface ContactInfo extends
 You might have notice that the `ContactInfo` component is missing
 something : its relationship to the `City` entity.
 
-Unidirectional relationships
-----------------------------
+## Unidirectional relationships
 
 It's time to link our first components together.
 
@@ -1292,8 +1274,7 @@ generated and the get/set pair would of course have used a
 Now that the employees model part is complete, let's deal with the
 organization.
 
-Entity inheritance
-------------------
+## Entity inheritance
 
 The organization model part is the most complex of the example, since it
 involves entity inheritance (and polymorphism) and other kinds of
@@ -1362,8 +1343,7 @@ named "contact". We reference the contact bean as a property of the
 Now that we have described our organization entities, let's link them
 together using relationships.
 
-Bi-directional relationships
-----------------------------
+## Bi-directional relationships
 
 It is time see how the Jspresso framework handles relationships that are
 navigable at both ends.
@@ -1512,8 +1492,7 @@ will have the corresponding collection accessors generated and whenever
 one side of the relationship is updated, the other one will also reflect
 the change.
 
-Component services
-------------------
+## Component services
 
 As of now, we have only dealt with Jspresso component properties. There
 might be situations where you want (or you need) your domain model
@@ -1630,8 +1609,7 @@ Again, Jspresso will seamlessly take care of triggering the delegates'
 methods, passing the right parameters, whenever the service is requested
 on the target component.
 
-Computed properties
--------------------
+## Computed properties
 
 Not all properties have a representation in the persistent store. Some
 of them may be computed using other parts of the domain model. For
@@ -1808,8 +1786,7 @@ The key advantages of this type of modularization are :
 -   Ease of monitoring and testing. The code responsible of the
     implementation can be easily instrumented.
 
-Property processors
--------------------
+## Property processors
 
 A clean and efficient domain model design assigns to the business
 objects the responsibility of maintaining their integrity.
@@ -1983,8 +1960,7 @@ processors inherit from the `EmptyPropertyProcessor` adapter class which
 provide empty implementations for all required methods and then to
 override the method you want to provide an implementation for.
 
-Hibernate mapping
------------------
+## Hibernate mapping
 
 This is actually nothing to do. When you compiled the project with
 maven, all the Hibernate mapping files were automatically generated by
@@ -1993,8 +1969,7 @@ folder that is already declared as a source folder in the Eclipse
 project. You might have a look to the generated files to chack how
 Jspresso translated your model description into Hibernate mapping files.
 
-Describing the views
-====================
+# Describing the views
 
 Now that we designed the complete domain model, it is time to make it
 available to the end-user. So we need to design the views that will be
@@ -2050,8 +2025,7 @@ the tool. No further configuration is needed.
 
 We can now begin to describe our first views.
 
-Component views
----------------
+## Component views
 
 One of the most heavily used type of view is the form-like component
 view. We will see in this section how to describe, translate and further
@@ -2256,8 +2230,7 @@ higher priority) :
     properties. In that case, the inlined components are splitted as we
     saw it for the first shot.
 
-Composite views
----------------
+## Composite views
 
 Now that we have seen how to provide the end-user with basic component
 editing, we need to compose these views into more complex ones. As an
@@ -2426,8 +2399,7 @@ won't detail them in this section, the following enumeration lists them
     This is certainly the most complex composite view descriptor but
     also the most powerful one.
 
-Collection views
-----------------
+## Collection views
 
 The next step in our frontend development is to display (and edit)
 collection relationships between components. We will achieve this using
@@ -2643,8 +2615,7 @@ go one step further by presenting to the end-user a hierarchical tree
 view of the organization. This is what we are going to achieve in the
 next section.
 
-Tree views
-----------
+## Tree views
 
 Tree views are certainly the most complicated but also the most
 intuitive type of view to display and manage a structured model. Anyone
@@ -2737,8 +2708,7 @@ Jspresso allows you aggregate the 2 simple tree levels (projects and
 team members) into a composite tree level and make this composite tree
 level the child level of the team tree level.
 
-Other types of views
---------------------
+## Other types of views
 
 Jspresso offers many other types of views to build arbitrarily complex
 views to enhance the user experience. We won't describe theme in detail
@@ -2752,8 +2722,7 @@ framework work for you.
 
 It's time now to get our application really up and running.
 
-Wiring the application
-======================
+# Wiring the application
 
 As we saw it at the beginning of this tutorial, a Jspresso based
 application is cleanly organized into 4 separate layers :
@@ -2793,8 +2762,7 @@ application is cleanly organized into 4 separate layers :
 We have already covered in details the model and view layers in this
 tutorial. This section will address the backend and frontend layers.
 
-Configuring the backend layer
------------------------------
+## Configuring the backend layer
 
 ### The backend controller
 
@@ -2885,8 +2853,7 @@ hibernate aware backend relying on our domain model.
 The next phase consists in setting up the configuration for the
 frontend.
 
-Configuring the frontend layer
-------------------------------
+## Configuring the frontend layer
 
 In this section, we will go through the different steps to finally have
 our application up and running.
@@ -3112,8 +3079,7 @@ authorizations and how the framework will handle it for you with very
 little configuration. But before getting there, we need to install some
 application workspaces and modules.
 
-Creating and registering application workspaces and modules
-===========================================================
+# Creating and registering application workspaces and modules
 
 Before getting further in this section, let's first agree on what
 application workspaces and modules are. Jspresso defines an application
@@ -3147,8 +3113,7 @@ There are 3 different categories of modules :
     The contained java beans collection can be accessed (get / set) at
     any time and the projected view model gets updated accordingly.
 
-The master data management workspace
-------------------------------------
+## The master data management workspace
 
 The first workspace we will create and register is the master data
 management workspace. It will offer simple C.R.U.D. (**C**reate
@@ -3201,14 +3166,46 @@ selected one to edit it in a more convenient form, reset the list, ...
 And if you turn on logging for the executed SQL, you will see all your
 statements transmitted to the backend database. The screenshots below
 captures some of the actions we have just talked about.
+        
 
-  ------------------------------------------------------------------------- ------------------------------------------------------------------------------------
-  1- We have just lauched the module.                                       2- We are saving 3 cities we've just created.
-  3- We are querying the database applying a filter.                        4- We are going to edit one of the cities individually in a form.
-  5- We have installed one of the city in the module tree and we edit it.   6- We reset the module content (the database, of course, still contains the data).
-  ------------------------------------------------------------------------- ------------------------------------------------------------------------------------
-
-  : Some screenshots of the master data management workspace
+<table summary="Some screenshots of the master data management
+          workspace" border="1" cellpadding="5">
+  <colgroup>
+    <col width="50%">
+    <col width="50%">
+  </colgroup>
+  <tbody>
+  <tr>
+    <td>1- We have just lauched the module.
+      <img src="../screenshots/Masterdata-module.jpg" align="middle">
+    </td>
+    <td>2- We are saving 3 cities we've just
+      created.
+      <img src="../screenshots/Masterdata-module-3cities.jpg" align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>3- We are querying the database applying a
+      filter.
+      <img src="../screenshots/Masterdata-module-filter.jpg" align="middle">
+    </td>
+    <td>4- We are going to edit one of the cities individually
+      in a form.
+      <img src="../screenshots/Masterdata-module-open.jpg" align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>5- We have installed one of the city in the module tree
+      and we edit it.
+      <img src="../screenshots/Masterdata-module-single.jpg" align="middle">
+    </td>
+    <td>6- We reset the module content (the database, of
+      course, still contains the data).
+      <img src="../screenshots/Masterdata-module-reloaded.jpg" align="middle">
+    </td>
+  </tr>
+  </tbody>
+</table>
 
 Next step will consist in structuring a little bit more the module tree.
 
@@ -3338,8 +3335,7 @@ Jspresso application i.e. controller (when the application starts)
 workspace (when the workspace is opened for the first time) and modules
 (when the module is first selected).
 
-Improving the development lifecycle : setting-up test data on startup
----------------------------------------------------------------------
+## Improving the development lifecycle : setting-up test data on startup
 
 One thing that you might have noticed is that the usage of an in-memory
 development database leads to a waste of time creating sample data to
@@ -3597,8 +3593,7 @@ public class SwingDevApplicationStartup extends SwingApplicationStartup {
 Before actually launching the application, we persist the test data
 produced by the test data persister.
 
-Developing the remaining workspaces
------------------------------------
+## Developing the remaining workspaces
 
 In this section, we will create and register the remaining workspaces
 and modules to work on the employees and the organization design. We
@@ -3621,14 +3616,55 @@ lines).
 
 So let's navigate through the employees workspace :
 
-  ------------------------------------------------ ---------------------------------------------------------------------------
-  1- We have just launched the module.             2- We are querying employees filtering their address city and birth date.
-  3- We are editing a single employee in a form.   4- This form gives access to the events of the edited employee.
-  5- We can copy an event entity.                  6- And paste it to another employee.
-  7- Or maybe read an event text from a file.      8- And even save the event text to a file.
-  ------------------------------------------------ ---------------------------------------------------------------------------
-
-  : Some screenshots of the employees management workspace
+<table summary="Some screenshots of the employees management
+          workspace" border="1" cellpadding="5">
+  <colgroup>
+    <col width="50%">
+    <col width="50%">
+  </colgroup>
+  <tbody>
+  <tr>
+    <td>1- We have just launched the module.
+      <img src="../screenshots/Employees-module.jpg" align="middle">
+    </td>
+    <td>2- We are querying employees filtering their address
+      city and birth date.
+      <img src="../screenshots/Employees-module-filter.jpg" align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>3- We are editing a single employee in a
+      form.
+      <img src="../screenshots/Employees-module-single.jpg" align="middle">
+    </td>
+    <td>4- This form gives access to the events of the edited
+      employee.
+      <img src="../screenshots/Employees-module-single-events.jpg"
+           align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>5- We can copy an event entity.
+      <img src="../screenshots/Employees-module-single-event-copy.jpg"
+           align="middle">
+    </td>
+    <td>6- And paste it to another employee.
+      <img src="../screenshots/Employees-module-single-event-paste.jpg"
+           align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>7- Or maybe read an event text from a file.
+      <img src="../screenshots/Employees-module-single-event-read.jpg"
+           align="middle">
+    </td>
+    <td>8- And even save the event text to a file.
+      <img src="../screenshots/Employees-module-single-event-save.jpg"
+           align="middle">
+    </td>
+  </tr>
+  </tbody>
+</table>
 
 ### The organization management workspace
 
@@ -3648,12 +3684,34 @@ So let's navigate through the organization workspace.
 You will find below the screenshots of companies management module; they
 are somehow familiar now.
 
-  ----------------------------------------------- -----------------------------------------------------------------------------------------------
-  1- We have just launched the module.            2- We are querying companies without any filter.
-  3- We are editing a single company in a form.   4- The second tab in the company view gives a tree overview of the current company structure.
-  ----------------------------------------------- -----------------------------------------------------------------------------------------------
-
-  : Some screenshots of the organization management workspace
+<table summary="Some screenshots of the organization management
+            workspace" border="1" cellpadding="5">
+  <colgroup>
+    <col width="50%">
+    <col width="50%">
+  </colgroup>
+  <tbody>
+  <tr>
+    <td>1- We have just launched the module.
+      <img src="../screenshots/Companies-module.jpg" align="middle">
+    </td>
+    <td>2- We are querying companies without any
+      filter.
+      <img src="../screenshots/Companies-module-filter.jpg" align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>3- We are editing a single company in a
+      form.
+      <img src="../screenshots/Companies-module-single.jpg" align="middle">
+    </td>
+    <td>4- The second tab in the company view gives a tree
+      overview of the current company structure.
+      <img src="../screenshots/Companies-module-single_tree.jpg" align="middle">
+    </td>
+  </tr>
+  </tbody>
+</table>
 
 Within this module, there is a business rule that needs some
 investigation. Remember the `OrganizationalUnit` abstract entity
@@ -3840,12 +3898,39 @@ the demonstration, we have created a second company along with an
 employee and we will try to use this new employee as the manager in one
 of the sample departments.
 
-  ------------------------------------------------------------------------------ ----------------------------------------------------------------------------------------------
-  1- We will trigger the list of value to change the department manager.         2- The LOV dialog opens with a pre-initialized filter containing the department company.
-  3- Let's reset the filter, and search for the employee of the other company.   4- Select it as the new manager; the business rule is violated and the end-user is notified.
-  ------------------------------------------------------------------------------ ----------------------------------------------------------------------------------------------
-
-  : Some screenshots to show the manager business rule enforcement
+<table summary="Some screenshots to show the manager business rule
+            enforcement" border="1" cellpadding="5">
+  <colgroup>
+    <col width="50%">
+    <col width="50%">
+  </colgroup>
+  <tbody>
+  <tr>
+    <td>1- We will trigger the list of value to change the
+      department manager.
+      <img src="../screenshots/Companies-module-single-manager-lov.jpg"
+                                                   align="middle">
+    </td>
+    <td>2- The LOV dialog opens with a pre-initialized filter
+      containing the department company.
+      <img src="../screenshots/Companies-module-single-manager-lov-open.jpg"
+                                                   align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>3- Let's reset the filter, and search for the
+      employee of the other company.
+      <img src="../screenshots/Companies-module-single-manager-lov-search.jpg"
+                                                   align="middle">
+    </td>
+    <td>4- Select it as the new manager; the business rule is
+      violated and the end-user is notified.
+      <img src="../screenshots/Companies-module-single-manager-lov-error.jpg"
+                                                   align="middle">
+    </td>
+  </tr>
+  </tbody>
+</table>
 
 #### Managing team members
 
@@ -3942,13 +4027,51 @@ normally require hundreds !
 
 The following screenshots shows the result :
 
-  ------------------------------------------------------------------------- -------------------------------------------------------------------------------------------
-  1- We display a company organization. notice our new team members view.   2- Notice how the 2 actions have been installed and configured (e.g. icons and tooltips).
-  3- Let's trigger the employee selection. The filter is pre-initialized.   4- Search for employees filtering on name.
-  5- Select one of the employee. The team members is updated.               4- Since it is a N-N relationship, the added employee still belongs to its former teams.
-  ------------------------------------------------------------------------- -------------------------------------------------------------------------------------------
-
-  : Some screenshots to show the team members management
+<table summary="Some screenshots to show the team members
+            management" border="1" cellpadding="5">
+  <colgroup>
+    <col width="50%">
+    <col width="50%">
+  </colgroup>
+  <tbody>
+  <tr>
+    <td>1- We display a company organization. notice our new
+      team members view.
+      <img src="../screenshots/Companies-module-single-team-members.jpg"
+                                                   align="middle">
+    </td>
+    <td>2- Notice how the 2 actions have been installed and
+      configured (e.g. icons and tooltips).
+      <img src="../screenshots/Companies-module-single-team-members-2.jpg"
+                                                   align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>3- Let's trigger the employee selection. The filter
+      is pre-initialized.
+      <img src="../screenshots/Companies-module-single-team-members-lov.jpg"
+                                                   align="middle">
+    </td>
+    <td>4- Search for employees filtering on
+      name.
+      <img
+          src="../screenshots/Companies-module-single-team-members-lov-search.jpg" align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td>5- Select one of the employee. The team members is
+      updated.
+      <img src="../screenshots/Companies-module-single-team-members-3.jpg"
+                                                   align="middle">
+    </td>
+    <td>4- Since it is a N-N relationship, the added employee
+      still belongs to its former teams.
+      <img src="../screenshots/Companies-module-single-team-members-4.jpg"
+                                                   align="middle">
+    </td>
+  </tr>
+  </tbody>
+</table>
 
 Jspresso comes with tens of configurable built-in actions like the ones
 we've just used (wizards, user decisions through pop-ups to control the
@@ -3960,8 +4083,7 @@ have the option to write your own actions leveraging the full power of
 the framework with a whole set of abstract action classes to inherit
 from.
 
-Securing the application access : Authorization
------------------------------------------------
+## Securing the application access : Authorization
 
 As we covered it before, securing an application requires 2 features :
 authentication and authorization. We've already discussed about
@@ -4087,8 +4209,7 @@ hide all the tracing properties unless the logged-in user is
 tracing property descriptors and all your GUI will be instantly
 impacted.
 
-Packaging and deploying
-=======================
+# Packaging and deploying
 
 Last but not least, we need to package and deploy the final application.
 Choosing the target environment highly depends on the requirements.
@@ -4096,8 +4217,7 @@ Jspresso supports as of now 5 different deployment scenarios : Swing,
 AJAX ([qooxdoo](http://qooxdoo.org)) and Flash
 ([Flex](http://flex.org/)).
 
-A quick overview of options
----------------------------
+## A quick overview of options
 
 For swing you should simply package your application classes and
 resources in a jar (or multiple jars) and distribute it on the clients
@@ -4165,8 +4285,7 @@ Whatever option you take to deploy your Jspresso application (you may
 choose all of them), everything is already prepared in the project and
 the Maven build will take care of every complicated packaging steps.
 
-Packaging the application WAR archive
--------------------------------------
+## Packaging the application WAR archive
 
 Surely the shortest section of the manual. Just launch :
 
@@ -4178,8 +4297,7 @@ project is also ready to to be used in Eclipse WTP. Just add it to the
 Eclipse managed Tomcat you've created when setting-up the development
 environment and start the server.
 
-Deploying to the application server
------------------------------------
+## Deploying to the application server
 
 Now that you have a complete WAR archive, it is time to deploy it in the
 application server. This step highly depends on the application server
@@ -4231,4 +4349,3 @@ qooxdoo library !
 Congratulations! we have now closed the circle and in tenth of the
 effort usually required to achieve the equivalent, we developped and
 deployed a multi-channel, distributed desktop-like business application.
-
