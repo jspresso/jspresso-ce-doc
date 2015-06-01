@@ -5,8 +5,7 @@ application framework and how to work with it.
 
 <!-- toc -->
 
-Setting-up the development environment
-======================================
+# Setting-up the development environment
 
 One of the interesting feature of Jspresso is its native integration
 with standard build tools. All the complex build process is completely
