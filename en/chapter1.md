@@ -17,25 +17,25 @@ Maven archetype to quickly setup your project and import it directly in
 
 Download, install and configure the following tools :
 
--   The [Java Development
+- The [Java Development
     Kit](http://java.sun.com/javase/downloads/index.jsp) for your
     platform (JDK 6+).
 
--   The [Apache Maven](http://maven.apache.org/download.html) project
+- The [Apache Maven](http://maven.apache.org/download.html) project
     management tool (3.0+).
 
--   The [Eclipse IDE for Java EE
+- The [Eclipse IDE for Java EE
     Developers](http://www.eclipse.org/downloads/) (3.6+).
 
--   the [Apache Tomcat servlet
+- the [Apache Tomcat servlet
     container](http://tomcat.apache.org/download-60.cgi) (6.0+).
 
 You must also increase the java heap space allocated to Maven :
 
--   on windows : `set MAVEN_OPTS=-Xmx512m` (or set it as a user env
+- on windows : `set MAVEN_OPTS=-Xmx512m` (or set it as a user env
     variable)
 
--   on linux : `export MAVEN_OPTS=-Xmx512m` (or set it as a user env
+- on linux : `export MAVEN_OPTS=-Xmx512m` (or set it as a user env
     variable)
 
 ## Generating the skeleton project
@@ -43,26 +43,26 @@ You must also increase the java heap space allocated to Maven :
 This is a one-step operation using the Jspresso application Maven
 archetype. Move to your Eclipse workspace and perform :
 
--   `mvn archetype:generate
+- `mvn archetype:generate
               -DarchetypeCatalog=http://repository.jspresso.org/maven2/`
 
 And choose the “Jspresso Application Archetype”.
 
 Then fill-in the questions with the following answers :
 
--   “groupId” : `org.jspresso.hrsample`
+- “groupId” : `org.jspresso.hrsample`
 
--   “artifactId” : `hrsample`
+- “artifactId” : `hrsample`
 
--   “package” : `org.jspresso.hrsample`
+- “package” : `org.jspresso.hrsample`
 
--   “version” : `1.0-SNAPSHOT`
+- “version” : `1.0-SNAPSHOT`
 
 This will generate a complete project ready to be compiled and packaged
 under the `hrsample/` directory. So move to the generated directory and
 type :
 
--   `mvn package`
+- `mvn package`
 
 The operation may take some time to finish since Maven will download all
 the needed plugins and dependencies in its local repository. Just wait
@@ -99,23 +99,23 @@ interfaces and classes.
 
 A few hints :
 
--   The traceable interface is implemented by entities for which we need
+- The traceable interface is implemented by entities for which we need
     to record when it was saved for the first time and when it was last
     updated. Of course, these tracing elements must be made read-only to
     the end-user since they are automatically managed by the
     application.
 
--   The nameable is implemented by entities having a name. A name has a
+- The nameable is implemented by entities having a name. A name has a
     max length of 64 characters and is mandatory. Nameable implements a
     service which formats its name (a really simple service only for
     demonstration purpose).
 
--   The contact information component is used by entities that have
+- The contact information component is used by entities that have
     contact details (address, phone, email, ...). A contact information
     points to one and only one city. A city is nameable and has a zip
     code of maximum length 10 characters.
 
--   An event is a piece of text which is traceable
+- An event is a piece of text which is traceable
 
 ![Commons class diagram](../uml/commons-cd.PNG)
 
@@ -124,34 +124,34 @@ is.
 
 A few hints :
 
--   An employee is nameable and traceable. An employee has :
+- An employee is nameable and traceable. An employee has :
 
-    -   a first name (his last name is inherited by the nameable
+    - a first name (his last name is inherited by the nameable
         interface)
 
-    -   a social security number which is composed by exactly 10 digits
+    - a social security number which is composed by exactly 10 digits
         and which is unique among all employees
 
-    -   a gender (male or female)
+    - a gender (male or female)
 
-    -   a birth date
+    - a birth date
 
-    -   a hire date in the company
+    - a hire date in the company
 
-    -   a contact information
+    - a contact information
 
-    -   a preferred color
+    - a preferred color
 
-    -   a flag indicating if (s)he is married
+    - a flag indicating if (s)he is married
 
-    -   a salary
+    - a salary
 
-    -   a photo
+    - a photo
 
--   An employee must provide a method to compute his age based on his
+- An employee must provide a method to compute his age based on his
     birth date.
 
--   An employee has an ordered list of events.
+- An employee has an ordered list of events.
 
 ![Employees class diagram](../uml/employees-cd.PNG)
 
@@ -160,7 +160,7 @@ company is structured in departments and teams.
 
 A few hints :
 
--   A company is structured in organizational units. An organizational
+- A company is structured in organizational units. An organizational
     unit may be a department or a team. An organizational unit has an
     identifier (*ouId*) which is formed by a 2 letter code followed by a
     dash followed by a 3 digit number (*IS-001* for instance). Each
@@ -169,14 +169,14 @@ A few hints :
     unit. An organizational unit is nameable, traceable and has contact
     information as well as a company has.
 
--   The company may have one or more departments and a department
+- The company may have one or more departments and a department
     belongs to one and only one company.
 
--   A department may have one or more teams and a team belongs to one
+- A department may have one or more teams and a team belongs to one
     and only one department. Each team is composed by one or more
     employees.
 
--   An employee belongs to one and only one company. An employee may
+- An employee belongs to one and only one company. An employee may
     belong to zero or more teams.
 
 ![Organization class diagram](../uml/organization-cd.PNG)
@@ -237,11 +237,11 @@ logical layering of a typical Jspresso application (although these
 practices may generally apply to any well designed application). We will
 define 3 logical layers from the bottom to the top :
 
--   The domain model
+- The domain model
 
--   The backend
+- The backend
 
--   The frontend
+- The frontend
 
 This organisation will help to prevent cyclic dependencies between
 layers since each layer will be allowed to use lower ones but not higher
@@ -265,24 +265,24 @@ Let's define now what precisely go in these layers.
 
 The domain model includes :
 
--   The entities. An entity will be described by :
+- The entities. An entity will be described by :
 
-    -   properties along with their constraints and their interceptors
+    - properties along with their constraints and their interceptors
 
-    -   behaviour (business methods, life-cycle interceptors)
+    - behaviour (business methods, life-cycle interceptors)
 
-    -   integrity enforcements
+    - integrity enforcements
 
-    -   default presentation elements (name, icon, rendered properties,
+    - default presentation elements (name, icon, rendered properties,
         ordering properties)
 
-    -   relationships to other entities (cardinality, reversibility)
+    - relationships to other entities (cardinality, reversibility)
 
--   The components. A component has all the characteristics of an entity
+- The components. A component has all the characteristics of an entity
     except that it is not autonomous since It is designed as a structure
     to be inlined in an entity (e.g. : an address structure).
 
--   Other structural elements like common business interfaces.
+- Other structural elements like common business interfaces.
 
 We will see later that there virtually any domain model can be
 extensively described using Jspresso. This includes for instance
@@ -293,19 +293,19 @@ polymorphic entities or associations, multiple inheritance, and so on.
 The backend includes all the application parts that do not depend on the
 client :
 
--   The actions server parts (which interact with the domain model for
+- The actions server parts (which interact with the domain model for
     instance)
 
--   The application workspaces along with their hierarchy of modules. A
+- The application workspaces along with their hierarchy of modules. A
     workspace is a top application entry point which is directly
     accessible by the end user.
 
--   The application modules. They form a hierarchy since modules may
+- The application modules. They form a hierarchy since modules may
     contain other modules. Each module is an independent application
     part targeted at accessing the backend data (domain model
     manipulation, reporting, ...).
 
--   The backend controller which holds the user backend application
+- The backend controller which holds the user backend application
     state and its configuration (in-memory model state)
 
 ## The frontend
@@ -313,14 +313,14 @@ client :
 The frontend includes all the application parts that interact directly
 with the end-user :
 
--   The views
+- The views
 
--   The action client parts (which handle user interaction and trigger
+- The action client parts (which handle user interaction and trigger
     action server parts)
 
--   The client application module parts
+- The client application module parts
 
--   The frontend controller which holds the user frontend application
+- The frontend controller which holds the user frontend application
     state and its configuration (workspaces and modules state)
 
 # Describing the domain model
@@ -338,11 +338,11 @@ Jspresso. This means that during the build, the SJS authored files are
 "compiled" to generate Spring XML files that are loaded in the Spring
 context beside the legacy ones. So you can :
 
--   develop only using SJS.
+- develop only using SJS.
 
--   develop only using Spring XML.
+- develop only using Spring XML.
 
--   develop using SJS and Spring XML and even reference on one side,
+- develop using SJS and Spring XML and even reference on one side,
     components that are defined on the other side.
 
 For instance, describing your application model will be a matter of
@@ -464,10 +464,10 @@ types.
 
 You should have now the 2 generated classes :
 
--   `Nameable.java` for the Nameable interface (see the [source code
+- `Nameable.java` for the Nameable interface (see the [source code
     below](#Nameable)).
 
--   `Traceable.java` for the Traceable interface.
+- `Traceable.java` for the Traceable interface.
 
 ```java
 package org.jspresso.hrsample.model;
@@ -522,10 +522,10 @@ They will be used later to generate the necessary persistence meta-data.
 What about the handling of the `Traceable` properties ? We want them to
 follow the life-cycle of any traceable entity, i.e. :
 
--   Set the `createTimestamp` when the entity is persisted for the first
+- Set the `createTimestamp` when the entity is persisted for the first
     time.
 
--   Set the `lastUpdateTimestamp` when the entity is updated in the
+- Set the `lastUpdateTimestamp` when the entity is updated in the
     persistent store.
 
 It is time to write our first lines of java to achieve that. Navigate to
@@ -1383,14 +1383,14 @@ will handle the relationship updates behind the scene for you.
 Making the `Company` \<-\> `Department` relationship bi-directional
 implies the following on the `Company` side:
 
-1.  Whenever a department is added to a company through the
+1. Whenever a department is added to a company through the
     `addToDepartments(Department)` adder, the passed-in department will
     have its company property updated accordingly. In the (unexpected)
     case that the department was part of another company, it will be
     removed from its previous company departments before being added to
     the new one.
 
-2.  Whenever a set of departments set as the company departments through
+2. Whenever a set of departments set as the company departments through
     the `setDepartments(Set<Department>)` setter, all the passed-in
     departments will have their company property updated accordingly. In
     the (unexpected) case that the departments were part of other
@@ -1399,7 +1399,7 @@ implies the following on the `Company` side:
     existing departments in the company before the update will have
     their company property reset.
 
-3.  Whenever a department is removed from a company through the
+3. Whenever a department is removed from a company through the
     `removeFromDepartments(Department)` remover, the passed-in
     department will have its company property reset to `null`. In the
     (unexpected) case that the department was part of another company,
@@ -1407,7 +1407,7 @@ implies the following on the `Company` side:
 
 And on the `Department` side :
 
-1.  Whenever a company is set in a department through the
+1. Whenever a company is set in a department through the
     `setCompany(Company)`, the company departments is updated
     accordingly. In the case that the passed-in company is `null`, the
     department will just be removed from its previous company if any.
@@ -1775,15 +1775,15 @@ requested.
 
 The key advantages of this type of modularization are :
 
--   Easy switching between implementations. You might have a mock
+- Easy switching between implementations. You might have a mock
     implementation for the early stage of the development and when the
     job is done, switch with the real one. You could also switch the
     implementations depending on the environment you deploy to.
 
--   Clear separation of concerns allowing an efficient distribution of
+- Clear separation of concerns allowing an efficient distribution of
     work between developers.
 
--   Ease of monitoring and testing. The code responsible of the
+- Ease of monitoring and testing. The code responsible of the
     implementation can be easily instrumented.
 
 ## Property processors
@@ -1793,14 +1793,14 @@ objects the responsibility of maintaining their integrity.
 
 This implies :
 
-1.  Checking a property before it gets actually modified. Trying to set
+1. Checking a property before it gets actually modified. Trying to set
     a value that would compromise the business object integrity must be
     prevented and should raise a clear notification.
 
-2.  Being able to intercept a setter to change the value actually set
+2. Being able to intercept a setter to change the value actually set
     (e.g. ensuring a string is uppercase).
 
-3.  Triggering some extra computation when a property value gets
+3. Triggering some extra computation when a property value gets
     actually updated.
 
 The first point is partially covered by some of the constraints that can
@@ -1819,20 +1819,20 @@ Fortunately, the Jspresso framework allows you to implement property
 processors that can be registered with any property you define on a
 Jspresso managed component. This includes :
 
-1.  Pre-update property processors to cover pre-update controls on
+1. Pre-update property processors to cover pre-update controls on
     setters for scalar, reference and collection properties and adders
     and removers for collection properties.
 
-2.  Interceptors to transform the value before it's actually set on the
+2. Interceptors to transform the value before it's actually set on the
     business object.
 
-3.  Post-update property processors to trigger post-update computations
+3. Post-update property processors to trigger post-update computations
     for scalar, reference and collection properties and adders and
     removers for collection properties.
 
 Let's define some simple integrity constraints on our domain model :
 
--   An employee first name should be automatically formatted like this :
+- An employee first name should be automatically formatted like this :
     first letter capitalized and the remaining letters in lower case;
     this is a setter interceptor on the employee first name property. We
     could have implemented this constraint using a regular expression
@@ -1840,7 +1840,7 @@ Let's define some simple integrity constraints on our domain model :
     compliant first name instead of automatically making it compliant
     through computation.
 
--   An employee can not be hired if he is not at least 18 years old;
+- An employee can not be hired if he is not at least 18 years old;
     this is a pre-update integrity processor on the employee birth date
     property.
 
@@ -1977,9 +1977,9 @@ part of our application. As promised, we won't need a single line of GUI
 code to achieve that. As for the domain model description, the goal will
 be :
 
-1.  To define precisely what we want.
+1. To define precisely what we want.
 
-2.  To assemble descriptor beans in order to translate what has been
+2. To assemble descriptor beans in order to translate what has been
     specified into Jspresso view descriptors.
 
 As far as we begin to deal with GUI, internationalization (I18N) comes
@@ -2077,19 +2077,19 @@ Now, launching the tester will produce the following result :
 
 You will notice several things on the screenshot above :
 
--   The `name` label has been colored in red and has a star marker. It
+- The `name` label has been colored in red and has a star marker. It
     is to indicate that the name property is mandatory as declared
     during the [domain model design](#Nameable_5).
 
--   The `createTimestamp` and `lastUpdateTimestamp` property fields have
+- The `createTimestamp` and `lastUpdateTimestamp` property fields have
     been made non-editable as [we declared them](#Traceable_3).
 
--   The `contact` inlined component has been splitted into its 4
+- The `contact` inlined component has been splitted into its 4
     properties (`address`, `city`, `phone` and `email`). The component
     properties are referred to using a nested property notation like
     *component.property*.
 
--   The `city` property field has been added a list of value (LOV)
+- The `city` property field has been added a list of value (LOV)
     button. This button will bring a dialog box allowing the user to
     look-up available cities and select one.
 
@@ -2102,13 +2102,13 @@ You will notice several things on the screenshot above :
     the search button and the auto-completion are not functional since
     we don't have any backend to rely on.
 
--   Whenever you try to type-in "aze" in the email property field, you
+- Whenever you try to type-in "aze" in the email property field, you
     will obtain the following error message :
 
     This is due to the [constraint we applied on the email
     property](#ContactInfo_2) in the `ContactInfo` inlined component.
 
--   Finally, there are terms that are missing translations in English.
+- Finally, there are terms that are missing translations in English.
     Whenever Jspresso detects such a situation, it will "translate" the
     term using the following pattern *[language:translation key]*. This
     strategy allows for easy and fast identification of missing
@@ -2171,11 +2171,11 @@ And with the French locale :
 
 We certainly need to further customize the company view. This includes :
 
--   Selecting the properties we want to display.
+- Selecting the properties we want to display.
 
--   Ordering the displayed properties.
+- Ordering the displayed properties.
 
--   Spanning properties across multiple columns.
+- Spanning properties across multiple columns.
 
 Assume that we would like to hide the tracing properties since, after
 all, they are technical data. Then, we want to organize the fields in 2
@@ -2222,11 +2222,11 @@ ones declare their own property list.
 To summarize, a component view will display (higher in the list has
 higher priority) :
 
-1.  If set on the view, the `fields` properties.
+1. If set on the view, the `fields` properties.
 
-2.  If set on the model, the `rendered` properties.
+2. If set on the model, the `rendered` properties.
 
-3.  All the properties, in their declaration order except the collection
+3. All the properties, in their declaration order except the collection
     properties. In that case, the inlined components are splitted as we
     saw it for the first shot.
 
@@ -2275,12 +2275,12 @@ We can make the view a little more attractive by adding icons and tool
 tips. Using Jspresso, it is quite straightforward by completing the
 descriptors :
 
--   For the icons, we want to assign an image to the model components
+- For the icons, we want to assign an image to the model components
     themselves so that whenever one of them is used as model, the
     framework may decide to use the image to improve the view
     appearance.
 
--   For the tool tips, it is more linked to the user interface itself,
+- For the tool tips, it is more linked to the user interface itself,
     so we will declare it on the view; but in fact, we will not declare
     a tool tip as such but rather bring a description information to the
     view so that the framework may, at runtime, transform this
@@ -2331,18 +2331,18 @@ Re-launching the view tester displays the following window :
 
 There are several remarks regarding what we have just done :
 
--   Name, description and icons can be used in different layers of the
+- Name, description and icons can be used in different layers of the
     application. Jspresso will then take advantage of these attributes
     to generate tool tips, to place icons, to fill-in labels in the
     following order (higher in the list has higher priority) :
 
-    1.  Name, description and icon image URL (each attribute can be
+    1. Name, description and icon image URL (each attribute can be
         independently overridden) set on the view descriptor.
 
-    2.  Name, description and icon image URL set the model descriptor on
+    2. Name, description and icon image URL set the model descriptor on
         which the view descriptor relies.
 
--   To reference an image to be used as icon, you may use any kind of
+- To reference an image to be used as icon, you may use any kind of
     URL (HTTP, file) but Jspresso provides a very useful, specialized
     URL which is the `classpath:` URL. Such a URL may be used to
     reference any resource present in the application classpath. As an
@@ -2354,7 +2354,7 @@ There are several remarks regarding what we have just done :
     to application external resources and promotes portability across
     deployment environments.
 
--   Whenever you want to link an icon image to a component or a view,
+- Whenever you want to link an icon image to a component or a view,
     you don't have to care about the actual size of the image. The
     framework will dynamically resize it for you at runtime, depending
     of what it wants to use it for. As a general rule, you might
@@ -2368,17 +2368,17 @@ Jspresso offers a rich set of composite view descriptors. Although we
 won't detail them in this section, the following enumeration lists them
 :
 
--   `BasicTabViewDescriptor` (or `tabs` in SJS) to organize sub-views in
+- `BasicTabViewDescriptor` (or `tabs` in SJS) to organize sub-views in
     tabs.
 
--   `BasicBorderViewDescriptor` (or `border` in SJS) to layout up to 5
+- `BasicBorderViewDescriptor` (or `border` in SJS) to layout up to 5
     sub-views at north, south, east, west and center.
 
--   `BasicSplitViewDescriptor` (or `split_[horizontal|vertical]` in SJS)
+- `BasicSplitViewDescriptor` (or `split_[horizontal|vertical]` in SJS)
     to layout 2 sub-view within a separator splitted panel. The
     orientation of the split may be vertical or horizontal.
 
--   `BasicEvenGridViewDescriptor` (or `evenGrid` in SJS) to layout an
+- `BasicEvenGridViewDescriptor` (or `evenGrid` in SJS) to layout an
     arbitrary number of sub-views into a grid with equally sized cells.
     As for component views, you only set up the driving dimension
     (horizontal or vertical), the maximum number of cells in the driving
@@ -2386,15 +2386,15 @@ won't detail them in this section, the following enumeration lists them
     the cells. Whenever the line (or column) reaches the maximum number
     of cells allowed, a new line (or column) is created.
 
--   `BasicConstrainedGridViewDescriptor` (or `grid` in SJS) lets you
+- `BasicConstrainedGridViewDescriptor` (or `grid` in SJS) lets you
     organize sub-views in a grid where each cell behaviour is determined
     by the following attributes :
 
-    -   position (row, column)
+    - position (row, column)
 
-    -   height (row span) and width (column span)
+    - height (row span) and width (column span)
 
-    -   width resizability and height resizability
+    - width resizability and height resizability
 
     This is certainly the most complex composite view descriptor but
     also the most powerful one.
@@ -2477,9 +2477,9 @@ modifies the previous view :
 Using this improved master detail view, we are now able to completely
 manage the departments of a company :
 
--   We can add, remove and duplicate a department.
+- We can add, remove and duplicate a department.
 
--   We copy, cut and paste a department.
+- We copy, cut and paste a department.
 
 Of course, we might need to refine and re-order the department
 properties displayed in the table view. Do you remember what we did
@@ -2506,30 +2506,30 @@ And when we re-launch the view tester :
 There are several things to notice on the screenshot above and that you
 can experiment in the view tester :
 
--   The columns have been refined to match the list of department's
+- The columns have been refined to match the list of department's
     rendered properties.
 
--   Mandatory columns have been marked with an asterisk.
+- Mandatory columns have been marked with an asterisk.
 
--   You can reorder and resize the columns as you wish.
+- You can reorder and resize the columns as you wish.
 
--   Some actions (duplicate, remove, cut and copy) may be applied on 1
+- Some actions (duplicate, remove, cut and copy) may be applied on 1
     selected item but also on a set of selected items; in that case,
     multiple selection is performed by maintaining the CTRL (increase
     selection with an individual item) or the SHIFT (range selection)
     and even both (increase selection with a range) key pressed when
     selecting the table rows.
 
--   You can sort the lines of a table view on 1 column by clicking the
+- You can sort the lines of a table view on 1 column by clicking the
     column header and even on multiple columns (look at the address and
     city columns) by keeping the CTRL key pressed when clicking multiple
     column headers.
 
--   The editable columns have been assigned an editor that matches their
+- The editable columns have been assigned an editor that matches their
     model; this includes associations LOV (see the editing manager cell
     above) and field controls and auto-completion.
 
--   You might right-click on a selected line to open a context menu (not
+- You might right-click on a selected line to open a context menu (not
     shown here) that will give you access to the same actions that are
     present in the tool bar.
 
@@ -2632,13 +2632,13 @@ a tree view is a matter of describing each tree level and assembling
 them. To describe the company organization tree, we are going to declare
 :
 
--   1 tree view : `Company.tree`.
+- 1 tree view : `Company.tree`.
 
--   1 tree level for the `Company` -\> `Department` 1-N relationship :
+- 1 tree level for the `Company` -\> `Department` 1-N relationship :
     `Company-departments.subtree` that will be the first child tree
     level in the company tree.
 
--   1 tree level for the `Department` -\> `Team` 1-N relationship :
+- 1 tree level for the `Department` -\> `Team` 1-N relationship :
     `Department-teams.subtree` that will be the child tree level of the
     previous one.
 
@@ -2727,36 +2727,36 @@ It's time now to get our application really up and running.
 As we saw it at the beginning of this tutorial, a Jspresso based
 application is cleanly organized into 4 separate layers :
 
-1.  The model layer that contains the rich domain business objects
+1. The model layer that contains the rich domain business objects
 
-2.  The view layer that binds to and displays the model
+2. The view layer that binds to and displays the model
 
-3.  The backend layer which is responsible for handling the backend
+3. The backend layer which is responsible for handling the backend
     state and operations providing :
 
-    -   domain business objects manipulation and persistence
+    - domain business objects manipulation and persistence
 
-    -   transaction management
+    - transaction management
 
-    -   rich application session that handles domain state, long running
+    - rich application session that handles domain state, long running
         user transactions (independent from actual technical
         transactions and persistence) and user management
         (identification, credentials, authorizations, ...)
 
-    -   actions backend part (domain services triggering, unit of work
+    - actions backend part (domain services triggering, unit of work
         for handling in-memory transaction-aware domain state)
 
-4.  The frontend layer which is responsible for handling the user
+4. The frontend layer which is responsible for handling the user
     interactions :
 
-    -   user log in
+    - user log in
 
-    -   application starting and access to the various registered
+    - application starting and access to the various registered
         workspaces and modules
 
-    -   construction and display of the views
+    - construction and display of the views
 
-    -   actions frontend part (wizards, success and error notifications,
+    - actions frontend part (wizards, success and error notifications,
         decisions, ...)
 
 We have already covered in details the model and view layers in this
@@ -2905,9 +2905,9 @@ The application is ready to be assembled.
 
 Securing an application is a matter of handling :
 
--   Authentication (is the user the one he pretends to be ?).
+- Authentication (is the user the one he pretends to be ?).
 
--   Authorization (is the user granted access to what he's trying to
+- Authorization (is the user granted access to what he's trying to
     achieve ?).
 
 Both of these topics are extensively covered by the Jspresso framework.
@@ -2921,13 +2921,13 @@ for instance). Jspresso provides all the necessary plumbing to
 seamlessly integrate any JAAS login module and as of this writing, there
 are 3 login modules that come with the framework :
 
--   The development login module which does not require any backend and
+- The development login module which does not require any backend and
     is perfectly suited for development.
 
--   The LDAP login module which authenticates the user against an LDAP
+- The LDAP login module which authenticates the user against an LDAP
     directory.
 
--   The JDBC login module which authenticates the user against a
+- The JDBC login module which authenticates the user against a
     relational database.
 
 You may find many other, freely available, JAAS login modules to meet
@@ -3099,15 +3099,15 @@ sub-module) is an actual application entry point.
 
 There are 3 different categories of modules :
 
--   Simple module : it offers a view (and its attached services) on an
+- Simple module : it offers a view (and its attached services) on an
     arbitrary model (if any).
 
--   Bean module : it offers a view (and its attached services) on a bean
+- Bean module : it offers a view (and its attached services) on a bean
     (maybe an entity but it is not mandatory; it can be any java bean).
     The contained java bean can be accessed (get / set) at any time and
     the projected view model gets updated accordingly.
 
--   Bean collection module : it offers a view (and its attached
+- Bean collection module : it offers a view (and its attached
     services) on a collection of beans (maybe a collection of entities
     but it is not mandatory; it can be any collection of java beans).
     The contained java beans collection can be accessed (get / set) at
@@ -3729,7 +3729,7 @@ same company than the team or department (s)he manages.
 There are several steps to enforce this business rule and ease the
 end-user job :
 
--   A department is directly linked to a company but a team is not; a
+- A department is directly linked to a company but a team is not; a
     team belongs to a company through the department it's part of. This
     is quite a good design regarding the model normalization but we
     might want to enrich the API of the `OrganisationalUnit` entity to
@@ -3737,14 +3737,14 @@ end-user job :
     It is the perfect situation where we need to implement a computed
     `company` property held by the `OrganisationalUnit` entity.
 
--   We need to enforce the company check business rule when setting the
+- We need to enforce the company check business rule when setting the
     manager property on an `OrganisationalUnit` entity. This will ensure
     that any update of the manager property (from the GUI or from any
     other headless interface) will not corrupt the integrity of the
     `OrganisationalUnit` entity. This is easily implemented using a
     property pre-processor.
 
--   We must ease the end-user job in the GUI by pre-initializing the
+- We must ease the end-user job in the GUI by pre-initializing the
     employee filter with the organizational unit company in the manager
     LOV and auto-completion feature.
 
@@ -3948,11 +3948,11 @@ actions without writing a single line of java code !
 
 We will compose 2 actions to manage team members :
 
--   The end-user can select an employee and add it to the selected team.
+- The end-user can select an employee and add it to the selected team.
     Of course, the application must filter the employees of the company
     the team belongs to.
 
--   The end-user can select an existing team member and remove it from
+- The end-user can select an existing team member and remove it from
     the team.
 
 These 2 actions will be presented by a view that lists the team members
@@ -4103,20 +4103,20 @@ the granted roles (you may name them profiles or groups) on the
 application component you want to secure the access to. Among the
 securable application components, you will find :
 
--   Workspaces
+- Workspaces
 
--   Modules
+- Modules
 
--   Actions
+- Actions
 
--   Views
+- Views
 
--   View parts like columns in table views or properties in component
+- View parts like columns in table views or properties in component
     views
 
--   Components (and of course entities)
+- Components (and of course entities)
 
--   Components (and entities) properties
+- Components (and entities) properties
 
 For workspaces, modules and actions, the end-user will be notified that
 he is not granted access to this part of the application.
@@ -4268,10 +4268,10 @@ to code against the Flex API (no MXML, no ActionScript). Jspresso takes
 care at runtime of the frontend display and client/server communication
 through :
 
--   a generic Flex rendering engine that reads everything it needs from
+- a generic Flex rendering engine that reads everything it needs from
     the server side
 
--   a generic communication layer based on
+- a generic communication layer based on
     [BlazeDS](http://opensource.adobe.com/wiki/display/blazeds/BlazeDS/)
     that takes care of exchanging low-level GUI commands back and forth
     with the server.
