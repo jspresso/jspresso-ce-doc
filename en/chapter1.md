@@ -3168,8 +3168,9 @@ statements transmitted to the backend database. The screenshots below
 captures some of the actions we have just talked about.
         
 
-<table summary="Some screenshots of the master data management
-          workspace" border="1" cellpadding="5">
+<table border="1" cellpadding="5">
+  <caption>Some screenshots of the master data management
+          workspace</caption>
   <colgroup>
     <col width="50%">
     <col width="50%">
@@ -3616,8 +3617,9 @@ lines).
 
 So let's navigate through the employees workspace :
 
-<table summary="Some screenshots of the employees management
-          workspace" border="1" cellpadding="5">
+<table border="1" cellpadding="5">
+  <caption>Some screenshots of the employees management
+          workspace</caption>
   <colgroup>
     <col width="50%">
     <col width="50%">
@@ -3684,8 +3686,9 @@ So let's navigate through the organization workspace.
 You will find below the screenshots of companies management module; they
 are somehow familiar now.
 
-<table summary="Some screenshots of the organization management
-            workspace" border="1" cellpadding="5">
+<table border="1" cellpadding="5">
+  <caption>Some screenshots of the organization management
+            workspace</caption>
   <colgroup>
     <col width="50%">
     <col width="50%">
@@ -3898,8 +3901,9 @@ the demonstration, we have created a second company along with an
 employee and we will try to use this new employee as the manager in one
 of the sample departments.
 
-<table summary="Some screenshots to show the manager business rule
-            enforcement" border="1" cellpadding="5">
+<table border="1" cellpadding="5">
+  <caption>Some screenshots to show the manager business rule
+            enforcement</caption>
   <colgroup>
     <col width="50%">
     <col width="50%">
@@ -4027,8 +4031,9 @@ normally require hundreds !
 
 The following screenshots shows the result :
 
-<table summary="Some screenshots to show the team members
-            management" border="1" cellpadding="5">
+<table border="1" cellpadding="5">
+  <caption>Some screenshots to show the team members
+            management</caption>
   <colgroup>
     <col width="50%">
     <col width="50%">
