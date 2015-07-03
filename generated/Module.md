@@ -137,7 +137,7 @@ A module is an entry point in the application. Modules are organized in
 This type of module keeps a reference on a beans collection. There is no
  assumption made on whether these beans are actually persistent entities or any
  other type of java beans.
- <p>
+ <p/>
  Simple bean collection modules must have their collection of referenced beans
  initialized somehow. There is no standard built-in action to do so, since it
  is highly dependent on what's needed. So it's rather common to have the
@@ -168,7 +168,7 @@ This type of module keeps a reference on a beans collection. There is no
  or even granted roles. The latter means that bean collection modules based
  on forbidden entities will automatically be excluded from the workspace of
  the logged-in user.
- <p>
+ <p/>
  if not explicitly configured, the element component descriptor can be
  inferred from the collection view descriptor configured as projected view
  descriptor.</p></td>
@@ -178,7 +178,7 @@ This type of module keeps a reference on a beans collection. There is no
 <td><p>This property is not used by the module itself, but by built-in actions
  that maybe registered on this module. One of these actions is
  <code>AddBeanAsSubModuleAction</code>.
- <p>
+ <p/>
  This property indicates the view to use whenever the user requests a
  &quot;form-like&quot; view on a collection element. Naturally the
  configured element view descriptor must be backed by a model matching the
