@@ -299,6 +299,10 @@ Default implementation of a criteria factory.
  <strong>triStateBooleanSupported</strong> is set to false, then a <code>false</code> boolean value will simply be
  ignored in the generated criteria.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>useAliasesForJoins</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets use aliases for joins.</p></td>
+</tr>
 </tbody>
 </table>
 
