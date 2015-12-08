@@ -245,14 +245,23 @@ This is a specialized type of bean collection module that provides a filter (
  element component descriptor (QBE filter model).</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>filterExtraViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTabViewDescriptor.html">Basic&#x200B;Tab&#x200B;View&#x200B;Descriptor</a></code></p></td>
+<td><p>This property allow to refine the filter view. If this field is not empty
+ the filter view will be replaced by a tab view containing this view and the
+ view defined bu the {@link #setFilterViewDescriptor(IViewDescriptor)} method.
+
+ If the extra filter view or the filter view is already a tab view, then tab
+ views will be merged to a single tab view.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>filterViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
-<td><p>This property allows to refine the default filer view to re-arrange the
+<td><p>This property allows to refine the default filter view to re-arrange the
  filter fields. Custom filter view descriptors assigned here must not be
  assigned a model descriptor since they will be at runtime. This is because
  the filter component descriptor must be reworked - to adapt comparable
  field structures for instance.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>orderingProperties</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/collection/ESort.html">ESort</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Configures a custom map of ordering properties for the result set. If not
  set, which is the default, the elements ordering properties is used.
@@ -268,28 +277,32 @@ This is a specialized type of bean collection module that provides a filter (
  Ordering properties are considered following their order in the map
  iterator.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>page</strong></p><p><code>Integer</code></p></td>
 <td><p>Delegates to filter.
  <p>
  {@inheritDoc}</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>pageSize</strong></p><p><code>Integer</code></p></td>
 <td><p>Configures a custom page size for the result set. If not set, which is the
  default, the elements default page size is used.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>paginationViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicViewDescriptor.html">Basic&#x200B;View&#x200B;Descriptor</a></code></p></td>
 <td><p>Configures the sub view used to navigate between the pages.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>pagingAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/BackendAction.html">Backend&#x200B;Action</a></code></p></td>
 <td><p>Sets the pagingAction.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>queryComponentDescriptorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/IQueryComponentDescriptorFactory.html">IQuery&#x200B;Component&#x200B;Descriptor&#x200B;Factory</a></code></p></td>
 <td><p>Sets the queryComponentDescriptorFactory.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>queryExtraViewDescriptorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IQueryExtraViewDescriptorFactory.html">IQuery&#x200B;Extra&#x200B;View&#x200B;Descriptor&#x200B;Factory</a></code></p></td>
+<td><p>Sets the queryExtraViewDescriptorFactory.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>queryViewDescriptorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IQueryViewDescriptorFactory.html">IQuery&#x200B;View&#x200B;Descriptor&#x200B;Factory</a></code></p></td>
