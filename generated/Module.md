@@ -246,10 +246,10 @@ This is a specialized type of bean collection module that provides a filter (
 </tr>
 <tr class="even">
 <td align="left"><p><strong>filterExtraViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTabViewDescriptor.html">Basic&#x200B;Tab&#x200B;View&#x200B;Descriptor</a></code></p></td>
-<td><p>This property allow to refine the filter view. If this field is not empty
- the filter view will be replaced by a tab view containing this view and the
+<td><p>This property allow to refine the filter view. If this field is not empty 
+ the filter view will be replaced by a tab view containing this view and the 
  view defined bu the {@link #setFilterViewDescriptor(IViewDescriptor)} method.
-
+ 
  If the extra filter view or the filter view is already a tab view, then tab
  views will be merged to a single tab view.</p></td>
 </tr>
