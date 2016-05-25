@@ -938,7 +938,7 @@ This type of view allows to make an action available as a view and thus
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicCollectionViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`AbstractListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor), [`BasicTableViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTableViewDescriptor)
++ **Sub-types** : [`AbstractListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor), [`AbstractRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor), [`BasicTableViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTableViewDescriptor)
 
 
 
@@ -1034,7 +1034,7 @@ This is the abstract base descriptor of all views used to display a
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractListViewDescriptor.html)
 + **Super-type** : [`BasicCollectionViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor)
-+ **Sub-types** : [`BasicListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor), [`MobileListViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor)
++ **Sub-types** : [`BasicListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor), [`MobileListViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor), [`MobileRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor)
 
 
 
@@ -1183,6 +1183,114 @@ This type of descriptor is used to implement a list view. A list view is a
 <tr class="even">
 <td align="left"><p><strong>showArrow</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets show arrow.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor"></a>MobileRepeaterViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileRepeaterViewDescriptor.html)
++ **Super-type** : [`AbstractListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor)
+
+
+
+This descriptor is used to implement a repeater view. A repeater view displays a
+ collection of components, each one in an arbitrary view that is repeated as necessary.
+
+
+
+<table>
+<caption>MobileRepeaterViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor"></a>AbstractRepeaterViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractRepeaterViewDescriptor.html)
++ **Super-type** : [`BasicCollectionViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor)
++ **Sub-types** : [`BasicRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicRepeaterViewDescriptor)
+
+
+
+This descriptor is used to implement a repeater view. A repeater view displays a
+ collection of components, each one in an arbitrary view that is repeated as necessary.
+ Repeater view supports selection by clicking one of the sections, so it can be used in a master-detail view.
+ It also supports row action by double-clicking one of the sections.
+
+
+
+<table>
+<caption>AbstractRepeaterViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>repeatedViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
+<td><p>Configures the view to be repeated as many times as necessary to match the element count in the model collection.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicRepeaterViewDescriptor"></a>BasicRepeaterViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicRepeaterViewDescriptor.html)
++ **Super-type** : [`AbstractRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor)
+
+
+
+This descriptor is used to implement a repeater view. A repeater view displays a
+ collection of components, each one in an arbitrary view that is repeated as necessary.
+
+
+
+<table>
+<caption>BasicRepeaterViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
