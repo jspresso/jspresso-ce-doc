@@ -87,7 +87,7 @@ This descriptor is used to describe a collection of sibling nodes that each
  mapping a collection of <i>A</i>s and whose children are 2 tree levels
  mapping respectively a collection <i>Y</i>s and <i>Z</i>s, the tree would
  look like :
-
+ 
  <pre>
  parent
    <b>A</b>-1
@@ -113,7 +113,7 @@ This descriptor is used to describe a collection of sibling nodes that each
        <b>Z</b>-3.1
        <b>Z</b>-3.2
  </pre>
-
+ 
  You can notice the intermediary grouping nodes that are installed to visually
  separate the 2 collection families (<i>Y</i> and <i>Z</i>).
 
@@ -157,7 +157,7 @@ This descriptor is used to describe a collection of sibling nodes that only
  without any intermediary grouping node. For instance, given a simple tree
  level mapping a collection of <i>A</i>s and whose child is a tree level
  mapping a collection of <i>B</i>s, the tree would look like :
-
+ 
  <pre>
  parent
    <b>A</b>-1
