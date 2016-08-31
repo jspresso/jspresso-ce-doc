@@ -489,10 +489,14 @@ This is is the base implementation of all &quot;remotable&quot; frontend
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>name</strong></p><p><code>String</code></p></td>
+<td align="left"><p><strong>description</strong></p><p><code>String</code></p></td>
 <td><p></p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>name</strong></p><p><code>String</code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>statusInfo</strong></p><p><code>String</code></p></td>
 <td><p>{@inheritDoc}</p></td>
 </tr>
