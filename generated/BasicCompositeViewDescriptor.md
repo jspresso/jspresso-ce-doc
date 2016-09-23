@@ -96,26 +96,30 @@ Abstract base class for mobile page view descriptors.
 <td><p>Sets i 18 n description.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>i18nHeader</strong></p><p><code>String</code></p></td>
+<td><p>Sets i 18 n header.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>i18nName</strong></p><p><code>String</code></p></td>
 <td><p>Sets i 18 n name.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>mainAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Sets main action.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>pageEndAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Sets page end action.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>swipeLeftAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Sets swipe left action.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>swipeRightAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Sets swipe right action.</p></td>
 </tr>
@@ -367,26 +371,30 @@ A composite view descriptor that aggregates mobile views.
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>i18nHeader</strong></p><p><code>String</code></p></td>
+<td><p>Sets i 18 n header.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>mainAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Sets main action.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>pageEndAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Sets page end action.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets  position.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>swipeLeftAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Sets swipe left action.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>swipeRightAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Sets swipe right action.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>westViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
 <td><p>Not supported in mobile environment.
  <p>
@@ -596,7 +604,7 @@ This composite view arranges its children in tabs. Each tab potentially
  displays a label (that is translated based on the name of the view in the
  tab), an icon (based on the icon of the view in the tab) and a toolTip (based
  on the description of the view in the tab).
- <p>
+ <p/>
  Default cascading order follows the order of nested view registrations in the
  container.
 
@@ -632,11 +640,17 @@ This composite view arranges its children in tabs. Each tab potentially
  <li><code>LABEL</code> for label only</li>
  <li><code>ICON</code> for icon only.</li>
  </ul>
- <p>
+ <p/>
  Default value is <code>ERenderingOptions.LABEL_ICON</code>, i.e. label and
  icon.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>tabSelectionAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
+<td><p>Registers an action that is implicitly triggered every time the tab selection
+ changes on the tab view UI peer. The context of the action execution
+ is the same as if the action was registered in the view action map.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>tabs</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Registers the list of views to be displayed as tabs. The tabs order follows
  the children views order of this list.</p></td>

@@ -1034,7 +1034,7 @@ This is the abstract base descriptor of all views used to display a
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractListViewDescriptor.html)
 + **Super-type** : [`BasicCollectionViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor)
-+ **Sub-types** : [`BasicListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor), [`MobileListViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor), [`MobileRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor)
++ **Sub-types** : [`BasicListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor), [`MobileListViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor)
 
 
 
@@ -1190,46 +1190,11 @@ This type of descriptor is used to implement a list view. A list view is a
 ---
 
 
-#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor"></a>MobileRepeaterViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileRepeaterViewDescriptor.html)
-+ **Super-type** : [`AbstractListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor)
-
-
-
-This descriptor is used to implement a repeater view. A repeater view displays a
- collection of components, each one in an arbitrary view that is repeated as necessary.
-
-
-
-<table>
-<caption>MobileRepeaterViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
 #### <a name="org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor"></a>AbstractRepeaterViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractRepeaterViewDescriptor.html)
 + **Super-type** : [`BasicCollectionViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor)
-+ **Sub-types** : [`BasicRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicRepeaterViewDescriptor)
++ **Sub-types** : [`BasicRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicRepeaterViewDescriptor), [`MobileRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor)
 
 
 
@@ -1277,6 +1242,41 @@ This descriptor is used to implement a repeater view. A repeater view displays a
 
 <table>
 <caption>BasicRepeaterViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor"></a>MobileRepeaterViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileRepeaterViewDescriptor.html)
++ **Super-type** : [`AbstractRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor)
+
+
+
+This descriptor is used to implement a repeater view. A repeater view displays a
+ collection of components, each one in an arbitrary view that is repeated as necessary.
+
+
+
+<table>
+<caption>MobileRepeaterViewDescriptor properties</caption>
 <colgroup>
 <col width="33%" />
 <col width="66%" />
