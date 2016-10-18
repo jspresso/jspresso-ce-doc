@@ -64,6 +64,10 @@ A workspace is an group of functional application modules. You may decide
 <td><p>Sets i 18 n header description.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>i18nPageHeaderDescription</strong></p><p><code>String</code></p></td>
+<td><p>Sets i 18 n page header description.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>iconImageURL</strong></p><p><code>String</code></p></td>
 <td><p>Sets the icon image URL of this workspace. Supported URL protocols include
  :
@@ -73,15 +77,15 @@ A workspace is an group of functional application modules. You may decide
  <li>the <b>classpath:/</b> pseudo URL protocol</li>
  </ul></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>iconPreferredHeight</strong></p><p><code>int</code></p></td>
 <td><p>Sets the icon preferred width.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>iconPreferredWidth</strong></p><p><code>int</code></p></td>
 <td><p>Sets the icon preferred width.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>iconProvider</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/IconProvider.html">Icon&#x200B;Provider</a></code></p></td>
 <td><p>Since a workspace is represented as a tree view of modules, this property
  can be used to customize an icon image URL provider on the created tree
@@ -90,7 +94,7 @@ A workspace is an group of functional application modules. You may decide
  <code>WorkspaceIconImageURLProvider</code>) will setup sensible defaults so
  that it unlikely has to be changed.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>itemSelectionAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Configures the action to be installed as item selection action on the
  rendered module tree view - see
@@ -98,17 +102,23 @@ A workspace is an group of functional application modules. You may decide
  action will then be executed each time a module selection changes in the
  workspace.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>modules</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/Module.html">Module</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Installs a list of module(s) into this workspace. Each module may own
  sub-modules that form a (potentially complex and dynamic) hierarchy, that
  is visually rendered as a tree view.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p></td>
 <td><p>Configures the key used to translate actual internationalized workspace
  name. The resulting translation will be leveraged as the workspace label on
  the UI side.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>pageHeaderDescription</strong></p><p><code>String</code></p></td>
+<td><p>Configures the key used to translate actual internationalized
+ workspace page header description. The resulting translation will generally be
+ leveraged as a textual section that explains the workspace goal.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>permId</strong></p><p><code>String</code></p></td>
