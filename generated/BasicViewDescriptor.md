@@ -1900,7 +1900,7 @@ This specialized property view descriptor is used in order to display a nested c
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>nestedComponentViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IComponentViewDescriptor.html">IComponent&#x200B;View&#x200B;Descriptor</a></code></p></td>
+<td align="left"><p><strong>nestedComponentViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
 <td><p>Sets nested component view descriptor.</p></td>
 </tr>
 </tbody>
