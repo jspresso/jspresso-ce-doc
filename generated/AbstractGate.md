@@ -40,7 +40,7 @@ This is the base abstract class of all Jspresso built-in gates. Open/close
 
 + **Full name** : [`org.jspresso.framework.util.gate.AbstractModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gate/AbstractModelGate.html)
 + **Super-type** : [`AbstractGate`](#org.jspresso.framework.util.gate.AbstractGate)
-+ **Sub-types** : [`AbstractPropertyModelGate`](#org.jspresso.framework.model.gate.AbstractPropertyModelGate)
++ **Sub-types** : [`AbstractPropertyModelGate`](#org.jspresso.framework.binding.model.AbstractPropertyModelGate)
 
 
 
@@ -71,11 +71,11 @@ This is the base abstract implementation for gates that are model-based.
 ---
 
 
-#### <a name="org.jspresso.framework.model.gate.AbstractPropertyModelGate"></a>AbstractPropertyModelGate
+#### <a name="org.jspresso.framework.binding.model.AbstractPropertyModelGate"></a>AbstractPropertyModelGate
 
-+ **Full name** : [`org.jspresso.framework.model.gate.AbstractPropertyModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/gate/AbstractPropertyModelGate.html)
++ **Full name** : [`org.jspresso.framework.binding.model.AbstractPropertyModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/binding/model/AbstractPropertyModelGate.html)
 + **Super-type** : [`AbstractModelGate`](#org.jspresso.framework.util.gate.AbstractModelGate)
-+ **Sub-types** : [`BooleanPropertyModelGate`](#org.jspresso.framework.model.gate.BooleanPropertyModelGate), [`EnumerationPropertyModelGate`](#org.jspresso.framework.model.gate.EnumerationPropertyModelGate), [`RegexPropertyModelGate`](#org.jspresso.framework.model.gate.RegexPropertyModelGate)
++ **Sub-types** : [`BooleanPropertyModelGate`](#org.jspresso.framework.binding.model.BooleanPropertyModelGate), [`EnumerationPropertyModelGate`](#org.jspresso.framework.binding.model.EnumerationPropertyModelGate), [`RegexPropertyModelGate`](#org.jspresso.framework.binding.model.RegexPropertyModelGate)
 
 
 
@@ -124,11 +124,10 @@ This is the base abstract class of gates whose opening rules are based on a
 ---
 
 
-#### <a name="org.jspresso.framework.model.gate.BooleanPropertyModelGate"></a>BooleanPropertyModelGate
+#### <a name="org.jspresso.framework.binding.model.BooleanPropertyModelGate"></a>BooleanPropertyModelGate
 
-+ **Full name** : [`org.jspresso.framework.model.gate.BooleanPropertyModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/gate/BooleanPropertyModelGate.html)
-+ **Super-type** : [`AbstractPropertyModelGate`](#org.jspresso.framework.model.gate.AbstractPropertyModelGate)
-+ **Sub-types** : 
++ **Full name** : [`org.jspresso.framework.binding.model.BooleanPropertyModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/binding/model/BooleanPropertyModelGate.html)
++ **Super-type** : [`AbstractPropertyModelGate`](#org.jspresso.framework.binding.model.AbstractPropertyModelGate)
 
 
 
@@ -165,11 +164,10 @@ This gate opens and closes based on the value of a boolean property of the
 ---
 
 
-#### <a name="org.jspresso.framework.model.gate.EnumerationPropertyModelGate"></a>EnumerationPropertyModelGate
+#### <a name="org.jspresso.framework.binding.model.EnumerationPropertyModelGate"></a>EnumerationPropertyModelGate
 
-+ **Full name** : [`org.jspresso.framework.model.gate.EnumerationPropertyModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/gate/EnumerationPropertyModelGate.html)
-+ **Super-type** : [`AbstractPropertyModelGate`](#org.jspresso.framework.model.gate.AbstractPropertyModelGate)
-+ **Sub-types** : 
++ **Full name** : [`org.jspresso.framework.binding.model.EnumerationPropertyModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/binding/model/EnumerationPropertyModelGate.html)
++ **Super-type** : [`AbstractPropertyModelGate`](#org.jspresso.framework.binding.model.AbstractPropertyModelGate)
 
 
 
@@ -202,11 +200,10 @@ This gate opens and closes based on the value of an enumeration property
 ---
 
 
-#### <a name="org.jspresso.framework.model.gate.RegexPropertyModelGate"></a>RegexPropertyModelGate
+#### <a name="org.jspresso.framework.binding.model.RegexPropertyModelGate"></a>RegexPropertyModelGate
 
-+ **Full name** : [`org.jspresso.framework.model.gate.RegexPropertyModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/gate/RegexPropertyModelGate.html)
-+ **Super-type** : [`AbstractPropertyModelGate`](#org.jspresso.framework.model.gate.AbstractPropertyModelGate)
-+ **Sub-types** : 
++ **Full name** : [`org.jspresso.framework.binding.model.RegexPropertyModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/binding/model/RegexPropertyModelGate.html)
++ **Super-type** : [`AbstractPropertyModelGate`](#org.jspresso.framework.binding.model.AbstractPropertyModelGate)
 
 
 
