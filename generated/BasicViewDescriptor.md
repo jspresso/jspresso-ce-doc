@@ -1034,7 +1034,7 @@ This is the abstract base descriptor of all views used to display a
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractListViewDescriptor.html)
 + **Super-type** : [`BasicCollectionViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor)
-+ **Sub-types** : [`BasicListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor), [`MobileListViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor)
++ **Sub-types** : [`BasicListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicListViewDescriptor), [`MobileListViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileListViewDescriptor), [`MobileRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor)
 
 
 
@@ -1190,11 +1190,46 @@ This type of descriptor is used to implement a list view. A list view is a
 ---
 
 
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor"></a>MobileRepeaterViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileRepeaterViewDescriptor.html)
++ **Super-type** : [`AbstractListViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractListViewDescriptor)
+
+
+
+This descriptor is used to implement a repeater view. A repeater view displays a
+ collection of components, each one in an arbitrary view that is repeated as necessary.
+
+
+
+<table>
+<caption>MobileRepeaterViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
 #### <a name="org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor"></a>AbstractRepeaterViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractRepeaterViewDescriptor.html)
 + **Super-type** : [`BasicCollectionViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCollectionViewDescriptor)
-+ **Sub-types** : [`BasicRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicRepeaterViewDescriptor), [`MobileRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor)
++ **Sub-types** : [`BasicRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicRepeaterViewDescriptor)
 
 
 
@@ -1242,41 +1277,6 @@ This descriptor is used to implement a repeater view. A repeater view displays a
 
 <table>
 <caption>BasicRepeaterViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor"></a>MobileRepeaterViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileRepeaterViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileRepeaterViewDescriptor.html)
-+ **Super-type** : [`AbstractRepeaterViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractRepeaterViewDescriptor)
-
-
-
-This descriptor is used to implement a repeater view. A repeater view displays a
- collection of components, each one in an arbitrary view that is repeated as necessary.
-
-
-
-<table>
-<caption>MobileRepeaterViewDescriptor properties</caption>
 <colgroup>
 <col width="33%" />
 <col width="66%" />
@@ -1518,7 +1518,7 @@ A mobile map view descriptor.
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicPropertyViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor)
++ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor)
 
 
 
@@ -1868,40 +1868,6 @@ This type of view descriptor is used to display a binary property or a string
 <td><p>Configures the image view to be either cropped or scrollable when the
  display area is too small to display it. A value of <code>true</code>
  (default) means that the image view will be made scrollable.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor"></a>BasicNestedComponentPropertyViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicNestedComponentPropertyViewDescriptor.html)
-+ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
-
-
-
-This specialized property view descriptor is used in order to display a nested component view.
-
-
-
-<table>
-<caption>BasicNestedComponentPropertyViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>nestedComponentViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
-<td><p>Sets nested component view descriptor.</p></td>
 </tr>
 </tbody>
 </table>
