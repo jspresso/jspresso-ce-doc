@@ -255,7 +255,7 @@ Mocks up password change.
 
 
 An action used duplicate a domain object. the cloned domain object is set as model for the current view.
-
+ 
  <pre>
  protected abstract Object cloneElement(Object element,
      Map&lt;String, Object&gt; context)
@@ -372,7 +372,7 @@ An action used in master/detail views to create and add a new detail to a
  master domain object. The only method to be implemented by concrete subclasses
  to retrieve the instances to be added to the master is :
  <p>
-
+ 
  <pre>
  protected abstract List&lt;?&gt;
            getAddedComponents(Map&lt;String, Object&gt; context)
@@ -416,7 +416,7 @@ An action used duplicate a collection of domain objects. Cloning an entity
  Components to clone are retrieved from the context using the selected indices
  of the model collection connector. Actual cloning of components is left to
  concrete implementations that must implement :
-
+ 
  <pre>
  protected abstract Object cloneElement(Object element,
      Map&lt;String, Object&gt; context)
