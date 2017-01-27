@@ -4,7 +4,7 @@
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.FrontendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/FrontendAction.html)
 + **Super-type** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction)
-+ **Sub-types** : [`AbstractChartAction`](#org.jspresso.framework.application.charting.frontend.action.AbstractChartAction), [`AbstractEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction), [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction), [`AbstractModuleDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction), [`AbstractReportAction`](#org.jspresso.framework.application.printing.frontend.action.AbstractReportAction), [`ActionParamToSelectedModelAction`](#org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction), [`AddBeanAsSubModuleFrontAction`](#org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction), [`AddCollectionToMasterAction`](#org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction), [`AddPageAction`](#org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction), [`BinaryPropertyInfoAction`](#org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction), [`ChooseActionAction`](#org.jspresso.framework.application.frontend.action.flow.ChooseActionAction), [`ChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction), [`CloseDialogAction`](#org.jspresso.framework.application.frontend.action.CloseDialogAction), [`CreateEntityFromLovPersistAction`](#org.jspresso.framework.application.frontend.action.lov.CreateEntityFromLovPersistAction), [`DisplayNextPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction), [`DisplayPreviousPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction), [`DisplayUrlAction`](#org.jspresso.framework.application.frontend.action.std.DisplayUrlAction), [`EditSelectionAction`](#org.jspresso.framework.application.frontend.action.EditSelectionAction), [`ExecuteActionAction`](#org.jspresso.framework.application.frontend.action.std.ExecuteActionAction), [`ExitAction`](#org.jspresso.framework.application.frontend.action.workspace.ExitAction), [`ListApplicationElementsAction`](#org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction), [`LoginAction`](#org.jspresso.framework.application.frontend.action.security.LoginAction), [`LovAction`](#org.jspresso.framework.application.frontend.action.lov.LovAction), [`ModalDialogAction`](#org.jspresso.framework.application.frontend.action.ModalDialogAction), [`ModuleRestartAction`](#org.jspresso.framework.application.frontend.action.module.ModuleRestartAction), [`ModuleSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction), [`OkChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction), [`OkLovAction`](#org.jspresso.framework.application.frontend.action.lov.OkLovAction), [`PageOffsetAction`](#org.jspresso.framework.application.frontend.action.std.PageOffsetAction), [`ParentModuleConnectorSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction), [`PrintAction`](#org.jspresso.framework.application.printing.frontend.action.PrintAction), [`QueryFilterModuleAction`](#org.jspresso.framework.application.frontend.action.module.QueryFilterModuleAction), [`RefreshCardViewFrontAction`](#org.jspresso.framework.application.frontend.action.std.RefreshCardViewFrontAction), [`RefreshControllerDescriptionAction`](#org.jspresso.framework.application.frontend.action.controller.RefreshControllerDescriptionAction), [`SaveModuleObjectFrontAction`](#org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction), [`SelectedModelToActionParamAction`](#org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction), [`SetConnectorValueAction`](#org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction), [`TransferToClipboardAction`](#org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction), [`EditSelectedComponentAction.UowRollbackerAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction), [`WizardAction`](#org.jspresso.framework.application.frontend.action.wizard.WizardAction), [`WorkspaceSelectionAction`](#org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction)
++ **Sub-types** : [`AbstractChartAction`](#org.jspresso.framework.application.charting.frontend.action.AbstractChartAction), [`AbstractEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction), [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction), [`AbstractModuleDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction), [`AbstractReportAction`](#org.jspresso.framework.application.printing.frontend.action.AbstractReportAction), [`ActionParamToSelectedModelAction`](#org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction), [`AddBeanAsSubModuleFrontAction`](#org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction), [`AddCollectionToMasterAction`](#org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction), [`AddPageAction`](#org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction), [`BinaryPropertyInfoAction`](#org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction), [`ChooseActionAction`](#org.jspresso.framework.application.frontend.action.flow.ChooseActionAction), [`ChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction), [`CloseDialogAction`](#org.jspresso.framework.application.frontend.action.CloseDialogAction), [`CreateEntityFromLovPersistAction`](#org.jspresso.framework.application.frontend.action.lov.CreateEntityFromLovPersistAction), [`DisplayNextPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction), [`DisplayPreviousPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction), [`DisplayUrlAction`](#org.jspresso.framework.application.frontend.action.std.DisplayUrlAction), [`EditSelectionAction`](#org.jspresso.framework.application.frontend.action.EditSelectionAction), [`ExecuteActionAction`](#org.jspresso.framework.application.frontend.action.std.ExecuteActionAction), [`ExitAction`](#org.jspresso.framework.application.frontend.action.workspace.ExitAction), [`ListApplicationElementsAction`](#org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction), [`LoginAction`](#org.jspresso.framework.application.frontend.action.security.LoginAction), [`LovAction`](#org.jspresso.framework.application.frontend.action.lov.LovAction), [`ModalDialogAction`](#org.jspresso.framework.application.frontend.action.ModalDialogAction), [`ModuleRestartAction`](#org.jspresso.framework.application.frontend.action.module.ModuleRestartAction), [`ModuleSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction), [`OkChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction), [`OkLovAction`](#org.jspresso.framework.application.frontend.action.lov.OkLovAction), [`PageOffsetAction`](#org.jspresso.framework.application.frontend.action.std.PageOffsetAction), [`ParentModuleConnectorSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction), [`PrintAction`](#org.jspresso.framework.application.printing.frontend.action.PrintAction), [`QueryFilterModuleAction`](#org.jspresso.framework.application.frontend.action.module.QueryFilterModuleAction), [`RefreshCardViewFrontAction`](#org.jspresso.framework.application.frontend.action.std.RefreshCardViewFrontAction), [`RefreshControllerDescriptionAction`](#org.jspresso.framework.application.frontend.action.controller.RefreshControllerDescriptionAction), [`RemoveComponentsFromWorkspacesFrontAction`](#org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction), [`SaveModuleObjectFrontAction`](#org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction), [`SelectedModelToActionParamAction`](#org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction), [`SetConnectorValueAction`](#org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction), [`TransferToClipboardAction`](#org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction), [`EditSelectedComponentAction.UowRollbackerAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction), [`WizardAction`](#org.jspresso.framework.application.frontend.action.wizard.WizardAction), [`WorkspaceSelectionAction`](#org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction)
 
 
 
@@ -1236,6 +1236,10 @@ This action lets the user browse his local file system and choose a file to
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>fileMaxSize</strong></p><p><code>Integer</code></p></td>
+<td><p>Sets the file max size.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>fileOpenCallback</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/file/IFileOpenCallback.html">IFile&#x200B;Open&#x200B;Callback</a></code></p></td>
 <td><p>Configures the file open callback instance that will be used to deal with
  the file dialog events. Two methods must be implemented :
@@ -2934,6 +2938,40 @@ Refreshes frontend controller name and description.
 
 <table>
 <caption>RefreshControllerDescriptionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction"></a>RemoveComponentsFromWorkspacesFrontAction
+
++ **Full name** : [`org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/RemoveComponentsFromWorkspacesFrontAction.html)
++ **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
+
+
+
+Remove selected models from workspaces front action.
+
+
+
+<table>
+<caption>RemoveComponentsFromWorkspacesFrontAction properties</caption>
 <colgroup>
 <col width="33%" />
 <col width="66%" />
