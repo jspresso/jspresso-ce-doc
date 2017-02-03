@@ -1518,7 +1518,7 @@ A mobile map view descriptor.
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicPropertyViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicNumberPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor), [`BasicTimePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor)
++ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor)
 
 
 
@@ -1913,41 +1913,6 @@ This specialized property view descriptor is used in order to display a nested c
 ---
 
 
-#### <a name="org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor"></a>BasicNumberPropertyViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicNumberPropertyViewDescriptor.html)
-+ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
-
-
-
-This specialized property view descriptor is used in order to be able to
- refine the &quot;format&quot; that is used to parse and format numbers.
-
-
-
-<table>
-<caption>BasicNumberPropertyViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p></td>
-<td><p>Sets format pattern. Allows to override the default one.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor"></a>BasicStringPropertyViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicStringPropertyViewDescriptor.html)
@@ -2023,41 +1988,6 @@ This specialized property view descriptor is used in order to be able to
  to this reference property view.
  <p/>
  A <code>null</code> value (default) keeps the standard action.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor"></a>BasicTimePropertyViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTimePropertyViewDescriptor.html)
-+ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
-
-
-
-This specialized property view descriptor is used in order to be able to
- refine the &quot;format&quot; that is used to parse and format times.
-
-
-
-<table>
-<caption>BasicTimePropertyViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p></td>
-<td><p>Sets format pattern. Allows to override the default one.</p></td>
 </tr>
 </tbody>
 </table>
