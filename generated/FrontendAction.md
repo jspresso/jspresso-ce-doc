@@ -124,6 +124,11 @@ This is the base class for frontend actions. To get a better understanding of
  menu label, ...).</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>repeatPeriodMillis</strong></p><p><code>Integer</code></p></td>
+<td><p>Sets repeat period in milliseconds. Whenever this is set to a positive integer, the client UI controller should
+ schedule an execution of this action periodically.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>styleName</strong></p><p><code>String</code></p></td>
 <td><p>Assigns the style name to use for this view. The way it is actually
  leveraged depends on the UI channel. It will generally be mapped to some
