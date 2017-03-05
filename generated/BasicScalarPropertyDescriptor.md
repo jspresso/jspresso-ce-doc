@@ -518,16 +518,20 @@ This is the abstract base descriptor of all numeric based properties.
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p></td>
+<td><p>Sets format pattern. Allows to override the default one.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>maxValue</strong></p><p><code>Big&#x200B;Decimal</code></p></td>
 <td><p>Configures the upper bound of the allowed values. Default value is
  <code>null</code>, meaning unbound.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>minValue</strong></p><p><code>Big&#x200B;Decimal</code></p></td>
 <td><p>Configures the lower bound of the allowed values. Default value is
  <code>null</code>, meaning unbound.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>thousandsGroupingUsed</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets thousands grouping used.</p></td>
 </tr>
