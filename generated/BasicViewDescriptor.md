@@ -1531,7 +1531,7 @@ A mobile map view descriptor.
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicPropertyViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicNumberPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor), [`BasicTimePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor)
++ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicNumberPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor), [`BasicStaticTextViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor), [`BasicTimePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor)
 
 
 
@@ -1961,6 +1961,48 @@ This specialized property view descriptor is used in order to be able to
 ---
 
 
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor"></a>BasicStaticTextViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicStaticTextViewDescriptor.html)
++ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
+
+
+
+This type of view descriptor is used to display a static text in a form as if it was a property.
+
+
+
+<table>
+<caption>BasicStaticTextViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>i18nTextKey</strong></p><p><code>String</code></p></td>
+<td><p>Sets i 18 n text key.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>multiLine</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets multi line.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>readOnly</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets read only.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor"></a>BasicStringPropertyViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicStringPropertyViewDescriptor.html)
@@ -1969,7 +2011,7 @@ This specialized property view descriptor is used in order to be able to
 
 
 
-This type of view descriptor is used to display a a string property.
+This type of view descriptor is used to display a string property.
  The objective is to be able to configure an action bound to character typing.
 
 
