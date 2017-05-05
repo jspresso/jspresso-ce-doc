@@ -107,7 +107,13 @@ This is the abstract base class for all property descriptors. It mainly
 </tr>
 <tr class="even">
 <td align="left"><p><strong>filterOnly</strong></p><p><code>boolean</code></p></td>
-<td><p>Sets filter only.</p></td>
+<td><p>Configures whether this property is only used in filters, i.e. it is not persistent and only serves for storing
+ criteria
+ data that can be further leveraged by criteria refiners. Using <code>filterOnly</code> properties relieves the
+ developer
+ from having to declare fake computed properties. see {@link
+ <a href="https://github.com/jspresso/jspresso-ce/issues/253">
+ this request for enhancement</a>}</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>grantedRoles</strong></p><p><code>Collection&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>

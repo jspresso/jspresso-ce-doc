@@ -1987,11 +1987,11 @@ This type of view descriptor is used to display a static text in a form as if it
 <tbody>
 <tr class="odd">
 <td align="left"><p><strong>i18nTextKey</strong></p><p><code>String</code></p></td>
-<td><p>Sets i 18 n text key.</p></td>
+<td><p>Configures the key to be used for getting the translated static text.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>multiLine</strong></p><p><code>boolean</code></p></td>
-<td><p>Sets multi line.</p></td>
+<td><p>Configures the static text to display as multi line. This is <code>false</code> by default.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>readOnly</strong></p><p><code>boolean</code></p></td>
