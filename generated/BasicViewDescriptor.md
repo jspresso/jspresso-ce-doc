@@ -919,11 +919,16 @@ This type of view allows to make an action available as a view and thus
 <tr class="odd">
 <td align="left"><p><strong>action</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Assigns the action to display as a view. The action will typically be
- rendered as a button in the UI. whenever you want to size the icon used to
+ rendered as a button in the UI. Whenever you want to size the icon used to
  display the action (and thus the button peer), you might use the
  <code>preferredWidth</code> / <code>preferredHeight</code> properties.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>actionList</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionList.html">Action&#x200B;List</a></code></p></td>
+<td><p>Assigns the action list to display as a view. The action will typically be
+ rendered as a button bar in the UI.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>renderingOptions</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ERenderingOptions.html">ERendering&#x200B;Options</a></code></p></td>
 <td><p>Indicates how the action should be rendered. This is either a value of the
  <code>ERenderingOptions</code> enum or its equivalent string representation
@@ -1472,11 +1477,16 @@ This descriptor is used to implement a map view.
 <tbody>
 <tr class="odd">
 <td align="left"><p><strong>latitudeProperty</strong></p><p><code>String</code></p></td>
-<td><p>Sets latitude property.</p></td>
+<td><p>Sets the latitude property that will bind to the center of the map view.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>longitudeProperty</strong></p><p><code>String</code></p></td>
-<td><p>Sets longitude property.</p></td>
+<td><p>Sets the longitude property that will bind to the center of the map view.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>routeProperty</strong></p><p><code>String</code></p></td>
+<td><p>Sets route property. This property should return an array of (longitude, latitude) coordinates that will draw a
+ route on the map view. If <code>null</code>, no route is drawn.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1526,7 +1536,7 @@ A mobile map view descriptor.
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicPropertyViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor)
++ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicNumberPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor), [`BasicStaticTextViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor), [`BasicTimePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor)
 
 
 
@@ -1921,6 +1931,83 @@ This specialized property view descriptor is used in order to display a nested c
 ---
 
 
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor"></a>BasicNumberPropertyViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicNumberPropertyViewDescriptor.html)
++ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
+
+
+
+This specialized property view descriptor is used in order to be able to
+ refine the &quot;format&quot; that is used to parse and format numbers.
+
+
+
+<table>
+<caption>BasicNumberPropertyViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p></td>
+<td><p>Sets format pattern. Allows to override the default one.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor"></a>BasicStaticTextViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicStaticTextViewDescriptor.html)
++ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
+
+
+
+This type of view descriptor is used to display a static text in a form as if it was a property.
+
+
+
+<table>
+<caption>BasicStaticTextViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>i18nTextKey</strong></p><p><code>String</code></p></td>
+<td><p>Configures the key to be used for getting the translated static text.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>multiLine</strong></p><p><code>boolean</code></p></td>
+<td><p>Configures the static text to display as multi line. This is <code>false</code> by default.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>readOnly</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets read only.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor"></a>BasicStringPropertyViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicStringPropertyViewDescriptor.html)
@@ -1929,7 +2016,7 @@ This specialized property view descriptor is used in order to display a nested c
 
 
 
-This type of view descriptor is used to display a a string property.
+This type of view descriptor is used to display a string property.
  The objective is to be able to configure an action bound to character typing.
 
 
@@ -1996,6 +2083,41 @@ This specialized property view descriptor is used in order to be able to
  to this reference property view.
  <p/>
  A <code>null</code> value (default) keeps the standard action.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor"></a>BasicTimePropertyViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTimePropertyViewDescriptor.html)
++ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
+
+
+
+This specialized property view descriptor is used in order to be able to
+ refine the &quot;format&quot; that is used to parse and format times.
+
+
+
+<table>
+<caption>BasicTimePropertyViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p></td>
+<td><p>Sets format pattern. Allows to override the default one.</p></td>
 </tr>
 </tbody>
 </table>

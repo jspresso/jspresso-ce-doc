@@ -4,7 +4,7 @@
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.FrontendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/FrontendAction.html)
 + **Super-type** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction)
-+ **Sub-types** : [`AbstractChartAction`](#org.jspresso.framework.application.charting.frontend.action.AbstractChartAction), [`AbstractEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction), [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction), [`AbstractModuleDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction), [`AbstractReportAction`](#org.jspresso.framework.application.printing.frontend.action.AbstractReportAction), [`ActionParamToSelectedModelAction`](#org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction), [`AddBeanAsSubModuleFrontAction`](#org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction), [`AddCollectionToMasterAction`](#org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction), [`AddPageAction`](#org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction), [`BinaryPropertyInfoAction`](#org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction), [`ChooseActionAction`](#org.jspresso.framework.application.frontend.action.flow.ChooseActionAction), [`ChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction), [`CloseDialogAction`](#org.jspresso.framework.application.frontend.action.CloseDialogAction), [`CreateEntityFromLovPersistAction`](#org.jspresso.framework.application.frontend.action.lov.CreateEntityFromLovPersistAction), [`DisplayNextPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction), [`DisplayPreviousPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction), [`DisplayUrlAction`](#org.jspresso.framework.application.frontend.action.std.DisplayUrlAction), [`EditSelectionAction`](#org.jspresso.framework.application.frontend.action.EditSelectionAction), [`ExecuteActionAction`](#org.jspresso.framework.application.frontend.action.std.ExecuteActionAction), [`ExitAction`](#org.jspresso.framework.application.frontend.action.workspace.ExitAction), [`ListApplicationElementsAction`](#org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction), [`LoginAction`](#org.jspresso.framework.application.frontend.action.security.LoginAction), [`LovAction`](#org.jspresso.framework.application.frontend.action.lov.LovAction), [`ModalDialogAction`](#org.jspresso.framework.application.frontend.action.ModalDialogAction), [`ModuleRestartAction`](#org.jspresso.framework.application.frontend.action.module.ModuleRestartAction), [`ModuleSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction), [`OkChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction), [`OkLovAction`](#org.jspresso.framework.application.frontend.action.lov.OkLovAction), [`PageOffsetAction`](#org.jspresso.framework.application.frontend.action.std.PageOffsetAction), [`ParentModuleConnectorSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction), [`PrintAction`](#org.jspresso.framework.application.printing.frontend.action.PrintAction), [`QueryFilterModuleAction`](#org.jspresso.framework.application.frontend.action.module.QueryFilterModuleAction), [`RefreshCardViewFrontAction`](#org.jspresso.framework.application.frontend.action.std.RefreshCardViewFrontAction), [`RefreshControllerDescriptionAction`](#org.jspresso.framework.application.frontend.action.controller.RefreshControllerDescriptionAction), [`SaveModuleObjectFrontAction`](#org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction), [`SelectedModelToActionParamAction`](#org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction), [`SetConnectorValueAction`](#org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction), [`TransferToClipboardAction`](#org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction), [`EditSelectedComponentAction.UowRollbackerAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction), [`WizardAction`](#org.jspresso.framework.application.frontend.action.wizard.WizardAction), [`WorkspaceSelectionAction`](#org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction)
++ **Sub-types** : [`AbstractChartAction`](#org.jspresso.framework.application.charting.frontend.action.AbstractChartAction), [`AbstractEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction), [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction), [`AbstractModuleDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction), [`AbstractReportAction`](#org.jspresso.framework.application.printing.frontend.action.AbstractReportAction), [`ActionParamToSelectedModelAction`](#org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction), [`AddBeanAsSubModuleFrontAction`](#org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction), [`AddCollectionToMasterAction`](#org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction), [`AddPageAction`](#org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction), [`BinaryPropertyInfoAction`](#org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction), [`ChooseActionAction`](#org.jspresso.framework.application.frontend.action.flow.ChooseActionAction), [`ChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction), [`CloseDialogAction`](#org.jspresso.framework.application.frontend.action.CloseDialogAction), [`CreateEntityFromLovPersistAction`](#org.jspresso.framework.application.frontend.action.lov.CreateEntityFromLovPersistAction), [`DisplayNextPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction), [`DisplayPreviousPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction), [`DisplayUrlAction`](#org.jspresso.framework.application.frontend.action.std.DisplayUrlAction), [`EditSelectionAction`](#org.jspresso.framework.application.frontend.action.EditSelectionAction), [`ExecuteActionAction`](#org.jspresso.framework.application.frontend.action.std.ExecuteActionAction), [`ExitAction`](#org.jspresso.framework.application.frontend.action.workspace.ExitAction), [`ListApplicationElementsAction`](#org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction), [`LoginAction`](#org.jspresso.framework.application.frontend.action.security.LoginAction), [`LovAction`](#org.jspresso.framework.application.frontend.action.lov.LovAction), [`ModalDialogAction`](#org.jspresso.framework.application.frontend.action.ModalDialogAction), [`ModuleRestartAction`](#org.jspresso.framework.application.frontend.action.module.ModuleRestartAction), [`ModuleSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction), [`NavigateModuleObjectsAction`](#org.jspresso.framework.application.frontend.action.module.NavigateModuleObjectsAction), [`OkChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction), [`OkLovAction`](#org.jspresso.framework.application.frontend.action.lov.OkLovAction), [`PageOffsetAction`](#org.jspresso.framework.application.frontend.action.std.PageOffsetAction), [`ParentModuleConnectorSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction), [`PrintAction`](#org.jspresso.framework.application.printing.frontend.action.PrintAction), [`QueryFilterModuleAction`](#org.jspresso.framework.application.frontend.action.module.QueryFilterModuleAction), [`RefreshCardViewFrontAction`](#org.jspresso.framework.application.frontend.action.std.RefreshCardViewFrontAction), [`RefreshControllerDescriptionAction`](#org.jspresso.framework.application.frontend.action.controller.RefreshControllerDescriptionAction), [`RemoveComponentsFromWorkspacesFrontAction`](#org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction), [`SaveModuleObjectFrontAction`](#org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction), [`SelectedModelToActionParamAction`](#org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction), [`SetConnectorValueAction`](#org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction), [`TransferToClipboardAction`](#org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction), [`EditSelectedComponentAction.UowRollbackerAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction), [`WizardAction`](#org.jspresso.framework.application.frontend.action.wizard.WizardAction), [`WorkspaceSelectionAction`](#org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction)
 
 
 
@@ -83,10 +83,14 @@ This is the base class for frontend actions. To get a better understanding of
  action.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>hiddenWhenDisabled</strong></p><p><code>Boolean</code></p></td>
+<td><p>Sets hidden when disabled.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>icon</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/Icon.html">Icon</a></code></p></td>
 <td><p>Sets the icon.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>iconImageURL</strong></p><p><code>String</code></p></td>
 <td><p>Sets the icon image URL used to decorate the action UI component peer.
  <p>
@@ -97,38 +101,38 @@ This is the base class for frontend actions. To get a better understanding of
  <li>the <b>classpath:/</b> pseudo URL protocol</li>
  </ul></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>iconPreferredHeight</strong></p><p><code>int</code></p></td>
 <td><p>Sets the icon preferred height.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>iconPreferredWidth</strong></p><p><code>int</code></p></td>
 <td><p>Sets the icon preferred width.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>mnemonicAsString</strong></p><p><code>String</code></p></td>
 <td><p>Configures the mnemonic key used for this action. Support of this feature
  depends on the UI execution platform. Mnemonics are typically used in menu
  and menu items.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>multiSelectionEnabled</strong></p><p><code>boolean</code></p></td>
 <td><p>Declares the action as being able to run on a collection containing more
  than 1 element. A multiSelectionEnabled = false action will be disabled
  when the selection contains no or more than one element.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p></td>
 <td><p>Sets the key used to compute the internationalized name of the action. The
  translated name is then usually used as label for the action (button label,
  menu label, ...).</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>repeatPeriodMillis</strong></p><p><code>Integer</code></p></td>
 <td><p>Sets repeat period in milliseconds. Whenever this is set to a positive integer, the client UI controller should
  schedule an execution of this action periodically.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>styleName</strong></p><p><code>String</code></p></td>
 <td><p>Assigns the style name to use for this view. The way it is actually
  leveraged depends on the UI channel. It will generally be mapped to some
@@ -2679,6 +2683,40 @@ Displays a module, and the corresponding workspace if necessary based on
 ---
 
 
+#### <a name="org.jspresso.framework.application.frontend.action.module.NavigateModuleObjectsAction"></a>NavigateModuleObjectsAction
+
++ **Full name** : [`org.jspresso.framework.application.frontend.action.module.NavigateModuleObjectsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/module/NavigateModuleObjectsAction.html)
++ **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
+
+
+
+Navigates the module objects by selecting the next / previous element.
+
+
+
+<table>
+<caption>NavigateModuleObjectsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>offset</strong></p><p><code>int</code></p></td>
+<td><p>Sets offset.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
 #### <a name="org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction"></a>OkChooseComponentAction
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/lov/OkChooseComponentAction.html)
@@ -2943,6 +2981,40 @@ Refreshes frontend controller name and description.
 
 <table>
 <caption>RefreshControllerDescriptionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction"></a>RemoveComponentsFromWorkspacesFrontAction
+
++ **Full name** : [`org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/RemoveComponentsFromWorkspacesFrontAction.html)
++ **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
+
+
+
+Remove selected models from workspaces front action.
+
+
+
+<table>
+<caption>RemoveComponentsFromWorkspacesFrontAction properties</caption>
 <colgroup>
 <col width="33%" />
 <col width="66%" />
