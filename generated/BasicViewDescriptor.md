@@ -1476,17 +1476,9 @@ This descriptor is used to implement a map view.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>latitudeProperty</strong></p><p><code>String</code></p></td>
-<td><p>Sets the latitude property that will bind to the center of the map view.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>longitudeProperty</strong></p><p><code>String</code></p></td>
-<td><p>Sets the longitude property that will bind to the center of the map view.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>routeProperty</strong></p><p><code>String</code></p></td>
-<td><p>Sets route property. This property should return an array of (longitude, latitude) coordinates that will draw a
- route on the map view. If <code>null</code>, no route is drawn.</p></td>
+<td align="left"><p><strong>mapContentProperty</strong></p><p><code>String</code></p></td>
+<td><p>Sets map content property. The targeted property should return a Json string that describes the markers and the
+ routes to display on the map.</p></td>
 </tr>
 </tbody>
 </table>
