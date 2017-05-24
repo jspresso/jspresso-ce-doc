@@ -73,7 +73,7 @@ This is the base class for all application actions. It establishes the
  same type (i.e. 2 frontend actions or 2 backend actions). Using this scheme
  helps keeping layer dependencies clear. Of course, this dual chaining
  mechanism is completely recursive thus allowing to compose small (generic)
- actions into larger composite ones and promoting reuse.
+ actions into larger composite ones and promoting reusability.
  <p>
  Actions execute on a context (an arbitrary map of objects keyed by
  "well-known" character strings) that is initialized by the controller when
