@@ -101,22 +101,26 @@ Base class for backend application controllers. Backend controllers are
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>actionMonitoringPlugin</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IActionMonitoringPlugin.html">IAction&#x200B;Monitoring&#x200B;Plugin</a></code></p></td>
+<td><p>Sets action monitoring plugin.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>applicationSession</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/session/IApplicationSession.html">IApplication&#x200B;Session</a></code></p></td>
 <td><p>Assigns the application session to this backend controller. This property
  can only be set once and should only be used by the DI container. It will
  rarely be changed from built-in defaults unless you need to specify a
  custom implementation instance to be used.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>asyncActionsThreadGroup</strong></p><p><code>Thread&#x200B;Group</code></p></td>
 <td><p>Sets async actions thread group.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>asyncExecutorsMaxCount</strong></p><p><code>int</code></p></td>
 <td><p>Configures the maximum count of concurrent asynchronous action executors.
  It defaults to <code>10</code>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>carbonEntityCloneFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/entity/IEntityCloneFactory.html">IEntity&#x200B;Clone&#x200B;Factory</a></code></p></td>
 <td><p>Configures the entity clone factory used to carbon-copy entities. An entity
  carbon-copy is an technical copy of an entity, including id and version but
@@ -126,11 +130,11 @@ Base class for backend application controllers. Backend controllers are
  will rarely be changed from built-in defaults unless you need to specify a
  custom implementation instance to be used.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>clientTimeZone</strong></p><p><code>Time&#x200B;Zone</code></p></td>
 <td><p>Sets client time zone.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>collectionFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/component/IComponentCollectionFactory.html">IComponent&#x200B;Collection&#x200B;Factory</a></code></p></td>
 <td><p>Configures the factory responsible for creating entities (or components)
  collections that are held by domain relationship properties. This property
@@ -138,25 +142,25 @@ Base class for backend application controllers. Backend controllers are
  built-in defaults unless you need to specify a custom implementation
  instance to be used.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>customSecurityPlugin</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/security/ISecurityPlugin.html">ISecurity&#x200B;Plugin</a></code></p></td>
 <td><p>Configures a custom security plugin on the controller. The controller
  itself is a security handler and is used as such across most of the
  application layers. Before delegating to the custom security handler, the
  controller will apply role-based security rules that cannot be disabled.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>customTranslationPlugin</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/i18n/ITranslationPlugin.html">ITranslation&#x200B;Plugin</a></code></p></td>
 <td><p>Configures a custom translation plugin on the controller. The controller
  itself is a translation provider and is used as such across most of the
  application layers. The custom translation plugin is used to override the
  default static, bundle-based, i18n scheme.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>dirtyTrackingEnabled</strong></p><p><code>boolean</code></p></td>
 <td><p>{@inheritDoc}</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>entityFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/entity/IEntityFactory.html">IEntity&#x200B;Factory</a></code></p></td>
 <td><p>Configures the entity factory to use to create new entities. Backend
  controllers only accept instances of
@@ -165,27 +169,27 @@ Base class for backend application controllers. Backend controllers are
  Jspresso entity implementations also use the controller from which they
  were created behind the scene.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>modelConnectorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/binding/model/IModelConnectorFactory.html">IModel&#x200B;Connector&#x200B;Factory</a></code></p></td>
 <td><p>Configures the model connector factory to use to create new model
  connectors. Connectors are adapters used by the binding layer to access
  domain model values.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>referenceTimeZoneId</strong></p><p><code>String</code></p></td>
 <td><p>Sets reference time zone id.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>slaveControllerFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/IBackendControllerFactory.html">IBackend&#x200B;Controller&#x200B;Factory</a></code></p></td>
 <td><p>Sets the slaveControllerFactory.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>throwExceptionOnBadUsage</strong></p><p><code>boolean</code></p></td>
 <td><p>Configures the backend controller to throw or not an exception whenever a
  bad usage is detected like manually merging a dirty entity from an ongoing
  UOW.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>transactionTemplate</strong></p><p><code>Transaction&#x200B;Template</code></p></td>
 <td><p>Assigns the Spring transaction template to this backend controller. This
  property can only be set once and should only be used by the DI container.
@@ -196,12 +200,12 @@ Base class for backend application controllers. Backend controllers are
  controller's <code>getTransactionTemplate()</code> method that should be
  used by the service layer for transaction management.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>translationProvider</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/i18n/ITranslationProvider.html">ITranslation&#x200B;Provider</a></code></p></td>
 <td><p>Configures the translation provider used to compute internationalized
  messages and labels.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>userPreferencesStore</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/preferences/IPreferencesStore.html">IPreferences&#x200B;Store</a></code></p></td>
 <td><p>Sets the user preference store.</p></td>
 </tr>

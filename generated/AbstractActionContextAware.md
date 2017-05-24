@@ -3,7 +3,7 @@
 #### <a name="org.jspresso.framework.application.action.AbstractActionContextAware"></a>AbstractActionContextAware
 
 + **Full name** : [`org.jspresso.framework.application.action.AbstractActionContextAware`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/action/AbstractActionContextAware.html)
-+ **Sub-types** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction), [`AbstractLovResultViewDescriptorFactory`](#org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory), [`AbstractLovViewDescriptorFactory`](#org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory), [`ConnectorValueGetterCallback`](#org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback), [`DefaultCriteriaFactory`](#org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory), [`FileToByteArrayCallback`](#org.jspresso.framework.application.frontend.file.FileToByteArrayCallback)
++ **Sub-types** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction), [`AbstractActionMonitoringPlugin`](#org.jspresso.framework.application.action.AbstractActionMonitoringPlugin), [`AbstractLovResultViewDescriptorFactory`](#org.jspresso.framework.application.frontend.action.lov.AbstractLovResultViewDescriptorFactory), [`AbstractLovViewDescriptorFactory`](#org.jspresso.framework.application.frontend.action.lov.AbstractLovViewDescriptorFactory), [`ConnectorValueGetterCallback`](#org.jspresso.framework.application.frontend.file.ConnectorValueGetterCallback), [`DefaultCriteriaFactory`](#org.jspresso.framework.model.persistence.hibernate.criterion.DefaultCriteriaFactory), [`FileToByteArrayCallback`](#org.jspresso.framework.application.frontend.file.FileToByteArrayCallback)
 
 
 
@@ -149,6 +149,42 @@ This is the base class for all application actions. It establishes the
  <i>next</i> one. This is perfectly suited to chain a backend action from a
  frontend action since the control flow will return back to the calling
  layer (the frontend).</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.action.AbstractActionMonitoringPlugin"></a>AbstractActionMonitoringPlugin
+
++ **Full name** : [`org.jspresso.framework.application.action.AbstractActionMonitoringPlugin`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/action/AbstractActionMonitoringPlugin.html)
++ **Super-type** : [`AbstractActionContextAware`](#org.jspresso.framework.application.action.AbstractActionContextAware)
++ **Sub-types** : [`LoggingActionMonitoringPlugin`](#org.jspresso.framework.application.action.LoggingActionMonitoringPlugin)
+
+
+
+Base class of action monitoring plugins. It mainly stores the action call stack in the chain as well as start
+ timestamp and duration.
+
+
+
+<table>
+<caption>AbstractActionMonitoringPlugin properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
