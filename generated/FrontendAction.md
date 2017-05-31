@@ -1298,9 +1298,9 @@ This action lets the user browse the local file system and choose a file to
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>modelPath</strong></p><p><code>String</code></p></td>
+<td><p>Sets model path.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1396,9 +1396,9 @@ This action lets the user browse the local file system and choose a file to
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>modelPath</strong></p><p><code>String</code></p></td>
+<td><p>Sets model path.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1858,9 +1858,9 @@ This action displays information about a binary property content. The
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>modelPath</strong></p><p><code>String</code></p></td>
+<td><p>Sets model path.</p></td>
 </tr>
 </tbody>
 </table>
