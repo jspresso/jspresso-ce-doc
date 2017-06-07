@@ -409,9 +409,9 @@ Describes a property used to store any java <code>Serializable</code> object.
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>modelTypeClassName</strong></p><p><code>String</code></p></td>
+<td><p>Configures the actual property type through its fully qualified name.</p></td>
 </tr>
 </tbody>
 </table>
@@ -518,16 +518,20 @@ This is the abstract base descriptor of all numeric based properties.
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p></td>
+<td><p>Sets format pattern. Allows to override the default one.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>maxValue</strong></p><p><code>Big&#x200B;Decimal</code></p></td>
 <td><p>Configures the upper bound of the allowed values. Default value is
  <code>null</code>, meaning unbound.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>minValue</strong></p><p><code>Big&#x200B;Decimal</code></p></td>
 <td><p>Configures the lower bound of the allowed values. Default value is
  <code>null</code>, meaning unbound.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>thousandsGroupingUsed</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets thousands grouping used.</p></td>
 </tr>
@@ -708,6 +712,11 @@ Describes a string based property.
  ... exactly like non-translatable properties.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>truncate</strong></p><p><code>Boolean</code></p></td>
+<td><p>Configures whether the underlying string property should be truncated
+ automatically if too long. Default value is <code>false</code>.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>upperCase</strong></p><p><code>boolean</code></p></td>
 <td><p>This is a shortcut to implement the common use-case of handling upper-case
  only properties. all incoming values will be transformed to uppercase as if
