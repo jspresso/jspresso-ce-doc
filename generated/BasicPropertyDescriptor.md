@@ -106,16 +106,6 @@ This is the abstract base class for all property descriptors. It mainly
 <td><p>Sets filter comparable.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>filterOnly</strong></p><p><code>boolean</code></p></td>
-<td><p>Configures whether this property is only used in filters, i.e. it is not persistent and only serves for storing
- criteria
- data that can be further leveraged by criteria refiners. Using <code>filterOnly</code> properties relieves the
- developer
- from having to declare fake computed properties. see {@link
- <a href="https://github.com/jspresso/jspresso-ce/issues/253">
- this request for enhancement</a>}</p></td>
-</tr>
-<tr class="odd">
 <td align="left"><p><strong>grantedRoles</strong></p><p><code>Collection&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Assigns the roles that are authorized to manipulate the property backed by
  this descriptor. It supports &quot;<b>!</b>&quot; prefix to negate the
@@ -125,7 +115,7 @@ This is the abstract base class for all property descriptors. It mainly
  this property level. Note that this authorization enforcement does not
  prevent programmatic access that is of the developer responsibility.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>integrityProcessorBeanNames</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Registers a list of property processor instances that will be triggered on
  the different phases of the property modification, i.e. :
@@ -164,7 +154,7 @@ This is the abstract base class for all property descriptors. It mainly
  <li><i>after</i> an element is <i>removed</i> from the collection property</li>
  </ul></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>integrityProcessorClassNames</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Much the same as <code>integrityProcessorBeanNames</code> except that
  instead of providing a list of Spring bean names, you provide a list of
@@ -175,7 +165,7 @@ This is the abstract base class for all property descriptors. It mainly
  </ul>
  When needed, Jspresso will create lifecycle interceptor instances.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>mandatory</strong></p><p><code>boolean</code></p></td>
 <td><p>Declare a property as mandatory. This will enforce mandatory checks when
  the owning component is persisted as well as when the property is updated
@@ -186,7 +176,7 @@ This is the abstract base class for all property descriptors. It mainly
  <p/>
  Default value is false.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p></td>
 <td><p>Enforces its name to start with a lower case letter, following the JavaBean
  convention. So even if you name it &quot;MyProperty&quot;, it will actually
@@ -194,14 +184,14 @@ This is the abstract base class for all property descriptors. It mainly
  <p/>
  {@inheritDoc}</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>permId</strong></p><p><code>String</code></p></td>
 <td><p>A property permanent id is forced to be its name. Trying to set it to
  another value will raise an exception.
  <p/>
  {@inheritDoc}</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>preferredWidth</strong></p><p><code>Integer</code></p></td>
 <td><p>This property allows for setting an indication of width for representing
  this property in a view.
@@ -210,19 +200,19 @@ This is the abstract base class for all property descriptors. It mainly
  decision based on the type and/or other characteristics of the property
  (e.g. max length).</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>readOnly</strong></p><p><code>boolean</code></p></td>
 <td><p>Enforces a property to be read-only. This is only enforced at the UI level,
  i.e. the property can still be updated programmatically. The UI may take
  decisions like changing text fields into labels if it knows the underlying
  property is read-only.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>sortable</strong></p><p><code>boolean</code></p></td>
 <td><p>Enforces a property sortability. This is only enforced at the UI level,
  i.e. the property can still be used for sorting programmatically.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>sqlName</strong></p><p><code>String</code></p></td>
 <td><p>Instructs Jspresso to use this name when translating this property name to
  the data store namespace. This includes , but is not limited to, database
@@ -231,7 +221,7 @@ This is the abstract base class for all property descriptors. It mainly
  Default value is <code>null</code> so that Jspresso uses its default naming
  policy.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>unicityScope</strong></p><p><code>String</code></p></td>
 <td><p>Makes this property part of a unicity scope. All tuples of properties
  belonging to the same unicity scope are enforced to be unique in the
@@ -241,7 +231,7 @@ This is the abstract base class for all property descriptors. It mainly
  Note that, for performance reasons, unicity scopes are only enforced by the
  persistence layer.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>versionControl</strong></p><p><code>boolean</code></p></td>
 <td><p>This property allows to fine tune whether this component property
  participates in optimistic versioning. It mainly allows to declare some
@@ -253,7 +243,7 @@ This is the abstract base class for all property descriptors. It mainly
  Default value is <code>true</code> so that any change in the described
  property increases the owning component version.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>writabilityGates</strong></p><p><code>Collection&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gate/IGate.html">IGate</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Assigns a collection of gates to determine property <i>writability</i>. A
  property will be considered writable if and only if all gates are open.
