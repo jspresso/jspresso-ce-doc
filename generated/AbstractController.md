@@ -51,6 +51,13 @@ Abstract base class for controllers. Controllers role is to adapt the
  un-completely processed and needs to continue the built-in handling.</li>
  </ul></p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>loginContextName</strong></p><p><code>String</code></p></td>
+<td><p>Configures the name of the JAAS login context to use to authenticate users.
+ It must reference a valid JAAS context that is installed in the JVM, either
+ through setting the <code>java.security.auth.login.config</code> system
+ property or through server-specific configuration.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -375,61 +382,54 @@ Base class for frontend application controllers. Frontend controllers are
  these extracted values.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>loginContextName</strong></p><p><code>String</code></p></td>
-<td><p>Configures the name of the JAAS login context to use to authenticate users.
- It must reference a valid JAAS context that is installed in the JVM, either
- through setting the <code>java.security.auth.login.config</code> system
- property or through server-specific configuration.</p></td>
-</tr>
-<tr class="odd">
 <td align="left"><p><strong>loginViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
 <td><p>Configures the view descriptor used to create the login dialog. The default
  built-in login view descriptor includes a standard login/password form.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>mvcBinder</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/binding/IMvcBinder.html">IMvc&#x200B;Binder</a></code></p></td>
 <td><p>Configures the MVC binder used to apply model-view bindings. There is
  hardly any reason for the developer to change the default binder but it
  can be customized here.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p></td>
 <td><p>Sets the application name i18n key. The way this name is actually leveraged
  depends on the UI channel but it typically generates (part of the) frame
  title.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>navigationActionMap</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionMap.html">Action&#x200B;Map</a></code></p></td>
 <td><p>Configures the navigation action map. The navigation action map should
  contain actions that are related to navigating the modules and workspace
  history, e.g. previous, next, home, and so on.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>onModuleEnterAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Configures an action to be executed each time a module of the application
  is entered. The action is executed in the context of the module the user
  enters.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>onModuleExitAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Configures an action to be executed each time a module of the application
  is exited. The action is executed in the context of the module the user
  exits. Default frontend controller configuration installs an action that
  checks current module dirty state.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>onModuleStartupAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Configures an action to be executed each time a module of the application
  is started. The action is executed in the context of the module the user
  starts.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>secondaryActionMap</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionMap.html">Action&#x200B;Map</a></code></p></td>
 <td><p>Assigns the view secondary action map. Same rules as the primary action map
  apply except that actions in this map should be visually distinguished from
  the main action map, e.g. placed in another toolbar.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>startupAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Configures an action to be executed on an empty UI context when the
  application starts. The action executes once the user has logged-in and the
@@ -437,20 +437,20 @@ Base class for frontend application controllers. Frontend controllers are
  an action would be a default workspace/module opening and selection, a
  &quot;tip of the day&quot; like action, ...</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>viewFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/IViewFactory.html">IView&#x200B;Factory</a>&#x200B;&lt;&#x200B;E&#x200B;,F&#x200B;,G&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Configures the view factory used to create views from view descriptors.
  Using a custom view factory is typically needed for extending Jspresso to
  use custom view descriptors / UI components. Of course, there is a view
  factory concrete type per UI channel.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>workspaces</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/model/Workspace.html">Workspace</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Configures the workspaces that are available in the application. Workspaces
  are application entry-points and are hierarchically composed of modules /
  sub-modules.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>workspacesMenuIconImageUrl</strong></p><p><code>String</code></p></td>
 <td><p>Sets the icon image URL that is used as the workspace menu icon. Supported
  URL protocols include :
