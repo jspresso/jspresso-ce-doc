@@ -620,7 +620,7 @@ This composite view arranges its children in tabs. Each tab potentially
  displays a label (that is translated based on the name of the view in the
  tab), an icon (based on the icon of the view in the tab) and a toolTip (based
  on the description of the view in the tab).
- <p/>
+ <p>
  Default cascading order follows the order of nested view registrations in the
  container.
 
@@ -656,17 +656,11 @@ This composite view arranges its children in tabs. Each tab potentially
  <li><code>LABEL</code> for label only</li>
  <li><code>ICON</code> for icon only.</li>
  </ul>
- <p/>
+ <p>
  Default value is <code>ERenderingOptions.LABEL_ICON</code>, i.e. label and
  icon.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>tabSelectionAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
-<td><p>Registers an action that is implicitly triggered every time the tab selection
- changes on the tab view UI peer. The context of the action execution
- is the same as if the action was registered in the view action map.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>tabs</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Registers the list of views to be displayed as tabs. The tabs order follows
  the children views order of this list.</p></td>
