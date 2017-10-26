@@ -2970,6 +2970,10 @@ Refresh card view having given permId
 <td align="left"><p><strong>cardViewId</strong></p><p><code>String</code></p></td>
 <td><p>Sets the card view id.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>viewPath</strong></p><p><code>int</code></p></td>
+<td><p>Sets view path to start search from.</p></td>
+</tr>
 </tbody>
 </table>
 
