@@ -2487,6 +2487,18 @@ This is a standard &quot;List Of Values&quot; action for reference property
  LOV dialog or implicitly through the auto query feature.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>findOnSet</strong></p><p><code>Boolean</code></p></td>
+<td><p>Whenever setting findOnSet to <code>true</code>, the LOV dialog will
+ trigger the query each time a field is set in the LOV filter view. This
+ brings continuous autocomplete feature on the LOV dialog.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>findOnType</strong></p><p><code>Boolean</code></p></td>
+<td><p>Whenever setting findOnType to <code>true</code>, the LOV dialog will
+ trigger the query each time a field is typed-in in the LOV filter view. This
+ brings continuous autocomplete feature on the LOV dialog.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>initializationMapping</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,Object&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Whenever the LOV action is not used on a reference field, in which case the
  filter initialization mapping is taken from the reference field descriptor

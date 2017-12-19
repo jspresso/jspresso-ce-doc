@@ -281,6 +281,18 @@ This is a specialized type of bean collection module that provides a filter (
  field structures for instance.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>findOnSet</strong></p><p><code>Boolean</code></p></td>
+<td><p>Whenever setting findOnSet to <code>true</code>, the module
+ trigger the query each time a field is set in the filter view. This
+ brings continuous autocomplete feature on the filter module.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>findOnType</strong></p><p><code>Boolean</code></p></td>
+<td><p>Whenever setting findOnType to <code>true</code>, the module will
+ trigger the query each time a field is typed-in in the module filter view. This
+ brings continuous autocomplete feature on the filter module.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>orderingProperties</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/collection/ESort.html">ESort</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Configures a custom map of ordering properties for the result set. If not
  set, which is the default, the elements ordering properties is used.
