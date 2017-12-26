@@ -170,11 +170,6 @@ This type of module keeps a reference on a beans collection. There is no
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>detailViewIncluded</strong></p><p><code>boolean</code></p></td>
-<td><p>This property allows to automatically include the detail view in a tab of the main collection module
- view. A complementary action list is installed to navigate between module objects. Default value is false.   *</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>elementComponentDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/IComponentDescriptor.html">IComponent&#x200B;Descriptor</a>&#x200B;&lt;&#x200B;Object&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Configures the type of bean element this collection module manages. A bunch
  of default values are inferred from this element component descriptor. For
@@ -188,7 +183,7 @@ This type of module keeps a reference on a beans collection. There is no
  inferred from the collection view descriptor configured as projected view
  descriptor.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>elementViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
 <td><p>This property is not used by the module itself, but by built-in actions
  that maybe registered on this module. One of these actions is
@@ -199,15 +194,11 @@ This type of module keeps a reference on a beans collection. There is no
  configured element view descriptor must be backed by a model matching the
  type of the module managed beans.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>moduleObjects</strong></p><p><code>List&#x200B;&lt;&#x200B;?&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Assigns the list of beans this module manages. The projected view will
  automatically reflect this change since a &quot;moduleObjects&quot;
  property change will be fired.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>navigateModuleObjectsActionList</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionList.html">Action&#x200B;List</a></code></p></td>
-<td><p>Sets navigate module objects action list.</p></td>
 </tr>
 </tbody>
 </table>
@@ -268,7 +259,7 @@ This is a specialized type of bean collection module that provides a filter (
 <td><p>This property allow to refine the filter view. If this field is not empty
  the filter view will be replaced by a tab view containing this view and the
  view defined bu the {@link #setFilterViewDescriptor(IViewDescriptor)} method.
- <p>
+<p>
  If the extra filter view or the filter view is already a tab view, then tab
  views will be merged to a single tab view.</p></td>
 </tr>
@@ -279,18 +270,6 @@ This is a specialized type of bean collection module that provides a filter (
  assigned a model descriptor since they will be at runtime. This is because
  the filter component descriptor must be reworked - to adapt comparable
  field structures for instance.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>findOnSet</strong></p><p><code>Boolean</code></p></td>
-<td><p>Whenever setting findOnSet to <code>true</code>, the module
- trigger the query each time a field is set in the filter view. This
- brings continuous autocomplete feature on the filter module.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>findOnType</strong></p><p><code>Boolean</code></p></td>
-<td><p>Whenever setting findOnType to <code>true</code>, the module will
- trigger the query each time a field is typed-in in the module filter view. This
- brings continuous autocomplete feature on the filter module.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>orderingProperties</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/collection/ESort.html">ESort</a>&#x200B;&gt;&#x200B;</code></p></td>
