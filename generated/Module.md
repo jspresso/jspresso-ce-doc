@@ -244,6 +244,22 @@ This is a specialized type of bean collection module that provides a filter (
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>criteriaFactory</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria factory. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.model.persistence.hibernate.criterion.ICriteriaFactory</li>
+ <li>org.jspresso.framework.model.persistence.mongo.criterion.IQueryFactory</li>
+ </ul></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>criteriaRefiner</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria refiner. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.application.backend.action.persistence.hibernate.ICriteriaRefiner</li>
+ <li>org.jspresso.framework.application.backend.action.persistence.mongo.IQueryRefiner</li>
+ </ul></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>displayPageIndex</strong></p><p><code>Integer</code></p></td>
 <td><p>Delegates to filter.
  <p>
@@ -332,26 +348,30 @@ This is a specialized type of bean collection module that provides a filter (
 <td><p>Sets the queryComponentDescriptorFactory.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>queryComponentRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/IQueryComponentRefiner.html">IQuery&#x200B;Component&#x200B;Refiner</a></code></p></td>
+<td><p>Sets query component refiner.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>queryExtraViewDescriptorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IQueryExtraViewDescriptorFactory.html">IQuery&#x200B;Extra&#x200B;View&#x200B;Descriptor&#x200B;Factory</a></code></p></td>
 <td><p>Sets the queryExtraViewDescriptorFactory.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>queryViewDescriptorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IQueryViewDescriptorFactory.html">IQuery&#x200B;View&#x200B;Descriptor&#x200B;Factory</a></code></p></td>
 <td><p>Sets the queryViewDescriptorFactory.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>recordCount</strong></p><p><code>Integer</code></p></td>
 <td><p>Delegates to filter.
  <p>
  {@inheritDoc}</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>selectedRecordCount</strong></p><p><code>Integer</code></p></td>
 <td><p>Delegates to filter.
  <p>
  {@inheritDoc}</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>stickyResults</strong></p><p><code>List&#x200B;&lt;&#x200B;?&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Delegates to filter. {@inheritDoc}</p></td>
 </tr>

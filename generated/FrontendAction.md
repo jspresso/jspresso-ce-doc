@@ -2471,6 +2471,22 @@ This is a standard &quot;List Of Values&quot; action for reference property
  the type of entities backing the LOV.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>criteriaFactory</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria factory. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.model.persistence.hibernate.criterion.ICriteriaFactory</li>
+ <li>org.jspresso.framework.model.persistence.mongo.criterion.IQueryFactory</li>
+ </ul></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>criteriaRefiner</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria refiner. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.application.backend.action.persistence.hibernate.ICriteriaRefiner</li>
+ <li>org.jspresso.framework.application.backend.action.persistence.mongo.IQueryRefiner</li>
+ </ul></p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>defaultIconImageURL</strong></p><p><code>String</code></p></td>
 <td><p>Sets the defaultIconImageURL.</p></td>
 </tr>
@@ -2534,10 +2550,14 @@ This is a standard &quot;List Of Values&quot; action for reference property
 <td><p>Should the LOV view pre-select items in the LOV view.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>queryComponentRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/IQueryComponentRefiner.html">IQuery&#x200B;Component&#x200B;Refiner</a></code></p></td>
+<td><p>Sets query component refiner.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
 <td><p>Allows to force the result view selection mode.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>staticComponentStore</strong></p><p><code>List&#x200B;&lt;&#x200B;?&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets static component store.</p></td>
 </tr>
@@ -2945,8 +2965,28 @@ Queries filter module and notify user of empty record set.
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>criteriaFactory</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria factory. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.model.persistence.hibernate.criterion.ICriteriaFactory</li>
+ <li>org.jspresso.framework.model.persistence.mongo.criterion.IQueryFactory</li>
+ </ul></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>criteriaRefiner</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria refiner. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.application.backend.action.persistence.hibernate.ICriteriaRefiner</li>
+ <li>org.jspresso.framework.application.backend.action.persistence.mongo.IQueryRefiner</li>
+ </ul></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>emptyResultAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Sets empty result action.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>queryComponentRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/IQueryComponentRefiner.html">IQuery&#x200B;Component&#x200B;Refiner</a></code></p></td>
+<td><p>Sets query component refiner.</p></td>
 </tr>
 </tbody>
 </table>
