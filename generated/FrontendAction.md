@@ -2638,9 +2638,9 @@ This is a very generic action that takes its specifications out of the action
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>triggerOnEnter</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets trigger on enter.</p></td>
 </tr>
 </tbody>
 </table>
