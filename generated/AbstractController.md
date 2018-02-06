@@ -52,6 +52,10 @@ Abstract base class for controllers. Controllers role is to adapt the
  </ul></p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>liveDebugUI</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets live debug ui.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>loginContextName</strong></p><p><code>String</code></p></td>
 <td><p>Configures the name of the JAAS login context to use to authenticate users.
  It must reference a valid JAAS context that is installed in the JVM, either
