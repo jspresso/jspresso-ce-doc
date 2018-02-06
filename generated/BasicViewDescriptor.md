@@ -148,7 +148,7 @@ This is the abstract base descriptor for all views. Its main purpose, since
  system.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>readOnly</strong></p><p><code>boolean</code></p></td>
+<td align="left"><p><strong>readOnly</strong></p><p><code>Boolean</code></p></td>
 <td><p>Allows to set a view read-only, i.e. none of the view part will allow for
  updating the underlying model. This is mainly a shortcut to assigning an
  &quot;always closed&quot; writability gate. One difference though is that,
@@ -1995,7 +1995,7 @@ This type of view descriptor is used to display a static text in a form as if it
 <td><p>Configures the static text to display as multi line. This is <code>false</code> by default.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>readOnly</strong></p><p><code>boolean</code></p></td>
+<td align="left"><p><strong>readOnly</strong></p><p><code>Boolean</code></p></td>
 <td><p>Sets read only.</p></td>
 </tr>
 </tbody>
