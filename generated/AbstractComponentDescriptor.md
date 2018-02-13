@@ -113,7 +113,7 @@ This is the abstract base descriptor for all component-like part of the
  When needed, Jspresso will create the property processor instances.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>orderingProperties</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,?&#x200B;&gt;&#x200B;</code></p></td>
+<td align="left"><p><strong>orderingProperties</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/collection/ESort.html">ESort</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Ordering properties are used to sort un-indexed collections of instances of
  components backed by this descriptor. This sort order can be overridden on
  the finer collection property level to change the way a specific collection
