@@ -61,6 +61,7 @@ This is the abstract base descriptor for all views. Its main purpose, since
  <li><code>TITLED</code> for a titled border. The view is then labeled with
  its translated name and and icon. Whenever the view name has not been
  explicitly set, the model name is used is used.</li>
+ <li><code>TITLED_ACTIONS</code> like TITLED but with the action map next to it if the UI channel supports it</li>
  </ul>
  <p/>
  Default value is <code>EBorderType.NONE</code>, i.e. no border.</p></td>
