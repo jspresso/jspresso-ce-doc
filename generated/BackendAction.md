@@ -164,7 +164,7 @@ An action used in master/detail views to create and add a new detail to a
  master domain object. The only method to be implemented by concrete subclasses
  to retrieve the instances to be added to the master is :
  <p>
-
+ <p>
  <pre>
  protected abstract List&lt;?&gt;
            getAddedComponents(Map&lt;String, Object&gt; context)
@@ -186,6 +186,10 @@ An action used in master/detail views to create and add a new detail to a
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>ignoreSelection</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets ignore selection.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>initializationMapping</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,Object&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets initialization mapping.</p></td>
 </tr>
