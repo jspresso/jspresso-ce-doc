@@ -661,12 +661,16 @@ This composite view arranges its children in tabs. Each tab potentially
  icon.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>selectFirstTab</strong></p><p><code>boolean</code></p></td>
+<td><p>If <code>true</code>, the tab view will select its the first tab each time its model changes. Default value is {@false}.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>tabSelectionAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Registers an action that is implicitly triggered every time the tab selection
  changes on the tab view UI peer. The context of the action execution
  is the same as if the action was registered in the view action map.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>tabs</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Registers the list of views to be displayed as tabs. The tabs order follows
  the children views order of this list.</p></td>
