@@ -1438,6 +1438,10 @@ This descriptor is used to implement a table view. This is certainly the most
  <code>renderedProperties</code> property.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>singleClickEdit</strong></p><p><code>boolean</code></p></td>
+<td><p>Configures the table view to enter edition on single clicks instead of double clicks.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>sortable</strong></p><p><code>boolean</code></p></td>
 <td><p>This property allows to define the table horizontal sorting behaviour.
  Whenever it is set to false, the corresponding table UI component will not
@@ -1446,7 +1450,7 @@ This descriptor is used to implement a table view. This is certainly the most
  Default value is <code>true</code>, i.e. table allows for its rows to be
  sorted.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>sortingAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Configures the action to be activated when a sort is triggered by the user.
  It should be used with caution and rarely be overridden from the default.</p></td>
