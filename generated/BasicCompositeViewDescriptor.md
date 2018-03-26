@@ -220,7 +220,7 @@ A composite view descriptor that aggregates view sections on a single page.
 <td><p>Sets inline editing.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>pageSectionDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/IMobilePageSectionViewDescriptor.html">IMobile&#x200B;Page&#x200B;Section&#x200B;View&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
+<td align="left"><p><strong>pageSectionDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/IMobileViewDescriptor.html">IMobile&#x200B;View&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets page sections.</p></td>
 </tr>
 </tbody>
@@ -258,7 +258,7 @@ Navigation page view descriptors that are able to navigate to another page based
 <td><p>Sets cascading models. This operation is not supported on mobile lists.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>headerSectionDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/IMobilePageSectionViewDescriptor.html">IMobile&#x200B;Page&#x200B;Section&#x200B;View&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
+<td align="left"><p><strong>headerSectionDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/IMobileViewDescriptor.html">IMobile&#x200B;View&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets header section descriptors.</p></td>
 </tr>
 <tr class="odd">

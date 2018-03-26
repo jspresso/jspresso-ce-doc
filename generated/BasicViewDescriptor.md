@@ -886,6 +886,14 @@ This descriptor is use to design a tree view. The way to define a tree view
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets for client types.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td><p>Sets position.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>showArrow</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets show arrow.</p></td>
 </tr>
@@ -1201,6 +1209,14 @@ This type of descriptor is used to implement a list view. A list view is a
  {@inheritDoc}</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets for client types.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td><p>Sets position.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>showArrow</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets show arrow.</p></td>
 </tr>
@@ -1308,9 +1324,13 @@ This descriptor is used to implement a repeater view. A repeater view displays a
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets for client types.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td><p>Sets position.</p></td>
 </tr>
 </tbody>
 </table>
