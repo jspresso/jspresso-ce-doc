@@ -259,6 +259,7 @@ This descriptor serves as abstract base implementation for card view
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicCardViewDescriptor.html)
 + **Super-type** : [`AbstractCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor)
++ **Sub-types** : [`MobileCardViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileCardViewDescriptor)
 
 
 
@@ -298,6 +299,44 @@ Describes a multi-purpose card view that is configurable with a custom card
 <td><p>Registers the card views keyed by their name keys. The names used as key of
  the <code>Map</code> must match the names that are returned by the
  registered card name selector.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileCardViewDescriptor"></a>MobileCardViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileCardViewDescriptor.html)
++ **Super-type** : [`BasicCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor)
+
+
+
+A composite view descriptor that aggregates mobile views in cards.
+
+
+
+<table>
+<caption>MobileCardViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets for client types.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td><p>Sets  position.</p></td>
 </tr>
 </tbody>
 </table>
