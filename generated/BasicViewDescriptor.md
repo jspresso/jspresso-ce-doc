@@ -946,6 +946,7 @@ This descriptor is use to design a tree view. The way to define a tree view
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicActionViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicActionViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
++ **Sub-types** : [`MobileActionViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileActionViewDescriptor)
 
 
 
@@ -994,6 +995,44 @@ This type of view allows to make an action available as a view and thus
  </ul>
  <p>
  Default value is <code>ERenderingOptions.ICON</code>, i.e. icon only.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileActionViewDescriptor"></a>MobileActionViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileActionViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileActionViewDescriptor.html)
++ **Super-type** : [`BasicActionViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicActionViewDescriptor)
+
+
+
+A mobile action view descriptor.
+
+
+
+<table>
+<caption>MobileActionViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets for client types.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td><p>Sets  position.</p></td>
 </tr>
 </tbody>
 </table>
