@@ -63,15 +63,10 @@ This is the abstract base descriptor for all component-like part of the
  this setting.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>autoQueryEnabled</strong></p><p><code>Boolean</code></p></td>
-<td><p>Whenever this component type is presented as a filter,
- this property gives the capability to enable / disable auto-search when typing the filter fields.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>componentTranslationsDescriptorTemplate</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/basic/BasicCollectionPropertyDescriptor.html">Basic&#x200B;Collection&#x200B;Property&#x200B;Descriptor</a>&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/component/IComponent.html">IComponent</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets component translations descriptor template.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>grantedRoles</strong></p><p><code>Collection&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Assigns the roles that are authorized to manipulate components backed by
  this descriptor. It supports &quot;<b>!</b>&quot; prefix to negate the
@@ -81,7 +76,7 @@ This is the abstract base descriptor for all component-like part of the
  Note that this authorization enforcement does not prevent programmatic
  access that is of the developer responsibility.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>lifecycleInterceptorBeanNames</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Registers a list of lifecycle interceptor instances that will be triggered
  on the different phases of the component lifecycle, i.e. :
@@ -101,7 +96,7 @@ This is the abstract base descriptor for all component-like part of the
  <code>ILifecycleInterceptor&lt;E&gt;</code> interface where &lt;E&gt; is a
  type assignable from the component type.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>lifecycleInterceptorClassNames</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Much the same as <code>lifecycleInterceptorBeanNames</code> except that
  instead of providing a list of Spring bean names, you provide a list of
@@ -112,8 +107,8 @@ This is the abstract base descriptor for all component-like part of the
  </ul>
  When needed, Jspresso will create the property processor instances.</p></td>
 </tr>
-<tr class="even">
-<td align="left"><p><strong>orderingProperties</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/collection/ESort.html">ESort</a>&#x200B;&gt;&#x200B;</code></p></td>
+<tr class="odd">
+<td align="left"><p><strong>orderingProperties</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,?&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Ordering properties are used to sort un-indexed collections of instances of
  components backed by this descriptor. This sort order can be overridden on
  the finer collection property level to change the way a specific collection
@@ -129,7 +124,7 @@ This is the abstract base descriptor for all component-like part of the
  iterator. A <code>null</code> value (default) will not give any indication
  for the collection sort order.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>pageSize</strong></p><p><code>Integer</code></p></td>
 <td><p>Whenever a collection of this component type is presented in a pageable UI,
  this property gives the size (number of component instances) of one page.
@@ -137,14 +132,14 @@ This is the abstract base descriptor for all component-like part of the
  property descriptor for &quot;lists of values&quot;). A <code>null</code>
  value (default) disables paging for this component.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>permId</strong></p><p><code>String</code></p></td>
 <td><p>A component permanent id is forced to be its fully-qualified class name.
  Trying to set it to another value will raise an exception.
  <p/>
  {@inheritDoc}</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>propertyDescriptors</strong></p><p><code>Collection&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/descriptor/IPropertyDescriptor.html">IProperty&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>This property allows to describe the properties of the components backed by
  this descriptor. Like in classic OO programming, the actual set of
@@ -155,7 +150,7 @@ This is the abstract base descriptor for all component-like part of the
  descriptor prevails over the definition of its ancestors. Naturally,
  properties are keyed by their names.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>queryableProperties</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>This property allows to define which of the component properties are to be
  used in the filter UIs that are based on this component family (a QBE
@@ -173,7 +168,7 @@ This is the abstract base descriptor for all component-like part of the
  if an ancestor defines an explicit set of queryable properties, its
  children ignore this setting.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>renderedProperties</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>This property allows to define which of the component properties are to be
  rendered by default when displaying a UI based on this component family.
@@ -190,7 +185,7 @@ This is the abstract base descriptor for all component-like part of the
  if an ancestor defines an explicit set of rendered properties, its children
  ignore this setting.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>serviceDelegateBeanNames</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Registers the collection of service delegate instances attached to this
  component. These delegate instances will automatically be triggered
@@ -219,7 +214,7 @@ This is the abstract base descriptor for all component-like part of the
  Spring context. lifecycle interceptor instances must implement the
  <code>IComponentService</code> marker interface.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>serviceDelegateClassNames</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Much the same as <code>serviceDelegateBeanNames</code> except that instead
  of providing a map valued with Spring bean names, you provide a map valued
@@ -230,7 +225,7 @@ This is the abstract base descriptor for all component-like part of the
  </ul>
  When needed, Jspresso will create service delegate instances.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>sqlName</strong></p><p><code>String</code></p></td>
 <td><p>Instructs Jspresso to use this name when translating this component type
  name to the data store namespace. This includes , but is not limited to,
@@ -239,7 +234,7 @@ This is the abstract base descriptor for all component-like part of the
  Default value is <code>null</code> so that Jspresso uses its default naming
  policy.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>toHtmlProperty</strong></p><p><code>String</code></p></td>
 <td><p>Allows to customize the HTML representation of a component instance. The
  property name assigned will be used when displaying the component instance
@@ -251,7 +246,7 @@ This is the abstract base descriptor for all component-like part of the
  inherited by children descriptors, i.e. even if an ancestor defines an
  explicit <i>toHtmlProperty</i> property, its children ignore this setting.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>toStringProperty</strong></p><p><code>String</code></p></td>
 <td><p>Allows to customize the string representation of a component instance. The
  property name assigned will be used when displaying the component instance
@@ -268,7 +263,7 @@ This is the abstract base descriptor for all component-like part of the
  if an ancestor defines an explicit <i>toString</i> property, its children
  ignore this setting.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>unclonedProperties</strong></p><p><code>Collection&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Configures the properties that must not be cloned when this component is
  duplicated. For instance, tracing information like a created timestamp
@@ -277,7 +272,7 @@ This is the abstract base descriptor for all component-like part of the
  define. There is no mean to make a component property cloneable if one of
  the ancestor declares it un-cloneable.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>writabilityGates</strong></p><p><code>Collection&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gate/IGate.html">IGate</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Assigns a collection of gates to determine component <i>writability</i>. A
  component will be considered writable if and only if all gates are open.
