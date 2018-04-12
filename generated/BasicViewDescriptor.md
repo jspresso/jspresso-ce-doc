@@ -1403,10 +1403,16 @@ This descriptor is used to implement a repeater view. A repeater view displays a
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>autoSelectFirstRow</strong></p><p><code>boolean</code></p></td>
+<td><p>Not supported in mobile environment.
+ <p>
+ {@inheritDoc}</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets for client types.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
