@@ -1933,10 +1933,14 @@ This type of view descriptor is used to display a a string property
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>editorConfiguration</strong></p><p><code>String</code></p></td>
+<td><p>Sets editor configuration.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>horizontallyScrollable</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets the horizontallyScrollable.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>verticallyScrollable</strong></p><p><code>boolean</code></p></td>
 <td><p>Configures the view to be either vertically cropped or scrollable when the
  display area is too small to display it.</p></td>
