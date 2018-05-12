@@ -207,7 +207,7 @@ This is the abstract base descriptor for all views. Its main purpose, since
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractCardViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`BasicCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor), [`EntityCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor)
++ **Sub-types** : [`BasicCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor), [`EntityCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor), [`PropertyCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor)
 
 
 
@@ -376,6 +376,50 @@ This card view provides a simple card determination strategy that is based on
  changes, this list is iterated until a card with a matching model is found.
  The first matching card is displayed. Whenever no registered card matches,
  an empty view is displayed.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor"></a>PropertyCardViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/PropertyCardViewDescriptor.html)
++ **Super-type** : [`AbstractCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor)
+
+
+
+Describes a model-bound card view that is configurable with a model property used to determine the card yo display.
+
+
+
+<table>
+<caption>PropertyCardViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>accessorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/accessor/IAccessorFactory.html">IAccessor&#x200B;Factory</a></code></p></td>
+<td><p>Sets accessor factory.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>cardViewDescriptors</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Registers the card views keyed by their name keys. The names used as key of
+ the <code>Map</code> must match the names that are returned by the
+ registered card name selector.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>propertyName</strong></p><p><code>String</code></p></td>
+<td><p>Sets the model property name used to determine the card name.</p></td>
 </tr>
 </tbody>
 </table>
