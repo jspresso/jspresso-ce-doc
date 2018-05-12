@@ -348,6 +348,7 @@ A composite view descriptor that aggregates mobile views in cards.
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/EntityCardViewDescriptor.html)
 + **Super-type** : [`AbstractCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor)
++ **Sub-types** : [`MobileEntityCardViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileEntityCardViewDescriptor)
 
 
 
@@ -383,10 +384,51 @@ This card view provides a simple card determination strategy that is based on
 ---
 
 
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileEntityCardViewDescriptor"></a>MobileEntityCardViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileEntityCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileEntityCardViewDescriptor.html)
++ **Super-type** : [`EntityCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor)
+
+
+
+This card view provides a simple card determination strategy that is based on
+ the bound model type. This strategy pulls up the card whose model descriptor
+ matches the type of the bound model.
+
+
+
+<table>
+<caption>MobileEntityCardViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets for client types.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td><p>Sets  position.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
 #### <a name="org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor"></a>PropertyCardViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/PropertyCardViewDescriptor.html)
 + **Super-type** : [`AbstractCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor)
++ **Sub-types** : [`MobilePropertyCardViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobilePropertyCardViewDescriptor)
 
 
 
@@ -420,6 +462,44 @@ Describes a model-bound card view that is configurable with a model property use
 <tr class="odd">
 <td align="left"><p><strong>propertyName</strong></p><p><code>String</code></p></td>
 <td><p>Sets the model property name used to determine the card name.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.view.descriptor.mobile.MobilePropertyCardViewDescriptor"></a>MobilePropertyCardViewDescriptor
+
++ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobilePropertyCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobilePropertyCardViewDescriptor.html)
++ **Super-type** : [`PropertyCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor)
+
+
+
+Describes a model-bound card view that is configurable with a model property used to determine the card yo display.
+
+
+
+<table>
+<caption>MobilePropertyCardViewDescriptor properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets for client types.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td><p>Sets  position.</p></td>
 </tr>
 </tbody>
 </table>
