@@ -1715,6 +1715,10 @@ This descriptor is used to implement a map view.
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>defaultZoom</strong></p><p><code>Integer</code></p></td>
+<td><p>Sets default zoom to display when there is no route and a single marker.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>mapContentProperty</strong></p><p><code>String</code></p></td>
 <td><p>Sets map content property. The targeted property should return a Json string that describes the markers and the
  routes to display on the map.</p></td>
