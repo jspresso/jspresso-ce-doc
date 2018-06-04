@@ -77,20 +77,14 @@ A module is an entry point in the application. Modules are organized in
  their model.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>headerDescription</strong></p><p><code>String</code></p></td>
-<td><p>Configures the key used to translate actual internationalized module
- header description. The resulting translation will generally be leveraged as a
- text header on the UI side.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>i18nHeaderDescription</strong></p><p><code>String</code></p></td>
+<td align="left"><p><strong>i18nPageHeaderDescription</strong></p><p><code>String</code></p></td>
 <td><p>Sets i 18 n header description.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>icon</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/Icon.html">Icon</a></code></p></td>
 <td><p>Sets the icon.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>iconImageURL</strong></p><p><code>String</code></p></td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include
  :
@@ -100,19 +94,25 @@ A module is an entry point in the application. Modules are organized in
  <li>the <b>classpath:/</b> pseudo URL protocol</li>
  </ul></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>iconPreferredHeight</strong></p><p><code>int</code></p></td>
 <td><p>Sets the icon preferred width.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>iconPreferredWidth</strong></p><p><code>int</code></p></td>
 <td><p>Sets the icon preferred width.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p></td>
 <td><p>Configures the key used to translate actual internationalized module name.
  The resulting translation will be leveraged as the module label on the UI
  side.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>pageHeaderDescription</strong></p><p><code>String</code></p></td>
+<td><p>Configures the key used to translate actual internationalized module
+ header description. The resulting translation will generally be leveraged as a
+ text header on the UI side.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>permId</strong></p><p><code>String</code></p></td>
