@@ -1758,6 +1758,10 @@ A mobile map view descriptor.
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>inline</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets inline.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
