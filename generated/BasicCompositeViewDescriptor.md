@@ -681,6 +681,10 @@ This composite view arranges its children in a container split either
 <td><p>Sets the <i>right</i> (horizontal split) of <i>bottom</i> (vertical split)
  nested view.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>separatorPosition</strong></p><p><code>Integer</code></p></td>
+<td><p>Sets separator position.</p></td>
+</tr>
 </tbody>
 </table>
 
