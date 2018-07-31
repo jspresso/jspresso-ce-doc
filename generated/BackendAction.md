@@ -4,7 +4,7 @@
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.BackendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/BackendAction.html)
 + **Super-type** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction)
-+ **Sub-types** : [`AbstractCloneAction`](#org.jspresso.framework.application.backend.action.AbstractCloneAction), [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction), [`AbstractLdapAction`](#org.jspresso.framework.application.backend.action.AbstractLdapAction), [`AbstractPasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractPasswordAction), [`AbstractQbeAction`](#org.jspresso.framework.application.backend.action.AbstractQbeAction), [`AbstractQueryComponentsAction`](#org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction), [`AddBeanAsSubModuleAction`](#org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction), [`CreateQueryComponentAction`](#org.jspresso.framework.application.backend.action.CreateQueryComponentAction), [`DeleteEntityAction`](#org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction), [`GenerateJasperReportAction`](#org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction), [`InitModuleFilterAction`](#org.jspresso.framework.application.backend.action.module.InitModuleFilterAction), [`PurgeCompletedAsynExecutorsAction`](#org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction), [`ReloadAction`](#org.jspresso.framework.application.backend.action.persistence.ReloadAction), [`RemoveFromModuleObjectsAction`](#org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction), [`ResetConnectorValueAction`](#org.jspresso.framework.application.backend.action.ResetConnectorValueAction), [`SaveAction`](#org.jspresso.framework.application.backend.action.persistence.SaveAction), [`ScriptedBackendAction`](#org.jspresso.framework.application.backend.action.ScriptedBackendAction), [`SelectEntityPropertyAction`](#org.jspresso.framework.application.backend.action.SelectEntityPropertyAction), [`TransferCollectionAction`](#org.jspresso.framework.application.backend.action.TransferCollectionAction)
++ **Sub-types** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction), [`AbstractCloneAction`](#org.jspresso.framework.application.backend.action.AbstractCloneAction), [`AbstractCollectionAction`](#org.jspresso.framework.application.backend.action.AbstractCollectionAction), [`AbstractLdapAction`](#org.jspresso.framework.application.backend.action.AbstractLdapAction), [`AbstractQbeAction`](#org.jspresso.framework.application.backend.action.AbstractQbeAction), [`AbstractQueryComponentsAction`](#org.jspresso.framework.application.backend.action.AbstractQueryComponentsAction), [`AddBeanAsSubModuleAction`](#org.jspresso.framework.application.backend.action.module.AddBeanAsSubModuleAction), [`CreateQueryComponentAction`](#org.jspresso.framework.application.backend.action.CreateQueryComponentAction), [`DeleteEntityAction`](#org.jspresso.framework.application.backend.action.persistence.DeleteEntityAction), [`GenerateJasperReportAction`](#org.jspresso.framework.application.printing.backend.action.GenerateJasperReportAction), [`InitModuleFilterAction`](#org.jspresso.framework.application.backend.action.module.InitModuleFilterAction), [`PurgeCompletedAsynExecutorsAction`](#org.jspresso.framework.application.backend.action.PurgeCompletedAsynExecutorsAction), [`ReloadAction`](#org.jspresso.framework.application.backend.action.persistence.ReloadAction), [`RemoveFromModuleObjectsAction`](#org.jspresso.framework.application.backend.action.persistence.module.RemoveFromModuleObjectsAction), [`ResetConnectorValueAction`](#org.jspresso.framework.application.backend.action.ResetConnectorValueAction), [`SaveAction`](#org.jspresso.framework.application.backend.action.persistence.SaveAction), [`ScriptedBackendAction`](#org.jspresso.framework.application.backend.action.ScriptedBackendAction), [`SelectEntityPropertyAction`](#org.jspresso.framework.application.backend.action.SelectEntityPropertyAction), [`TransferCollectionAction`](#org.jspresso.framework.application.backend.action.TransferCollectionAction)
 
 
 
@@ -38,6 +38,214 @@ This class should serve as base class for implementing actions that execute
 ---
 
 
+#### <a name="org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction"></a>AbstractChangePasswordAction
+
++ **Full name** : [`org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/AbstractChangePasswordAction.html)
++ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
++ **Sub-types** : [`DatabaseChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction), [`LdapChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction), [`MockChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.MockChangePasswordAction)
+
+
+
+This is the base class for implementing an action that performs actual
+ modification of a logged-in user password. This implementation delegates to
+ subclasses the actual change in the concrete JAAS store. This backend action
+ expects a Map&lt;String,Object&gt; in as action parameter in the context.
+ This map must contain :
+ <p>
+ <ul>
+ <li><code>password_current</code> entry containing current password. Entry
+ key can be referred to as PASSWD_CURRENT static constant.</li>
+ <li><code>password_typed</code> entry containing the new password. Entry key
+ can be referred to as PASSWD_TYPED static constant.</li>
+ <li><code>password_retyped</code> entry containing the new password retyped.
+ Entry key can be referred to as PASSWD_RETYPED static constant.</li>
+ </ul>
+ For the action to succeed, <code>current_password</code> must match the
+ logged-in user current password and <code>password_typed</code> and
+ <code>password_retyped</code> mut match between each other. The only method to
+ be implemented by concrete subclasses is :
+ <p>
+
+ <pre>
+ protected abstract boolean changePassword(UserPrincipal userPrincipal,
+           String currentPassword, String newPassword)
+ </pre>
+
+
+
+<table>
+<caption>AbstractChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>allowEmptyPasswords</strong></p><p><code>boolean</code></p></td>
+<td><p>Configures the possibility to choose an empty password.
+ <p>
+ Default value is <code>true</code>, i.e. allow for empty passwords.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>allowLoginPasswords</strong></p><p><code>boolean</code></p></td>
+<td><p>Configures the possibility to choose a password that equals the login.
+ <p>
+ Default value is <code>true</code>, i.e. allow for password equals login.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>digestAlgorithm</strong></p><p><code>String</code></p></td>
+<td><p>Sets the digestAlgorithm to use to hash the password before storing it (MD5
+ for instance).</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>hashEncoding</strong></p><p><code>String</code></p></td>
+<td><p>Sets the hashEncoding to encode the password hash before storing it. You
+ may choose between :
+ <ul>
+ <li><code>BASE64</code> for base 64 encoding.</li>
+ <li><code>HEX</code> for base 16 encoding.</li>
+ </ul>
+ Default encoding is <code>BASE64</code>.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>passwordRegex</strong></p><p><code>String</code></p></td>
+<td><p>Configures a regex that new passwords must match.
+ <p>
+ Default value is <code>null</code>, i.e. no regex is enforced.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>passwordRegexSample</strong></p><p><code>String</code></p></td>
+<td><p>Configures an example of a valid password to explain the regex rules.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction"></a>DatabaseChangePasswordAction
+
++ **Full name** : [`org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/DatabaseChangePasswordAction.html)
++ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
+
+
+
+Concrete backend implementation of a change password action where password is
+ stored in a relational database.
+
+
+
+<table>
+<caption>DatabaseChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>jdbcTemplate</strong></p><p><code>Jdbc&#x200B;Template</code></p></td>
+<td><p>Configures the Spring jdbcTemplate to use to issue the update statement.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>updateQuery</strong></p><p><code>String</code></p></td>
+<td><p>Configures the update query to execute to change the password. The prepared
+ statement parameters that will be bound are, in order :
+ <ol>
+ <li><b>&quot;new password&quot;</b> potentially hashed.</li>
+ <li><b>&quot;user name&quot;</b>.</li>
+ <li><b>&quot;current password&quot;</b> potentially hashed.</li>
+ </ol></p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction"></a>LdapChangePasswordAction
+
++ **Full name** : [`org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/LdapChangePasswordAction.html)
++ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
+
+
+
+Concrete backend implementation of a change password action where password is
+ stored in an LDAP directory. The user DN to use to connect to the LDAP
+ directory is the one stored in the user principal from the login process.
+
+
+
+<table>
+<caption>LdapChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>ldapUrl</strong></p><p><code>String</code></p></td>
+<td><p>Configures the LDAP url (e.g. <i>http://localhost:389</i>) of the LDAP
+ directory. The user must be authorized to change its own password in the
+ LDAP backend.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.backend.action.security.MockChangePasswordAction"></a>MockChangePasswordAction
+
++ **Full name** : [`org.jspresso.framework.application.backend.action.security.MockChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/MockChangePasswordAction.html)
++ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
+
+
+
+Mocks up password change.
+
+
+
+<table>
+<caption>MockChangePasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
 #### <a name="org.jspresso.framework.application.backend.action.AbstractCloneAction"></a>AbstractCloneAction
 
 + **Full name** : [`org.jspresso.framework.application.backend.action.AbstractCloneAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/AbstractCloneAction.html)
@@ -47,7 +255,7 @@ This class should serve as base class for implementing actions that execute
 
 
 An action used duplicate a domain object. the cloned domain object is set as model for the current view.
-
+ 
  <pre>
  protected abstract Object cloneElement(Object element,
      Map&lt;String, Object&gt; context)
@@ -164,7 +372,7 @@ An action used in master/detail views to create and add a new detail to a
  master domain object. The only method to be implemented by concrete subclasses
  to retrieve the instances to be added to the master is :
  <p>
- <p>
+ 
  <pre>
  protected abstract List&lt;?&gt;
            getAddedComponents(Map&lt;String, Object&gt; context)
@@ -186,10 +394,6 @@ An action used in master/detail views to create and add a new detail to a
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>ignoreSelection</strong></p><p><code>boolean</code></p></td>
-<td><p>Sets ignore selection.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>initializationMapping</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,Object&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets initialization mapping.</p></td>
 </tr>
@@ -212,7 +416,7 @@ An action used duplicate a collection of domain objects. Cloning an entity
  Components to clone are retrieved from the context using the selected indices
  of the model collection connector. Actual cloning of components is left to
  concrete implementations that must implement :
-
+ 
  <pre>
  protected abstract Object cloneElement(Object element,
      Map&lt;String, Object&gt; context)
@@ -744,368 +948,6 @@ Root abstract class of actions that deal with LDAP directory. It's only
 <tr class="odd">
 <td align="left"><p><strong>ldapTemplate</strong></p><p><code>Ldap&#x200B;Template</code></p></td>
 <td><p>Configures the Spring LDAP template to use with this action.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.application.backend.action.security.AbstractPasswordAction"></a>AbstractPasswordAction
-
-+ **Full name** : [`org.jspresso.framework.application.backend.action.security.AbstractPasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/AbstractPasswordAction.html)
-+ **Super-type** : [`BackendAction`](#org.jspresso.framework.application.backend.action.BackendAction)
-+ **Sub-types** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction), [`AbstractResetPasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractResetPasswordAction)
-
-
-
-Abstract pasword class with base methods for encofding and hashing passwords.
-
-
-
-<table>
-<caption>AbstractPasswordAction properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>digestAlgorithm</strong></p><p><code>String</code></p></td>
-<td><p>Sets the digestAlgorithm to use to hash the password before storing it (MD5
- for instance).</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>hashEncoding</strong></p><p><code>String</code></p></td>
-<td><p>Sets the hashEncoding to encode the password hash before storing it. You
- may choose between :
- <ul>
- <li><code>BASE64</code> for base 64 encoding.</li>
- <li><code>HEX</code> for base 16 encoding.</li>
- </ul>
- Default encoding is <code>BASE64</code>.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction"></a>AbstractChangePasswordAction
-
-+ **Full name** : [`org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/AbstractChangePasswordAction.html)
-+ **Super-type** : [`AbstractPasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractPasswordAction)
-+ **Sub-types** : [`DatabaseChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction), [`LdapChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction), [`MockChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.MockChangePasswordAction)
-
-
-
-This is the base class for implementing an action that performs actual
- modification of a logged-in user password. This implementation delegates to
- subclasses the actual change in the concrete JAAS store. This backend action
- expects a Map&lt;String,Object&gt; in as action parameter in the context.
- This map must contain :
- <p>
- <ul>
- <li><code>password_current</code> entry containing current password. Entry
- key can be referred to as PASSWD_CURRENT static constant.</li>
- <li><code>password_typed</code> entry containing the new password. Entry key
- can be referred to as PASSWD_TYPED static constant.</li>
- <li><code>password_retyped</code> entry containing the new password retyped.
- Entry key can be referred to as PASSWD_RETYPED static constant.</li>
- </ul>
- For the action to succeed, <code>current_password</code> must match the
- logged-in user current password and <code>password_typed</code> and
- <code>password_retyped</code> mut match between each other. The only method to
- be implemented by concrete subclasses is :
- <p>
-
- <pre>
- protected abstract boolean changePassword(UserPrincipal userPrincipal,
-           String currentPassword, String newPassword)
- </pre>
-
-
-
-<table>
-<caption>AbstractChangePasswordAction properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>allowEmptyPasswords</strong></p><p><code>boolean</code></p></td>
-<td><p>Configures the possibility to choose an empty password.
- <p>
- Default value is <code>true</code>, i.e. allow for empty passwords.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>allowLoginPasswords</strong></p><p><code>boolean</code></p></td>
-<td><p>Configures the possibility to choose a password that equals the login.
- <p>
- Default value is <code>true</code>, i.e. allow for password equals login.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>passwordRegex</strong></p><p><code>String</code></p></td>
-<td><p>Configures a regex that new passwords must match.
- <p>
- Default value is <code>null</code>, i.e. no regex is enforced.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>passwordRegexSample</strong></p><p><code>String</code></p></td>
-<td><p>Configures an example of a valid password to explain the regex rules.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction"></a>DatabaseChangePasswordAction
-
-+ **Full name** : [`org.jspresso.framework.application.backend.action.security.DatabaseChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/DatabaseChangePasswordAction.html)
-+ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
-
-
-
-Concrete backend implementation of a change password action where password is
- stored in a relational database.
-
-
-
-<table>
-<caption>DatabaseChangePasswordAction properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>jdbcTemplate</strong></p><p><code>Jdbc&#x200B;Template</code></p></td>
-<td><p>Configures the Spring jdbcTemplate to use to issue the update statement.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>updateQuery</strong></p><p><code>String</code></p></td>
-<td><p>Configures the update query to execute to change the password. The prepared
- statement parameters that will be bound are, in order :
- <ol>
- <li><b>&quot;new password&quot;</b> potentially hashed.</li>
- <li><b>&quot;user name&quot;</b>.</li>
- <li><b>&quot;current password&quot;</b> potentially hashed.</li>
- </ol></p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction"></a>LdapChangePasswordAction
-
-+ **Full name** : [`org.jspresso.framework.application.backend.action.security.LdapChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/LdapChangePasswordAction.html)
-+ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
-
-
-
-Concrete backend implementation of a change password action where password is
- stored in an LDAP directory. The user DN to use to connect to the LDAP
- directory is the one stored in the user principal from the login process.
-
-
-
-<table>
-<caption>LdapChangePasswordAction properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>ldapUrl</strong></p><p><code>String</code></p></td>
-<td><p>Configures the LDAP url (e.g. <i>http://localhost:389</i>) of the LDAP
- directory. The user must be authorized to change its own password in the
- LDAP backend.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.application.backend.action.security.MockChangePasswordAction"></a>MockChangePasswordAction
-
-+ **Full name** : [`org.jspresso.framework.application.backend.action.security.MockChangePasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/MockChangePasswordAction.html)
-+ **Super-type** : [`AbstractChangePasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractChangePasswordAction)
-
-
-
-Mocks up password change.
-
-
-
-<table>
-<caption>MockChangePasswordAction properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.application.backend.action.security.AbstractResetPasswordAction"></a>AbstractResetPasswordAction
-
-+ **Full name** : [`org.jspresso.framework.application.backend.action.security.AbstractResetPasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/AbstractResetPasswordAction.html)
-+ **Super-type** : [`AbstractPasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractPasswordAction)
-+ **Sub-types** : [`DatabaseResetPasswordAction`](#org.jspresso.framework.application.backend.action.security.DatabaseResetPasswordAction), [`MockResetPasswordAction`](#org.jspresso.framework.application.backend.action.security.MockResetPasswordAction)
-
-
-
-This is the base class for implementing an action that performs actual
- reset of a logged-in user password. This implementation delegates to
- subclasses the actual change in the concrete JAAS store. This backend action
- will generate a random String that will replace the user password in the store.
-
- The only method to be implemented by concrete subclasses is :
- <p>
-
- <pre>
- protected abstract boolean resetPassword(String username, String newPassword)
- </pre>
-
-
-
-<table>
-<caption>AbstractResetPasswordAction properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.application.backend.action.security.DatabaseResetPasswordAction"></a>DatabaseResetPasswordAction
-
-+ **Full name** : [`org.jspresso.framework.application.backend.action.security.DatabaseResetPasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/DatabaseResetPasswordAction.html)
-+ **Super-type** : [`AbstractResetPasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractResetPasswordAction)
-
-
-
-Concrete backend implementation of a reset password action where password is
- stored in a relational database.
-
-
-
-<table>
-<caption>DatabaseResetPasswordAction properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>jdbcTemplate</strong></p><p><code>Jdbc&#x200B;Template</code></p></td>
-<td><p>Configures the Spring jdbcTemplate to use to issue the update statement.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>updateQuery</strong></p><p><code>String</code></p></td>
-<td><p>Configures the update query to execute to change the password. The prepared
- statement parameters that will be bound are, in order :
- <ol>
- <li><b>&quot;new password&quot;</b> potentially hashed.</li>
- <li><b>&quot;user name&quot;</b>.</li>
- </ol></p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.application.backend.action.security.MockResetPasswordAction"></a>MockResetPasswordAction
-
-+ **Full name** : [`org.jspresso.framework.application.backend.action.security.MockResetPasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/security/MockResetPasswordAction.html)
-+ **Super-type** : [`AbstractResetPasswordAction`](#org.jspresso.framework.application.backend.action.security.AbstractResetPasswordAction)
-
-
-
-Mocks up password reset.
-
-
-
-<table>
-<caption>MockResetPasswordAction properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -1779,9 +1621,9 @@ Resets the model connector value to null.
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><p><strong>modelPath</strong></p><p><code>String</code></p></td>
-<td><p>Sets model path.</p></td>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>

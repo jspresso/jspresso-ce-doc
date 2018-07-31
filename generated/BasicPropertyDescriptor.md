@@ -38,10 +38,6 @@ This is the abstract base class for all property descriptors. It mainly
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>alternativeSortProperty</strong></p><p><code>String</code></p></td>
-<td><p>Allows to configure an alternative property used to sort this one.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>cacheable</strong></p><p><code>boolean</code></p></td>
 <td><p>Configures the fact that this property can be cached. This is only used for
  computed properties. Note that the cached value will be reset whenever a
@@ -51,7 +47,7 @@ This is the abstract base class for all property descriptors. It mainly
  side-effects if computed property change notification is not correctly
  wired.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>computed</strong></p><p><code>boolean</code></p></td>
 <td><p>Forces a property to be considered as a computed property by the framework.
  A computed property will be completely ignored by the persistence layer and
@@ -69,7 +65,7 @@ This is the abstract base class for all property descriptors. It mainly
  <p/>
  Default value is <code>false</code>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>delegateClassName</strong></p><p><code>String</code></p></td>
 <td><p>Instructs the framework that this property is computed by a delegate
  attached to the owning component. The <code>delegateClassName</code>
@@ -96,7 +92,7 @@ This is the abstract base class for all property descriptors. It mainly
  <code>delegateWritable=true</code>. In that case the delegate class must
  also provide a setter for the computed property.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>delegateWritable</strong></p><p><code>boolean</code></p></td>
 <td><p>Instructs the framework that a delegate-computed property is writable. Most
  of the time, a computed property is read-only. Whenever a computed property
@@ -105,19 +101,9 @@ This is the abstract base class for all property descriptors. It mainly
  <p/>
  Default value is <code>false</code>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>filterComparable</strong></p><p><code>Boolean</code></p></td>
 <td><p>Sets filter comparable.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>filterOnly</strong></p><p><code>boolean</code></p></td>
-<td><p>Configures whether this property is only used in filters, i.e. it is not persistent and only serves for storing
- criteria
- data that can be further leveraged by criteria refiners. Using <code>filterOnly</code> properties relieves the
- developer
- from having to declare fake computed properties. see {@link
- <a href="https://github.com/jspresso/jspresso-ce/issues/253">
- this request for enhancement</a>}</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>grantedRoles</strong></p><p><code>Collection&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>

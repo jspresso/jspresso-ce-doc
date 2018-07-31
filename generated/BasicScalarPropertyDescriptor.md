@@ -409,9 +409,9 @@ Describes a property used to store any java <code>Serializable</code> object.
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><p><strong>modelTypeClassName</strong></p><p><code>String</code></p></td>
-<td><p>Configures the actual property type through its fully qualified name.</p></td>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -712,11 +712,6 @@ Describes a string based property.
  ... exactly like non-translatable properties.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>truncate</strong></p><p><code>Boolean</code></p></td>
-<td><p>Configures whether the underlying string property should be truncated
- automatically if too long. Default value is <code>false</code>.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>upperCase</strong></p><p><code>boolean</code></p></td>
 <td><p>This is a shortcut to implement the common use-case of handling upper-case
  only properties. all incoming values will be transformed to uppercase as if

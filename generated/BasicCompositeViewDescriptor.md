@@ -220,7 +220,7 @@ A composite view descriptor that aggregates view sections on a single page.
 <td><p>Sets inline editing.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>pageSectionDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/IMobileViewDescriptor.html">IMobile&#x200B;View&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
+<td align="left"><p><strong>pageSectionDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/IMobilePageSectionViewDescriptor.html">IMobile&#x200B;Page&#x200B;Section&#x200B;View&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets page sections.</p></td>
 </tr>
 </tbody>
@@ -258,7 +258,7 @@ Navigation page view descriptors that are able to navigate to another page based
 <td><p>Sets cascading models. This operation is not supported on mobile lists.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>headerSectionDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/IMobileViewDescriptor.html">IMobile&#x200B;View&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
+<td align="left"><p><strong>headerSectionDescriptors</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/IMobilePageSectionViewDescriptor.html">IMobile&#x200B;Page&#x200B;Section&#x200B;View&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets header section descriptors.</p></td>
 </tr>
 <tr class="odd">
@@ -481,7 +481,6 @@ This composite view arranges its children in a grid where cell behaviour and
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicEvenGridViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicEvenGridViewDescriptor.html)
 + **Super-type** : [`BasicCompositeViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCompositeViewDescriptor)
-+ **Sub-types** : [`MobileEvenGridViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileEvenGridViewDescriptor)
 
 
 
@@ -547,84 +546,6 @@ This composite view arranges its children in a grid where cells are
 ---
 
 
-#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileEvenGridViewDescriptor"></a>MobileEvenGridViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileEvenGridViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileEvenGridViewDescriptor.html)
-+ **Super-type** : [`BasicEvenGridViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEvenGridViewDescriptor)
-
-
-
-A composite view descriptor that aggregates mobile views.
-
-
-
-<table>
-<caption>MobileEvenGridViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>backAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
-<td><p>Sets back action.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>drivingDimension</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EAxis.html">EAxis</a></code></p></td>
-<td><p>Not supported in mobile environment.
- <p>
- {@inheritDoc}</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>drivingDimensionCellCount</strong></p><p><code>int</code></p></td>
-<td><p>Not supported in mobile environment.
- <p>
- {@inheritDoc}</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>enterAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
-<td><p>Sets enter action.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Sets for client types.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>i18nHeader</strong></p><p><code>String</code></p></td>
-<td><p>Sets i 18 n header.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>mainAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
-<td><p>Sets main action.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>pageEndAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
-<td><p>Sets page end action.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
-<td><p>Sets  position.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>swipeLeftAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
-<td><p>Sets swipe left action.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>swipeRightAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
-<td><p>Sets swipe right action.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
 #### <a name="org.jspresso.framework.view.descriptor.basic.BasicSplitViewDescriptor"></a>BasicSplitViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicSplitViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicSplitViewDescriptor.html)
@@ -681,10 +602,6 @@ This composite view arranges its children in a container split either
 <td><p>Sets the <i>right</i> (horizontal split) of <i>bottom</i> (vertical split)
  nested view.</p></td>
 </tr>
-<tr class="even">
-<td align="left"><p><strong>separatorPosition</strong></p><p><code>Integer</code></p></td>
-<td><p>Sets separator position.</p></td>
-</tr>
 </tbody>
 </table>
 
@@ -703,7 +620,7 @@ This composite view arranges its children in tabs. Each tab potentially
  displays a label (that is translated based on the name of the view in the
  tab), an icon (based on the icon of the view in the tab) and a toolTip (based
  on the description of the view in the tab).
- <p/>
+ <p>
  Default cascading order follows the order of nested view registrations in the
  container.
 
@@ -739,19 +656,9 @@ This composite view arranges its children in tabs. Each tab potentially
  <li><code>LABEL</code> for label only</li>
  <li><code>ICON</code> for icon only.</li>
  </ul>
- <p/>
+ <p>
  Default value is <code>ERenderingOptions.LABEL_ICON</code>, i.e. label and
  icon.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>selectFirstTab</strong></p><p><code>boolean</code></p></td>
-<td><p>If <code>true</code>, the tab view will select its the first tab each time its model changes. Default value is {@false}.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>tabSelectionAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
-<td><p>Registers an action that is implicitly triggered every time the tab selection
- changes on the tab view UI peer. The context of the action execution
- is the same as if the action was registered in the view action map.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>tabs</strong></p><p><code>List&#x200B;&lt;&#x200B;<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
