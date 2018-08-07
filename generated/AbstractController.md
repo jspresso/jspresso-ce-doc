@@ -52,6 +52,10 @@ Abstract base class for controllers. Controllers role is to adapt the
  </ul></p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>liveDebugUI</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets live debug ui.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>loginContextName</strong></p><p><code>String</code></p></td>
 <td><p>Configures the name of the JAAS login context to use to authenticate users.
  It must reference a valid JAAS context that is installed in the JVM, either
@@ -362,6 +366,14 @@ Base class for frontend application controllers. Frontend controllers are
  The help action map is visually distinguished from the regular application
  action map. For instance elp actions can be represented in a menu that is
  right-aligned in the menu bar.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>i18nDescription</strong></p><p><code>String</code></p></td>
+<td><p>Sets i 18 n description.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>i18nName</strong></p><p><code>String</code></p></td>
+<td><p>Sets i 18 n name.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>iconImageURL</strong></p><p><code>String</code></p></td>
