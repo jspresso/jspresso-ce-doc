@@ -52,7 +52,7 @@ This is the abstract base descriptor for all views. Its main purpose, since
  Default value is <code>null</code>, meaning use UI default.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>borderType</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EBorderType.html">EBorder&#x200B;Type</a></code></p></td>
+<td align="left"><p><strong>borderType</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EBorderType.html">EBorder&#x200B;Type</a></code></p></td>
 <td><p>Sets the border type of the view. This is either a value of the
  <code>EBorderType</code> enum or its equivalent string representation :
  <ul>
@@ -341,7 +341,7 @@ A composite view descriptor that aggregates mobile views in cards.
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets  position.</p></td>
 </tr>
 </tbody>
@@ -421,7 +421,7 @@ This card view provides a simple card determination strategy that is based on
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets  position.</p></td>
 </tr>
 </tbody>
@@ -504,7 +504,7 @@ Describes a model-bound card view that is configurable with a model property use
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets  position.</p></td>
 </tr>
 </tbody>
@@ -557,7 +557,7 @@ Abstract class for component view descriptors.
  Default value is <code>null</code>, meaning use default component font.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>labelsPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ELabelPosition.html">ELabel&#x200B;Position</a></code></p></td>
+<td align="left"><p><strong>labelsPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ELabelPosition.html">ELabel&#x200B;Position</a></code></p></td>
 <td><p>Instructs Jspresso where to place the fields label. This is either a value
  of the <code>ELabelPosition</code> enum or its equivalent string
  representation :
@@ -717,7 +717,7 @@ Component view descriptors are surely one of the most commonly used view
  Default value is <code>false</code>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>labelsHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
+<td align="left"><p><strong>labelsHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
 <td><p>Configures the label horizontal position. There are special cases when the default label position has to be
  overridden. This is either a value of the <code>EHorizontalPosition</code>
  enum or its equivalent string representation :
@@ -826,7 +826,7 @@ A mobile form view descriptor.
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 </tbody>
@@ -1059,7 +1059,7 @@ This descriptor is use to design a tree view. The way to define a tree view
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 <tr class="odd">
@@ -1161,7 +1161,7 @@ A mobile action view descriptor.
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets  position.</p></td>
 </tr>
 </tbody>
@@ -1234,7 +1234,7 @@ This is the abstract base descriptor of all views used to display a
  action was registered in the view action map.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
+<td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
 <td><p>Sets the selection mode of the collection view. This is either a value of
  the <code>ESelectionMode</code> enum or its equivalent string
  representation :
@@ -1421,7 +1421,7 @@ This type of descriptor is used to implement a list view. A list view is a
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 <tr class="even">
@@ -1543,7 +1543,7 @@ This descriptor is used to implement a repeater view. A repeater view displays a
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 </tbody>
@@ -1768,7 +1768,7 @@ A mobile map view descriptor.
 <td><p>Sets inline.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 </tbody>
@@ -1841,7 +1841,7 @@ This view descriptor serves 2 purposes :
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>horizontalAlignment</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EHorizontalAlignment.html">EHorizontal&#x200B;Alignment</a></code></p></td>
+<td align="left"><p><strong>horizontalAlignment</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EHorizontalAlignment.html">EHorizontal&#x200B;Alignment</a></code></p></td>
 <td><p>This property allows to control the property alignment in views that
  support it. This is either a value of the <code>EHorizontalAlignment</code>
  enum or its equivalent string representation :
@@ -1889,7 +1889,7 @@ This view descriptor serves 2 purposes :
  Default value is <code>null</code>, meaning use UI default.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>labelHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
+<td align="left"><p><strong>labelHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
 <td><p>Configures the label horizontal position. There are special cases when the default label position has to be
  overridden. This is either a value of the <code>EHorizontalPosition</code>
  enum or its equivalent string representation :
@@ -2028,7 +2028,7 @@ This specialized property view descriptor is used in order to be able to
  available as a choice.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>orientation</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EOrientation.html">EOrientation</a></code></p></td>
+<td align="left"><p><strong>orientation</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EOrientation.html">EOrientation</a></code></p></td>
 <td><p>Configures whether radio values be rendered horizontally or vertically.
  <code>HORIZONTAL</code> if radio values should be rendered horizontally and
  <code>VERTICAL</code> otherwise. Default value is <code>VERTICAL</code>.</p></td>

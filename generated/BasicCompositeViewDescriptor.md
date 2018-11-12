@@ -128,7 +128,7 @@ Abstract base class for mobile page view descriptors.
 <td><p>Sets page end action.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 <tr class="even">
@@ -399,7 +399,7 @@ A composite view descriptor that aggregates mobile views.
 <td><p>Sets page end action.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets  position.</p></td>
 </tr>
 <tr class="odd">
@@ -524,7 +524,7 @@ This composite view arranges its children in a grid where cells are
 <td><p>Registers the nested views to display as grid cells.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>drivingDimension</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EAxis.html">EAxis</a></code></p></td>
+<td align="left"><p><strong>drivingDimension</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EAxis.html">EAxis</a></code></p></td>
 <td><p>Configures the driving dimension of the grid. This is either a value of the
  <code>EAxis</code> enum or its equivalent string representation :
  <ul>
@@ -576,7 +576,7 @@ A composite view descriptor that aggregates mobile views.
 <td><p>Sets back action.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>drivingDimension</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EAxis.html">EAxis</a></code></p></td>
+<td align="left"><p><strong>drivingDimension</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EAxis.html">EAxis</a></code></p></td>
 <td><p>Not supported in mobile environment.
  <p>
  {@inheritDoc}</p></td>
@@ -608,7 +608,7 @@ A composite view descriptor that aggregates mobile views.
 <td><p>Sets page end action.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets  position.</p></td>
 </tr>
 <tr class="even">
@@ -663,7 +663,7 @@ This composite view arranges its children in a container split either
  nested view.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>orientation</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EOrientation.html">EOrientation</a></code></p></td>
+<td align="left"><p><strong>orientation</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EOrientation.html">EOrientation</a></code></p></td>
 <td><p>Configures the split orientation of the container. This is either a value
  of the <code>EOrientation</code> enum or its equivalent string
  representation :
@@ -803,7 +803,7 @@ A composite view descriptor that aggregates mobile views.
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 </tbody>

@@ -2558,7 +2558,7 @@ This is a standard &quot;List Of Values&quot; action for reference property
 <td><p>Sets query component refiner.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
+<td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
 <td><p>Allows to force the result view selection mode.</p></td>
 </tr>
 <tr class="even">
