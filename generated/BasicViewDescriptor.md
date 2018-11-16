@@ -52,7 +52,7 @@ This is the abstract base descriptor for all views. Its main purpose, since
  Default value is <code>null</code>, meaning use UI default.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>borderType</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EBorderType.html">EBorder&#x200B;Type</a></code></p></td>
+<td align="left"><p><strong>borderType</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EBorderType.html">EBorder&#x200B;Type</a></code></p></td>
 <td><p>Sets the border type of the view. This is either a value of the
  <code>EBorderType</code> enum or its equivalent string representation :
  <ul>
@@ -61,22 +61,9 @@ This is the abstract base descriptor for all views. Its main purpose, since
  <li><code>TITLED</code> for a titled border. The view is then labeled with
  its translated name and and icon. Whenever the view name has not been
  explicitly set, the model name is used is used.</li>
- <li><code>TITLED_ACTIONS</code> like TITLED but with the action map next to it if the UI channel supports it</li>
  </ul>
  <p/>
  Default value is <code>EBorderType.NONE</code>, i.e. no border.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>collapsed</strong></p><p><code>boolean</code></p></td>
-<td><p>Configures wether the view is collapsed by default. Some UI frontends allow the user to collapse
- views when they are surrounded by a titled border. This is <code>false</code> by default. if set to <code>true</code>, the
- view will appear collapsed by default if and only if it is collapsible.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>collapsible</strong></p><p><code>boolean</code></p></td>
-<td><p>Configures wether the UI frontend is alowed to collapse this view. Some UI frontends allow the user to collapse
- views when they are surrounded by a titled border. This is <code>true</code> by default. if set to <code>false</code>, the
- view will not collapse.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>font</strong></p><p><code>String</code></p></td>
@@ -161,7 +148,7 @@ This is the abstract base descriptor for all views. Its main purpose, since
  system.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>readOnly</strong></p><p><code>Boolean</code></p></td>
+<td align="left"><p><strong>readOnly</strong></p><p><code>boolean</code></p></td>
 <td><p>Allows to set a view read-only, i.e. none of the view part will allow for
  updating the underlying model. This is mainly a shortcut to assigning an
  &quot;always closed&quot; writability gate. One difference though is that,
@@ -213,7 +200,7 @@ This is the abstract base descriptor for all views. Its main purpose, since
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/AbstractCardViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`BasicCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor), [`EntityCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor), [`PropertyCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor)
++ **Sub-types** : [`BasicCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor), [`EntityCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor)
 
 
 
@@ -265,7 +252,6 @@ This descriptor serves as abstract base implementation for card view
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicCardViewDescriptor.html)
 + **Super-type** : [`AbstractCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor)
-+ **Sub-types** : [`MobileCardViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileCardViewDescriptor)
 
 
 
@@ -312,49 +298,10 @@ Describes a multi-purpose card view that is configurable with a custom card
 ---
 
 
-#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileCardViewDescriptor"></a>MobileCardViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileCardViewDescriptor.html)
-+ **Super-type** : [`BasicCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicCardViewDescriptor)
-
-
-
-A composite view descriptor that aggregates mobile views in cards.
-
-
-
-<table>
-<caption>MobileCardViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Sets for client types.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
-<td><p>Sets  position.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
 #### <a name="org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor"></a>EntityCardViewDescriptor
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/EntityCardViewDescriptor.html)
 + **Super-type** : [`AbstractCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor)
-+ **Sub-types** : [`MobileEntityCardViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileEntityCardViewDescriptor)
 
 
 
@@ -383,129 +330,6 @@ This card view provides a simple card determination strategy that is based on
  changes, this list is iterated until a card with a matching model is found.
  The first matching card is displayed. Whenever no registered card matches,
  an empty view is displayed.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileEntityCardViewDescriptor"></a>MobileEntityCardViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileEntityCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileEntityCardViewDescriptor.html)
-+ **Super-type** : [`EntityCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.EntityCardViewDescriptor)
-
-
-
-This card view provides a simple card determination strategy that is based on
- the bound model type. This strategy pulls up the card whose model descriptor
- matches the type of the bound model.
-
-
-
-<table>
-<caption>MobileEntityCardViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Sets for client types.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
-<td><p>Sets  position.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor"></a>PropertyCardViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/PropertyCardViewDescriptor.html)
-+ **Super-type** : [`AbstractCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.AbstractCardViewDescriptor)
-+ **Sub-types** : [`MobilePropertyCardViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobilePropertyCardViewDescriptor)
-
-
-
-Describes a model-bound card view that is configurable with a model property used to determine the card yo display.
-
-
-
-<table>
-<caption>PropertyCardViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>accessorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/accessor/IAccessorFactory.html">IAccessor&#x200B;Factory</a></code></p></td>
-<td><p>Sets accessor factory.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>cardViewDescriptors</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,<a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a>&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Registers the card views keyed by their name keys. The names used as key of
- the <code>Map</code> must match the names that are returned by the
- registered card name selector.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>propertyName</strong></p><p><code>String</code></p></td>
-<td><p>Sets the model property name used to determine the card name.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.mobile.MobilePropertyCardViewDescriptor"></a>MobilePropertyCardViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobilePropertyCardViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobilePropertyCardViewDescriptor.html)
-+ **Super-type** : [`PropertyCardViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.PropertyCardViewDescriptor)
-
-
-
-Describes a model-bound card view that is configurable with a model property used to determine the card yo display.
-
-
-
-<table>
-<caption>MobilePropertyCardViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Sets for client types.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
-<td><p>Sets  position.</p></td>
 </tr>
 </tbody>
 </table>
@@ -557,7 +381,7 @@ Abstract class for component view descriptors.
  Default value is <code>null</code>, meaning use default component font.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>labelsPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ELabelPosition.html">ELabel&#x200B;Position</a></code></p></td>
+<td align="left"><p><strong>labelsPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ELabelPosition.html">ELabel&#x200B;Position</a></code></p></td>
 <td><p>Instructs Jspresso where to place the fields label. This is either a value
  of the <code>ELabelPosition</code> enum or its equivalent string
  representation :
@@ -709,15 +533,7 @@ Component view descriptors are surely one of the most commonly used view
  single column.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>horizontallyScrollable</strong></p><p><code>boolean</code></p></td>
-<td><p>This property allows to define the form horizontal scrolling behaviour.
- Whenever it is set to true, the corresponding UI component will install a
- horizontal scroll bar when the available horizontal space is not enough.
- <p>
- Default value is <code>false</code>.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>labelsHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
+<td align="left"><p><strong>labelsHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
 <td><p>Configures the label horizontal position. There are special cases when the default label position has to be
  overridden. This is either a value of the <code>EHorizontalPosition</code>
  enum or its equivalent string representation :
@@ -728,7 +544,7 @@ Component view descriptors are surely one of the most commonly used view
  <p>
  Default value is <code>LEFT</code>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>propertyWidths</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,Object&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>This property allows to simply define property spans in the underlying grid
  without having to extensively define the
@@ -744,7 +560,7 @@ Component view descriptors are surely one of the most commonly used view
  Default value is <code>null</code>, meaning all property fields have a span
  of 1.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>renderedChildProperties</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,List&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Whenever a rendered property is not scalar, this property allows to
  override which of the referenced component fields should be displayed :
@@ -768,7 +584,7 @@ Component view descriptors are surely one of the most commonly used view
  flexibility in the content layouting as you would have when using composite
  views; so the latter is by far recommended.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>verticallyScrollable</strong></p><p><code>boolean</code></p></td>
 <td><p>This property allows to define the form vertical scrolling behaviour.
  Whenever it is set to true, the corresponding UI component will install a
@@ -776,7 +592,7 @@ Component view descriptors are surely one of the most commonly used view
  <p>
  Default value is <code>false</code>.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>widthResizeable</strong></p><p><code>boolean</code></p></td>
 <td><p>This property allows to define the form horizontal fill behaviour.
  Whenever it is set to true, the corresponding UI component will fill all its available horizontal space.
@@ -826,7 +642,7 @@ A mobile form view descriptor.
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 </tbody>
@@ -1055,14 +871,6 @@ This descriptor is use to design a tree view. The way to define a tree view
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Sets for client types.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
-<td><p>Sets position.</p></td>
-</tr>
-<tr class="odd">
 <td align="left"><p><strong>showArrow</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets show arrow.</p></td>
 </tr>
@@ -1076,7 +884,6 @@ This descriptor is use to design a tree view. The way to define a tree view
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicActionViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicActionViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`MobileActionViewDescriptor`](#org.jspresso.framework.view.descriptor.mobile.MobileActionViewDescriptor)
 
 
 
@@ -1104,16 +911,11 @@ This type of view allows to make an action available as a view and thus
 <tr class="odd">
 <td align="left"><p><strong>action</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Assigns the action to display as a view. The action will typically be
- rendered as a button in the UI. Whenever you want to size the icon used to
+ rendered as a button in the UI. whenever you want to size the icon used to
  display the action (and thus the button peer), you might use the
  <code>preferredWidth</code> / <code>preferredHeight</code> properties.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>actionList</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/ActionList.html">Action&#x200B;List</a></code></p></td>
-<td><p>Assigns the action list to display as a view. The action will typically be
- rendered as a button bar in the UI.</p></td>
-</tr>
-<tr class="odd">
 <td align="left"><p><strong>renderingOptions</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ERenderingOptions.html">ERendering&#x200B;Options</a></code></p></td>
 <td><p>Indicates how the action should be rendered. This is either a value of the
  <code>ERenderingOptions</code> enum or its equivalent string representation
@@ -1125,44 +927,6 @@ This type of view allows to make an action available as a view and thus
  </ul>
  <p>
  Default value is <code>ERenderingOptions.ICON</code>, i.e. icon only.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.mobile.MobileActionViewDescriptor"></a>MobileActionViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.mobile.MobileActionViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/mobile/MobileActionViewDescriptor.html)
-+ **Super-type** : [`BasicActionViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicActionViewDescriptor)
-
-
-
-A mobile action view descriptor.
-
-
-
-<table>
-<caption>MobileActionViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Sets for client types.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
-<td><p>Sets  position.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1234,7 +998,7 @@ This is the abstract base descriptor of all views used to display a
  action was registered in the view action map.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
+<td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
 <td><p>Sets the selection mode of the collection view. This is either a value of
  the <code>ESelectionMode</code> enum or its equivalent string
  representation :
@@ -1417,14 +1181,6 @@ This type of descriptor is used to implement a list view. A list view is a
  {@inheritDoc}</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Sets for client types.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
-<td><p>Sets position.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>showArrow</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets show arrow.</p></td>
 </tr>
@@ -1532,19 +1288,9 @@ This descriptor is used to implement a repeater view. A repeater view displays a
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left"><p><strong>autoSelectFirstRow</strong></p><p><code>boolean</code></p></td>
-<td><p>Not supported in mobile environment.
- <p>
- {@inheritDoc}</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
-<td><p>Sets for client types.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
-<td><p>Sets position.</p></td>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -1672,10 +1418,6 @@ This descriptor is used to implement a table view. This is certainly the most
  <code>renderedProperties</code> property.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>singleClickEdit</strong></p><p><code>boolean</code></p></td>
-<td><p>Configures the table view to enter edition on single clicks instead of double clicks.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>sortable</strong></p><p><code>boolean</code></p></td>
 <td><p>This property allows to define the table horizontal sorting behaviour.
  Whenever it is set to false, the corresponding table UI component will not
@@ -1684,7 +1426,7 @@ This descriptor is used to implement a table view. This is certainly the most
  Default value is <code>true</code>, i.e. table allows for its rows to be
  sorted.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>sortingAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
 <td><p>Configures the action to be activated when a sort is triggered by the user.
  It should be used with caution and rarely be overridden from the default.</p></td>
@@ -1721,13 +1463,12 @@ This descriptor is used to implement a map view.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>defaultZoom</strong></p><p><code>Integer</code></p></td>
-<td><p>Sets default zoom to display when there is no route and a single marker.</p></td>
+<td align="left"><p><strong>latitudeProperty</strong></p><p><code>String</code></p></td>
+<td><p>Sets latitude property.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>mapContentProperty</strong></p><p><code>String</code></p></td>
-<td><p>Sets map content property. The targeted property should return a Json string that describes the markers and the
- routes to display on the map.</p></td>
+<td align="left"><p><strong>longitudeProperty</strong></p><p><code>String</code></p></td>
+<td><p>Sets longitude property.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1764,11 +1505,7 @@ A mobile map view descriptor.
 <td><p>Sets for client types.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>inline</strong></p><p><code>boolean</code></p></td>
-<td><p>Sets inline.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EPosition.html">EPosition</a></code></p></td>
+<td align="left"><p><strong>position</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EPosition.html">EPosition</a></code></p></td>
 <td><p>Sets position.</p></td>
 </tr>
 </tbody>
@@ -1781,7 +1518,7 @@ A mobile map view descriptor.
 
 + **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicPropertyViewDescriptor.html)
 + **Super-type** : [`BasicViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicViewDescriptor)
-+ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicNumberPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor), [`BasicStaticTextViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor), [`BasicTimePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor)
++ **Sub-types** : [`BasicDatePropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicDatePropertyViewDescriptor), [`BasicEnumerationPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicEnumerationPropertyViewDescriptor), [`BasicHtmlViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicHtmlViewDescriptor), [`BasicImageViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicImageViewDescriptor), [`BasicNestedComponentPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicNestedComponentPropertyViewDescriptor), [`BasicStringPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicStringPropertyViewDescriptor)
 
 
 
@@ -1833,15 +1570,11 @@ This view descriptor serves 2 purposes :
 <td><p>Sets focus gained action.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>focusLostAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
-<td><p>Sets focus lost action.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets for client types.</p></td>
 </tr>
-<tr class="odd">
-<td align="left"><p><strong>horizontalAlignment</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EHorizontalAlignment.html">EHorizontal&#x200B;Alignment</a></code></p></td>
+<tr class="even">
+<td align="left"><p><strong>horizontalAlignment</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EHorizontalAlignment.html">EHorizontal&#x200B;Alignment</a></code></p></td>
 <td><p>This property allows to control the property alignment in views that
  support it. This is either a value of the <code>EHorizontalAlignment</code>
  enum or its equivalent string representation :
@@ -1853,7 +1586,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>null</code>, meaning use property type default.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>labelBackground</strong></p><p><code>String</code></p></td>
 <td><p>When the property has to be labelled (e.g. in a component view), this
  property defines the background color of the corresponding label. It might
@@ -1862,7 +1595,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>null</code>, meaning use UI default.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>labelFont</strong></p><p><code>String</code></p></td>
 <td><p>When the property has to be labelled (e.g. in a component view), this
  property defines the font of the corresponding label. It might differ from
@@ -1879,7 +1612,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>null</code>, meaning use default component font.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>labelForeground</strong></p><p><code>String</code></p></td>
 <td><p>When the property has to be labelled (e.g. in a component view), this
  property defines the foreground color of the corresponding label. It might
@@ -1888,8 +1621,8 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>null</code>, meaning use UI default.</p></td>
 </tr>
-<tr class="odd">
-<td align="left"><p><strong>labelHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
+<tr class="even">
+<td align="left"><p><strong>labelHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
 <td><p>Configures the label horizontal position. There are special cases when the default label position has to be
  overridden. This is either a value of the <code>EHorizontalPosition</code>
  enum or its equivalent string representation :
@@ -1900,7 +1633,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>LEFT</code>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>renderedChildProperties</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Whenever the property descriptor backing the view is not scalar, this
  property allows to override which of the referenced component fields should
@@ -1921,14 +1654,14 @@ This view descriptor serves 2 purposes :
  flexibility in the content layouting as you would have when using composite
  views; so the latter is by far recommended.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>sortable</strong></p><p><code>boolean</code></p></td>
 <td><p>Configure the sortability of a property view when used to defines a table
  column for instance. Whenever it is not explicitly set, it falls back to
  the model property sortability. If no model descriptor is set, defaults to
  <code>true</code>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>width</strong></p><p><code>Integer</code></p></td>
 <td><p>When the property has to be displayed in a grid-like layout (e.g. in a
  component view), this property defines the umber of grid columns the
@@ -2028,7 +1761,7 @@ This specialized property view descriptor is used in order to be able to
  available as a choice.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>orientation</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/EOrientation.html">EOrientation</a></code></p></td>
+<td align="left"><p><strong>orientation</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EOrientation.html">EOrientation</a></code></p></td>
 <td><p>Configures whether radio values be rendered horizontally or vertically.
  <code>HORIZONTAL</code> if radio values should be rendered horizontally and
  <code>VERTICAL</code> otherwise. Default value is <code>VERTICAL</code>.</p></td>
@@ -2071,14 +1804,10 @@ This type of view descriptor is used to display a a string property
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>editorConfiguration</strong></p><p><code>String</code></p></td>
-<td><p>Sets editor configuration.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>horizontallyScrollable</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets the horizontallyScrollable.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>verticallyScrollable</strong></p><p><code>boolean</code></p></td>
 <td><p>Configures the view to be either vertically cropped or scrollable when the
  display area is too small to display it.</p></td>
@@ -2175,85 +1904,8 @@ This specialized property view descriptor is used in order to display a nested c
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>nestedComponentViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IComponentViewDescriptor.html">IComponent&#x200B;View&#x200B;Descriptor</a></code></p></td>
+<td align="left"><p><strong>nestedComponentViewDescriptor</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/IViewDescriptor.html">IView&#x200B;Descriptor</a></code></p></td>
 <td><p>Sets nested component view descriptor.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor"></a>BasicNumberPropertyViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicNumberPropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicNumberPropertyViewDescriptor.html)
-+ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
-
-
-
-This specialized property view descriptor is used in order to be able to
- refine the &quot;format&quot; that is used to parse and format numbers.
-
-
-
-<table>
-<caption>BasicNumberPropertyViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p></td>
-<td><p>Sets format pattern. Allows to override the default one.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor"></a>BasicStaticTextViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicStaticTextViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicStaticTextViewDescriptor.html)
-+ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
-
-
-
-This type of view descriptor is used to display a static text in a form as if it was a property.
-
-
-
-<table>
-<caption>BasicStaticTextViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>i18nTextKey</strong></p><p><code>String</code></p></td>
-<td><p>Configures the key to be used for getting the translated static text.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>multiLine</strong></p><p><code>boolean</code></p></td>
-<td><p>Configures the static text to display as multi line. This is <code>false</code> by default.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>readOnly</strong></p><p><code>Boolean</code></p></td>
-<td><p>Sets read only.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2269,7 +1921,7 @@ This type of view descriptor is used to display a static text in a form as if it
 
 
 
-This type of view descriptor is used to display a string property.
+This type of view descriptor is used to display a a string property.
  The objective is to be able to configure an action bound to character typing.
 
 
@@ -2336,41 +1988,6 @@ This specialized property view descriptor is used in order to be able to
  to this reference property view.
  <p/>
  A <code>null</code> value (default) keeps the standard action.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-
-#### <a name="org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor"></a>BasicTimePropertyViewDescriptor
-
-+ **Full name** : [`org.jspresso.framework.view.descriptor.basic.BasicTimePropertyViewDescriptor`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/basic/BasicTimePropertyViewDescriptor.html)
-+ **Super-type** : [`BasicPropertyViewDescriptor`](#org.jspresso.framework.view.descriptor.basic.BasicPropertyViewDescriptor)
-
-
-
-This specialized property view descriptor is used in order to be able to
- refine the &quot;format&quot; that is used to parse and format times.
-
-
-
-<table>
-<caption>BasicTimePropertyViewDescriptor properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p></td>
-<td><p>Sets format pattern. Allows to override the default one.</p></td>
 </tr>
 </tbody>
 </table>
