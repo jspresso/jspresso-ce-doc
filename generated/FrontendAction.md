@@ -1236,10 +1236,6 @@ This action lets the user browse his local file system and choose a file to
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>fileMaxSize</strong></p><p><code>Integer</code></p></td>
-<td><p>Sets the file max size.</p></td>
-</tr>
-<tr class="even">
 <td align="left"><p><strong>fileOpenCallback</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/file/IFileOpenCallback.html">IFile&#x200B;Open&#x200B;Callback</a></code></p></td>
 <td><p>Configures the file open callback instance that will be used to deal with
  the file dialog events. Two methods must be implemented :

@@ -1566,14 +1566,10 @@ This view descriptor serves 2 purposes :
  </ol></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>focusGainedAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
-<td><p>Sets focus gained action.</p></td>
-</tr>
-<tr class="odd">
 <td align="left"><p><strong>forClientTypes</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Sets for client types.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>horizontalAlignment</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EHorizontalAlignment.html">EHorizontal&#x200B;Alignment</a></code></p></td>
 <td><p>This property allows to control the property alignment in views that
  support it. This is either a value of the <code>EHorizontalAlignment</code>
@@ -1586,7 +1582,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>null</code>, meaning use property type default.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>labelBackground</strong></p><p><code>String</code></p></td>
 <td><p>When the property has to be labelled (e.g. in a component view), this
  property defines the background color of the corresponding label. It might
@@ -1595,7 +1591,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>null</code>, meaning use UI default.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>labelFont</strong></p><p><code>String</code></p></td>
 <td><p>When the property has to be labelled (e.g. in a component view), this
  property defines the font of the corresponding label. It might differ from
@@ -1612,7 +1608,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>null</code>, meaning use default component font.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>labelForeground</strong></p><p><code>String</code></p></td>
 <td><p>When the property has to be labelled (e.g. in a component view), this
  property defines the foreground color of the corresponding label. It might
@@ -1621,7 +1617,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>null</code>, meaning use UI default.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>labelHorizontalPosition</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/EHorizontalPosition.html">EHorizontal&#x200B;Position</a></code></p></td>
 <td><p>Configures the label horizontal position. There are special cases when the default label position has to be
  overridden. This is either a value of the <code>EHorizontalPosition</code>
@@ -1633,7 +1629,7 @@ This view descriptor serves 2 purposes :
  <p>
  Default value is <code>LEFT</code>.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>renderedChildProperties</strong></p><p><code>List&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
 <td><p>Whenever the property descriptor backing the view is not scalar, this
  property allows to override which of the referenced component fields should
@@ -1654,14 +1650,14 @@ This view descriptor serves 2 purposes :
  flexibility in the content layouting as you would have when using composite
  views; so the latter is by far recommended.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>sortable</strong></p><p><code>boolean</code></p></td>
 <td><p>Configure the sortability of a property view when used to defines a table
  column for instance. Whenever it is not explicitly set, it falls back to
  the model property sortability. If no model descriptor is set, defaults to
  <code>true</code>.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>width</strong></p><p><code>Integer</code></p></td>
 <td><p>When the property has to be displayed in a grid-like layout (e.g. in a
  component view), this property defines the umber of grid columns the
