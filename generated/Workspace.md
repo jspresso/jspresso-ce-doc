@@ -129,6 +129,10 @@ A workspace is an group of functional application modules. You may decide
  id but must be explicitly set if Spring XML is used.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>startExpanded</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets expanded.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>startupAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Configures an action to be executed the first time the workspace is
  &quot;started&quot; by the user. The action will execute in the context of

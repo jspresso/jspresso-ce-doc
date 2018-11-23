@@ -40,7 +40,7 @@ This is the base abstract class of all Jspresso built-in gates. Open/close
 
 + **Full name** : [`org.jspresso.framework.util.gate.AbstractModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gate/AbstractModelGate.html)
 + **Super-type** : [`AbstractGate`](#org.jspresso.framework.util.gate.AbstractGate)
-+ **Sub-types** : [`AbstractPropertyModelGate`](#org.jspresso.framework.model.gate.AbstractPropertyModelGate)
++ **Sub-types** : [`AbstractPropertyModelGate`](#org.jspresso.framework.model.gate.AbstractPropertyModelGate), [`ServiceModelGate`](#org.jspresso.framework.model.gate.ServiceModelGate)
 
 
 
@@ -233,6 +233,59 @@ This gate opens and closes based on the value of a string property matching a
 <td><p>Configures the regular expression to match the property value against. The
  gate will open if the property value matches the regex unless the
  <code>openOnTrue</code> property has been set to false.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.model.gate.ServiceModelGate"></a>ServiceModelGate
+
++ **Full name** : [`org.jspresso.framework.model.gate.ServiceModelGate`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/model/gate/ServiceModelGate.html)
++ **Super-type** : [`AbstractModelGate`](#org.jspresso.framework.util.gate.AbstractModelGate)
+
+
+
+This is a gate whose opening rules are based on an arbitrary method returning a boolean value.
+
+
+
+<table>
+<caption>ServiceModelGate properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>accessorFactory</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/accessor/IAccessorFactory.html">IAccessor&#x200B;Factory</a></code></p></td>
+<td><p>Configures the accessor factory to use to access the underlying model
+ properties.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>context</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,Object&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets context.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>grantedRoles</strong></p><p><code>Collection&#x200B;&lt;&#x200B;String&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Configures the roles for which the gate is installed. It supports
+ &quot;<b>!</b>&quot; prefix to negate the role(s).</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>methodName</strong></p><p><code>String</code></p></td>
+<td><p>Configures the model service method name to which this gate is attached.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>openOnTrue</strong></p><p><code>boolean</code></p></td>
+<td><p>This property allows to revert the standard behaviour of the gate, i.e.
+ close when it should normally have opened and the other way around.</p></td>
 </tr>
 </tbody>
 </table>

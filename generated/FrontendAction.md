@@ -4,7 +4,7 @@
 
 + **Full name** : [`org.jspresso.framework.application.frontend.action.FrontendAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/FrontendAction.html)
 + **Super-type** : [`AbstractAction`](#org.jspresso.framework.application.action.AbstractAction)
-+ **Sub-types** : [`AbstractChartAction`](#org.jspresso.framework.application.charting.frontend.action.AbstractChartAction), [`AbstractEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction), [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction), [`AbstractModuleDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction), [`AbstractReportAction`](#org.jspresso.framework.application.printing.frontend.action.AbstractReportAction), [`ActionParamToSelectedModelAction`](#org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction), [`AddBeanAsSubModuleFrontAction`](#org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction), [`AddCollectionToMasterAction`](#org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction), [`AddPageAction`](#org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction), [`BinaryPropertyInfoAction`](#org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction), [`ChooseActionAction`](#org.jspresso.framework.application.frontend.action.flow.ChooseActionAction), [`ChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction), [`CloseDialogAction`](#org.jspresso.framework.application.frontend.action.CloseDialogAction), [`CreateEntityFromLovPersistAction`](#org.jspresso.framework.application.frontend.action.lov.CreateEntityFromLovPersistAction), [`DisplayNextPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction), [`DisplayPreviousPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction), [`DisplayUrlAction`](#org.jspresso.framework.application.frontend.action.std.DisplayUrlAction), [`EditSelectionAction`](#org.jspresso.framework.application.frontend.action.EditSelectionAction), [`ExecuteActionAction`](#org.jspresso.framework.application.frontend.action.std.ExecuteActionAction), [`ExitAction`](#org.jspresso.framework.application.frontend.action.workspace.ExitAction), [`ListApplicationElementsAction`](#org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction), [`LoginAction`](#org.jspresso.framework.application.frontend.action.security.LoginAction), [`LovAction`](#org.jspresso.framework.application.frontend.action.lov.LovAction), [`ModalDialogAction`](#org.jspresso.framework.application.frontend.action.ModalDialogAction), [`ModuleRestartAction`](#org.jspresso.framework.application.frontend.action.module.ModuleRestartAction), [`ModuleSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction), [`OkChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction), [`OkLovAction`](#org.jspresso.framework.application.frontend.action.lov.OkLovAction), [`PageOffsetAction`](#org.jspresso.framework.application.frontend.action.std.PageOffsetAction), [`ParentModuleConnectorSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction), [`PrintAction`](#org.jspresso.framework.application.printing.frontend.action.PrintAction), [`QueryFilterModuleAction`](#org.jspresso.framework.application.frontend.action.module.QueryFilterModuleAction), [`RefreshCardViewFrontAction`](#org.jspresso.framework.application.frontend.action.std.RefreshCardViewFrontAction), [`RefreshControllerDescriptionAction`](#org.jspresso.framework.application.frontend.action.controller.RefreshControllerDescriptionAction), [`SaveModuleObjectFrontAction`](#org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction), [`SelectedModelToActionParamAction`](#org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction), [`SetConnectorValueAction`](#org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction), [`TransferToClipboardAction`](#org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction), [`EditSelectedComponentAction.UowRollbackerAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction), [`WizardAction`](#org.jspresso.framework.application.frontend.action.wizard.WizardAction), [`WorkspaceSelectionAction`](#org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction)
++ **Sub-types** : [`AbstractChartAction`](#org.jspresso.framework.application.charting.frontend.action.AbstractChartAction), [`AbstractEditComponentAction`](#org.jspresso.framework.application.frontend.action.std.AbstractEditComponentAction), [`AbstractMessageAction`](#org.jspresso.framework.application.frontend.action.flow.AbstractMessageAction), [`AbstractModuleDirtyStateAction`](#org.jspresso.framework.application.backend.action.module.AbstractModuleDirtyStateAction), [`AbstractReportAction`](#org.jspresso.framework.application.printing.frontend.action.AbstractReportAction), [`ActionParamToSelectedModelAction`](#org.jspresso.framework.application.frontend.action.ActionParamToSelectedModelAction), [`AddBeanAsSubModuleFrontAction`](#org.jspresso.framework.application.frontend.action.AddBeanAsSubModuleFrontAction), [`AddCollectionToMasterAction`](#org.jspresso.framework.application.frontend.action.std.AddCollectionToMasterAction), [`AddPageAction`](#org.jspresso.framework.application.frontend.action.std.mobile.AddPageAction), [`BinaryPropertyInfoAction`](#org.jspresso.framework.application.frontend.action.std.BinaryPropertyInfoAction), [`ChooseActionAction`](#org.jspresso.framework.application.frontend.action.flow.ChooseActionAction), [`ChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.ChooseComponentAction), [`CloseDialogAction`](#org.jspresso.framework.application.frontend.action.CloseDialogAction), [`CreateEntityFromLovPersistAction`](#org.jspresso.framework.application.frontend.action.lov.CreateEntityFromLovPersistAction), [`DisplayNextPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayNextPinnedModuleAction), [`DisplayPreviousPinnedModuleAction`](#org.jspresso.framework.application.frontend.action.module.DisplayPreviousPinnedModuleAction), [`DisplayUrlAction`](#org.jspresso.framework.application.frontend.action.std.DisplayUrlAction), [`EditSelectionAction`](#org.jspresso.framework.application.frontend.action.EditSelectionAction), [`ExecuteActionAction`](#org.jspresso.framework.application.frontend.action.std.ExecuteActionAction), [`ExitAction`](#org.jspresso.framework.application.frontend.action.workspace.ExitAction), [`ListApplicationElementsAction`](#org.jspresso.framework.application.frontend.action.controller.ListApplicationElementsAction), [`LoginAction`](#org.jspresso.framework.application.frontend.action.security.LoginAction), [`LovAction`](#org.jspresso.framework.application.frontend.action.lov.LovAction), [`ModalDialogAction`](#org.jspresso.framework.application.frontend.action.ModalDialogAction), [`ModuleRestartAction`](#org.jspresso.framework.application.frontend.action.module.ModuleRestartAction), [`ModuleSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ModuleSelectionAction), [`NavigateModuleObjectsAction`](#org.jspresso.framework.application.frontend.action.module.NavigateModuleObjectsAction), [`OkChooseComponentAction`](#org.jspresso.framework.application.frontend.action.lov.OkChooseComponentAction), [`OkLovAction`](#org.jspresso.framework.application.frontend.action.lov.OkLovAction), [`PageOffsetAction`](#org.jspresso.framework.application.frontend.action.std.PageOffsetAction), [`ParentModuleConnectorSelectionAction`](#org.jspresso.framework.application.frontend.action.module.ParentModuleConnectorSelectionAction), [`PrintAction`](#org.jspresso.framework.application.printing.frontend.action.PrintAction), [`QueryFilterModuleAction`](#org.jspresso.framework.application.frontend.action.module.QueryFilterModuleAction), [`RefreshCardViewFrontAction`](#org.jspresso.framework.application.frontend.action.std.RefreshCardViewFrontAction), [`RefreshControllerDescriptionAction`](#org.jspresso.framework.application.frontend.action.controller.RefreshControllerDescriptionAction), [`RemoveComponentsFromWorkspacesFrontAction`](#org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction), [`ResetPasswordAction`](#org.jspresso.framework.application.frontend.action.security.ResetPasswordAction), [`SaveModuleObjectFrontAction`](#org.jspresso.framework.application.frontend.action.module.SaveModuleObjectFrontAction), [`SelectedModelToActionParamAction`](#org.jspresso.framework.application.frontend.action.SelectedModelToActionParamAction), [`SetConnectorValueAction`](#org.jspresso.framework.application.frontend.action.std.SetConnectorValueAction), [`TransferToClipboardAction`](#org.jspresso.framework.application.frontend.action.std.TransferToClipboardAction), [`EditSelectedComponentAction.UowRollbackerAction`](#org.jspresso.framework.application.frontend.action.std.EditSelectedComponentAction.UowRollbackerAction), [`WizardAction`](#org.jspresso.framework.application.frontend.action.wizard.WizardAction), [`WorkspaceSelectionAction`](#org.jspresso.framework.application.frontend.action.workspace.WorkspaceSelectionAction)
 
 
 
@@ -83,10 +83,14 @@ This is the base class for frontend actions. To get a better understanding of
  action.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>hiddenWhenDisabled</strong></p><p><code>Boolean</code></p></td>
+<td><p>Sets hidden when disabled.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>icon</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/Icon.html">Icon</a></code></p></td>
 <td><p>Sets the icon.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>iconImageURL</strong></p><p><code>String</code></p></td>
 <td><p>Sets the icon image URL used to decorate the action UI component peer.
  <p>
@@ -97,31 +101,36 @@ This is the base class for frontend actions. To get a better understanding of
  <li>the <b>classpath:/</b> pseudo URL protocol</li>
  </ul></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>iconPreferredHeight</strong></p><p><code>int</code></p></td>
 <td><p>Sets the icon preferred height.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>iconPreferredWidth</strong></p><p><code>int</code></p></td>
 <td><p>Sets the icon preferred width.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>mnemonicAsString</strong></p><p><code>String</code></p></td>
 <td><p>Configures the mnemonic key used for this action. Support of this feature
  depends on the UI execution platform. Mnemonics are typically used in menu
  and menu items.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>multiSelectionEnabled</strong></p><p><code>boolean</code></p></td>
 <td><p>Declares the action as being able to run on a collection containing more
  than 1 element. A multiSelectionEnabled = false action will be disabled
  when the selection contains no or more than one element.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p></td>
 <td><p>Sets the key used to compute the internationalized name of the action. The
  translated name is then usually used as label for the action (button label,
  menu label, ...).</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>repeatPeriodMillis</strong></p><p><code>Integer</code></p></td>
+<td><p>Sets repeat period in milliseconds. Whenever this is set to a positive integer, the client UI controller should
+ schedule an execution of this action periodically.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>styleName</strong></p><p><code>String</code></p></td>
@@ -1236,6 +1245,10 @@ This action lets the user browse his local file system and choose a file to
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>fileMaxSize</strong></p><p><code>Integer</code></p></td>
+<td><p>Sets the file max size.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>fileOpenCallback</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/file/IFileOpenCallback.html">IFile&#x200B;Open&#x200B;Callback</a></code></p></td>
 <td><p>Configures the file open callback instance that will be used to deal with
  the file dialog events. Two methods must be implemented :
@@ -1285,9 +1298,9 @@ This action lets the user browse the local file system and choose a file to
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>modelPath</strong></p><p><code>String</code></p></td>
+<td><p>Sets model path.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1383,9 +1396,9 @@ This action lets the user browse the local file system and choose a file to
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>modelPath</strong></p><p><code>String</code></p></td>
+<td><p>Sets model path.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1845,9 +1858,9 @@ This action displays information about a binary property content. The
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>modelPath</strong></p><p><code>String</code></p></td>
+<td><p>Sets model path.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2383,6 +2396,10 @@ This is the frontend action to trigger the application login using the current c
 <td align="left"><p><strong>anonymous</strong></p><p><code>boolean</code></p></td>
 <td><p>Sets anonymous.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>changePasswordAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/security/ChangePasswordAction.html">Change&#x200B;Password&#x200B;Action</a>&#x200B;&lt;&#x200B;E&#x200B;,F&#x200B;,G&#x200B;&gt;&#x200B;</code></p></td>
+<td><p>Sets change password action.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -2454,6 +2471,22 @@ This is a standard &quot;List Of Values&quot; action for reference property
  the type of entities backing the LOV.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>criteriaFactory</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria factory. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.model.persistence.hibernate.criterion.ICriteriaFactory</li>
+ <li>org.jspresso.framework.model.persistence.mongo.criterion.IQueryFactory</li>
+ </ul></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>criteriaRefiner</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria refiner. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.application.backend.action.persistence.hibernate.ICriteriaRefiner</li>
+ <li>org.jspresso.framework.application.backend.action.persistence.mongo.IQueryRefiner</li>
+ </ul></p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>defaultIconImageURL</strong></p><p><code>String</code></p></td>
 <td><p>Sets the defaultIconImageURL.</p></td>
 </tr>
@@ -2468,6 +2501,18 @@ This is a standard &quot;List Of Values&quot; action for reference property
 <td><p>Configures the action to be executed whenever the user queries the
  persistent store, either explicitly when using the action installed in the
  LOV dialog or implicitly through the auto query feature.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>findOnSet</strong></p><p><code>Boolean</code></p></td>
+<td><p>Whenever setting findOnSet to <code>true</code>, the LOV dialog will
+ trigger the query each time a field is set in the LOV filter view. This
+ brings continuous autocomplete feature on the LOV dialog.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>findOnType</strong></p><p><code>Boolean</code></p></td>
+<td><p>Whenever setting findOnType to <code>true</code>, the LOV dialog will
+ trigger the query each time a field is typed-in in the LOV filter view. This
+ brings continuous autocomplete feature on the LOV dialog.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>initializationMapping</strong></p><p><code>Map&#x200B;&lt;&#x200B;String&#x200B;,Object&#x200B;&gt;&#x200B;</code></p></td>
@@ -2501,7 +2546,15 @@ This is a standard &quot;List Of Values&quot; action for reference property
 <td><p>Sets the pagingAction.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/descriptor/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
+<td align="left"><p><strong>preselectItems</strong></p><p><code>boolean</code></p></td>
+<td><p>Should the LOV view pre-select items in the LOV view.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>queryComponentRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/IQueryComponentRefiner.html">IQuery&#x200B;Component&#x200B;Refiner</a></code></p></td>
+<td><p>Sets query component refiner.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>selectionMode</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/util/gui/ESelectionMode.html">ESelection&#x200B;Mode</a></code></p></td>
 <td><p>Allows to force the result view selection mode.</p></td>
 </tr>
 <tr class="even">
@@ -2585,9 +2638,9 @@ This is a very generic action that takes its specifications out of the action
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="odd">
+<td align="left"><p><strong>triggerOnEnter</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets trigger on enter.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2663,6 +2716,40 @@ Displays a module, and the corresponding workspace if necessary based on
 <tr class="even">
 <td align="left"><p><strong>workspaceName</strong></p><p><code>String</code></p></td>
 <td><p>Configures the name (untranslated) of the workspace to be displayed.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.frontend.action.module.NavigateModuleObjectsAction"></a>NavigateModuleObjectsAction
+
++ **Full name** : [`org.jspresso.framework.application.frontend.action.module.NavigateModuleObjectsAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/module/NavigateModuleObjectsAction.html)
++ **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
+
+
+
+Navigates the module objects by selecting the next / previous element.
+
+
+
+<table>
+<caption>NavigateModuleObjectsAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>offset</strong></p><p><code>int</code></p></td>
+<td><p>Sets offset.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2878,8 +2965,28 @@ Queries filter module and notify user of empty record set.
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>criteriaFactory</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria factory. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.model.persistence.hibernate.criterion.ICriteriaFactory</li>
+ <li>org.jspresso.framework.model.persistence.mongo.criterion.IQueryFactory</li>
+ </ul></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>criteriaRefiner</strong></p><p><code>Object</code></p></td>
+<td><p>Sets criteria refiner. Depending on the persistence layer used, it should be an instance of :
+ <ul>
+ <li>org.jspresso.framework.application.backend.action.persistence.hibernate.ICriteriaRefiner</li>
+ <li>org.jspresso.framework.application.backend.action.persistence.mongo.IQueryRefiner</li>
+ </ul></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>emptyResultAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/action/IAction.html">IAction</a></code></p></td>
 <td><p>Sets empty result action.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>queryComponentRefiner</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/backend/action/IQueryComponentRefiner.html">IQuery&#x200B;Component&#x200B;Refiner</a></code></p></td>
+<td><p>Sets query component refiner.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2915,6 +3022,10 @@ Refresh card view having given permId
 <td align="left"><p><strong>cardViewId</strong></p><p><code>String</code></p></td>
 <td><p>Sets the card view id.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>viewPath</strong></p><p><code>int</code></p></td>
+<td><p>Sets view path to start search from.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -2948,6 +3059,81 @@ Refreshes frontend controller name and description.
 <tr>
 <td align="left">This class does not have any specific property.</td>
 <td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction"></a>RemoveComponentsFromWorkspacesFrontAction
+
++ **Full name** : [`org.jspresso.framework.application.frontend.action.std.RemoveComponentsFromWorkspacesFrontAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/std/RemoveComponentsFromWorkspacesFrontAction.html)
++ **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
+
+
+
+Remove selected models from workspaces front action.
+
+
+
+<table>
+<caption>RemoveComponentsFromWorkspacesFrontAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+
+#### <a name="org.jspresso.framework.application.frontend.action.security.ResetPasswordAction"></a>ResetPasswordAction
+
++ **Full name** : [`org.jspresso.framework.application.frontend.action.security.ResetPasswordAction`](http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/application/frontend/action/security/ResetPasswordAction.html)
++ **Super-type** : [`FrontendAction`](#org.jspresso.framework.application.frontend.action.FrontendAction)
+
+
+
+This is the frontend action to initiate a user password reset. The username to change the password for is
+ retrieved from the selected model using the usernameProperty parameterized in the action.
+ This action must wrap with a concrete subclass of backend <code>AbstractResetPasswordAction</code> that performs
+ the actual password reset depending on the authentication backend. Jspresso offers one concrete implementation :
+ <ul>
+ <li><code>DatabaseChangePasswordAction</code> for JDBC based authentication
+ backend</li>
+ </ul>
+
+
+
+<table>
+<caption>ResetPasswordAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong>usernameProperty</strong></p><p><code>String</code></p></td>
+<td><p>Sets username property.</p></td>
 </tr>
 </tbody>
 </table>
