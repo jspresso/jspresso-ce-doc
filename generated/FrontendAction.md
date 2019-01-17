@@ -2297,10 +2297,14 @@ This generic action takes another arbitrary action out of the context
 
 
 
-This action exits the application. Before doing so, user activated application
- modules are traversed ton check that no pending changes need to be forwarded
- to the persistent store. Whenever the dirty checking is positive, then the
- user is notified and given a chance to cancel the exit.
+This action exits the application.
+ Before doing so, user activated application modules are traversed
+ to check that no pending changes need to be forwarded to the persistent
+ store.
+ Also asynchronous executor thread are traversed to check for still alive
+ one.
+ Whenever the dirty checking is positive, or any asynchronous executor is
+ still alive, then the user is notified and given a chance to cancel the exit.
 
 
 
