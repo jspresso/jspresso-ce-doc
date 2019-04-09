@@ -1729,6 +1729,18 @@ This descriptor is used to implement a map view.
 <td><p>Sets map content property. The targeted property should return a Json string that describes the markers and the
  routes to display on the map.</p></td>
 </tr>
+<tr class="odd">
+<td align="left"><p><strong>markerAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
+<td><p>Sets marker action.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>routeAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
+<td><p>Sets route action.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>zoneAction</strong></p><p><code><a href="http://www.jspresso.org/external/maven-site/apidocs/org/jspresso/framework/view/action/IDisplayableAction.html">IDisplayable&#x200B;Action</a></code></p></td>
+<td><p>Sets zone action.</p></td>
+</tr>
 </tbody>
 </table>
 
