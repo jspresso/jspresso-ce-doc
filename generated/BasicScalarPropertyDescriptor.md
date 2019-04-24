@@ -365,12 +365,16 @@ Describes a property used to store an image binary value. This type of
  format before being stored.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>keepRatio</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets keep ratio.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>scaledHeight</strong></p><p><code>Integer</code></p></td>
 <td><p>Sets scaled height. This property, when set to a positive integer will force the image height to be resized to the
  target value. If only one of the 2 scaled dimensions is set, then the image is scaled by preserving its aspect
  ratio.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>scaledWidth</strong></p><p><code>Integer</code></p></td>
 <td><p>Sets scaled width. This property, when set to a positive integer will force the image width to be resized to the
  target value. If only one of the 2 scaled dimensions is set, then the image is scaled by preserving its aspect
@@ -754,12 +758,16 @@ Describes an image URL property. This type of descriptor instructs Jspresso
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p><strong>keepRatio</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets keep ratio.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>scaledHeight</strong></p><p><code>Integer</code></p></td>
 <td><p>Sets scaled height. This property, when set to a positive integer will force the image height to be resized to the
  target value. If only one of the 2 scaled dimensions is set, then the image is scaled by preserving its aspect
  ratio.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>scaledWidth</strong></p><p><code>Integer</code></p></td>
 <td><p>Sets scaled width. This property, when set to a positive integer will force the image width to be resized to the
  target value. If only one of the 2 scaled dimensions is set, then the image is scaled by preserving its aspect

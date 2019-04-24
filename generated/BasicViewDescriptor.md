@@ -2139,18 +2139,22 @@ This type of view descriptor is used to display a binary property or a string
  e.g. a POD signature. Defaults to <code>false</code>.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>keepRatio</strong></p><p><code>boolean</code></p></td>
+<td><p>Sets keep ratio.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>scaledHeight</strong></p><p><code>Integer</code></p></td>
 <td><p>Sets scaled height. This property, when set to a positive integer will force the image height to be resized to the
  target value. If only one of the 2 scaled dimensions is set, then the image is scaled by preserving its aspect
  ratio.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>scaledWidth</strong></p><p><code>Integer</code></p></td>
 <td><p>Sets scaled width. This property, when set to a positive integer will force the image width to be resized to the
  target value. If only one of the 2 scaled dimensions is set, then the image is scaled by preserving its aspect
  ratio.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>scrollable</strong></p><p><code>boolean</code></p></td>
 <td><p>Configures the image view to be either cropped or scrollable when the
  display area is too small to display it. A value of <code>true</code>
